@@ -1,0 +1,697 @@
+#include <string.h>
+#include "TChain.h"
+#include "TFile.h"
+#include "TH1.h"
+#include "TTree.h"
+#include "TKey.h"
+#include "Riostream.h"
+#include "TCanvas.h"
+#include "TLegend.h"
+#include "TGraphAsymmErrors.h"
+#include "TGraph.h"
+#include "TMultiGraph.h"
+#include "iostream"
+#include "fstream"
+#include "TMath.h"
+
+void rootMacro_Mu3Overlay()
+{
+
+  gStyle->SetOptStat(kFALSE);
+  gStyle->SetEndErrorSize(7);
+
+  //Old DMs
+  TFile infileTT     ("/home/kyletos/Downloads/TriggerOutput/FINAL_TT_NoMuTauHad_FineBin_OCT21.root");
+  TFile infileWJ     ("/home/kyletos/Downloads/TriggerOutput/FINAL_WJ_NoMuTauHad_FineBin_OCT21.root");
+  TFile infileDY     ("/home/kyletos/Downloads/TriggerOutput/FINAL_DY_NoMuTauHad_FineBin_OCT21.root");
+  TFile infileSig    ("/home/kyletos/Downloads/TriggerOutput/OutputHistograms_Sig125.root");
+  TFile infileSigBig ("/home/kyletos/Downloads/TriggerOutput/OutputHistograms_Sig750.root");
+
+  TFile *outFile = new TFile("/home/kyletos/Downloads/RootFiles/CombinedPlots/comb_Mu3Overlay_XSecNorm_FineBin_OCT24.root", "RECREATE");
+
+cout << "Files Created" << endl;
+
+  ////////////////
+  // TTJets
+  ////////////////
+  infileTT.cd("Mu3Analyzer");
+  TCanvas*  Mu3PtCanvasTT_ = (TCanvas*)gDirectory->Get("Mu3PtCanvas");
+  TCanvas*  Mu3PtLargestCanvasTT_ = (TCanvas*)gDirectory->Get("Mu3PtLargestCanvas");
+  TCanvas*  Mu3SizeCanvasTT_ = (TCanvas*)gDirectory->Get("Mu3SizeCanvas");
+  TCanvas*  DRMu3Mu1CanvasTT_ = (TCanvas*)gDirectory->Get("DRMu3Mu1Canvas");
+  TCanvas*  DRMu3Mu2CanvasTT_ = (TCanvas*)gDirectory->Get("DRMu3Mu2Canvas");
+  TCanvas*  ClosetsdRCanvasTT_ = (TCanvas*)gDirectory->Get("ClosetsdRCanvas");
+  TCanvas*  Mu3IsoCanvasTT_ = (TCanvas*)gDirectory->Get("Mu3IsoCanvas");
+  TCanvas*  PtMu3vsIsoLargestPtCanvasTT_ = (TCanvas*)gDirectory->Get("PtMu3vsIsoLargestPtCanvas");  
+  TCanvas*  PtMu3vsIsoCanvasTT_ = (TCanvas*)gDirectory->Get("PtMu3vsIsoCanvas");
+  TH2F* TTh2_ = (TH2F*)gDirectory->Get("PtMu3vsIsoLargestPt");
+
+  ////////////////
+  // WJ
+  ////////////////
+  infileWJ.cd("Mu3Analyzer");
+  TCanvas*  Mu3PtCanvasWJ_ = (TCanvas*)gDirectory->Get("Mu3PtCanvas");
+  TCanvas*  Mu3PtLargestCanvasWJ_ = (TCanvas*)gDirectory->Get("Mu3PtLargestCanvas");
+  TCanvas*  Mu3SizeCanvasWJ_ = (TCanvas*)gDirectory->Get("Mu3SizeCanvas");
+  TCanvas*  DRMu3Mu1CanvasWJ_ = (TCanvas*)gDirectory->Get("DRMu3Mu1Canvas");
+  TCanvas*  DRMu3Mu2CanvasWJ_ = (TCanvas*)gDirectory->Get("DRMu3Mu2Canvas");
+  TCanvas*  ClosetsdRCanvasWJ_ = (TCanvas*)gDirectory->Get("ClosetsdRCanvas");
+  TCanvas*  Mu3IsoCanvasWJ_ = (TCanvas*)gDirectory->Get("Mu3IsoCanvas");
+  TCanvas*  PtMu3vsIsoLargestPtCanvasWJ_ = (TCanvas*)gDirectory->Get("PtMu3vsIsoLargestPtCanvas");
+  TCanvas*  PtMu3vsIsoCanvasWJ_ = (TCanvas*)gDirectory->Get("PtMu3vsIsoCanvas");
+  TH2F* WJh2_ = (TH2F*)gDirectory->Get("PtMu3vsIsoLargestPt");
+
+  ////////////////
+  // DY
+  ////////////////
+  infileDY.cd("Mu3Analyzer");
+  TCanvas*  Mu3PtCanvasDY_ = (TCanvas*)gDirectory->Get("Mu3PtCanvas");
+  TCanvas*  Mu3PtLargestCanvasDY_ = (TCanvas*)gDirectory->Get("Mu3PtLargestCanvas");
+  TCanvas*  Mu3SizeCanvasDY_ = (TCanvas*)gDirectory->Get("Mu3SizeCanvas");
+  TCanvas*  DRMu3Mu1CanvasDY_ = (TCanvas*)gDirectory->Get("DRMu3Mu1Canvas");
+  TCanvas*  DRMu3Mu2CanvasDY_ = (TCanvas*)gDirectory->Get("DRMu3Mu2Canvas");
+  TCanvas*  ClosetsdRCanvasDY_ = (TCanvas*)gDirectory->Get("ClosetsdRCanvas");
+  TCanvas*  Mu3IsoCanvasDY_ = (TCanvas*)gDirectory->Get("Mu3IsoCanvas");
+  TCanvas*  PtMu3vsIsoLargestPtCanvasDY_ = (TCanvas*)gDirectory->Get("PtMu3vsIsoLargestPtCanvas");
+  TCanvas*  PtMu3vsIsoCanvasDY_ = (TCanvas*)gDirectory->Get("PtMu3vsIsoCanvas");
+  TH2F* DYh2_ = (TH2F*)gDirectory->Get("PtMu3vsIsoLargestPt");
+
+  ////////////////
+  // Sig
+  ////////////////
+  infileSig.cd("Mu3Analyzer");
+  TCanvas*  Mu3PtCanvasSig_ = (TCanvas*)gDirectory->Get("Mu3PtCanvas");
+  TCanvas*  Mu3PtLargestCanvasSig_ = (TCanvas*)gDirectory->Get("Mu3PtLargestCanvas");
+  TCanvas*  Mu3SizeCanvasSig_ = (TCanvas*)gDirectory->Get("Mu3SizeCanvas");
+  TCanvas*  DRMu3Mu1CanvasSig_ = (TCanvas*)gDirectory->Get("DRMu3Mu1Canvas");
+  TCanvas*  DRMu3Mu2CanvasSig_ = (TCanvas*)gDirectory->Get("DRMu3Mu2Canvas");
+  TCanvas*  ClosetsdRCanvasSig_ = (TCanvas*)gDirectory->Get("ClosetsdRCanvas");
+  TCanvas*  Mu3IsoCanvasSig_ = (TCanvas*)gDirectory->Get("Mu3IsoCanvas");
+  TCanvas*  PtMu3vsIsoLargestPtCanvasSig_ = (TCanvas*)gDirectory->Get("PtMu3vsIsoLargestPtCanvas");
+  TCanvas*  PtMu3vsIsoCanvasSig_ = (TCanvas*)gDirectory->Get("PtMu3vsIsoCanvas");
+  TH2F* Sigh2_ = (TH2F*)gDirectory->Get("PtMu3vsIsoLargestPt");
+
+  ////////////////
+  // SigBig
+  ////////////////
+  infileSigBig.cd("Mu3Analyzer");
+  TCanvas*  Mu3PtCanvasSigBig_ = (TCanvas*)gDirectory->Get("Mu3PtCanvas");
+  TCanvas*  Mu3PtLargestCanvasSigBig_ = (TCanvas*)gDirectory->Get("Mu3PtLargestCanvas");
+  TCanvas*  Mu3SizeCanvasSigBig_ = (TCanvas*)gDirectory->Get("Mu3SizeCanvas");
+  TCanvas*  DRMu3Mu1CanvasSigBig_ = (TCanvas*)gDirectory->Get("DRMu3Mu1Canvas");
+  TCanvas*  DRMu3Mu2CanvasSigBig_ = (TCanvas*)gDirectory->Get("DRMu3Mu2Canvas");
+  TCanvas*  ClosetsdRCanvasSigBig_ = (TCanvas*)gDirectory->Get("ClosetsdRCanvas");
+  TCanvas*  Mu3IsoCanvasSigBig_ = (TCanvas*)gDirectory->Get("Mu3IsoCanvas");
+  TCanvas*  PtMu3vsIsoLargestPtCanvasSigBig_ = (TCanvas*)gDirectory->Get("PtMu3vsIsoLargestPtCanvas");
+  TCanvas*  PtMu3vsIsoCanvasSigBig_ = (TCanvas*)gDirectory->Get("PtMu3vsIsoCanvas");
+  TH2F* SigBigh2_ = (TH2F*)gDirectory->Get("PtMu3vsIsoLargestPt");
+
+cout << "Got Canvases" << endl;
+
+  //////////////////////////////
+  // Getting the TT Histograms
+  //////////////////////////////
+  TH1F* Mu3PtTT_ = (TH1F*)Mu3PtCanvasTT_->GetPrimitive("Mu3Pt");
+  TH1F* Mu3PtLargestTT_ = (TH1F*)Mu3PtLargestCanvasTT_->GetPrimitive("Mu3PtLargest");
+  TH1F* Mu3SizeTT_ = (TH1F*)Mu3SizeCanvasTT_->GetPrimitive("Mu3Size");
+  TH1F* DRMu3Mu1TT_ = (TH1F*)DRMu3Mu1CanvasTT_->GetPrimitive("DRMu3Mu1");
+  TH1F* DRMu3Mu2TT_ = (TH1F*)DRMu3Mu2CanvasTT_->GetPrimitive("DRMu3Mu2");
+  TH1F* ClosetsdRTT_ = (TH1F*)ClosetsdRCanvasTT_->GetPrimitive("ClosetsdR");
+  TH1F* Mu3IsoTT_ = (TH1F*)Mu3IsoCanvasTT_->GetPrimitive("Mu3Iso");
+  TH2F* PtMu3vsIsoLargestPtTT_ = (TH2F*)PtMu3vsIsoLargestPtCanvasTT_->GetPrimitive("PtMu3vsIsoLargestPt");
+  TH2F* PtMu3vsIsoTT_ = (TH2F*)PtMu3vsIsoCanvasTT_->GetPrimitive("PtMu3vsIso");
+
+  //////////////////////////////
+  // Getting the WJ Histograms
+  //////////////////////////////
+  TH1F* Mu3PtWJ_ = (TH1F*)Mu3PtCanvasWJ_->GetPrimitive("Mu3Pt");
+  TH1F* Mu3PtLargestWJ_ = (TH1F*)Mu3PtLargestCanvasWJ_->GetPrimitive("Mu3PtLargest");
+  TH1F* Mu3SizeWJ_ = (TH1F*)Mu3SizeCanvasWJ_->GetPrimitive("Mu3Size");
+  TH1F* DRMu3Mu1WJ_ = (TH1F*)DRMu3Mu1CanvasWJ_->GetPrimitive("DRMu3Mu1");
+  TH1F* DRMu3Mu2WJ_ = (TH1F*)DRMu3Mu2CanvasWJ_->GetPrimitive("DRMu3Mu2");
+  TH1F* ClosetsdRWJ_ = (TH1F*)ClosetsdRCanvasWJ_->GetPrimitive("ClosetsdR");
+  TH1F* Mu3IsoWJ_ = (TH1F*)Mu3IsoCanvasWJ_->GetPrimitive("Mu3Iso");
+  TH2F* PtMu3vsIsoLargestPtWJ_ = (TH2F*)PtMu3vsIsoLargestPtCanvasWJ_->GetPrimitive("PtMu3vsIsoLargestPt");
+  TH2F* PtMu3vsIsoWJ_ = (TH2F*)PtMu3vsIsoCanvasWJ_->GetPrimitive("PtMu3vsIso");
+
+  //////////////////////////////
+  // Getting the DY Histograms
+  //////////////////////////////
+  TH1F* Mu3PtDY_ = (TH1F*)Mu3PtCanvasDY_->GetPrimitive("Mu3Pt");
+  TH1F* Mu3PtLargestDY_ = (TH1F*)Mu3PtLargestCanvasDY_->GetPrimitive("Mu3PtLargest");
+  TH1F* Mu3SizeDY_ = (TH1F*)Mu3SizeCanvasDY_->GetPrimitive("Mu3Size");
+  TH1F* DRMu3Mu1DY_ = (TH1F*)DRMu3Mu1CanvasDY_->GetPrimitive("DRMu3Mu1");
+  TH1F* DRMu3Mu2DY_ = (TH1F*)DRMu3Mu2CanvasDY_->GetPrimitive("DRMu3Mu2");
+  TH1F* ClosetsdRDY_ = (TH1F*)ClosetsdRCanvasDY_->GetPrimitive("ClosetsdR");
+  TH1F* Mu3IsoDY_ = (TH1F*)Mu3IsoCanvasDY_->GetPrimitive("Mu3Iso");
+  TH2F* PtMu3vsIsoLargestPtDY_ = (TH2F*)PtMu3vsIsoLargestPtCanvasDY_->GetPrimitive("PtMu3vsIsoLargestPt");
+  TH2F* PtMu3vsIsoDY_ = (TH2F*)PtMu3vsIsoCanvasDY_->GetPrimitive("PtMu3vsIso");
+
+  //////////////////////////////
+  // Getting the Sig Histograms
+  //////////////////////////////
+  TH1F* Mu3PtSig_ = (TH1F*)Mu3PtCanvasSig_->GetPrimitive("Mu3Pt");
+  TH1F* Mu3PtLargestSig_ = (TH1F*)Mu3PtLargestCanvasSig_->GetPrimitive("Mu3PtLargest");
+  TH1F* Mu3SizeSig_ = (TH1F*)Mu3SizeCanvasSig_->GetPrimitive("Mu3Size");
+  TH1F* DRMu3Mu1Sig_ = (TH1F*)DRMu3Mu1CanvasSig_->GetPrimitive("DRMu3Mu1");
+  TH1F* DRMu3Mu2Sig_ = (TH1F*)DRMu3Mu2CanvasSig_->GetPrimitive("DRMu3Mu2");
+  TH1F* ClosetsdRSig_ = (TH1F*)ClosetsdRCanvasSig_->GetPrimitive("ClosetsdR");
+  TH1F* Mu3IsoSig_ = (TH1F*)Mu3IsoCanvasSig_->GetPrimitive("Mu3Iso");
+  TH2F* PtMu3vsIsoLargestPtSig_ = (TH2F*)PtMu3vsIsoLargestPtCanvasSig_->GetPrimitive("PtMu3vsIsoLargestPt");
+  TH2F* PtMu3vsIsoSig_ = (TH2F*)PtMu3vsIsoCanvasSig_->GetPrimitive("PtMu3vsIso");
+
+  //////////////////////////////
+  // Getting the SigBig Histograms
+  //////////////////////////////
+  TH1F* Mu3PtSigBig_ = (TH1F*)Mu3PtCanvasSigBig_->GetPrimitive("Mu3Pt");
+  TH1F* Mu3PtLargestSigBig_ = (TH1F*)Mu3PtLargestCanvasSigBig_->GetPrimitive("Mu3PtLargest");
+  TH1F* Mu3SizeSigBig_ = (TH1F*)Mu3SizeCanvasSigBig_->GetPrimitive("Mu3Size");
+  TH1F* DRMu3Mu1SigBig_ = (TH1F*)DRMu3Mu1CanvasSigBig_->GetPrimitive("DRMu3Mu1");
+  TH1F* DRMu3Mu2SigBig_ = (TH1F*)DRMu3Mu2CanvasSigBig_->GetPrimitive("DRMu3Mu2");
+  TH1F* ClosetsdRSigBig_ = (TH1F*)ClosetsdRCanvasSigBig_->GetPrimitive("ClosetsdR");
+  TH1F* Mu3IsoSigBig_ = (TH1F*)Mu3IsoCanvasSigBig_->GetPrimitive("Mu3Iso");
+  TH2F* PtMu3vsIsoLargestPtSigBig_ = (TH2F*)PtMu3vsIsoLargestPtCanvasSigBig_->GetPrimitive("PtMu3vsIsoLargestPt");
+  TH2F* PtMu3vsIsoSigBig_ = (TH2F*)PtMu3vsIsoCanvasSigBig_->GetPrimitive("PtMu3vsIso");
+
+cout << "Histograms assigned." << endl; 
+
+  ///////////////////////
+  // Total Overal Plots
+  ///////////////////////
+  TCanvas Mu3PtCanvasTOT_("Mu3PtCanvasTOT","",600,600);
+  TCanvas Mu3PtLargestCanvasTOT_("Mu3PtLargestCanvasTOT","",600,600);
+  TCanvas Mu3SizeCanvasTOT_("Mu3SizeCanvasTOT","",600,600);
+  TCanvas DRMu3Mu1CanvasTOT_("DRMu3Mu1CanvasTOT","",600,600);
+  TCanvas DRMu3Mu2CanvasTOT_("DRMu3Mu2CanvasTOT","",600,600);
+  TCanvas ClosetsdRCanvasTOT_("ClosetsdRCanvasTOT" ,"",600,600);
+  TCanvas Mu3IsoCanvasTOT_("Mu3IsoCanvasTOT","",600,600);
+  TCanvas Mu3PtvsIsoCanvasTOT_("Mu3PtvsIsoCanvasTOT","",600,600);
+  Mu3PtvsIsoCanvasTOT_.Divide(2,3);
+  TCanvas Mu3PtLargestvsIsoCanvasTOT_("Mu3PtLargestvsIsoCanvasTOT","",600,600);
+  Mu3PtLargestvsIsoCanvasTOT_.Divide(2,3);
+
+  Mu3PtCanvasTOT_.SetGrid(1,1);
+  Mu3PtLargestCanvasTOT_.SetGrid(1,1);
+  Mu3SizeCanvasTOT_.SetGrid(1,1);
+  DRMu3Mu1CanvasTOT_.SetGrid(1,1);
+  DRMu3Mu2CanvasTOT_.SetGrid(1,1);
+  ClosetsdRCanvasTOT_.SetGrid(1,1);
+  Mu3IsoCanvasTOT_.SetGrid(1,1);
+
+  Mu3PtCanvasTOT_.SetLogy();
+  Mu3PtLargestCanvasTOT_.SetLogy();
+  Mu3SizeCanvasTOT_.SetLogy();
+  DRMu3Mu1CanvasTOT_.SetLogy();
+  DRMu3Mu2CanvasTOT_.SetLogy();
+  ClosetsdRCanvasTOT_.SetLogy();
+  Mu3IsoCanvasTOT_.SetLogy();
+/*
+  Mu3PtCanvasTOT_.SetLogx();
+  Mu3PtLargestCanvasTOT_.SetLogx();
+  Mu3SizeCanvasTOT_.SetLogx();
+  DRMu3Mu1CanvasTOT_.SetLogx();
+  DRMu3Mu2CanvasTOT_.SetLogx();
+  ClosetsdRCanvasTOT_.SetLogx();
+  Mu3IsoCanvasTOT_.SetLogx();
+*/
+cout << "Final Canvases created" << endl;
+
+  std::cout << "TTBar   Scale(831.76*20,000.0/38,288,417)=  " << 831.76*20000.0/38288417.0  << std::endl;
+  std::cout << "WJets   Scale(61,526.7*20,000.0/47,737,675)= " << 61526.7*20000.0/47737675.0  << std::endl;
+  std::cout << "DY m=50 Scale(1921.8*20,000.0/54,208,227)=  " << 1921.8*20000.0/54208227.0  << std::endl;
+  std::cout << "mH=125  Scale(48.90*20,000.0/1000.0)=  " << 48.90*20000.0/1000.0  << std::endl;
+  std::cout << "mH=750  Scale(0.4969*20,000.0/1000.0)= " << 0.4969*20000.0/1000.0  << std::endl;
+
+  Mu3PtTT_->Scale(831.76*20000.0/38288417.0);
+  Mu3PtLargestTT_->Scale(831.76*20000.0/38288417.0);
+  Mu3SizeTT_->Scale(831.76*20000.0/38288417.0);
+  DRMu3Mu1TT_->Scale(831.76*20000.0/38288417.0);
+  DRMu3Mu2TT_->Scale(831.76*20000.0/38288417.0);
+  ClosetsdRTT_->Scale(831.76*20000.0/38288417.0);
+  Mu3IsoTT_->Scale(831.76*20000.0/38288417.0);
+  
+  Mu3PtWJ_->Scale(61526.7*20000.0/47737675.0);
+  Mu3PtLargestWJ_->Scale(61526.7*20000.0/47737675.0);
+  Mu3SizeWJ_->Scale(61526.7*20000.0/47737675.0);
+  DRMu3Mu1WJ_->Scale(61526.7*20000.0/47737675.0);
+  DRMu3Mu2WJ_->Scale(61526.7*20000.0/47737675.0);
+  ClosetsdRWJ_->Scale(61526.7*20000.0/47737675.0);
+  Mu3IsoWJ_->Scale(61526.7*20000.0/47737675.0);
+  
+  Mu3PtDY_->Scale(1921.8*20000.0/54208227.0);
+  Mu3PtLargestDY_->Scale(1921.8*20000.0/54208227.0);
+  Mu3SizeDY_->Scale(1921.8*20000.0/54208227.0);
+  DRMu3Mu1DY_->Scale(1921.8*20000.0/54208227.0);
+  DRMu3Mu2DY_->Scale(1921.8*20000.0/54208227.0);
+  ClosetsdRDY_->Scale(1921.8*20000.0/54208227.0);
+  Mu3IsoDY_->Scale(1921.8*20000.0/54208227.0);
+  
+  Mu3PtSig_->Scale(48.90*20000.0/1000.0);
+  Mu3PtLargestSig_->Scale(48.90*20000.0/1000.0);
+  Mu3SizeSig_->Scale(48.90*20000.0/1000.0);
+  DRMu3Mu1Sig_->Scale(48.90*20000.0/1000.0);
+  DRMu3Mu2Sig_->Scale(48.90*20000.0/1000.0);
+  ClosetsdRSig_->Scale(48.90*20000.0/1000.0);
+  Mu3IsoSig_->Scale(48.90*20000.0/1000.0);
+  
+  Mu3PtSigBig_->Scale(0.4969*20000.0/1000.0);
+  Mu3PtLargestSigBig_->Scale(0.4969*20000.0/1000.0);
+  Mu3SizeSigBig_->Scale(0.4969*20000.0/1000.0);
+  DRMu3Mu1SigBig_->Scale(0.4969*20000.0/1000.0);
+  DRMu3Mu2SigBig_->Scale(0.4969*20000.0/1000.0);
+  ClosetsdRSigBig_->Scale(0.4969*20000.0/1000.0);
+  Mu3IsoSigBig_->Scale(0.4969*20000.0/1000.0);
+
+
+cout << "Histograms scaled" << endl;
+
+  //////////////////////////////////
+  // TT TGraphErrors from TH1
+  //////////////////////////////////
+  TGraphAsymmErrors* FinalMu3PtTT_ = new TGraphAsymmErrors(Mu3PtTT_);
+  TGraphAsymmErrors* FinalMu3PtLargestTT_ = new TGraphAsymmErrors(Mu3PtLargestTT_);
+  TGraphAsymmErrors* FinalMu3SizeTT_ = new TGraphAsymmErrors(Mu3SizeTT_);
+  TGraphAsymmErrors* FinalDRMu3Mu1TT_ = new TGraphAsymmErrors(DRMu3Mu1TT_);
+  TGraphAsymmErrors* FinalDRMu3Mu2TT_ = new TGraphAsymmErrors(DRMu3Mu2TT_);
+  TGraphAsymmErrors* FinalClosetsdRTT_ = new TGraphAsymmErrors(ClosetsdRTT_);
+  TGraphAsymmErrors* FinalMu3IsoTT_ = new TGraphAsymmErrors(Mu3IsoTT_);
+
+  //////////////////////////////////
+  // WJ TGraphErrors from TH1
+  //////////////////////////////////
+  TGraphAsymmErrors* FinalMu3PtWJ_ = new TGraphAsymmErrors(Mu3PtWJ_);
+  TGraphAsymmErrors* FinalMu3PtLargestWJ_ = new TGraphAsymmErrors(Mu3PtLargestWJ_);
+  TGraphAsymmErrors* FinalMu3SizeWJ_ = new TGraphAsymmErrors(Mu3SizeWJ_);
+  TGraphAsymmErrors* FinalDRMu3Mu1WJ_ = new TGraphAsymmErrors(DRMu3Mu1WJ_);
+  TGraphAsymmErrors* FinalDRMu3Mu2WJ_ = new TGraphAsymmErrors(DRMu3Mu2WJ_);
+  TGraphAsymmErrors* FinalClosetsdRWJ_ = new TGraphAsymmErrors(ClosetsdRWJ_);
+  TGraphAsymmErrors* FinalMu3IsoWJ_ = new TGraphAsymmErrors(Mu3IsoWJ_);
+
+  //////////////////////////////////
+  // DY TGraphErrors from TH1
+  //////////////////////////////////
+  TGraphAsymmErrors* FinalMu3PtDY_ = new TGraphAsymmErrors(Mu3PtDY_);
+  TGraphAsymmErrors* FinalMu3PtLargestDY_ = new TGraphAsymmErrors(Mu3PtLargestDY_);
+  TGraphAsymmErrors* FinalMu3SizeDY_ = new TGraphAsymmErrors(Mu3SizeDY_);
+  TGraphAsymmErrors* FinalDRMu3Mu1DY_ = new TGraphAsymmErrors(DRMu3Mu1DY_);
+  TGraphAsymmErrors* FinalDRMu3Mu2DY_ = new TGraphAsymmErrors(DRMu3Mu2DY_);
+  TGraphAsymmErrors* FinalClosetsdRDY_ = new TGraphAsymmErrors(ClosetsdRDY_);
+  TGraphAsymmErrors* FinalMu3IsoDY_ = new TGraphAsymmErrors(Mu3IsoDY_);
+
+  //////////////////////////////////
+  // Sig TGraphErrors from TH1
+  //////////////////////////////////
+  TGraphAsymmErrors* FinalMu3PtSig_ = new TGraphAsymmErrors(Mu3PtSig_);
+  TGraphAsymmErrors* FinalMu3PtLargestSig_ = new TGraphAsymmErrors(Mu3PtLargestSig_);
+  TGraphAsymmErrors* FinalMu3SizeSig_ = new TGraphAsymmErrors(Mu3SizeSig_);
+  TGraphAsymmErrors* FinalDRMu3Mu1Sig_ = new TGraphAsymmErrors(DRMu3Mu1Sig_);
+  TGraphAsymmErrors* FinalDRMu3Mu2Sig_ = new TGraphAsymmErrors(DRMu3Mu2Sig_);
+  TGraphAsymmErrors* FinalClosetsdRSig_ = new TGraphAsymmErrors(ClosetsdRSig_);
+  TGraphAsymmErrors* FinalMu3IsoSig_ = new TGraphAsymmErrors(Mu3IsoSig_);
+
+  //////////////////////////////////
+  // SigBig TGraphErrors from TH1
+  //////////////////////////////////
+  TGraphAsymmErrors* FinalMu3PtSigBig_ = new TGraphAsymmErrors(Mu3PtSigBig_);
+  TGraphAsymmErrors* FinalMu3PtLargestSigBig_ = new TGraphAsymmErrors(Mu3PtLargestSigBig_);
+  TGraphAsymmErrors* FinalMu3SizeSigBig_ = new TGraphAsymmErrors(Mu3SizeSigBig_);
+  TGraphAsymmErrors* FinalDRMu3Mu1SigBig_ = new TGraphAsymmErrors(DRMu3Mu1SigBig_);
+  TGraphAsymmErrors* FinalDRMu3Mu2SigBig_ = new TGraphAsymmErrors(DRMu3Mu2SigBig_);
+  TGraphAsymmErrors* FinalClosetsdRSigBig_ = new TGraphAsymmErrors(ClosetsdRSigBig_);
+  TGraphAsymmErrors* FinalMu3IsoSigBig_ = new TGraphAsymmErrors(Mu3IsoSigBig_);
+
+  // Setting colors
+  FinalMu3PtTT_->SetMarkerColor(kBlue+1);
+  FinalMu3PtLargestTT_->SetMarkerColor(kBlue+1);
+  FinalMu3SizeTT_->SetMarkerColor(kBlue+1);
+  FinalDRMu3Mu1TT_->SetMarkerColor(kBlue+1);
+  FinalDRMu3Mu2TT_->SetMarkerColor(kBlue+1);
+  FinalClosetsdRTT_->SetMarkerColor(kBlue+1);
+  FinalMu3IsoTT_->SetMarkerColor(kBlue+1);
+
+  FinalMu3PtWJ_->SetMarkerColor(kRed+1);
+  FinalMu3PtLargestWJ_->SetMarkerColor(kRed+1);
+  FinalMu3SizeWJ_->SetMarkerColor(kRed+1);
+  FinalDRMu3Mu1WJ_->SetMarkerColor(kRed+1);
+  FinalDRMu3Mu2WJ_->SetMarkerColor(kRed+1);
+  FinalClosetsdRWJ_->SetMarkerColor(kRed+1);
+  FinalMu3IsoWJ_->SetMarkerColor(kRed+1);
+
+  FinalMu3PtDY_->SetMarkerColor(kGreen+1);
+  FinalMu3PtLargestDY_->SetMarkerColor(kGreen+1);
+  FinalMu3SizeDY_->SetMarkerColor(kGreen+1);
+  FinalDRMu3Mu1DY_->SetMarkerColor(kGreen+1);
+  FinalDRMu3Mu2DY_->SetMarkerColor(kGreen+1);
+  FinalClosetsdRDY_->SetMarkerColor(kGreen+1);
+  FinalMu3IsoDY_->SetMarkerColor(kGreen+1);
+
+  FinalMu3PtSig_->SetMarkerColor(kBlack);
+  FinalMu3PtLargestSig_->SetMarkerColor(kBlack);
+  FinalMu3SizeSig_->SetMarkerColor(kBlack);
+  FinalDRMu3Mu1Sig_->SetMarkerColor(kBlack);
+  FinalDRMu3Mu2Sig_->SetMarkerColor(kBlack);
+  FinalClosetsdRSig_->SetMarkerColor(kBlack);
+  FinalMu3IsoSig_->SetMarkerColor(kBlack);
+
+  FinalMu3PtSigBig_->SetMarkerColor(kViolet-2);
+  FinalMu3PtLargestSigBig_->SetMarkerColor(kViolet-2);
+  FinalMu3SizeSigBig_->SetMarkerColor(kViolet-2);
+  FinalDRMu3Mu1SigBig_->SetMarkerColor(kViolet-2);
+  FinalDRMu3Mu2SigBig_->SetMarkerColor(kViolet-2);
+  FinalClosetsdRSigBig_->SetMarkerColor(kViolet-2);
+  FinalMu3IsoSigBig_->SetMarkerColor(kViolet-2);
+
+  //Setting Marker Size
+  FinalMu3PtTT_->SetMarkerSize(.07);
+  FinalMu3PtLargestTT_->SetMarkerSize(.07);
+  FinalMu3SizeTT_->SetMarkerSize(.07);
+  FinalDRMu3Mu1TT_->SetMarkerSize(.07);
+  FinalDRMu3Mu2TT_->SetMarkerSize(.07);
+  FinalClosetsdRTT_->SetMarkerSize(.07);
+  FinalMu3IsoTT_->SetMarkerSize(.07);
+  
+  FinalMu3PtWJ_->SetMarkerSize(.07);
+  FinalMu3PtLargestWJ_->SetMarkerSize(.07);
+  FinalMu3SizeWJ_->SetMarkerSize(.07);
+  FinalDRMu3Mu1WJ_->SetMarkerSize(.07);
+  FinalDRMu3Mu2WJ_->SetMarkerSize(.07);
+  FinalClosetsdRWJ_->SetMarkerSize(.07);
+  FinalMu3IsoWJ_->SetMarkerSize(.07);
+  
+  FinalMu3PtDY_->SetMarkerSize(.07);
+  FinalMu3PtLargestDY_->SetMarkerSize(.07);
+  FinalMu3SizeDY_->SetMarkerSize(.07);
+  FinalDRMu3Mu1DY_->SetMarkerSize(.07);
+  FinalDRMu3Mu2DY_->SetMarkerSize(.07);
+  FinalClosetsdRDY_->SetMarkerSize(.07);
+  FinalMu3IsoDY_->SetMarkerSize(.07);
+  
+  FinalMu3PtSig_->SetMarkerSize(.07);
+  FinalMu3PtLargestSig_->SetMarkerSize(.07);
+  FinalMu3SizeSig_->SetMarkerSize(.07);
+  FinalDRMu3Mu1Sig_->SetMarkerSize(.07);
+  FinalDRMu3Mu2Sig_->SetMarkerSize(.07);
+  FinalClosetsdRSig_->SetMarkerSize(.07);
+  FinalMu3IsoSig_->SetMarkerSize(.07);
+  
+  FinalMu3PtSigBig_->SetMarkerSize(.07);
+  FinalMu3PtLargestSigBig_->SetMarkerSize(.07);
+  FinalMu3SizeSigBig_->SetMarkerSize(.07);
+  FinalDRMu3Mu1SigBig_->SetMarkerSize(.07);
+  FinalDRMu3Mu2SigBig_->SetMarkerSize(.07);
+  FinalClosetsdRSigBig_->SetMarkerSize(.07);
+  FinalMu3IsoSigBig_->SetMarkerSize(.07);
+
+  //Set line Color
+  FinalMu3PtTT_->SetLineColor(kBlue+1);
+  FinalMu3PtLargestTT_->SetLineColor(kBlue+1);
+  FinalMu3SizeTT_->SetLineColor(kBlue+1);
+  FinalDRMu3Mu1TT_->SetLineColor(kBlue+1);
+  FinalDRMu3Mu2TT_->SetLineColor(kBlue+1);
+  FinalClosetsdRTT_->SetLineColor(kBlue+1);
+  FinalMu3IsoTT_->SetLineColor(kBlue+1);
+
+  FinalMu3PtWJ_->SetLineColor(kRed+1);
+  FinalMu3PtLargestWJ_->SetLineColor(kRed+1);
+  FinalMu3SizeWJ_->SetLineColor(kRed+1);
+  FinalDRMu3Mu1WJ_->SetLineColor(kRed+1);
+  FinalDRMu3Mu2WJ_->SetLineColor(kRed+1);
+  FinalClosetsdRWJ_->SetLineColor(kRed+1);
+  FinalMu3IsoWJ_->SetLineColor(kRed+1);
+
+  FinalMu3PtDY_->SetLineColor(kGreen+1);
+  FinalMu3PtLargestDY_->SetLineColor(kGreen+1);
+  FinalMu3SizeDY_->SetLineColor(kGreen+1);
+  FinalDRMu3Mu1DY_->SetLineColor(kGreen+1);
+  FinalDRMu3Mu2DY_->SetLineColor(kGreen+1);
+  FinalClosetsdRDY_->SetLineColor(kGreen+1);
+  FinalMu3IsoDY_->SetLineColor(kGreen+1);
+
+  FinalMu3PtSig_->SetLineColor(kBlack);
+  FinalMu3PtLargestSig_->SetLineColor(kBlack);
+  FinalMu3SizeSig_->SetLineColor(kBlack);
+  FinalDRMu3Mu1Sig_->SetLineColor(kBlack);
+  FinalDRMu3Mu2Sig_->SetLineColor(kBlack);
+  FinalClosetsdRSig_->SetLineColor(kBlack);
+  FinalMu3IsoSig_->SetLineColor(kBlack);
+
+  FinalMu3PtSigBig_->SetLineColor(kViolet-2);
+  FinalMu3PtLargestSigBig_->SetLineColor(kViolet-2);
+  FinalMu3SizeSigBig_->SetLineColor(kViolet-2);
+  FinalDRMu3Mu1SigBig_->SetLineColor(kViolet-2);
+  FinalDRMu3Mu2SigBig_->SetLineColor(kViolet-2);
+  FinalClosetsdRSigBig_->SetLineColor(kViolet-2);
+  FinalMu3IsoSigBig_->SetLineColor(kViolet-2);
+
+  //Set Titles
+  FinalMu3PtTT_->GetXaxis()->SetTitle("Mu3 p_{T}");
+  FinalMu3PtLargestTT_->GetXaxis()->SetTitle("Largest Mu3 p_{T}");
+  FinalMu3SizeTT_->GetXaxis()->SetTitle("# of Mu3 Candidates");
+  FinalDRMu3Mu1TT_->GetXaxis()->SetTitle("#DeltaR(Mu1, Mu3)");
+  FinalDRMu3Mu2TT_->GetXaxis()->SetTitle("#DeltaR(Mu1, Mu2)");
+  FinalClosetsdRTT_->GetXaxis()->SetTitle("#DeltaR(Mu1, closest Mu1 or Mu2)");
+  FinalMu3IsoTT_->GetXaxis()->SetTitle("Relative Iso in cone < .4 of Mu3");
+
+  FinalMu3PtWJ_->GetXaxis()->SetTitle("Mu3 p_{T}");
+  FinalMu3PtLargestWJ_->GetXaxis()->SetTitle("Largest Mu3 p_{T}");
+  FinalMu3SizeWJ_->GetXaxis()->SetTitle("# of Mu3 Candidates");
+  FinalDRMu3Mu1WJ_->GetXaxis()->SetTitle("#DeltaR(Mu1, Mu3)");
+  FinalDRMu3Mu2WJ_->GetXaxis()->SetTitle("#DeltaR(Mu1, Mu2)");
+  FinalClosetsdRWJ_->GetXaxis()->SetTitle("#DeltaR(Mu1, closest Mu1 or Mu2)");
+  FinalMu3IsoWJ_->GetXaxis()->SetTitle("Relative Iso in cone < .4 of Mu3");
+
+  FinalMu3PtDY_->GetXaxis()->SetTitle("Mu3 p_{T}");
+  FinalMu3PtLargestDY_->GetXaxis()->SetTitle("Largest Mu3 p_{T}");
+  FinalMu3SizeDY_->GetXaxis()->SetTitle("# of Mu3 Candidates");
+  FinalDRMu3Mu1DY_->GetXaxis()->SetTitle("#DeltaR(Mu1, Mu3)");
+  FinalDRMu3Mu2DY_->GetXaxis()->SetTitle("#DeltaR(Mu1, Mu2)");
+  FinalClosetsdRDY_->GetXaxis()->SetTitle("#DeltaR(Mu1, closest Mu1 or Mu2)");
+  FinalMu3IsoDY_->GetXaxis()->SetTitle("Relative Iso in cone < .4 of Mu3");
+
+  FinalMu3PtSig_->GetXaxis()->SetTitle("Mu3 p_{T}");
+  FinalMu3PtLargestSig_->GetXaxis()->SetTitle("Largest Mu3 p_{T}");
+  FinalMu3SizeSig_->GetXaxis()->SetTitle("# of Mu3 Candidates");
+  FinalDRMu3Mu1Sig_->GetXaxis()->SetTitle("#DeltaR(Mu1, Mu3)");
+  FinalDRMu3Mu2Sig_->GetXaxis()->SetTitle("#DeltaR(Mu2, Mu3)");
+  FinalClosetsdRSig_->GetXaxis()->SetTitle("#DeltaR(Mu1, closest Mu1 or Mu2)");
+  FinalMu3IsoSig_->GetXaxis()->SetTitle("Relative Iso in cone < .4 of Mu3");
+
+  FinalMu3PtSigBig_->GetXaxis()->SetTitle("Mu3 p_{T}");
+  FinalMu3PtLargestSigBig_->GetXaxis()->SetTitle("Largest Mu3 p_{T}");
+  FinalMu3SizeSigBig_->GetXaxis()->SetTitle("# of Mu3 Candidates");
+  FinalDRMu3Mu1SigBig_->GetXaxis()->SetTitle("#DeltaR(Mu1, Mu3)");
+  FinalDRMu3Mu2SigBig_->GetXaxis()->SetTitle("#DeltaR(Mu1, Mu2)");
+  FinalClosetsdRSigBig_->GetXaxis()->SetTitle("#DeltaR(Mu1, closest Mu1 or Mu2)");
+  FinalMu3IsoSigBig_->GetXaxis()->SetTitle("Relative Iso in cone < .4 of Mu3");
+
+  //Set Titles
+  FinalMu3PtTT_->SetTitle("Mu1 tight, Mu2 loose, Mu1 p_{T} > 45, Mu2 p_{T} > 15, #DeltaR(Mu1,Mu2) < 1.5, Iso < 1.5");
+  FinalMu3PtLargestTT_->SetTitle("Mu1 tight, Mu2 loose, Mu1 p_{T} > 45, Mu2 p_{T} > 15, #DeltaR(Mu1,Mu2) < 1.5, Iso < 1.5");
+  FinalMu3SizeTT_->SetTitle("Mu1 tight, Mu2 loose, Mu1 p_{T} > 45, Mu2 p_{T} > 15, #DeltaR(Mu1,Mu2) < 1.5, Iso < 1.5");
+  FinalDRMu3Mu1TT_->SetTitle("Mu1 tight, Mu2 loose, Mu1 p_{T} > 45, Mu2 p_{T} > 15, #DeltaR(Mu1,Mu2) < 1.5, Iso < 1.5");
+  FinalDRMu3Mu2TT_->SetTitle("Mu1 tight, Mu2 loose, Mu1 p_{T} > 45, Mu2 p_{T} > 15, #DeltaR(Mu1,Mu2) < 1.5, Iso < 1.5");
+  FinalClosetsdRTT_->SetTitle("Mu1 tight, Mu2 loose, Mu1 p_{T} > 45, Mu2 p_{T} > 15, #DeltaR(Mu1,Mu2) < 1.5, Iso < 1.5");
+  FinalMu3IsoTT_->SetTitle("Mu1 tight, Mu2 loose, Mu1 p_{T} > 45, Mu2 p_{T} > 15, #DeltaR(Mu1,Mu2) < 1.5, Iso < 1.5");
+  
+  FinalMu3PtWJ_->SetTitle("Mu1 tight, Mu2 loose, Mu1 p_{T} > 45, Mu2 p_{T} > 15, #DeltaR(Mu1,Mu2) < 1.5, Iso < 1.5");
+  FinalMu3PtLargestWJ_->SetTitle("Mu1 tight, Mu2 loose, Mu1 p_{T} > 45, Mu2 p_{T} > 15, #DeltaR(Mu1,Mu2) < 1.5, Iso < 1.5");
+  FinalMu3SizeWJ_->SetTitle("Mu1 tight, Mu2 loose, Mu1 p_{T} > 45, Mu2 p_{T} > 15, #DeltaR(Mu1,Mu2) < 1.5, Iso < 1.5");
+  FinalDRMu3Mu1WJ_->SetTitle("Mu1 tight, Mu2 loose, Mu1 p_{T} > 45, Mu2 p_{T} > 15, #DeltaR(Mu1,Mu2) < 1.5, Iso < 1.5");
+  FinalDRMu3Mu2WJ_->SetTitle("Mu1 tight, Mu2 loose, Mu1 p_{T} > 45, Mu2 p_{T} > 15, #DeltaR(Mu1,Mu2) < 1.5, Iso < 1.5");
+  FinalClosetsdRWJ_->SetTitle("Mu1 tight, Mu2 loose, Mu1 p_{T} > 45, Mu2 p_{T} > 15, #DeltaR(Mu1,Mu2) < 1.5, Iso < 1.5");
+  FinalMu3IsoWJ_->SetTitle("Mu1 tight, Mu2 loose, Mu1 p_{T} > 45, Mu2 p_{T} > 15, #DeltaR(Mu1,Mu2) < 1.5, Iso < 1.5");
+  
+  FinalMu3PtDY_->SetTitle("Mu1 tight, Mu2 loose, Mu1 p_{T} > 45, Mu2 p_{T} > 15, #DeltaR(Mu1,Mu2) < 1.5, Iso < 1.5");
+  FinalMu3PtLargestDY_->SetTitle("Mu1 tight, Mu2 loose, Mu1 p_{T} > 45, Mu2 p_{T} > 15, #DeltaR(Mu1,Mu2) < 1.5, Iso < 1.5");
+  FinalMu3SizeDY_->SetTitle("Mu1 tight, Mu2 loose, Mu1 p_{T} > 45, Mu2 p_{T} > 15, #DeltaR(Mu1,Mu2) < 1.5, Iso < 1.5");
+  FinalDRMu3Mu1DY_->SetTitle("Mu1 tight, Mu2 loose, Mu1 p_{T} > 45, Mu2 p_{T} > 15, #DeltaR(Mu1,Mu2) < 1.5, Iso < 1.5");
+  FinalDRMu3Mu2DY_->SetTitle("Mu1 tight, Mu2 loose, Mu1 p_{T} > 45, Mu2 p_{T} > 15, #DeltaR(Mu1,Mu2) < 1.5, Iso < 1.5");
+  FinalClosetsdRDY_->SetTitle("Mu1 tight, Mu2 loose, Mu1 p_{T} > 45, Mu2 p_{T} > 15, #DeltaR(Mu1,Mu2) < 1.5, Iso < 1.5");
+  FinalMu3IsoDY_->SetTitle("Mu1 tight, Mu2 loose, Mu1 p_{T} > 45, Mu2 p_{T} > 15, #DeltaR(Mu1,Mu2) < 1.5, Iso < 1.5");
+  
+  FinalMu3PtSig_->SetTitle("Mu1 tight, Mu2 loose, Mu1 p_{T} > 45, Mu2 p_{T} > 15, #DeltaR(Mu1,Mu2) < 1.5, Iso < 1.5");
+  FinalMu3PtLargestSig_->SetTitle("Mu1 tight, Mu2 loose, Mu1 p_{T} > 45, Mu2 p_{T} > 15, #DeltaR(Mu1,Mu2) < 1.5, Iso < 1.5");
+  FinalMu3SizeSig_->SetTitle("Mu1 tight, Mu2 loose, Mu1 p_{T} > 45, Mu2 p_{T} > 15, #DeltaR(Mu1,Mu2) < 1.5, Iso < 1.5");
+  FinalDRMu3Mu1Sig_->SetTitle("Mu1 tight, Mu2 loose, Mu1 p_{T} > 45, Mu2 p_{T} > 15, #DeltaR(Mu1,Mu2) < 1.5, Iso < 1.5");
+  FinalDRMu3Mu2Sig_->SetTitle("Mu1 tight, Mu2 loose, Mu1 p_{T} > 45, Mu2 p_{T} > 15, #DeltaR(Mu1,Mu2) < 1.5, Iso < 1.5");
+  FinalClosetsdRSig_->SetTitle("Mu1 tight, Mu2 loose, Mu1 p_{T} > 45, Mu2 p_{T} > 15, #DeltaR(Mu1,Mu2) < 1.5, Iso < 1.5");
+  FinalMu3IsoSig_->SetTitle("Mu1 tight, Mu2 loose, Mu1 p_{T} > 45, Mu2 p_{T} > 15, #DeltaR(Mu1,Mu2) < 1.5, Iso < 1.5");
+
+  FinalMu3PtSigBig_->SetTitle("Mu1 tight, Mu2 loose, Mu1 p_{T} > 45, Mu2 p_{T} > 15, #DeltaR(Mu1,Mu2) < 1.5, Iso < 1.5");
+  FinalMu3PtLargestSigBig_->SetTitle("Mu1 tight, Mu2 loose, Mu1 p_{T} > 45, Mu2 p_{T} > 15, #DeltaR(Mu1,Mu2) < 1.5, Iso < 1.5");
+  FinalMu3SizeSigBig_->SetTitle("Mu1 tight, Mu2 loose, Mu1 p_{T} > 45, Mu2 p_{T} > 15, #DeltaR(Mu1,Mu2) < 1.5, Iso < 1.5");
+  FinalDRMu3Mu1SigBig_->SetTitle("Mu1 tight, Mu2 loose, Mu1 p_{T} > 45, Mu2 p_{T} > 15, #DeltaR(Mu1,Mu2) < 1.5, Iso < 1.5");
+  FinalDRMu3Mu2SigBig_->SetTitle("Mu1 tight, Mu2 loose, Mu1 p_{T} > 45, Mu2 p_{T} > 15, #DeltaR(Mu1,Mu2) < 1.5, Iso < 1.5");
+  FinalClosetsdRSigBig_->SetTitle("Mu1 tight, Mu2 loose, Mu1 p_{T} > 45, Mu2 p_{T} > 15, #DeltaR(Mu1,Mu2) < 1.5, Iso < 1.5");
+  FinalMu3IsoSigBig_->SetTitle("Mu1 tight, Mu2 loose, Mu1 p_{T} > 45, Mu2 p_{T} > 15, #DeltaR(Mu1,Mu2) < 1.5, Iso < 1.5");
+
+  //Set Line Width
+  FinalMu3PtTT_->SetLineWidth(2);
+  FinalMu3PtLargestTT_->SetLineWidth(2);
+  FinalMu3SizeTT_->SetLineWidth(2);
+  FinalDRMu3Mu1TT_->SetLineWidth(2);
+  FinalDRMu3Mu2TT_->SetLineWidth(2);
+  FinalClosetsdRTT_->SetLineWidth(2);
+  FinalMu3IsoTT_->SetLineWidth(2);
+  
+  FinalMu3PtWJ_->SetLineWidth(2);
+  FinalMu3PtLargestWJ_->SetLineWidth(2);
+  FinalMu3SizeWJ_->SetLineWidth(2);
+  FinalDRMu3Mu1WJ_->SetLineWidth(2);
+  FinalDRMu3Mu2WJ_->SetLineWidth(2);
+  FinalClosetsdRWJ_->SetLineWidth(2);
+  FinalMu3IsoWJ_->SetLineWidth(2);
+  
+  FinalMu3PtDY_->SetLineWidth(2);
+  FinalMu3PtLargestDY_->SetLineWidth(2);
+  FinalMu3SizeDY_->SetLineWidth(2);
+  FinalDRMu3Mu1DY_->SetLineWidth(2);
+  FinalDRMu3Mu2DY_->SetLineWidth(2);
+  FinalClosetsdRDY_->SetLineWidth(2);
+  FinalMu3IsoDY_->SetLineWidth(2);
+
+  FinalMu3PtSig_->SetLineWidth(2);
+  FinalMu3PtLargestSig_->SetLineWidth(2);
+  FinalMu3SizeSig_->SetLineWidth(2);
+  FinalDRMu3Mu1Sig_->SetLineWidth(2);
+  FinalDRMu3Mu2Sig_->SetLineWidth(2);
+  FinalClosetsdRSig_->SetLineWidth(2);
+  FinalMu3IsoSig_->SetLineWidth(2);
+
+  FinalMu3PtSigBig_->SetLineWidth(2);
+  FinalMu3PtLargestSigBig_->SetLineWidth(2);
+  FinalMu3SizeSigBig_->SetLineWidth(2);
+  FinalDRMu3Mu1SigBig_->SetLineWidth(2);
+  FinalDRMu3Mu2SigBig_->SetLineWidth(2);
+  FinalClosetsdRSigBig_->SetLineWidth(2);
+  FinalMu3IsoSigBig_->SetLineWidth(2);
+
+  PtMu3vsIsoLargestPtTT_->SetTitle("TTBar");
+  PtMu3vsIsoTT_->SetTitle("TTBar");
+  TTh2_->SetTitle("TTBar");
+  PtMu3vsIsoLargestPtWJ_->SetTitle("WJets");
+  PtMu3vsIsoWJ_->SetTitle("WJets");
+  WJh2_->SetTitle("WJets");
+  PtMu3vsIsoLargestPtDY_->SetTitle("DY M=50");
+  PtMu3vsIsoDY_->SetTitle("DY M=50");
+  DYh2_->SetTitle("DY M=50");
+  PtMu3vsIsoLargestPtSig_->SetTitle("M_{h} = 125");
+  PtMu3vsIsoSig_->SetTitle("M_{h} = 125");
+  Sigh2_->SetTitle("M_{h} = 125");
+  PtMu3vsIsoLargestPtSigBig_->SetTitle("M_{h} = 750");
+  PtMu3vsIsoSigBig_->SetTitle("M_{h} = 750");
+  SigBigh2_->SetTitle("M_{h} = 750");
+
+cout << "Attributes set." << endl;  
+
+  //Making the Legend
+  leg = new TLegend(0.1,0.7,0.25,0.9);
+  leg->AddEntry(FinalMu3PtTT_, "TTbar","L");
+  leg->AddEntry(FinalMu3PtDY_, "DY","L");
+  leg->AddEntry(FinalMu3PtWJ_, "WJets","L");
+  leg->AddEntry(FinalMu3PtSig_,"Signal H125","L");
+  leg->AddEntry(FinalMu3PtSigBig_,"Signal H750","L");
+
+  //Drawing all of the Overlaid Lepton Matched HIstograms
+  Mu3PtCanvasTOT_.cd();
+  FinalMu3PtTT_->Draw();
+  FinalMu3PtWJ_->Draw("SAME");
+  FinalMu3PtDY_->Draw("SAME");
+  FinalMu3PtSig_->Draw("SAME");
+  FinalMu3PtSigBig_->Draw("SAME");
+  leg->Draw();
+
+  Mu3PtLargestCanvasTOT_.cd();
+  Mu3PtCanvasTOT_.cd();
+  FinalMu3PtLargestTT_->Draw();
+  FinalMu3PtLargestWJ_->Draw("SAME");
+  FinalMu3PtLargestDY_->Draw("SAME");
+  FinalMu3PtLargestSig_->Draw("SAME");
+  FinalMu3PtLargestSigBig_->Draw("SAME");
+  leg->Draw();
+
+  Mu3SizeCanvasTOT_.cd();
+  FinalMu3SizeTT_->Draw();
+  FinalMu3SizeWJ_->Draw("SAME");
+  FinalMu3SizeDY_->Draw("SAME");
+  FinalMu3SizeSig_->Draw("SAME");
+  FinalMu3SizeSigBig_->Draw("SAME");
+  leg->Draw();
+
+  DRMu3Mu1CanvasTOT_.cd();
+  FinalDRMu3Mu1TT_->Draw();
+  FinalDRMu3Mu1WJ_->Draw("SAME");
+  FinalDRMu3Mu1DY_->Draw("SAME");
+  FinalDRMu3Mu1Sig_->Draw("SAME");
+  FinalDRMu3Mu1SigBig_->Draw("SAME");
+  leg->Draw();
+
+  DRMu3Mu2CanvasTOT_.cd();
+  FinalDRMu3Mu2TT_->Draw();
+  FinalDRMu3Mu2WJ_->Draw("SAME");
+  FinalDRMu3Mu2DY_->Draw("SAME");
+  FinalDRMu3Mu2Sig_->Draw("SAME");
+  FinalDRMu3Mu2SigBig_->Draw("SAME");
+  leg->Draw();
+
+  ClosetsdRCanvasTOT_.cd();
+  FinalClosetsdRTT_->Draw();
+  FinalClosetsdRWJ_->Draw("SAME");
+  FinalClosetsdRDY_->Draw("SAME");
+  FinalClosetsdRSig_->Draw("SAME");
+  FinalClosetsdRSigBig_->Draw("SAME");
+  leg->Draw();
+
+  Mu3IsoCanvasTOT_.cd();
+  FinalMu3IsoTT_->Draw();
+  FinalMu3IsoWJ_->Draw("SAME");
+  FinalMu3IsoDY_->Draw("SAME");
+  FinalMu3IsoSig_->Draw("SAME");
+  FinalMu3IsoSigBig_->Draw("SAME");
+  leg->Draw();
+
+  Mu3PtvsIsoCanvasTOT_.cd(1);
+  PtMu3vsIsoTT_->Draw("COLZ");
+  Mu3PtvsIsoCanvasTOT_.cd(2);
+  PtMu3vsIsoWJ_->Draw("COLZ");
+  Mu3PtvsIsoCanvasTOT_.cd(3);
+  PtMu3vsIsoDY_->Draw("COLZ");
+  Mu3PtvsIsoCanvasTOT_.cd(4);
+  PtMu3vsIsoSig_->Draw("COLZ");
+  Mu3PtvsIsoCanvasTOT_.cd(5);
+  PtMu3vsIsoSigBig_->Draw("COLZ");
+
+  Mu3PtLargestvsIsoCanvasTOT_.cd(1);
+//  PtMu3vsIsoLargestPtTT_->Draw("COLZ");
+  TTh2_->Draw("COLZ");
+  Mu3PtLargestvsIsoCanvasTOT_.cd(2);
+//  PtMu3vsIsoLargestPtWJ_->Draw("COLZ");
+  WJh2_->Draw("COLZ");
+  Mu3PtLargestvsIsoCanvasTOT_.cd(3);
+//  PtMu3vsIsoLargestPtDY_->Draw("COLZ");
+  DYh2_->Draw("COLZ");
+  Mu3PtLargestvsIsoCanvasTOT_.cd(4);
+//  PtMu3vsIsoLargestPtSig_->Draw("COLZ");
+  Sigh2_->Draw("COLZ");
+  Mu3PtLargestvsIsoCanvasTOT_.cd(5);
+//  PtMu3vsIsoLargestPtSigBig_->Draw("COLZ");
+  SigBigh2_->Draw("COLZ");
+
+cout << "Histograms Drawn" << endl;
+
+  outFile->cd();
+  Mu3PtCanvasTOT_.Write();
+  Mu3PtLargestCanvasTOT_.Write();
+  Mu3SizeCanvasTOT_.Write();
+  DRMu3Mu1CanvasTOT_.Write();
+  DRMu3Mu2CanvasTOT_.Write();
+  ClosetsdRCanvasTOT_.Write();
+  Mu3IsoCanvasTOT_.Write();
+
+  Mu3PtLargestvsIsoCanvasTOT_.Write();
+  Mu3PtvsIsoCanvasTOT_.Write();
+  outFile->Write();
+  outFile->Close();
+cout << "end" << endl;
+
+}//rootMacro_BBA_combine
