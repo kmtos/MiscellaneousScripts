@@ -26,61 +26,61 @@ void rootMacro_FakeRateInfo_VectorTwoFunc()
   gStyle->SetEndErrorSize(7);
 
   //Old DMs
-  TFile infileTTNew   ("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_TT_New_BDScan_DEC20.root");
-  TFile infileTTNewMVA("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_TT_NewMVA_BDScan_DEC20.root");
-  TFile infileTTOld   ("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_TT_Old_BDScan_DEC20.root");
-  TFile infileTTOldMVA("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_TT_OldMVA_BDScan_DEC20.root");
+  TFile infileTTNew   ("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_TT_New_BDiscvsRaw_DEC29.root");
+  TFile infileTTNewMVA("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_TT_NewMVA_BDiscvsRaw_DEC29.root");
+  TFile infileTTOld   ("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_TT_Old_BDiscvsRaw_DEC29.root");
+  TFile infileTTOldMVA("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_TT_OldMVA_BDiscvsRaw_DEC29.root");
 
-  TFile infileWJNew   ("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_WJ_New_BDScan_DEC20.root");
-  TFile infileWJNewMVA("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_WJ_NewMVA_BDScan_DEC20.root");
-  TFile infileWJOld   ("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_WJ_Old_BDScan_DEC20.root");
-  TFile infileWJOldMVA("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_WJ_OldMVA_BDScan_DEC20.root");
+  TFile infileWJNew   ("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_WJ_New_BDiscvsRaw_DEC29.root");
+  TFile infileWJNewMVA("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_WJ_NewMVA_BDiscvsRaw_DEC29.root");
+  TFile infileWJOld   ("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_WJ_Old_BDiscvsRaw_DEC29.root");
+  TFile infileWJOldMVA("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_WJ_OldMVA_BDiscvsRaw_DEC29.root");
 
-  TFile infileDYNew   ("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_DY_New_BDScan_DEC20.root");
-  TFile infileDYNewMVA("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_DY_NewMVA_BDScan_DEC20.root");
-  TFile infileDYOld   ("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_DY_Old_BDScan_DEC20.root");
-  TFile infileDYOldMVA("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_DY_OldMVA_BDScan_DEC20.root");
+  TFile infileDYNew   ("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_DY_New_BDiscvsRaw_DEC29.root");
+  TFile infileDYNewMVA("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_DY_NewMVA_BDiscvsRaw_DEC29.root");
+  TFile infileDYOld   ("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_DY_Old_BDiscvsRaw_DEC29.root");
+  TFile infileDYOldMVA("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_DY_OldMVA_BDiscvsRaw_DEC29.root");
 
-  TFile infileDYLowNew   ("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_DYLow_New_BDScan_DEC20.root");
-  TFile infileDYLowNewMVA("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_DYLow_NewMVA_BDScan_DEC20.root");
-  TFile infileDYLowOld   ("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_DYLow_Old_BDScan_DEC20.root");
-  TFile infileDYLowOldMVA("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_DYLow_OldMVA_BDScan_DEC20.root");
+  TFile infileDYLowNew   ("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_DYLow_New_BDiscvsRaw_DEC29.root");
+  TFile infileDYLowNewMVA("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_DYLow_NewMVA_BDiscvsRaw_DEC29.root");
+  TFile infileDYLowOld   ("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_DYLow_Old_BDiscvsRaw_DEC29.root");
+  TFile infileDYLowOldMVA("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_DYLow_OldMVA_BDiscvsRaw_DEC29.root");
    
-  TFile infileWZNew   ("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_WZ_New_BDScan_DEC20.root");
-  TFile infileWZNewMVA("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_WZ_NewMVA_BDScan_DEC20.root");
-  TFile infileWZOld   ("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_WZ_Old_BDScan_DEC20.root");
-  TFile infileWZOldMVA("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_WZ_OldMVA_BDScan_DEC20.root");
+  TFile infileWZNew   ("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_WZ_New_BDiscvsRaw_DEC29.root");
+  TFile infileWZNewMVA("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_WZ_NewMVA_BDiscvsRaw_DEC29.root");
+  TFile infileWZOld   ("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_WZ_Old_BDiscvsRaw_DEC29.root");
+  TFile infileWZOldMVA("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_WZ_OldMVA_BDiscvsRaw_DEC29.root");
 
-  TFile infileZZNew   ("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_ZZ_New_BDScan_DEC20.root");
-  TFile infileZZNewMVA("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_ZZ_NewMVA_BDScan_DEC20.root");
-  TFile infileZZOld   ("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_ZZ_Old_BDScan_DEC20.root");
-  TFile infileZZOldMVA("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_ZZ_OldMVA_BDScan_DEC20.root");
+  TFile infileZZNew   ("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_ZZ_New_BDiscvsRaw_DEC29.root");
+  TFile infileZZNewMVA("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_ZZ_NewMVA_BDiscvsRaw_DEC29.root");
+  TFile infileZZOld   ("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_ZZ_Old_BDiscvsRaw_DEC29.root");
+  TFile infileZZOldMVA("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_ZZ_OldMVA_BDiscvsRaw_DEC29.root");
 
-  TFile infileH125a19New   ("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_H125a19_New_BDScan_DEC20.root");
-  TFile infileH125a19NewMVA("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_H125a19_NewMVA_BDScan_DEC20.root");
-  TFile infileH125a19Old   ("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_H125a19_Old_BDScan_DEC20.root");
-  TFile infileH125a19OldMVA("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_H125a19_OldMVA_BDScan_DEC20.root");
+  TFile infileH125a19New   ("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_H125a19_New_BDiscvsRaw_DEC29.root");
+  TFile infileH125a19NewMVA("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_H125a19_NewMVA_BDiscvsRaw_DEC29.root");
+  TFile infileH125a19Old   ("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_H125a19_Old_BDiscvsRaw_DEC29.root");
+  TFile infileH125a19OldMVA("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_H125a19_OldMVA_BDiscvsRaw_DEC29.root");
 
-  TFile infileH125a9New   ("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_H125a9_New_BDScan_DEC20.root");
-  TFile infileH125a9NewMVA("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_H125a9_NewMVA_BDScan_DEC20.root");
-  TFile infileH125a9Old   ("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_H125a9_Old_BDScan_DEC20.root");
-  TFile infileH125a9OldMVA("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_H125a9_OldMVA_BDScan_DEC20.root");
+  TFile infileH125a9New   ("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_H125a9_New_BDiscvsRaw_DEC29.root");
+  TFile infileH125a9NewMVA("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_H125a9_NewMVA_BDiscvsRaw_DEC29.root");
+  TFile infileH125a9Old   ("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_H125a9_Old_BDiscvsRaw_DEC29.root");
+  TFile infileH125a9OldMVA("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_H125a9_OldMVA_BDiscvsRaw_DEC29.root");
 
-  TFile infileH125a5New   ("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_H125a5_New_BDScan_DEC20.root");
-  TFile infileH125a5NewMVA("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_H125a5_NewMVA_BDScan_DEC20.root");
-  TFile infileH125a5Old   ("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_H125a5_Old_BDScan_DEC20.root");
-  TFile infileH125a5OldMVA("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_H125a5_OldMVA_BDScan_DEC20.root");
+  TFile infileH125a5New   ("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_H125a5_New_BDiscvsRaw_DEC29.root");
+  TFile infileH125a5NewMVA("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_H125a5_NewMVA_BDiscvsRaw_DEC29.root");
+  TFile infileH125a5Old   ("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_H125a5_Old_BDiscvsRaw_DEC29.root");
+  TFile infileH125a5OldMVA("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_H125a5_OldMVA_BDiscvsRaw_DEC29.root");
 
-  TFile infileH750a9New   ("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_H750a9_New_BDScan_DEC20.root");
-  TFile infileH750a9NewMVA("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_H750a9_NewMVA_BDScan_DEC20.root");
-  TFile infileH750a9Old   ("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_H750a9_Old_BDScan_DEC20.root");
-  TFile infileH750a9OldMVA("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_H750a9_OldMVA_BDScan_DEC20.root");
+  TFile infileH750a9New   ("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_H750a9_New_BDiscvsRaw_DEC29.root");
+  TFile infileH750a9NewMVA("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_H750a9_NewMVA_BDiscvsRaw_DEC29.root");
+  TFile infileH750a9Old   ("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_H750a9_Old_BDiscvsRaw_DEC29.root");
+  TFile infileH750a9OldMVA("/home/kyletos/Downloads/RootFiles/SkimStudies/Analyzed/FINAL_H750a9_OldMVA_BDiscvsRaw_DEC29.root");
 
 
-  TFile *outFile = new TFile("/home/kyletos/Downloads/RootFiles/CombinedPlots/comb_FakeRateInfo_BDScan_DEC20.root", "RECREATE");
+  TFile *outFile = new TFile("/home/kyletos/Downloads/RootFiles/CombinedPlots/comb_FakeRateInfo_BDiscvsRaw_DEC29.root", "RECREATE");
 
   ofstream infoFile;
-  infoFile.open ("/home/kyletos/Downloads/RootFiles/CombinedPlots/FakeRateInfo_BDScan_DEC20.txt");
+  infoFile.open ("/home/kyletos/Downloads/RootFiles/CombinedPlots/FakeRateInfo_BDiscvsRaw_DEC29.txt");
 
   //////////////////////////////
   //  Scaling xsec calculations
@@ -181,22 +181,22 @@ void rootMacro_FakeRateInfo_VectorTwoFunc()
   string TTName = "TT", DYName = "DY" , DYLowName = "DYLow", WJName = "WJ", H125a19Name = "H125a19", H125a9Name = "H125a9", H125a5Name = "H125a5", H750a9Name = "H750a9", WZName = "WZ", ZZName = "ZZ";
   string  NewMVA = "NewMVA", New = "New", OldMVA = "OldMVA", Old = "Old";
 
-  int CutDYNewMVA[22], CutDYLowNewMVA[22], CutTTNewMVA[22], CutWJNewMVA[22],  CutWZNewMVA[22], CutZZNewMVA[22], CutH125a19NewMVA[22], CutH125a9NewMVA[22], CutH125a5NewMVA[22], CutH750a9NewMVA[22];
-  int CutDYNew[22], CutDYLowNew[22], CutTTNew[22], CutWJNew[22], CutWZNew[22], CutZZNew[22], CutH125a19New[22], CutH125a9New[22], CutH125a5New[22], CutH750a9New[22];
-  int CutDYOldMVA[22], CutDYLowOldMVA[22], CutTTOldMVA[22], CutWJOldMVA[22], CutWZOldMVA[22], CutZZOldMVA[22], CutH125a19OldMVA[22], CutH125a9OldMVA[22], CutH125a5OldMVA[22], CutH750a9OldMVA[22];
-  int CutDYOld[22], CutDYLowOld[22], CutTTOld[22], CutWJOld[22], CutWZOld[22], CutZZOld[22], CutH125a19Old[22], CutH125a9Old[22], CutH125a5Old[22], CutH750a9Old[22];
+  int CutDYNewMVA[24], CutDYLowNewMVA[24], CutTTNewMVA[24], CutWJNewMVA[24],  CutWZNewMVA[24], CutZZNewMVA[24], CutH125a19NewMVA[24], CutH125a9NewMVA[24], CutH125a5NewMVA[24], CutH750a9NewMVA[24];
+  int CutDYNew[24], CutDYLowNew[24], CutTTNew[24], CutWJNew[24], CutWZNew[24], CutZZNew[24], CutH125a19New[24], CutH125a9New[24], CutH125a5New[24], CutH750a9New[24];
+  int CutDYOldMVA[24], CutDYLowOldMVA[24], CutTTOldMVA[24], CutWJOldMVA[24], CutWZOldMVA[24], CutZZOldMVA[24], CutH125a19OldMVA[24], CutH125a9OldMVA[24], CutH125a5OldMVA[24], CutH750a9OldMVA[24];
+  int CutDYOld[24], CutDYLowOld[24], CutTTOld[24], CutWJOld[24], CutWZOld[24], CutZZOld[24], CutH125a19Old[24], CutH125a9Old[24], CutH125a5Old[24], CutH750a9Old[24];
 
   int CountDYNewMVA[5], CountDYLowNewMVA[5], CountTTNewMVA[5], CountWJNewMVA[5], CountWZNewMVA[5], CountZZNewMVA[5], CountH125a19NewMVA[5], CountH125a9NewMVA[5], CountH125a5NewMVA[5], CountH750a9NewMVA[5];
   int CountDYNew[5], CountDYLowNew[5], CountTTNew[5], CountWJNew[5], CountWZNew[5], CountZZNew[5], CountH125a19New[5], CountH125a9New[5], CountH125a5New[5], CountH750a9New[5]; 
   int CountDYOldMVA[5], CountDYLowOldMVA[5], CountTTOldMVA[5], CountWJOldMVA[5], CountWZOldMVA[5], CountZZOldMVA[5], CountH125a19OldMVA[5], CountH125a9OldMVA[5], CountH125a5OldMVA[5], CountH750a9OldMVA[5];
   int CountDYOld[5], CountDYLowOld[5], CountTTOld[5], CountWJOld[5], CountWZOld[5], CountZZOld[5], CountH125a19Old[5], CountH125a9Old[5], CountH125a5Old[5], CountH750a9Old[5]; 
   
-  string CutLabelsBack[22], CutLabelsSig[11];
+  string CutLabelsBack[24], CutLabelsSig[13];
 
-  for (int i=0; i < 11; i++)
+  for (int i=0; i < 13; i++)
     CutLabelsSig[i] = "";
   //Initialize Arrays
-  for (int i=0;i < 22; i++)
+  for (int i=0;i < 24; i++)
   {
     CutDYNewMVA[i] = -1;
     CutDYNew[i] = -1;
@@ -337,6 +337,65 @@ void rootMacro_FakeRateInfo_VectorTwoFunc()
 
 std::cout << "Formatting and Drawing done. Writing cut output." << std::endl;
 
+  /////////////////////////////////////////////
+  // Background Errors
+  ////////////////////////////////////////////
+  double backErr1Old = pow(sqrt(CutDYOld[1])*scaleDY50,2) + pow(sqrt(CutDYLowOld[1])*scaleDYLow,2) + pow(sqrt(CutTTOld[1])*scaleTT,2) + pow(sqrt(CutWZOld[1])*scaleWZ,2) + pow(sqrt(CutZZOld[1])*scaleZZ,2) + pow(sqrt(CutWJOld[1])*scaleWJ,2) + pow(sqrt(CutDYOld[10])*scaleDY50,2) + pow(sqrt(CutDYLowOld[10])*scaleDYLow,2) + pow(sqrt(CutTTOld[10])*scaleTT,2) + pow(sqrt(CutWZOld[10])*scaleWZ,2) + pow(sqrt(CutZZOld[10])*scaleZZ,2) + pow(sqrt(CutWJOld[10])*scaleWJ,2);
+  double backErr2Old = pow(sqrt(CutDYOld[2])*scaleDY50,2) + pow(sqrt(CutDYLowOld[2])*scaleDYLow,2) + pow(sqrt(CutTTOld[2])*scaleTT,2) + pow(sqrt(CutWZOld[2])*scaleWZ,2) + pow(sqrt(CutZZOld[2])*scaleZZ,2) + pow(sqrt(CutWJOld[2])*scaleWJ,2) + pow(sqrt(CutDYOld[11])*scaleDY50,2) + pow(sqrt(CutDYLowOld[11])*scaleDYLow,2) + pow(sqrt(CutTTOld[11])*scaleTT,2) + pow(sqrt(CutWZOld[11])*scaleWZ,2) + pow(sqrt(CutZZOld[11])*scaleZZ,2) + pow(sqrt(CutWJOld[11])*scaleWJ,2);
+  double backErr3Old = pow(sqrt(CutDYOld[3])*scaleDY50,2) + pow(sqrt(CutDYLowOld[3])*scaleDYLow,2) + pow(sqrt(CutTTOld[3])*scaleTT,2) + pow(sqrt(CutWZOld[3])*scaleWZ,2) + pow(sqrt(CutZZOld[3])*scaleZZ,2) + pow(sqrt(CutWJOld[3])*scaleWJ,2) + pow(sqrt(CutDYOld[12])*scaleDY50,2) + pow(sqrt(CutDYLowOld[12])*scaleDYLow,2) + pow(sqrt(CutTTOld[12])*scaleTT,2) + pow(sqrt(CutWZOld[12])*scaleWZ,2) + pow(sqrt(CutZZOld[12])*scaleZZ,2) + pow(sqrt(CutWJOld[12])*scaleWJ,2);
+  double backErr4Old = pow(sqrt(CutDYOld[4])*scaleDY50,2) + pow(sqrt(CutDYLowOld[4])*scaleDYLow,2) + pow(sqrt(CutTTOld[4])*scaleTT,2) + pow(sqrt(CutWZOld[4])*scaleWZ,2) + pow(sqrt(CutZZOld[4])*scaleZZ,2) + pow(sqrt(CutWJOld[4])*scaleWJ,2) + pow(sqrt(CutDYOld[13])*scaleDY50,2) + pow(sqrt(CutDYLowOld[13])*scaleDYLow,2) + pow(sqrt(CutTTOld[13])*scaleTT,2) + pow(sqrt(CutWZOld[13])*scaleWZ,2) + pow(sqrt(CutZZOld[13])*scaleZZ,2) + pow(sqrt(CutWJOld[13])*scaleWJ,2);
+  double backErr5Old = pow(sqrt(CutDYOld[5])*scaleDY50,2) + pow(sqrt(CutDYLowOld[5])*scaleDYLow,2) + pow(sqrt(CutTTOld[5])*scaleTT,2) + pow(sqrt(CutWZOld[5])*scaleWZ,2) + pow(sqrt(CutZZOld[5])*scaleZZ,2) + pow(sqrt(CutWJOld[5])*scaleWJ,2) + pow(sqrt(CutDYOld[14])*scaleDY50,2) + pow(sqrt(CutDYLowOld[14])*scaleDYLow,2) + pow(sqrt(CutTTOld[14])*scaleTT,2) + pow(sqrt(CutWZOld[14])*scaleWZ,2) + pow(sqrt(CutZZOld[14])*scaleZZ,2) + pow(sqrt(CutWJOld[14])*scaleWJ,2);
+  double backErr6Old = pow(sqrt(CutDYOld[6])*scaleDY50,2) + pow(sqrt(CutDYLowOld[6])*scaleDYLow,2) + pow(sqrt(CutTTOld[6])*scaleTT,2) + pow(sqrt(CutWZOld[6])*scaleWZ,2) + pow(sqrt(CutZZOld[6])*scaleZZ,2) + pow(sqrt(CutWJOld[6])*scaleWJ,2) + pow(sqrt(CutDYOld[15])*scaleDY50,2) + pow(sqrt(CutDYLowOld[15])*scaleDYLow,2) + pow(sqrt(CutTTOld[15])*scaleTT,2) + pow(sqrt(CutWZOld[15])*scaleWZ,2) + pow(sqrt(CutZZOld[15])*scaleZZ,2) + pow(sqrt(CutWJOld[15])*scaleWJ,2);
+  double backErr7Old = pow(sqrt(CutDYOld[7])*scaleDY50,2) + pow(sqrt(CutDYLowOld[7])*scaleDYLow,2) + pow(sqrt(CutTTOld[7])*scaleTT,2) + pow(sqrt(CutWZOld[7])*scaleWZ,2) + pow(sqrt(CutZZOld[7])*scaleZZ,2) + pow(sqrt(CutWJOld[7])*scaleWJ,2) + pow(sqrt(CutDYOld[16])*scaleDY50,2) + pow(sqrt(CutDYLowOld[16])*scaleDYLow,2) + pow(sqrt(CutTTOld[16])*scaleTT,2) + pow(sqrt(CutWZOld[16])*scaleWZ,2) + pow(sqrt(CutZZOld[16])*scaleZZ,2) + pow(sqrt(CutWJOld[16])*scaleWJ,2);
+  double backErr8Old = pow(sqrt(CutDYOld[8])*scaleDY50,2) + pow(sqrt(CutDYLowOld[8])*scaleDYLow,2) + pow(sqrt(CutTTOld[8])*scaleTT,2) + pow(sqrt(CutWZOld[8])*scaleWZ,2) + pow(sqrt(CutZZOld[8])*scaleZZ,2) + pow(sqrt(CutWJOld[8])*scaleWJ,2) + pow(sqrt(CutDYOld[17])*scaleDY50,2) + pow(sqrt(CutDYLowOld[17])*scaleDYLow,2) + pow(sqrt(CutTTOld[17])*scaleTT,2) + pow(sqrt(CutWZOld[17])*scaleWZ,2) + pow(sqrt(CutZZOld[17])*scaleZZ,2) + pow(sqrt(CutWJOld[17])*scaleWJ,2);
+  double backErr10Old = pow(sqrt(CutDYOld[21])*scaleDY50,2) + pow(sqrt(CutDYLowOld[21])*scaleDYLow,2) + pow(sqrt(CutTTOld[21])*scaleTT,2) + pow(sqrt(CutWZOld[21])*scaleWZ,2) + pow(sqrt(CutZZOld[21])*scaleZZ,2) + pow(sqrt(CutWJOld[21])*scaleWJ,2);
+  double backErr9Old  = pow(sqrt(CutDYOld[20])*scaleDY50,2) + pow(sqrt(CutDYLowOld[20])*scaleDYLow,2) + pow(sqrt(CutTTOld[20])*scaleTT,2) + pow(sqrt(CutWZOld[20])*scaleWZ,2) + pow(sqrt(CutZZOld[20])*scaleZZ,2) + pow(sqrt(CutWJOld[20])*scaleWJ,2);
+  double backErr11Old = pow(sqrt(CutDYOld[22])*scaleDY50,2) + pow(sqrt(CutDYLowOld[22])*scaleDYLow,2) + pow(sqrt(CutTTOld[22])*scaleTT,2) + pow(sqrt(CutWZOld[22])*scaleWZ,2) + pow(sqrt(CutZZOld[22])*scaleZZ,2) + pow(sqrt(CutWJOld[22])*scaleWJ,2);
+  double backErr12Old = pow(sqrt(CutDYOld[23])*scaleDY50,2) + pow(sqrt(CutDYLowOld[23])*scaleDYLow,2) + pow(sqrt(CutTTOld[23])*scaleTT,2) + pow(sqrt(CutWZOld[23])*scaleWZ,2) + pow(sqrt(CutZZOld[23])*scaleZZ,2) + pow(sqrt(CutWJOld[23])*scaleWJ,2);
+
+
+  double backErr1OldMVA = pow(sqrt(CutDYOldMVA[1])*scaleDY50,2) + pow(sqrt(CutDYLowOldMVA[1])*scaleDYLow,2) + pow(sqrt(CutTTOldMVA[1])*scaleTT,2) + pow(sqrt(CutWZOldMVA[1])*scaleWZ,2) + pow(sqrt(CutZZOldMVA[1])*scaleZZ,2) + pow(sqrt(CutWJOldMVA[1])*scaleWJ,2) + pow(sqrt(CutDYOldMVA[10])*scaleDY50,2) + pow(sqrt(CutDYLowOldMVA[10])*scaleDYLow,2) + pow(sqrt(CutTTOldMVA[10])*scaleTT,2) + pow(sqrt(CutWZOldMVA[10])*scaleWZ,2) + pow(sqrt(CutZZOldMVA[10])*scaleZZ,2) + pow(sqrt(CutWJOldMVA[10])*scaleWJ,2);
+  double backErr2OldMVA = pow(sqrt(CutDYOldMVA[2])*scaleDY50,2) + pow(sqrt(CutDYLowOldMVA[2])*scaleDYLow,2) + pow(sqrt(CutTTOldMVA[2])*scaleTT,2) + pow(sqrt(CutWZOldMVA[2])*scaleWZ,2) + pow(sqrt(CutZZOldMVA[2])*scaleZZ,2) + pow(sqrt(CutWJOldMVA[2])*scaleWJ,2) + pow(sqrt(CutDYOldMVA[11])*scaleDY50,2) + pow(sqrt(CutDYLowOldMVA[11])*scaleDYLow,2) + pow(sqrt(CutTTOldMVA[11])*scaleTT,2) + pow(sqrt(CutWZOldMVA[11])*scaleWZ,2) + pow(sqrt(CutZZOldMVA[11])*scaleZZ,2) + pow(sqrt(CutWJOldMVA[11])*scaleWJ,2);
+  double backErr3OldMVA = pow(sqrt(CutDYOldMVA[3])*scaleDY50,2) + pow(sqrt(CutDYLowOldMVA[3])*scaleDYLow,2) + pow(sqrt(CutTTOldMVA[3])*scaleTT,2) + pow(sqrt(CutWZOldMVA[3])*scaleWZ,2) + pow(sqrt(CutZZOldMVA[3])*scaleZZ,2) + pow(sqrt(CutWJOldMVA[3])*scaleWJ,2) + pow(sqrt(CutDYOldMVA[12])*scaleDY50,2) + pow(sqrt(CutDYLowOldMVA[12])*scaleDYLow,2) + pow(sqrt(CutTTOldMVA[12])*scaleTT,2) + pow(sqrt(CutWZOldMVA[12])*scaleWZ,2) + pow(sqrt(CutZZOldMVA[12])*scaleZZ,2) + pow(sqrt(CutWJOldMVA[12])*scaleWJ,2);
+  double backErr4OldMVA = pow(sqrt(CutDYOldMVA[4])*scaleDY50,2) + pow(sqrt(CutDYLowOldMVA[4])*scaleDYLow,2) + pow(sqrt(CutTTOldMVA[4])*scaleTT,2) + pow(sqrt(CutWZOldMVA[4])*scaleWZ,2) + pow(sqrt(CutZZOldMVA[4])*scaleZZ,2) + pow(sqrt(CutWJOldMVA[4])*scaleWJ,2) + pow(sqrt(CutDYOldMVA[13])*scaleDY50,2) + pow(sqrt(CutDYLowOldMVA[13])*scaleDYLow,2) + pow(sqrt(CutTTOldMVA[13])*scaleTT,2) + pow(sqrt(CutWZOldMVA[13])*scaleWZ,2) + pow(sqrt(CutZZOldMVA[13])*scaleZZ,2) + pow(sqrt(CutWJOldMVA[13])*scaleWJ,2);
+  double backErr5OldMVA = pow(sqrt(CutDYOldMVA[5])*scaleDY50,2) + pow(sqrt(CutDYLowOldMVA[5])*scaleDYLow,2) + pow(sqrt(CutTTOldMVA[5])*scaleTT,2) + pow(sqrt(CutWZOldMVA[5])*scaleWZ,2) + pow(sqrt(CutZZOldMVA[5])*scaleZZ,2) + pow(sqrt(CutWJOldMVA[5])*scaleWJ,2) + pow(sqrt(CutDYOldMVA[14])*scaleDY50,2) + pow(sqrt(CutDYLowOldMVA[14])*scaleDYLow,2) + pow(sqrt(CutTTOldMVA[14])*scaleTT,2) + pow(sqrt(CutWZOldMVA[14])*scaleWZ,2) + pow(sqrt(CutZZOldMVA[14])*scaleZZ,2) + pow(sqrt(CutWJOldMVA[14])*scaleWJ,2);
+  double backErr6OldMVA = pow(sqrt(CutDYOldMVA[6])*scaleDY50,2) + pow(sqrt(CutDYLowOldMVA[6])*scaleDYLow,2) + pow(sqrt(CutTTOldMVA[6])*scaleTT,2) + pow(sqrt(CutWZOldMVA[6])*scaleWZ,2) + pow(sqrt(CutZZOldMVA[6])*scaleZZ,2) + pow(sqrt(CutWJOldMVA[6])*scaleWJ,2) + pow(sqrt(CutDYOldMVA[15])*scaleDY50,2) + pow(sqrt(CutDYLowOldMVA[15])*scaleDYLow,2) + pow(sqrt(CutTTOldMVA[15])*scaleTT,2) + pow(sqrt(CutWZOldMVA[15])*scaleWZ,2) + pow(sqrt(CutZZOldMVA[15])*scaleZZ,2) + pow(sqrt(CutWJOldMVA[15])*scaleWJ,2);
+  double backErr7OldMVA = pow(sqrt(CutDYOldMVA[7])*scaleDY50,2) + pow(sqrt(CutDYLowOldMVA[7])*scaleDYLow,2) + pow(sqrt(CutTTOldMVA[7])*scaleTT,2) + pow(sqrt(CutWZOldMVA[7])*scaleWZ,2) + pow(sqrt(CutZZOldMVA[7])*scaleZZ,2) + pow(sqrt(CutWJOldMVA[7])*scaleWJ,2) + pow(sqrt(CutDYOldMVA[16])*scaleDY50,2) + pow(sqrt(CutDYLowOldMVA[16])*scaleDYLow,2) + pow(sqrt(CutTTOldMVA[16])*scaleTT,2) + pow(sqrt(CutWZOldMVA[16])*scaleWZ,2) + pow(sqrt(CutZZOldMVA[16])*scaleZZ,2) + pow(sqrt(CutWJOldMVA[16])*scaleWJ,2);
+  double backErr8OldMVA = pow(sqrt(CutDYOldMVA[8])*scaleDY50,2) + pow(sqrt(CutDYLowOldMVA[8])*scaleDYLow,2) + pow(sqrt(CutTTOldMVA[8])*scaleTT,2) + pow(sqrt(CutWZOldMVA[8])*scaleWZ,2) + pow(sqrt(CutZZOldMVA[8])*scaleZZ,2) + pow(sqrt(CutWJOldMVA[8])*scaleWJ,2) + pow(sqrt(CutDYOldMVA[17])*scaleDY50,2) + pow(sqrt(CutDYLowOldMVA[17])*scaleDYLow,2) + pow(sqrt(CutTTOldMVA[17])*scaleTT,2) + pow(sqrt(CutWZOldMVA[17])*scaleWZ,2) + pow(sqrt(CutZZOldMVA[17])*scaleZZ,2) + pow(sqrt(CutWJOldMVA[17])*scaleWJ,2);
+  double backErr10OldMVA = pow(sqrt(CutDYOldMVA[21])*scaleDY50,2) + pow(sqrt(CutDYLowOldMVA[21])*scaleDYLow,2) + pow(sqrt(CutTTOldMVA[21])*scaleTT,2) + pow(sqrt(CutWZOldMVA[21])*scaleWZ,2) + pow(sqrt(CutZZOldMVA[21])*scaleZZ,2) + pow(sqrt(CutWJOldMVA[21])*scaleWJ,2);
+  double backErr9OldMVA  = pow(sqrt(CutDYOldMVA[20])*scaleDY50,2) + pow(sqrt(CutDYLowOldMVA[20])*scaleDYLow,2) + pow(sqrt(CutTTOldMVA[20])*scaleTT,2) + pow(sqrt(CutWZOldMVA[20])*scaleWZ,2) + pow(sqrt(CutZZOldMVA[20])*scaleZZ,2) + pow(sqrt(CutWJOldMVA[20])*scaleWJ,2);
+  double backErr11OldMVA = pow(sqrt(CutDYOldMVA[22])*scaleDY50,2) + pow(sqrt(CutDYLowOldMVA[22])*scaleDYLow,2) + pow(sqrt(CutTTOldMVA[22])*scaleTT,2) + pow(sqrt(CutWZOldMVA[22])*scaleWZ,2) + pow(sqrt(CutZZOldMVA[22])*scaleZZ,2) + pow(sqrt(CutWJOldMVA[22])*scaleWJ,2);
+  double backErr12OldMVA = pow(sqrt(CutDYOldMVA[23])*scaleDY50,2) + pow(sqrt(CutDYLowOldMVA[23])*scaleDYLow,2) + pow(sqrt(CutTTOldMVA[23])*scaleTT,2) + pow(sqrt(CutWZOldMVA[23])*scaleWZ,2) + pow(sqrt(CutZZOldMVA[23])*scaleZZ,2) + pow(sqrt(CutWJOldMVA[23])*scaleWJ,2);
+
+
+  double backErr1New = pow(sqrt(CutDYNew[1])*scaleDY50,2) + pow(sqrt(CutDYLowNew[1])*scaleDYLow,2) + pow(sqrt(CutTTNew[1])*scaleTT,2) + pow(sqrt(CutWZNew[1])*scaleWZ,2) + pow(sqrt(CutZZNew[1])*scaleZZ,2) + pow(sqrt(CutWJNew[1])*scaleWJ,2) + pow(sqrt(CutDYNew[10])*scaleDY50,2) + pow(sqrt(CutDYLowNew[10])*scaleDYLow,2) + pow(sqrt(CutTTNew[10])*scaleTT,2) + pow(sqrt(CutWZNew[10])*scaleWZ,2) + pow(sqrt(CutZZNew[10])*scaleZZ,2) + pow(sqrt(CutWJNew[10])*scaleWJ,2);
+  double backErr2New = pow(sqrt(CutDYNew[2])*scaleDY50,2) + pow(sqrt(CutDYLowNew[2])*scaleDYLow,2) + pow(sqrt(CutTTNew[2])*scaleTT,2) + pow(sqrt(CutWZNew[2])*scaleWZ,2) + pow(sqrt(CutZZNew[2])*scaleZZ,2) + pow(sqrt(CutWJNew[2])*scaleWJ,2) + pow(sqrt(CutDYNew[11])*scaleDY50,2) + pow(sqrt(CutDYLowNew[11])*scaleDYLow,2) + pow(sqrt(CutTTNew[11])*scaleTT,2) + pow(sqrt(CutWZNew[11])*scaleWZ,2) + pow(sqrt(CutZZNew[11])*scaleZZ,2) + pow(sqrt(CutWJNew[11])*scaleWJ,2);
+  double backErr3New = pow(sqrt(CutDYNew[3])*scaleDY50,2) + pow(sqrt(CutDYLowNew[3])*scaleDYLow,2) + pow(sqrt(CutTTNew[3])*scaleTT,2) + pow(sqrt(CutWZNew[3])*scaleWZ,2) + pow(sqrt(CutZZNew[3])*scaleZZ,2) + pow(sqrt(CutWJNew[3])*scaleWJ,2) + pow(sqrt(CutDYNew[12])*scaleDY50,2) + pow(sqrt(CutDYLowNew[12])*scaleDYLow,2) + pow(sqrt(CutTTNew[12])*scaleTT,2) + pow(sqrt(CutWZNew[12])*scaleWZ,2) + pow(sqrt(CutZZNew[12])*scaleZZ,2) + pow(sqrt(CutWJNew[12])*scaleWJ,2);
+  double backErr4New = pow(sqrt(CutDYNew[4])*scaleDY50,2) + pow(sqrt(CutDYLowNew[4])*scaleDYLow,2) + pow(sqrt(CutTTNew[4])*scaleTT,2) + pow(sqrt(CutWZNew[4])*scaleWZ,2) + pow(sqrt(CutZZNew[4])*scaleZZ,2) + pow(sqrt(CutWJNew[4])*scaleWJ,2) + pow(sqrt(CutDYNew[13])*scaleDY50,2) + pow(sqrt(CutDYLowNew[13])*scaleDYLow,2) + pow(sqrt(CutTTNew[13])*scaleTT,2) + pow(sqrt(CutWZNew[13])*scaleWZ,2) + pow(sqrt(CutZZNew[13])*scaleZZ,2) + pow(sqrt(CutWJNew[13])*scaleWJ,2);
+  double backErr5New = pow(sqrt(CutDYNew[5])*scaleDY50,2) + pow(sqrt(CutDYLowNew[5])*scaleDYLow,2) + pow(sqrt(CutTTNew[5])*scaleTT,2) + pow(sqrt(CutWZNew[5])*scaleWZ,2) + pow(sqrt(CutZZNew[5])*scaleZZ,2) + pow(sqrt(CutWJNew[5])*scaleWJ,2) + pow(sqrt(CutDYNew[14])*scaleDY50,2) + pow(sqrt(CutDYLowNew[14])*scaleDYLow,2) + pow(sqrt(CutTTNew[14])*scaleTT,2) + pow(sqrt(CutWZNew[14])*scaleWZ,2) + pow(sqrt(CutZZNew[14])*scaleZZ,2) + pow(sqrt(CutWJNew[14])*scaleWJ,2);
+  double backErr6New = pow(sqrt(CutDYNew[6])*scaleDY50,2) + pow(sqrt(CutDYLowNew[6])*scaleDYLow,2) + pow(sqrt(CutTTNew[6])*scaleTT,2) + pow(sqrt(CutWZNew[6])*scaleWZ,2) + pow(sqrt(CutZZNew[6])*scaleZZ,2) + pow(sqrt(CutWJNew[6])*scaleWJ,2) + pow(sqrt(CutDYNew[15])*scaleDY50,2) + pow(sqrt(CutDYLowNew[15])*scaleDYLow,2) + pow(sqrt(CutTTNew[15])*scaleTT,2) + pow(sqrt(CutWZNew[15])*scaleWZ,2) + pow(sqrt(CutZZNew[15])*scaleZZ,2) + pow(sqrt(CutWJNew[15])*scaleWJ,2);
+  double backErr7New = pow(sqrt(CutDYNew[7])*scaleDY50,2) + pow(sqrt(CutDYLowNew[7])*scaleDYLow,2) + pow(sqrt(CutTTNew[7])*scaleTT,2) + pow(sqrt(CutWZNew[7])*scaleWZ,2) + pow(sqrt(CutZZNew[7])*scaleZZ,2) + pow(sqrt(CutWJNew[7])*scaleWJ,2) + pow(sqrt(CutDYNew[16])*scaleDY50,2) + pow(sqrt(CutDYLowNew[16])*scaleDYLow,2) + pow(sqrt(CutTTNew[16])*scaleTT,2) + pow(sqrt(CutWZNew[16])*scaleWZ,2) + pow(sqrt(CutZZNew[16])*scaleZZ,2) + pow(sqrt(CutWJNew[16])*scaleWJ,2);
+  double backErr8New = pow(sqrt(CutDYNew[8])*scaleDY50,2) + pow(sqrt(CutDYLowNew[8])*scaleDYLow,2) + pow(sqrt(CutTTNew[8])*scaleTT,2) + pow(sqrt(CutWZNew[8])*scaleWZ,2) + pow(sqrt(CutZZNew[8])*scaleZZ,2) + pow(sqrt(CutWJNew[8])*scaleWJ,2) + pow(sqrt(CutDYNew[17])*scaleDY50,2) + pow(sqrt(CutDYLowNew[17])*scaleDYLow,2) + pow(sqrt(CutTTNew[17])*scaleTT,2) + pow(sqrt(CutWZNew[17])*scaleWZ,2) + pow(sqrt(CutZZNew[17])*scaleZZ,2) + pow(sqrt(CutWJNew[17])*scaleWJ,2);
+  double backErr10New = pow(sqrt(CutDYNew[21])*scaleDY50,2) + pow(sqrt(CutDYLowNew[21])*scaleDYLow,2) + pow(sqrt(CutTTNew[21])*scaleTT,2) + pow(sqrt(CutWZNew[21])*scaleWZ,2) + pow(sqrt(CutZZNew[21])*scaleZZ,2) + pow(sqrt(CutWJNew[21])*scaleWJ,2);
+  double backErr9New  = pow(sqrt(CutDYNew[20])*scaleDY50,2) + pow(sqrt(CutDYLowNew[20])*scaleDYLow,2) + pow(sqrt(CutTTNew[20])*scaleTT,2) + pow(sqrt(CutWZNew[20])*scaleWZ,2) + pow(sqrt(CutZZNew[20])*scaleZZ,2) + pow(sqrt(CutWJNew[20])*scaleWJ,2);
+  double backErr11New = pow(sqrt(CutDYNew[22])*scaleDY50,2) + pow(sqrt(CutDYLowNew[22])*scaleDYLow,2) + pow(sqrt(CutTTNew[22])*scaleTT,2) + pow(sqrt(CutWZNew[22])*scaleWZ,2) + pow(sqrt(CutZZNew[22])*scaleZZ,2) + pow(sqrt(CutWJNew[22])*scaleWJ,2);
+  double backErr12New = pow(sqrt(CutDYNew[23])*scaleDY50,2) + pow(sqrt(CutDYLowNew[23])*scaleDYLow,2) + pow(sqrt(CutTTNew[23])*scaleTT,2) + pow(sqrt(CutWZNew[23])*scaleWZ,2) + pow(sqrt(CutZZNew[23])*scaleZZ,2) + pow(sqrt(CutWJNew[23])*scaleWJ,2);
+
+
+  double backErr1NewMVA = pow(sqrt(CutDYNewMVA[1])*scaleDY50,2) + pow(sqrt(CutDYLowNewMVA[1])*scaleDYLow,2) + pow(sqrt(CutTTNewMVA[1])*scaleTT,2) + pow(sqrt(CutWZNewMVA[1])*scaleWZ,2) + pow(sqrt(CutZZNewMVA[1])*scaleZZ,2) + pow(sqrt(CutWJNewMVA[1])*scaleWJ,2) + pow(sqrt(CutDYNewMVA[10])*scaleDY50,2) + pow(sqrt(CutDYLowNewMVA[10])*scaleDYLow,2) + pow(sqrt(CutTTNewMVA[10])*scaleTT,2) + pow(sqrt(CutWZNewMVA[10])*scaleWZ,2) + pow(sqrt(CutZZNewMVA[10])*scaleZZ,2) + pow(sqrt(CutWJNewMVA[10])*scaleWJ,2);
+  double backErr2NewMVA = pow(sqrt(CutDYNewMVA[2])*scaleDY50,2) + pow(sqrt(CutDYLowNewMVA[2])*scaleDYLow,2) + pow(sqrt(CutTTNewMVA[2])*scaleTT,2) + pow(sqrt(CutWZNewMVA[2])*scaleWZ,2) + pow(sqrt(CutZZNewMVA[2])*scaleZZ,2) + pow(sqrt(CutWJNewMVA[2])*scaleWJ,2) + pow(sqrt(CutDYNewMVA[11])*scaleDY50,2) + pow(sqrt(CutDYLowNewMVA[11])*scaleDYLow,2) + pow(sqrt(CutTTNewMVA[11])*scaleTT,2) + pow(sqrt(CutWZNewMVA[11])*scaleWZ,2) + pow(sqrt(CutZZNewMVA[11])*scaleZZ,2) + pow(sqrt(CutWJNewMVA[11])*scaleWJ,2);
+  double backErr3NewMVA = pow(sqrt(CutDYNewMVA[3])*scaleDY50,2) + pow(sqrt(CutDYLowNewMVA[3])*scaleDYLow,2) + pow(sqrt(CutTTNewMVA[3])*scaleTT,2) + pow(sqrt(CutWZNewMVA[3])*scaleWZ,2) + pow(sqrt(CutZZNewMVA[3])*scaleZZ,2) + pow(sqrt(CutWJNewMVA[3])*scaleWJ,2) + pow(sqrt(CutDYNewMVA[12])*scaleDY50,2) + pow(sqrt(CutDYLowNewMVA[12])*scaleDYLow,2) + pow(sqrt(CutTTNewMVA[12])*scaleTT,2) + pow(sqrt(CutWZNewMVA[12])*scaleWZ,2) + pow(sqrt(CutZZNewMVA[12])*scaleZZ,2) + pow(sqrt(CutWJNewMVA[12])*scaleWJ,2);
+  double backErr4NewMVA = pow(sqrt(CutDYNewMVA[4])*scaleDY50,2) + pow(sqrt(CutDYLowNewMVA[4])*scaleDYLow,2) + pow(sqrt(CutTTNewMVA[4])*scaleTT,2) + pow(sqrt(CutWZNewMVA[4])*scaleWZ,2) + pow(sqrt(CutZZNewMVA[4])*scaleZZ,2) + pow(sqrt(CutWJNewMVA[4])*scaleWJ,2) + pow(sqrt(CutDYNewMVA[13])*scaleDY50,2) + pow(sqrt(CutDYLowNewMVA[13])*scaleDYLow,2) + pow(sqrt(CutTTNewMVA[13])*scaleTT,2) + pow(sqrt(CutWZNewMVA[13])*scaleWZ,2) + pow(sqrt(CutZZNewMVA[13])*scaleZZ,2) + pow(sqrt(CutWJNewMVA[13])*scaleWJ,2);
+  double backErr5NewMVA = pow(sqrt(CutDYNewMVA[5])*scaleDY50,2) + pow(sqrt(CutDYLowNewMVA[5])*scaleDYLow,2) + pow(sqrt(CutTTNewMVA[5])*scaleTT,2) + pow(sqrt(CutWZNewMVA[5])*scaleWZ,2) + pow(sqrt(CutZZNewMVA[5])*scaleZZ,2) + pow(sqrt(CutWJNewMVA[5])*scaleWJ,2) + pow(sqrt(CutDYNewMVA[14])*scaleDY50,2) + pow(sqrt(CutDYLowNewMVA[14])*scaleDYLow,2) + pow(sqrt(CutTTNewMVA[14])*scaleTT,2) + pow(sqrt(CutWZNewMVA[14])*scaleWZ,2) + pow(sqrt(CutZZNewMVA[14])*scaleZZ,2) + pow(sqrt(CutWJNewMVA[14])*scaleWJ,2);
+  double backErr6NewMVA = pow(sqrt(CutDYNewMVA[6])*scaleDY50,2) + pow(sqrt(CutDYLowNewMVA[6])*scaleDYLow,2) + pow(sqrt(CutTTNewMVA[6])*scaleTT,2) + pow(sqrt(CutWZNewMVA[6])*scaleWZ,2) + pow(sqrt(CutZZNewMVA[6])*scaleZZ,2) + pow(sqrt(CutWJNewMVA[6])*scaleWJ,2) + pow(sqrt(CutDYNewMVA[15])*scaleDY50,2) + pow(sqrt(CutDYLowNewMVA[15])*scaleDYLow,2) + pow(sqrt(CutTTNewMVA[15])*scaleTT,2) + pow(sqrt(CutWZNewMVA[15])*scaleWZ,2) + pow(sqrt(CutZZNewMVA[15])*scaleZZ,2) + pow(sqrt(CutWJNewMVA[15])*scaleWJ,2);
+  double backErr7NewMVA = pow(sqrt(CutDYNewMVA[7])*scaleDY50,2) + pow(sqrt(CutDYLowNewMVA[7])*scaleDYLow,2) + pow(sqrt(CutTTNewMVA[7])*scaleTT,2) + pow(sqrt(CutWZNewMVA[7])*scaleWZ,2) + pow(sqrt(CutZZNewMVA[7])*scaleZZ,2) + pow(sqrt(CutWJNewMVA[7])*scaleWJ,2) + pow(sqrt(CutDYNewMVA[16])*scaleDY50,2) + pow(sqrt(CutDYLowNewMVA[16])*scaleDYLow,2) + pow(sqrt(CutTTNewMVA[16])*scaleTT,2) + pow(sqrt(CutWZNewMVA[16])*scaleWZ,2) + pow(sqrt(CutZZNewMVA[16])*scaleZZ,2) + pow(sqrt(CutWJNewMVA[16])*scaleWJ,2);
+  double backErr8NewMVA = pow(sqrt(CutDYNewMVA[8])*scaleDY50,2) + pow(sqrt(CutDYLowNewMVA[8])*scaleDYLow,2) + pow(sqrt(CutTTNewMVA[8])*scaleTT,2) + pow(sqrt(CutWZNewMVA[8])*scaleWZ,2) + pow(sqrt(CutZZNewMVA[8])*scaleZZ,2) + pow(sqrt(CutWJNewMVA[8])*scaleWJ,2) + pow(sqrt(CutDYNewMVA[17])*scaleDY50,2) + pow(sqrt(CutDYLowNewMVA[17])*scaleDYLow,2) + pow(sqrt(CutTTNewMVA[17])*scaleTT,2) + pow(sqrt(CutWZNewMVA[17])*scaleWZ,2) + pow(sqrt(CutZZNewMVA[17])*scaleZZ,2) + pow(sqrt(CutWJNewMVA[17])*scaleWJ,2);
+  double backErr10NewMVA = pow(sqrt(CutDYNewMVA[21])*scaleDY50,2) + pow(sqrt(CutDYLowNewMVA[21])*scaleDYLow,2) + pow(sqrt(CutTTNewMVA[21])*scaleTT,2) + pow(sqrt(CutWZNewMVA[21])*scaleWZ,2) + pow(sqrt(CutZZNewMVA[21])*scaleZZ,2) + pow(sqrt(CutWJNewMVA[21])*scaleWJ,2);
+  double backErr9NewMVA  = pow(sqrt(CutDYNewMVA[20])*scaleDY50,2) + pow(sqrt(CutDYLowNewMVA[20])*scaleDYLow,2) + pow(sqrt(CutTTNewMVA[20])*scaleTT,2) + pow(sqrt(CutWZNewMVA[20])*scaleWZ,2) + pow(sqrt(CutZZNewMVA[20])*scaleZZ,2) + pow(sqrt(CutWJNewMVA[20])*scaleWJ,2);
+  double backErr11NewMVA = pow(sqrt(CutDYNewMVA[22])*scaleDY50,2) + pow(sqrt(CutDYLowNewMVA[22])*scaleDYLow,2) + pow(sqrt(CutTTNewMVA[22])*scaleTT,2) + pow(sqrt(CutWZNewMVA[22])*scaleWZ,2) + pow(sqrt(CutZZNewMVA[22])*scaleZZ,2) + pow(sqrt(CutWJNewMVA[22])*scaleWJ,2);
+  double backErr12NewMVA = pow(sqrt(CutDYNewMVA[23])*scaleDY50,2) + pow(sqrt(CutDYLowNewMVA[23])*scaleDYLow,2) + pow(sqrt(CutTTNewMVA[23])*scaleTT,2) + pow(sqrt(CutWZNewMVA[23])*scaleWZ,2) + pow(sqrt(CutZZNewMVA[23])*scaleZZ,2) + pow(sqrt(CutWJNewMVA[23])*scaleWJ,2);
+
+
   ///////////
   // scaling
   ///////////
@@ -393,7 +452,7 @@ std::cout << "Formatting and Drawing done. Writing cut output." << std::endl;
     CountH750a9Old[i] = CountH750a9Old[i] * scaleH750a9;
   }//for
 
-  for (int i=0; i < 22; i++)
+  for (int i=0; i < 24; i++)
   {
     CutDYNewMVA[i] = CutDYNewMVA[i] * scaleDY50;
     CutDYNew[i] = CutDYNew[i] * scaleDY50;
@@ -473,6 +532,8 @@ std::cout << "Formatting and Drawing done. Writing cut output." << std::endl;
   infoFile << CutLabelsBack[16] << "\t: DY= " << CutDYNewMVA[16] << "\tDY10-50= " << CutDYLowNewMVA[16] << "\tTT= " << CutTTNewMVA[16] << "\tWJ= " << CutWJNewMVA[16] << "\tWZ= " << CutWZNewMVA[16] << "\tZZ= " << CutZZNewMVA[16] << "\tH125a19= " << CutH125a19NewMVA[8] << "\tH125a9= " << CutH125a9NewMVA[8] << "\tH125a5= " << CutH125a5NewMVA[8] << "\tH750a9= " << CutH750a9NewMVA[8] << std::endl;
   infoFile << CutLabelsBack[20] << "\t: DY= " << CutDYNewMVA[20] << "\tDY10-50= " << CutDYLowNewMVA[20] << "\tTT= " << CutTTNewMVA[20] << "\tWJ= " << CutWJNewMVA[20] << "\tWZ= " << CutWZNewMVA[20] << "\tZZ= " << CutZZNewMVA[20] << "\tH125a19= " << CutH125a19NewMVA[9] << "\tH125a9= " << CutH125a9NewMVA[9] << "\tH125a5= " << CutH125a5NewMVA[9] << "\tH750a9= " << CutH750a9NewMVA[9] << std::endl;
   infoFile << CutLabelsBack[21] << "\t: DY= " << CutDYNewMVA[21] << "\tDY10-50= " << CutDYLowNewMVA[21] << "\tTT= " << CutTTNewMVA[21] << "\tWJ= " << CutWJNewMVA[21] << "\tWZ= " << CutWZNewMVA[21] << "\tZZ= " << CutZZNewMVA[21] << "\tH125a19= " << CutH125a19NewMVA[0] << "\tH125a9= " << CutH125a9NewMVA[0] << "\tH125a5= " << CutH125a5NewMVA[0] << "\tH750a9= " << CutH750a9NewMVA[0] << std::endl;
+  infoFile << CutLabelsBack[22] << "\t: DY= " << CutDYNewMVA[22] << "\tDY10-50= " << CutDYLowNewMVA[22] << "\tTT= " << CutTTNewMVA[22] << "\tWJ= " << CutWJNewMVA[22] << "\tWZ= " << CutWZNewMVA[22] << "\tZZ= " << CutZZNewMVA[22] << "\tH125a19= " << CutH125a19NewMVA[11] << "\tH125a9= " << CutH125a9NewMVA[11] << "\tH125a5= " << CutH125a5NewMVA[11] << "\tH750a9= " << CutH750a9NewMVA[11] <<std::endl;
+  infoFile << CutLabelsBack[23] << "\t: DY= " << CutDYNewMVA[23] << "\tDY10-50= " << CutDYLowNewMVA[23] << "\tTT= " << CutTTNewMVA[23] << "\tWJ= " << CutWJNewMVA[23] << "\tWZ= " << CutWZNewMVA[23] << "\tZZ= " << CutZZNewMVA[23] << "\tH125a19= " << CutH125a19NewMVA[12] << "\tH125a9= " << CutH125a9NewMVA[12] << "\tH125a5= " << CutH125a5NewMVA[12] << "\tH750a9= " << CutH750a9NewMVA[12] <<std::endl;
 
   /////////////////////////////////
   // Writing Output New 
@@ -499,6 +560,8 @@ std::cout << "Formatting and Drawing done. Writing cut output." << std::endl;
   infoFile << CutLabelsBack[16] << "\t: DY= " << CutDYNew[16] << "\tDY10-50= " << CutDYLowNew[16] << "\tTT= " << CutTTNew[16] << "\tWJ= " << CutWJNew[16] << "\tWZ= " << CutWZNew[16] << "\tZZ= " << CutZZNew[16] << "\tH125a19= " << CutH125a19New[8] << "\tH125a9= " << CutH125a9New[8] << "\tH125a5= " << CutH125a5New[8] << "\tH750a9= " << CutH750a9New[8] << std::endl;
   infoFile << CutLabelsBack[20] << "\t: DY= " << CutDYNew[20] << "\tDY10-50= " << CutDYLowNew[20] << "\tTT= " << CutTTNew[20] << "\tWJ= " << CutWJNew[20] << "\tWZ= " << CutWZNew[20] << "\tZZ= " << CutZZNew[20] << "\tH125a19= " << CutH125a19New[9] << "\tH125a9= " << CutH125a9New[9] << "\tH125a5= " << CutH125a5New[9] << "\tH750a9= " << CutH750a9New[9] << std::endl;
   infoFile << CutLabelsBack[21] << "\t: DY= " << CutDYNew[21] << "\tDY10-50= " << CutDYLowNew[21] << "\tTT= " << CutTTNew[21] << "\tWJ= " << CutWJNew[21] << "\tWZ= " << CutWZNew[21] << "\tZZ= " << CutZZNew[21] << "\tH125a19= " << CutH125a19New[0] << "\tH125a9= " << CutH125a9New[0] << "\tH125a5= " << CutH125a5New[0] << "\tH750a9= " << CutH750a9New[0] << std::endl;
+  infoFile << CutLabelsBack[22] << "\t: DY= " << CutDYNew[22] << "\tDY10-50= " << CutDYLowNew[22] << "\tTT= " << CutTTNew[22] << "\tWJ= " << CutWJNew[22] << "\tWZ= " << CutWZNew[22] << "\tZZ= " << CutZZNew[22] << "\tH125a19= " << CutH125a19New[11] << "\tH125a9= " << CutH125a9New[11] << "\tH125a5= " << CutH125a5New[11] << "\tH750a9= " << CutH750a9New[11] <<std::endl;
+  infoFile << CutLabelsBack[23] << "\t: DY= " << CutDYNew[23] << "\tDY10-50= " << CutDYLowNew[23] << "\tTT= " << CutTTNew[23] << "\tWJ= " << CutWJNew[23] << "\tWZ= " << CutWZNew[23] << "\tZZ= " << CutZZNew[23] << "\tH125a19= " << CutH125a19New[12] << "\tH125a9= " << CutH125a9New[12] << "\tH125a5= " << CutH125a5New[12] << "\tH750a9= " << CutH750a9New[12] <<std::endl;
 
   /////////////////////////////////
   // Writing Output Old + MVA
@@ -525,6 +588,8 @@ std::cout << "Formatting and Drawing done. Writing cut output." << std::endl;
   infoFile << CutLabelsBack[16] << "\t: DY= " << CutDYOldMVA[16] << "\tDY10-50= " << CutDYLowOldMVA[16] << "\tTT= " << CutTTOldMVA[16] << "\tWJ= " << CutWJOldMVA[16] << "\tWZ= " << CutWZOldMVA[16] << "\tZZ= " << CutZZOldMVA[16] << "\tH125a19= " << CutH125a19OldMVA[8] << "\tH125a9= " << CutH125a9OldMVA[8] << "\tH125a5= " << CutH125a5OldMVA[8] << "\tH750a9= " << CutH750a9OldMVA[8] << std::endl;
   infoFile << CutLabelsBack[20] << "\t: DY= " << CutDYOldMVA[20] << "\tDY10-50= " << CutDYLowOldMVA[20] << "\tTT= " << CutTTOldMVA[20] << "\tWJ= " << CutWJOldMVA[20] << "\tWZ= " << CutWZOldMVA[20] << "\tZZ= " << CutZZOldMVA[20] << "\tH125a19= " << CutH125a19OldMVA[9] << "\tH125a9= " << CutH125a9OldMVA[9] << "\tH125a5= " << CutH125a5OldMVA[9] << "\tH750a9= " << CutH750a9OldMVA[9] << std::endl;
   infoFile << CutLabelsBack[21] << "\t: DY= " << CutDYOldMVA[21] << "\tDY10-50= " << CutDYLowOldMVA[21] << "\tTT= " << CutTTOldMVA[21] << "\tWJ= " << CutWJOldMVA[21] << "\tWZ= " << CutWZOldMVA[21] << "\tZZ= " << CutZZOldMVA[21] << "\tH125a19= " << CutH125a19OldMVA[0] << "\tH125a9= " << CutH125a9OldMVA[0] << "\tH125a5= " << CutH125a5OldMVA[0] << "\tH750a9= " << CutH750a9OldMVA[0] << std::endl;
+  infoFile << CutLabelsBack[22] << "\t: DY= " << CutDYOldMVA[22] << "\tDY10-50= " << CutDYLowOldMVA[22] << "\tTT= " << CutTTOldMVA[22] << "\tWJ= " << CutWJOldMVA[22] << "\tWZ= " << CutWZOldMVA[22] << "\tZZ= " << CutZZOldMVA[22] << "\tH125a19= " << CutH125a19OldMVA[11] << "\tH125a9= " << CutH125a9OldMVA[11] << "\tH125a5= " << CutH125a5OldMVA[11] << "\tH750a9= " << CutH750a9OldMVA[11] <<std::endl;
+  infoFile << CutLabelsBack[23] << "\t: DY= " << CutDYOldMVA[23] << "\tDY10-50= " << CutDYLowOldMVA[23] << "\tTT= " << CutTTOldMVA[23] << "\tWJ= " << CutWJOldMVA[23] << "\tWZ= " << CutWZOldMVA[23] << "\tZZ= " << CutZZOldMVA[23] << "\tH125a19= " << CutH125a19OldMVA[12] << "\tH125a9= " << CutH125a9OldMVA[12] << "\tH125a5= " << CutH125a5OldMVA[12] << "\tH750a9= " << CutH750a9OldMVA[12] <<std::endl;
 
   /////////////////////////////////
   // Writing Output Old 
@@ -551,6 +616,8 @@ std::cout << "Formatting and Drawing done. Writing cut output." << std::endl;
   infoFile << CutLabelsBack[16] << "\t: DY= " << CutDYOld[16] << "\tDY10-50= " << CutDYLowOld[16] << "\tTT= " << CutTTOld[16] << "\tWJ= " << CutWJOld[16] << "\tWZ= " << CutWZOld[16] << "\tZZ= " << CutZZOld[16] << "\tH125a19= " << CutH125a19Old[8] << "\tH125a9= " << CutH125a9Old[8] << "\tH125a5= " << CutH125a5Old[8] << "\tH750a9= " << CutH750a9Old[8] << std::endl;
   infoFile << CutLabelsBack[20] << "\t: DY= " << CutDYOld[20] << "\tDY10-50= " << CutDYLowOld[20] << "\tTT= " << CutTTOld[20] << "\tWJ= " << CutWJOld[20] << "\tWZ= " << CutWZOld[20] << "\tZZ= " << CutZZOld[20] << "\tH125a19= " << CutH125a19Old[9] << "\tH125a9= " << CutH125a9Old[9] << "\tH125a5= " << CutH125a5Old[9] << "\tH750a9= " << CutH750a9Old[9] << std::endl;
   infoFile << CutLabelsBack[21] << "\t: DY= " << CutDYOld[21] << "\tDY10-50= " << CutDYLowOld[21] << "\tTT= " << CutTTOld[21] << "\tWJ= " << CutWJOld[21] << "\tWZ= " << CutWZOld[21] << "\tZZ= " << CutZZOld[21] << "\tH125a19= " << CutH125a19Old[0] << "\tH125a9= " << CutH125a9Old[0] << "\tH125a5= " << CutH125a5Old[0] << "\tH750a9= " << CutH750a9Old[0] << std::endl;
+  infoFile << CutLabelsBack[22] << "\t: DY= " << CutDYOld[22] << "\tDY10-50= " << CutDYLowOld[22] << "\tTT= " << CutTTOld[22] << "\tWJ= " << CutWJOld[22] << "\tWZ= " << CutWZOld[22] << "\tZZ= " << CutZZOld[22] << "\tH125a19= " << CutH125a19Old[11] << "\tH125a9= " << CutH125a9Old[11] << "\tH125a5= " << CutH125a5Old[11] << "\tH750a9= " << CutH750a9Old[11] <<std::endl;
+  infoFile << CutLabelsBack[23] << "\t: DY= " << CutDYOld[23] << "\tDY10-50= " << CutDYLowOld[23] << "\tTT= " << CutTTOld[23] << "\tWJ= " << CutWJOld[23] << "\tWZ= " << CutWZOld[23] << "\tZZ= " << CutZZOld[23] << "\tH125a19= " << CutH125a19Old[12] << "\tH125a9= " << CutH125a9Old[12] << "\tH125a5= " << CutH125a5Old[12] << "\tH750a9= " << CutH750a9Old[12] <<std::endl;
 
 std::cout << "Writing Tau DM output." << std::endl;
 
@@ -672,9 +739,10 @@ std::cout << "Done writing output. Now plotting Signal to Background." << std::e
 /////////////////////////////////////////////
 // ALL SIG TO BACKGROUND PLOTS
 ////////////////////////////////////////////
+  //Old Background Counts
   double backSum1Old = CutDYOld[1] + CutDYLowOld[1] + CutTTOld[1] + CutWZOld[1] + CutZZOld[1] + CutWJOld[1] + CutDYOld[10] + CutDYLowOld[10] + CutTTOld[10] + CutWZOld[10] + CutZZOld[10] + CutWJOld[10];
   double backSum2Old = CutDYOld[2] + CutDYLowOld[2] + CutTTOld[2] + CutWZOld[2] + CutZZOld[2] + CutWJOld[2] + CutDYOld[11] + CutDYLowOld[11] + CutTTOld[11] + CutWZOld[11] + CutZZOld[11] + CutWJOld[11];
-  double backSum3Old = CutDYOld[3] + CutDYLowOld[3] + CutTTOld[3] + CutWZOld[1] + CutZZOld[3] + CutWJOld[3] + CutDYOld[12] + CutDYLowOld[12] + CutTTOld[12] + CutWZOld[12] + CutZZOld[12] + CutWJOld[12];
+  double backSum3Old = CutDYOld[3] + CutDYLowOld[3] + CutTTOld[3] + CutWZOld[3] + CutZZOld[3] + CutWJOld[3] + CutDYOld[12] + CutDYLowOld[12] + CutTTOld[12] + CutWZOld[12] + CutZZOld[12] + CutWJOld[12];
   double backSum4Old = CutDYOld[4] + CutDYLowOld[4] + CutTTOld[4] + CutWZOld[4] + CutZZOld[4] + CutWJOld[4] + CutDYOld[13] + CutDYLowOld[13] + CutTTOld[13] + CutWZOld[13] + CutZZOld[13] + CutWJOld[13];
   double backSum5Old = CutDYOld[5] + CutDYLowOld[5] + CutTTOld[5] + CutWZOld[5] + CutZZOld[5] + CutWJOld[5] + CutDYOld[14] + CutDYLowOld[14] + CutTTOld[14] + CutWZOld[14] + CutZZOld[14] + CutWJOld[14];
   double backSum6Old = CutDYOld[6] + CutDYLowOld[6] + CutTTOld[6] + CutWZOld[6] + CutZZOld[6] + CutWJOld[6] + CutDYOld[15] + CutDYLowOld[15] + CutTTOld[15] + CutWZOld[15] + CutZZOld[15] + CutWJOld[15];
@@ -682,11 +750,14 @@ std::cout << "Done writing output. Now plotting Signal to Background." << std::e
   double backSum8Old = CutDYOld[8] + CutDYLowOld[8] + CutTTOld[8] + CutWZOld[8] + CutZZOld[8] + CutWJOld[8] + CutDYOld[17] + CutDYLowOld[17] + CutTTOld[17] + CutWZOld[17] + CutZZOld[17] + CutWJOld[17];
   double backSum10Old = CutDYOld[21] + CutDYLowOld[21] + CutTTOld[21] + CutWZOld[21] + CutZZOld[21] + CutWJOld[21];
   double backSum9Old = CutDYOld[20] + CutDYLowOld[20] + CutTTOld[20] + CutWZOld[20] + CutZZOld[20] + CutWJOld[20];
-
+  double backSum11Old = CutDYOld[22] + CutDYLowOld[22] + CutTTOld[22] + CutWZOld[22] + CutZZOld[22] + CutWJOld[22];
+  double backSum12Old = CutDYOld[23] + CutDYLowOld[23] + CutTTOld[23] + CutWZOld[23] + CutZZOld[23] + CutWJOld[23];
+  
+  
 
   double backSum1OldMVA = CutDYOldMVA[1] + CutDYLowOldMVA[1] + CutTTOldMVA[1] + CutWZOldMVA[1] + CutZZOldMVA[1] + CutWJOldMVA[1] + CutDYOldMVA[10] + CutDYLowOldMVA[10] + CutTTOldMVA[10] + CutWZOldMVA[10] + CutZZOldMVA[10] + CutWJOldMVA[10];
   double backSum2OldMVA = CutDYOldMVA[2] + CutDYLowOldMVA[2] + CutTTOldMVA[2] + CutWZOldMVA[2] + CutZZOldMVA[2] + CutWJOldMVA[2] + CutDYOldMVA[11] + CutDYLowOldMVA[11] + CutTTOldMVA[11] + CutWZOldMVA[11] + CutZZOldMVA[11] + CutWJOldMVA[11];
-  double backSum3OldMVA = CutDYOldMVA[3] + CutDYLowOldMVA[3] + CutTTOldMVA[3] + CutWZOldMVA[1] + CutZZOldMVA[3] + CutWJOldMVA[3] + CutDYOldMVA[12] + CutDYLowOldMVA[12] + CutTTOldMVA[12] + CutWZOldMVA[12] + CutZZOldMVA[12] + CutWJOldMVA[12];
+  double backSum3OldMVA = CutDYOldMVA[3] + CutDYLowOldMVA[3] + CutTTOldMVA[3] + CutWZOldMVA[3] + CutZZOldMVA[3] + CutWJOldMVA[3] + CutDYOldMVA[12] + CutDYLowOldMVA[12] + CutTTOldMVA[12] + CutWZOldMVA[12] + CutZZOldMVA[12] + CutWJOldMVA[12];
   double backSum4OldMVA = CutDYOldMVA[4] + CutDYLowOldMVA[4] + CutTTOldMVA[4] + CutWZOldMVA[4] + CutZZOldMVA[4] + CutWJOldMVA[4] + CutDYOldMVA[13] + CutDYLowOldMVA[13] + CutTTOldMVA[13] + CutWZOldMVA[13] + CutZZOldMVA[13] + CutWJOldMVA[13];
   double backSum5OldMVA = CutDYOldMVA[5] + CutDYLowOldMVA[5] + CutTTOldMVA[5] + CutWZOldMVA[5] + CutZZOldMVA[5] + CutWJOldMVA[5] + CutDYOldMVA[14] + CutDYLowOldMVA[14] + CutTTOldMVA[14] + CutWZOldMVA[14] + CutZZOldMVA[14] + CutWJOldMVA[14];
   double backSum6OldMVA = CutDYOldMVA[6] + CutDYLowOldMVA[6] + CutTTOldMVA[6] + CutWZOldMVA[6] + CutZZOldMVA[6] + CutWJOldMVA[6] + CutDYOldMVA[15] + CutDYLowOldMVA[15] + CutTTOldMVA[15] + CutWZOldMVA[15] + CutZZOldMVA[15] + CutWJOldMVA[15];
@@ -694,10 +765,13 @@ std::cout << "Done writing output. Now plotting Signal to Background." << std::e
   double backSum8OldMVA = CutDYOldMVA[8] + CutDYLowOldMVA[8] + CutTTOldMVA[8] + CutWZOldMVA[8] + CutZZOldMVA[8] + CutWJOldMVA[8] + CutDYOldMVA[17] + CutDYLowOldMVA[17] + CutTTOldMVA[17] + CutWZOldMVA[17] + CutZZOldMVA[17] + CutWJOldMVA[17];
   double backSum10OldMVA = CutDYOldMVA[21] + CutDYLowOldMVA[21] + CutTTOldMVA[21] + CutWZOldMVA[21] + CutZZOldMVA[21] + CutWJOldMVA[21];
   double backSum9OldMVA = CutDYOldMVA[20] + CutDYLowOldMVA[20] + CutTTOldMVA[20] + CutWZOldMVA[20] + CutZZOldMVA[20] + CutWJOldMVA[20];
+  double backSum11OldMVA = CutDYOldMVA[22] + CutDYLowOldMVA[22] + CutTTOldMVA[22] + CutWZOldMVA[22] + CutZZOldMVA[22] + CutWJOldMVA[22];
+  double backSum12OldMVA = CutDYOldMVA[23] + CutDYLowOldMVA[23] + CutTTOldMVA[23] + CutWZOldMVA[23] + CutZZOldMVA[23] + CutWJOldMVA[23];
+
 
   double backSum1New = CutDYNew[1] + CutDYLowNew[1] + CutTTNew[1] + CutWZNew[1] + CutZZNew[1] + CutWJNew[1] + CutDYNew[10] + CutDYLowNew[10] + CutTTNew[10] + CutWZNew[10] + CutZZNew[10] + CutWJNew[10];
   double backSum2New = CutDYNew[2] + CutDYLowNew[2] + CutTTNew[2] + CutWZNew[2] + CutZZNew[2] + CutWJNew[2] + CutDYNew[11] + CutDYLowNew[11] + CutTTNew[11] + CutWZNew[11] + CutZZNew[11] + CutWJNew[11];
-  double backSum3New = CutDYNew[3] + CutDYLowNew[3] + CutTTNew[3] + CutWZNew[1] + CutZZNew[3] + CutWJNew[3] + CutDYNew[12] + CutDYLowNew[12] + CutTTNew[12] + CutWZNew[12] + CutZZNew[12] + CutWJNew[12];
+  double backSum3New = CutDYNew[3] + CutDYLowNew[3] + CutTTNew[3] + CutWZNew[3] + CutZZNew[3] + CutWJNew[3] + CutDYNew[12] + CutDYLowNew[12] + CutTTNew[12] + CutWZNew[12] + CutZZNew[12] + CutWJNew[12];
   double backSum4New = CutDYNew[4] + CutDYLowNew[4] + CutTTNew[4] + CutWZNew[4] + CutZZNew[4] + CutWJNew[4] + CutDYNew[13] + CutDYLowNew[13] + CutTTNew[13] + CutWZNew[13] + CutZZNew[13] + CutWJNew[13];
   double backSum5New = CutDYNew[5] + CutDYLowNew[5] + CutTTNew[5] + CutWZNew[5] + CutZZNew[5] + CutWJNew[5] + CutDYNew[14] + CutDYLowNew[14] + CutTTNew[14] + CutWZNew[14] + CutZZNew[14] + CutWJNew[14];
   double backSum6New = CutDYNew[6] + CutDYLowNew[6] + CutTTNew[6] + CutWZNew[6] + CutZZNew[6] + CutWJNew[6] + CutDYNew[15] + CutDYLowNew[15] + CutTTNew[15] + CutWZNew[15] + CutZZNew[15] + CutWJNew[15];
@@ -705,10 +779,13 @@ std::cout << "Done writing output. Now plotting Signal to Background." << std::e
   double backSum8New = CutDYNew[8] + CutDYLowNew[8] + CutTTNew[8] + CutWZNew[8] + CutZZNew[8] + CutWJNew[8] + CutDYNew[17] + CutDYLowNew[17] + CutTTNew[17] + CutWZNew[17] + CutZZNew[17] + CutWJNew[17];
   double backSum10New = CutDYNew[21] + CutDYLowNew[21] + CutTTNew[21] + CutWZNew[21] + CutZZNew[21] + CutWJNew[21];
   double backSum9New = CutDYNew[20] + CutDYLowNew[20] + CutTTNew[20] + CutWZNew[20] + CutZZNew[20] + CutWJNew[20];
+  double backSum11New = CutDYNew[22] + CutDYLowNew[22] + CutTTNew[22] + CutWZNew[22] + CutZZNew[22] + CutWJNew[22];
+  double backSum12New = CutDYNew[23] + CutDYLowNew[23] + CutTTNew[23] + CutWZNew[23] + CutZZNew[23] + CutWJNew[23];
+
 
   double backSum1NewMVA = CutDYNewMVA[1] + CutDYLowNewMVA[1] + CutTTNewMVA[1] + CutWZNewMVA[1] + CutZZNewMVA[1] + CutWJNewMVA[1] + CutDYNewMVA[10] + CutDYLowNewMVA[10] + CutTTNewMVA[10] + CutWZNewMVA[10] + CutZZNewMVA[10] + CutWJNewMVA[10];
   double backSum2NewMVA = CutDYNewMVA[2] + CutDYLowNewMVA[2] + CutTTNewMVA[2] + CutWZNewMVA[2] + CutZZNewMVA[2] + CutWJNewMVA[2] + CutDYNewMVA[11] + CutDYLowNewMVA[11] + CutTTNewMVA[11] + CutWZNewMVA[11] + CutZZNewMVA[11] + CutWJNewMVA[11];
-  double backSum3NewMVA = CutDYNewMVA[3] + CutDYLowNewMVA[3] + CutTTNewMVA[3] + CutWZNewMVA[1] + CutZZNewMVA[3] + CutWJNewMVA[3] + CutDYNewMVA[12] + CutDYLowNewMVA[12] + CutTTNewMVA[12] + CutWZNewMVA[12] + CutZZNewMVA[12] + CutWJNewMVA[12];
+  double backSum3NewMVA = CutDYNewMVA[3] + CutDYLowNewMVA[3] + CutTTNewMVA[3] + CutWZNewMVA[3] + CutZZNewMVA[3] + CutWJNewMVA[3] + CutDYNewMVA[12] + CutDYLowNewMVA[12] + CutTTNewMVA[12] + CutWZNewMVA[12] + CutZZNewMVA[12] + CutWJNewMVA[12];
   double backSum4NewMVA = CutDYNewMVA[4] + CutDYLowNewMVA[4] + CutTTNewMVA[4] + CutWZNewMVA[4] + CutZZNewMVA[4] + CutWJNewMVA[4] + CutDYNewMVA[13] + CutDYLowNewMVA[13] + CutTTNewMVA[13] + CutWZNewMVA[13] + CutZZNewMVA[13] + CutWJNewMVA[13];
   double backSum5NewMVA = CutDYNewMVA[5] + CutDYLowNewMVA[5] + CutTTNewMVA[5] + CutWZNewMVA[5] + CutZZNewMVA[5] + CutWJNewMVA[5] + CutDYNewMVA[14] + CutDYLowNewMVA[14] + CutTTNewMVA[14] + CutWZNewMVA[14] + CutZZNewMVA[14] + CutWJNewMVA[14];
   double backSum6NewMVA = CutDYNewMVA[6] + CutDYLowNewMVA[6] + CutTTNewMVA[6] + CutWZNewMVA[6] + CutZZNewMVA[6] + CutWJNewMVA[6] + CutDYNewMVA[15] + CutDYLowNewMVA[15] + CutTTNewMVA[15] + CutWZNewMVA[15] + CutZZNewMVA[15] + CutWJNewMVA[15];
@@ -716,12 +793,242 @@ std::cout << "Done writing output. Now plotting Signal to Background." << std::e
   double backSum8NewMVA = CutDYNewMVA[8] + CutDYLowNewMVA[8] + CutTTNewMVA[8] + CutWZNewMVA[8] + CutZZNewMVA[8] + CutWJNewMVA[8] + CutDYNewMVA[17] + CutDYLowNewMVA[17] + CutTTNewMVA[17] + CutWZNewMVA[17] + CutZZNewMVA[17] + CutWJNewMVA[17];
   double backSum10NewMVA = CutDYNewMVA[21] + CutDYLowNewMVA[21] + CutTTNewMVA[21] + CutWZNewMVA[21] + CutZZNewMVA[21] + CutWJNewMVA[21];
   double backSum9NewMVA = CutDYNewMVA[20] + CutDYLowNewMVA[20] + CutTTNewMVA[20] + CutWZNewMVA[20] + CutZZNewMVA[20] + CutWJNewMVA[20];
+  double backSum11NewMVA = CutDYNewMVA[22] + CutDYLowNewMVA[22] + CutTTNewMVA[22] + CutWZNewMVA[22] + CutZZNewMVA[22] + CutWJNewMVA[22];
+  double backSum12NewMVA = CutDYNewMVA[23] + CutDYLowNewMVA[23] + CutTTNewMVA[23] + CutWZNewMVA[23] + CutZZNewMVA[23] + CutWJNewMVA[23];
 
+  
+  //////////////////////////////////////////////////////////////////////////////////////////////
+  // NEW METHOD: Err(F = S / sqrt(S+B) ) = sqrt{ [(dF/dS)*Err(S)]^2 +  [(dF/dB)*Err(B)]^2 }
+  //             Err(F) = sqrt{ (ErrS)^2*[(S+B)^(-1/2)-(S/2)(S+B)^(-3/2)]^2 +  (ErrB)^2*[(S/2)(S+B)^(-3/2)]^2 }
+  // OLD METHOD: Err(S / sqrt(S+B) ) = (S/sqrt(S+B)) * sqrt( (ErrS/S)^2 + (Err(sqrt(S+B)) / sqrt(S+B))^2 )
+  /////////////////////////////////////////////////////////////////////////////////////////////
+  // H125a19              sqrt(          (ErrS)^2            *             (S+B)^(-1/2)                     -     (S/2)         *           (S+B)^(-3/2)
+  double err1H125a19Old = sqrt( scaleH125a19*CutH125a19Old[1]*pow( pow(backSum1Old + CutH125a19Old[1],-.5) - CutH125a19Old[1]/2*pow(CutH125a19Old[1] + backSum1Old,-1.5),2) + backErr1Old*pow(CutH125a19Old[1]/2*pow(CutH125a19Old[1] + backSum1Old,-1.5),2) );
+  double err2H125a19Old = sqrt( scaleH125a19*CutH125a19Old[2]*pow( pow(backSum2Old + CutH125a19Old[2],-.5) - CutH125a19Old[2]/2*pow(CutH125a19Old[2] + backSum2Old,-1.5),2) + backErr2Old*pow(CutH125a19Old[2]/2*pow(CutH125a19Old[2] + backSum2Old,-1.5),2) );
+  double err3H125a19Old = sqrt( scaleH125a19*CutH125a19Old[3]*pow( pow(backSum3Old + CutH125a19Old[3],-.5) - CutH125a19Old[3]/2*pow(CutH125a19Old[3] + backSum3Old,-1.5),2) + backErr3Old*pow(CutH125a19Old[3]/2*pow(CutH125a19Old[3] + backSum3Old,-1.5),2) );
+  double err4H125a19Old = sqrt( scaleH125a19*CutH125a19Old[4]*pow( pow(backSum4Old + CutH125a19Old[4],-.5) - CutH125a19Old[4]/2*pow(CutH125a19Old[4] + backSum4Old,-1.5),2) + backErr4Old*pow(CutH125a19Old[4]/2*pow(CutH125a19Old[4] + backSum4Old,-1.5),2) );
+  double err5H125a19Old = sqrt( scaleH125a19*CutH125a19Old[5]*pow( pow(backSum5Old + CutH125a19Old[5],-.5) - CutH125a19Old[5]/2*pow(CutH125a19Old[5] + backSum5Old,-1.5),2) + backErr5Old*pow(CutH125a19Old[5]/2*pow(CutH125a19Old[5] + backSum5Old,-1.5),2) );
+  double err6H125a19Old = sqrt( scaleH125a19*CutH125a19Old[6]*pow( pow(backSum6Old + CutH125a19Old[6],-.5) - CutH125a19Old[6]/2*pow(CutH125a19Old[6] + backSum6Old,-1.5),2) + backErr6Old*pow(CutH125a19Old[6]/2*pow(CutH125a19Old[6] + backSum6Old,-1.5),2) );
+  double err7H125a19Old = sqrt( scaleH125a19*CutH125a19Old[7]*pow( pow(backSum7Old + CutH125a19Old[7],-.5) - CutH125a19Old[7]/2*pow(CutH125a19Old[7] + backSum7Old,-1.5),2) + backErr7Old*pow(CutH125a19Old[7]/2*pow(CutH125a19Old[7] + backSum7Old,-1.5),2) );
+  double err8H125a19Old = sqrt( scaleH125a19*CutH125a19Old[8]*pow( pow(backSum8Old + CutH125a19Old[8],-.5) - CutH125a19Old[8]/2*pow(CutH125a19Old[8] + backSum8Old,-1.5),2) + backErr8Old*pow(CutH125a19Old[8]/2*pow(CutH125a19Old[8] + backSum8Old,-1.5),2) );
+  double err9H125a19Old = sqrt( scaleH125a19*CutH125a19Old[9]*pow( pow(backSum9Old + CutH125a19Old[9],-.5) - CutH125a19Old[9]/2*pow(CutH125a19Old[9] + backSum9Old,-1.5),2) + backErr9Old*pow(CutH125a19Old[9]/2*pow(CutH125a19Old[9] + backSum9Old,-1.5),2) );
+  double err10H125a19Old = sqrt( scaleH125a19*CutH125a19Old[0]*pow( pow(backSum10Old + CutH125a19Old[0],-.5) - CutH125a19Old[0]/2*pow(CutH125a19Old[0] + backSum10Old,-1.5),2) + backErr10Old*pow(CutH125a19Old[0]/2*pow(CutH125a19Old[0] + backSum10Old,-1.5),2) );
+  double err11H125a19Old = sqrt( scaleH125a19*CutH125a19Old[11]*pow( pow(backSum11Old + CutH125a19Old[11],-.5) - CutH125a19Old[11]/2*pow(CutH125a19Old[11] + backSum11Old,-1.5),2) + backErr11Old*pow(CutH125a19Old[11]/2*pow(CutH125a19Old[11] + backSum11Old,-1.5),2) );
+  double err12H125a19Old = sqrt( scaleH125a19*CutH125a19Old[12]*pow( pow(backSum12Old + CutH125a19Old[12],-.5) - CutH125a19Old[12]/2*pow(CutH125a19Old[12] + backSum12Old,-1.5),2) + backErr12Old*pow(CutH125a19Old[12]/2*pow(CutH125a19Old[12] + backSum12Old,-1.5),2) );
+
+  double err1H125a19OldMVA = sqrt( scaleH125a19*CutH125a19OldMVA[1]*pow( pow(backSum1OldMVA + CutH125a19OldMVA[1],-.5) - CutH125a19OldMVA[1]/2*pow(CutH125a19OldMVA[1] + backSum1OldMVA,-1.5),2) + backErr1OldMVA*pow(CutH125a19OldMVA[1]/2*pow(CutH125a19OldMVA[1] + backSum1OldMVA,-1.5),2) );
+  double err2H125a19OldMVA = sqrt( scaleH125a19*CutH125a19OldMVA[2]*pow( pow(backSum2OldMVA + CutH125a19OldMVA[2],-.5) - CutH125a19OldMVA[2]/2*pow(CutH125a19OldMVA[2] + backSum2OldMVA,-1.5),2) + backErr2OldMVA*pow(CutH125a19OldMVA[2]/2*pow(CutH125a19OldMVA[2] + backSum2OldMVA,-1.5),2) );
+  double err3H125a19OldMVA = sqrt( scaleH125a19*CutH125a19OldMVA[3]*pow( pow(backSum3OldMVA + CutH125a19OldMVA[3],-.5) - CutH125a19OldMVA[3]/2*pow(CutH125a19OldMVA[3] + backSum3OldMVA,-1.5),2) + backErr3OldMVA*pow(CutH125a19OldMVA[3]/2*pow(CutH125a19OldMVA[3] + backSum3OldMVA,-1.5),2) );
+  double err4H125a19OldMVA = sqrt( scaleH125a19*CutH125a19OldMVA[4]*pow( pow(backSum4OldMVA + CutH125a19OldMVA[4],-.5) - CutH125a19OldMVA[4]/2*pow(CutH125a19OldMVA[4] + backSum4OldMVA,-1.5),2) + backErr4OldMVA*pow(CutH125a19OldMVA[4]/2*pow(CutH125a19OldMVA[4] + backSum4OldMVA,-1.5),2) );
+  double err5H125a19OldMVA = sqrt( scaleH125a19*CutH125a19OldMVA[5]*pow( pow(backSum5OldMVA + CutH125a19OldMVA[5],-.5) - CutH125a19OldMVA[5]/2*pow(CutH125a19OldMVA[5] + backSum5OldMVA,-1.5),2) + backErr5OldMVA*pow(CutH125a19OldMVA[5]/2*pow(CutH125a19OldMVA[5] + backSum5OldMVA,-1.5),2) );
+  double err6H125a19OldMVA = sqrt( scaleH125a19*CutH125a19OldMVA[6]*pow( pow(backSum6OldMVA + CutH125a19OldMVA[6],-.5) - CutH125a19OldMVA[6]/2*pow(CutH125a19OldMVA[6] + backSum6OldMVA,-1.5),2) + backErr6OldMVA*pow(CutH125a19OldMVA[6]/2*pow(CutH125a19OldMVA[6] + backSum6OldMVA,-1.5),2) );
+  double err7H125a19OldMVA = sqrt( scaleH125a19*CutH125a19OldMVA[7]*pow( pow(backSum7OldMVA + CutH125a19OldMVA[7],-.5) - CutH125a19OldMVA[7]/2*pow(CutH125a19OldMVA[7] + backSum7OldMVA,-1.5),2) + backErr7OldMVA*pow(CutH125a19OldMVA[7]/2*pow(CutH125a19OldMVA[7] + backSum7OldMVA,-1.5),2) );
+  double err8H125a19OldMVA = sqrt( scaleH125a19*CutH125a19OldMVA[8]*pow( pow(backSum8OldMVA + CutH125a19OldMVA[8],-.5) - CutH125a19OldMVA[8]/2*pow(CutH125a19OldMVA[8] + backSum8OldMVA,-1.5),2) + backErr8OldMVA*pow(CutH125a19OldMVA[8]/2*pow(CutH125a19OldMVA[8] + backSum8OldMVA,-1.5),2) );
+  double err9H125a19OldMVA = sqrt( scaleH125a19*CutH125a19OldMVA[9]*pow( pow(backSum9OldMVA + CutH125a19OldMVA[9],-.5) - CutH125a19OldMVA[9]/2*pow(CutH125a19OldMVA[9] + backSum9OldMVA,-1.5),2) + backErr9OldMVA*pow(CutH125a19OldMVA[9]/2*pow(CutH125a19OldMVA[9] + backSum9OldMVA,-1.5),2) );
+  double err10H125a19OldMVA = sqrt( scaleH125a19*CutH125a19OldMVA[0]*pow( pow(backSum10OldMVA + CutH125a19OldMVA[0],-.5) - CutH125a19OldMVA[0]/2*pow(CutH125a19OldMVA[0] + backSum10OldMVA,-1.5),2) + backErr10OldMVA*pow(CutH125a19OldMVA[0]/2*pow(CutH125a19OldMVA[0] + backSum10OldMVA,-1.5),2) );
+  double err11H125a19OldMVA = sqrt( scaleH125a19*CutH125a19OldMVA[11]*pow( pow(backSum11OldMVA + CutH125a19OldMVA[11],-.5) - CutH125a19OldMVA[11]/2*pow(CutH125a19OldMVA[11] + backSum11OldMVA,-1.5),2) + backErr11OldMVA*pow(CutH125a19OldMVA[11]/2*pow(CutH125a19OldMVA[11] + backSum11OldMVA,-1.5),2) );
+  double err12H125a19OldMVA = sqrt( scaleH125a19*CutH125a19OldMVA[12]*pow( pow(backSum12OldMVA + CutH125a19OldMVA[12],-.5) - CutH125a19OldMVA[12]/2*pow(CutH125a19OldMVA[12] + backSum12OldMVA,-1.5),2) + backErr12OldMVA*pow(CutH125a19OldMVA[12]/2*pow(CutH125a19OldMVA[12] + backSum12OldMVA,-1.5),2) );
+
+  double err1H125a19New = sqrt( scaleH125a19*CutH125a19New[1]*pow( pow(backSum1New + CutH125a19New[1],-.5) - CutH125a19New[1]/2*pow(CutH125a19New[1] + backSum1New,-1.5),2) + backErr1New*pow(CutH125a19New[1]/2*pow(CutH125a19New[1] + backSum1New,-1.5),2) );
+  double err2H125a19New = sqrt( scaleH125a19*CutH125a19New[2]*pow( pow(backSum2New + CutH125a19New[2],-.5) - CutH125a19New[2]/2*pow(CutH125a19New[2] + backSum2New,-1.5),2) + backErr2New*pow(CutH125a19New[2]/2*pow(CutH125a19New[2] + backSum2New,-1.5),2) );
+  double err3H125a19New = sqrt( scaleH125a19*CutH125a19New[3]*pow( pow(backSum3New + CutH125a19New[3],-.5) - CutH125a19New[3]/2*pow(CutH125a19New[3] + backSum3New,-1.5),2) + backErr3New*pow(CutH125a19New[3]/2*pow(CutH125a19New[3] + backSum3New,-1.5),2) );
+  double err4H125a19New = sqrt( scaleH125a19*CutH125a19New[4]*pow( pow(backSum4New + CutH125a19New[4],-.5) - CutH125a19New[4]/2*pow(CutH125a19New[4] + backSum4New,-1.5),2) + backErr4New*pow(CutH125a19New[4]/2*pow(CutH125a19New[4] + backSum4New,-1.5),2) );
+  double err5H125a19New = sqrt( scaleH125a19*CutH125a19New[5]*pow( pow(backSum5New + CutH125a19New[5],-.5) - CutH125a19New[5]/2*pow(CutH125a19New[5] + backSum5New,-1.5),2) + backErr5New*pow(CutH125a19New[5]/2*pow(CutH125a19New[5] + backSum5New,-1.5),2) );
+  double err6H125a19New = sqrt( scaleH125a19*CutH125a19New[6]*pow( pow(backSum6New + CutH125a19New[6],-.5) - CutH125a19New[6]/2*pow(CutH125a19New[6] + backSum6New,-1.5),2) + backErr6New*pow(CutH125a19New[6]/2*pow(CutH125a19New[6] + backSum6New,-1.5),2) );
+  double err7H125a19New = sqrt( scaleH125a19*CutH125a19New[7]*pow( pow(backSum7New + CutH125a19New[7],-.5) - CutH125a19New[7]/2*pow(CutH125a19New[7] + backSum7New,-1.5),2) + backErr7New*pow(CutH125a19New[7]/2*pow(CutH125a19New[7] + backSum7New,-1.5),2) );
+  double err8H125a19New = sqrt( scaleH125a19*CutH125a19New[8]*pow( pow(backSum8New + CutH125a19New[8],-.5) - CutH125a19New[8]/2*pow(CutH125a19New[8] + backSum8New,-1.5),2) + backErr8New*pow(CutH125a19New[8]/2*pow(CutH125a19New[8] + backSum8New,-1.5),2) );
+  double err9H125a19New = sqrt( scaleH125a19*CutH125a19New[9]*pow( pow(backSum9New + CutH125a19New[9],-.5) - CutH125a19New[9]/2*pow(CutH125a19New[9] + backSum9New,-1.5),2) + backErr9New*pow(CutH125a19New[9]/2*pow(CutH125a19New[9] + backSum9New,-1.5),2) );
+  double err10H125a19New = sqrt( scaleH125a19*CutH125a19New[0]*pow( pow(backSum10New + CutH125a19New[0],-.5) - CutH125a19New[0]/2*pow(CutH125a19New[0] + backSum10New,-1.5),2) + backErr10New*pow(CutH125a19New[0]/2*pow(CutH125a19New[0] + backSum10New,-1.5),2) );
+  double err11H125a19New = sqrt( scaleH125a19*CutH125a19New[11]*pow( pow(backSum11New + CutH125a19New[11],-.5) - CutH125a19New[11]/2*pow(CutH125a19New[11] + backSum11New,-1.5),2) + backErr11New*pow(CutH125a19New[11]/2*pow(CutH125a19New[11] + backSum11New,-1.5),2) );
+  double err12H125a19New = sqrt( scaleH125a19*CutH125a19New[12]*pow( pow(backSum12New + CutH125a19New[12],-.5) - CutH125a19New[12]/2*pow(CutH125a19New[12] + backSum12New,-1.5),2) + backErr12New*pow(CutH125a19New[12]/2*pow(CutH125a19New[12] + backSum12New,-1.5),2) );
+
+  double err1H125a19NewMVA = sqrt( scaleH125a19*CutH125a19NewMVA[1]*pow( pow(backSum1NewMVA + CutH125a19NewMVA[1],-.5) - CutH125a19NewMVA[1]/2*pow(CutH125a19NewMVA[1] + backSum1NewMVA,-1.5),2) + backErr1NewMVA*pow(CutH125a19NewMVA[1]/2*pow(CutH125a19NewMVA[1] + backSum1NewMVA,-1.5),2) );
+  double err2H125a19NewMVA = sqrt( scaleH125a19*CutH125a19NewMVA[2]*pow( pow(backSum2NewMVA + CutH125a19NewMVA[2],-.5) - CutH125a19NewMVA[2]/2*pow(CutH125a19NewMVA[2] + backSum2NewMVA,-1.5),2) + backErr2NewMVA*pow(CutH125a19NewMVA[2]/2*pow(CutH125a19NewMVA[2] + backSum2NewMVA,-1.5),2) );
+  double err3H125a19NewMVA = sqrt( scaleH125a19*CutH125a19NewMVA[3]*pow( pow(backSum3NewMVA + CutH125a19NewMVA[3],-.5) - CutH125a19NewMVA[3]/2*pow(CutH125a19NewMVA[3] + backSum3NewMVA,-1.5),2) + backErr3NewMVA*pow(CutH125a19NewMVA[3]/2*pow(CutH125a19NewMVA[3] + backSum3NewMVA,-1.5),2) );
+  double err4H125a19NewMVA = sqrt( scaleH125a19*CutH125a19NewMVA[4]*pow( pow(backSum4NewMVA + CutH125a19NewMVA[4],-.5) - CutH125a19NewMVA[4]/2*pow(CutH125a19NewMVA[4] + backSum4NewMVA,-1.5),2) + backErr4NewMVA*pow(CutH125a19NewMVA[4]/2*pow(CutH125a19NewMVA[4] + backSum4NewMVA,-1.5),2) );
+  double err5H125a19NewMVA = sqrt( scaleH125a19*CutH125a19NewMVA[5]*pow( pow(backSum5NewMVA + CutH125a19NewMVA[5],-.5) - CutH125a19NewMVA[5]/2*pow(CutH125a19NewMVA[5] + backSum5NewMVA,-1.5),2) + backErr5NewMVA*pow(CutH125a19NewMVA[5]/2*pow(CutH125a19NewMVA[5] + backSum5NewMVA,-1.5),2) );
+  double err6H125a19NewMVA = sqrt( scaleH125a19*CutH125a19NewMVA[6]*pow( pow(backSum6NewMVA + CutH125a19NewMVA[6],-.5) - CutH125a19NewMVA[6]/2*pow(CutH125a19NewMVA[6] + backSum6NewMVA,-1.5),2) + backErr6NewMVA*pow(CutH125a19NewMVA[6]/2*pow(CutH125a19NewMVA[6] + backSum6NewMVA,-1.5),2) );
+  double err7H125a19NewMVA = sqrt( scaleH125a19*CutH125a19NewMVA[7]*pow( pow(backSum7NewMVA + CutH125a19NewMVA[7],-.5) - CutH125a19NewMVA[7]/2*pow(CutH125a19NewMVA[7] + backSum7NewMVA,-1.5),2) + backErr7NewMVA*pow(CutH125a19NewMVA[7]/2*pow(CutH125a19NewMVA[7] + backSum7NewMVA,-1.5),2) );
+  double err8H125a19NewMVA = sqrt( scaleH125a19*CutH125a19NewMVA[8]*pow( pow(backSum8NewMVA + CutH125a19NewMVA[8],-.5) - CutH125a19NewMVA[8]/2*pow(CutH125a19NewMVA[8] + backSum8NewMVA,-1.5),2) + backErr8NewMVA*pow(CutH125a19NewMVA[8]/2*pow(CutH125a19NewMVA[8] + backSum8NewMVA,-1.5),2) );
+  double err9H125a19NewMVA = sqrt( scaleH125a19*CutH125a19NewMVA[9]*pow( pow(backSum9NewMVA + CutH125a19NewMVA[9],-.5) - CutH125a19NewMVA[9]/2*pow(CutH125a19NewMVA[9] + backSum9NewMVA,-1.5),2) + backErr9NewMVA*pow(CutH125a19NewMVA[9]/2*pow(CutH125a19NewMVA[9] + backSum9NewMVA,-1.5),2) );
+  double err10H125a19NewMVA = sqrt( scaleH125a19*CutH125a19NewMVA[0]*pow( pow(backSum10NewMVA + CutH125a19NewMVA[0],-.5) - CutH125a19NewMVA[0]/2*pow(CutH125a19NewMVA[0] + backSum10NewMVA,-1.5),2) + backErr10NewMVA*pow(CutH125a19NewMVA[0]/2*pow(CutH125a19NewMVA[0] + backSum10NewMVA,-1.5),2) );
+  double err11H125a19NewMVA = sqrt( scaleH125a19*CutH125a19NewMVA[11]*pow( pow(backSum11NewMVA + CutH125a19NewMVA[11],-.5) - CutH125a19NewMVA[11]/2*pow(CutH125a19NewMVA[11] + backSum11NewMVA,-1.5),2) + backErr11NewMVA*pow(CutH125a19NewMVA[11]/2*pow(CutH125a19NewMVA[11] + backSum11NewMVA,-1.5),2) );
+  double err12H125a19NewMVA = sqrt( scaleH125a19*CutH125a19NewMVA[12]*pow( pow(backSum12NewMVA + CutH125a19NewMVA[12],-.5) - CutH125a19NewMVA[12]/2*pow(CutH125a19NewMVA[12] + backSum12NewMVA,-1.5),2) + backErr12NewMVA*pow(CutH125a19NewMVA[12]/2*pow(CutH125a19NewMVA[12] + backSum12NewMVA,-1.5),2) );
+
+
+  // H125a9              sqrt(          (SumS)^2            *             (S+B)^(-.5)                     -     (S/2)         *           (S+B)^(-1.5)
+  double err1H125a9Old = sqrt( scaleH125a9*CutH125a9Old[1]*pow( pow(backSum1Old + CutH125a9Old[1],-.5) - CutH125a9Old[1]/2*pow(CutH125a9Old[1] + backSum1Old,-1.5),2) + backErr1Old*pow(CutH125a9Old[1]/2*pow(CutH125a9Old[1] + backSum1Old,-1.5),2) );
+  double err2H125a9Old = sqrt( scaleH125a9*CutH125a9Old[2]*pow( pow(backSum2Old + CutH125a9Old[2],-.5) - CutH125a9Old[2]/2*pow(CutH125a9Old[2] + backSum2Old,-1.5),2) + backErr2Old*pow(CutH125a9Old[2]/2*pow(CutH125a9Old[2] + backSum2Old,-1.5),2) );
+  double err3H125a9Old = sqrt( scaleH125a9*CutH125a9Old[3]*pow( pow(backSum3Old + CutH125a9Old[3],-.5) - CutH125a9Old[3]/2*pow(CutH125a9Old[3] + backSum3Old,-1.5),2) + backErr3Old*pow(CutH125a9Old[3]/2*pow(CutH125a9Old[3] + backSum3Old,-1.5),2) );
+  double err4H125a9Old = sqrt( scaleH125a9*CutH125a9Old[4]*pow( pow(backSum4Old + CutH125a9Old[4],-.5) - CutH125a9Old[4]/2*pow(CutH125a9Old[4] + backSum4Old,-1.5),2) + backErr4Old*pow(CutH125a9Old[4]/2*pow(CutH125a9Old[4] + backSum4Old,-1.5),2) );
+  double err5H125a9Old = sqrt( scaleH125a9*CutH125a9Old[5]*pow( pow(backSum5Old + CutH125a9Old[5],-.5) - CutH125a9Old[5]/2*pow(CutH125a9Old[5] + backSum5Old,-1.5),2) + backErr5Old*pow(CutH125a9Old[5]/2*pow(CutH125a9Old[5] + backSum5Old,-1.5),2) );
+  double err6H125a9Old = sqrt( scaleH125a9*CutH125a9Old[6]*pow( pow(backSum6Old + CutH125a9Old[6],-.5) - CutH125a9Old[6]/2*pow(CutH125a9Old[6] + backSum6Old,-1.5),2) + backErr6Old*pow(CutH125a9Old[6]/2*pow(CutH125a9Old[6] + backSum6Old,-1.5),2) );
+  double err7H125a9Old = sqrt( scaleH125a9*CutH125a9Old[7]*pow( pow(backSum7Old + CutH125a9Old[7],-.5) - CutH125a9Old[7]/2*pow(CutH125a9Old[7] + backSum7Old,-1.5),2) + backErr7Old*pow(CutH125a9Old[7]/2*pow(CutH125a9Old[7] + backSum7Old,-1.5),2) );
+  double err8H125a9Old = sqrt( scaleH125a9*CutH125a9Old[8]*pow( pow(backSum8Old + CutH125a9Old[8],-.5) - CutH125a9Old[8]/2*pow(CutH125a9Old[8] + backSum8Old,-1.5),2) + backErr8Old*pow(CutH125a9Old[8]/2*pow(CutH125a9Old[8] + backSum8Old,-1.5),2) );
+  double err9H125a9Old = sqrt( scaleH125a9*CutH125a9Old[9]*pow( pow(backSum9Old + CutH125a9Old[9],-.5) - CutH125a9Old[9]/2*pow(CutH125a9Old[9] + backSum9Old,-1.5),2) + backErr9Old*pow(CutH125a9Old[9]/2*pow(CutH125a9Old[9] + backSum9Old,-1.5),2) );
+  double err10H125a9Old = sqrt( scaleH125a9*CutH125a9Old[0]*pow( pow(backSum10Old + CutH125a9Old[0],-.5) - CutH125a9Old[0]/2*pow(CutH125a9Old[0] + backSum10Old,-1.5),2) + backErr10Old*pow(CutH125a9Old[0]/2*pow(CutH125a9Old[0] + backSum10Old,-1.5),2) );
+  double err11H125a9Old = sqrt( scaleH125a9*CutH125a9Old[11]*pow( pow(backSum11Old + CutH125a9Old[11],-.5) - CutH125a9Old[11]/2*pow(CutH125a9Old[11] + backSum11Old,-1.5),2) + backErr11Old*pow(CutH125a9Old[11]/2*pow(CutH125a9Old[11] + backSum11Old,-1.5),2) );
+  double err12H125a9Old = sqrt( scaleH125a9*CutH125a9Old[12]*pow( pow(backSum12Old + CutH125a9Old[12],-.5) - CutH125a9Old[12]/2*pow(CutH125a9Old[12] + backSum12Old,-1.5),2) + backErr12Old*pow(CutH125a9Old[12]/2*pow(CutH125a9Old[12] + backSum12Old,-1.5),2) );
+
+  double err1H125a9OldMVA = sqrt( scaleH125a9*CutH125a9OldMVA[1]*pow( pow(backSum1OldMVA + CutH125a9OldMVA[1],-.5) - CutH125a9OldMVA[1]/2*pow(CutH125a9OldMVA[1] + backSum1OldMVA,-1.5),2) + backErr1OldMVA*pow(CutH125a9OldMVA[1]/2*pow(CutH125a9OldMVA[1] + backSum1OldMVA,-1.5),2) );
+  double err2H125a9OldMVA = sqrt( scaleH125a9*CutH125a9OldMVA[2]*pow( pow(backSum2OldMVA + CutH125a9OldMVA[2],-.5) - CutH125a9OldMVA[2]/2*pow(CutH125a9OldMVA[2] + backSum2OldMVA,-1.5),2) + backErr2OldMVA*pow(CutH125a9OldMVA[2]/2*pow(CutH125a9OldMVA[2] + backSum2OldMVA,-1.5),2) );
+  double err3H125a9OldMVA = sqrt( scaleH125a9*CutH125a9OldMVA[3]*pow( pow(backSum3OldMVA + CutH125a9OldMVA[3],-.5) - CutH125a9OldMVA[3]/2*pow(CutH125a9OldMVA[3] + backSum3OldMVA,-1.5),2) + backErr3OldMVA*pow(CutH125a9OldMVA[3]/2*pow(CutH125a9OldMVA[3] + backSum3OldMVA,-1.5),2) );
+  double err4H125a9OldMVA = sqrt( scaleH125a9*CutH125a9OldMVA[4]*pow( pow(backSum4OldMVA + CutH125a9OldMVA[4],-.5) - CutH125a9OldMVA[4]/2*pow(CutH125a9OldMVA[4] + backSum4OldMVA,-1.5),2) + backErr4OldMVA*pow(CutH125a9OldMVA[4]/2*pow(CutH125a9OldMVA[4] + backSum4OldMVA,-1.5),2) );
+  double err5H125a9OldMVA = sqrt( scaleH125a9*CutH125a9OldMVA[5]*pow( pow(backSum5OldMVA + CutH125a9OldMVA[5],-.5) - CutH125a9OldMVA[5]/2*pow(CutH125a9OldMVA[5] + backSum5OldMVA,-1.5),2) + backErr5OldMVA*pow(CutH125a9OldMVA[5]/2*pow(CutH125a9OldMVA[5] + backSum5OldMVA,-1.5),2) );
+  double err6H125a9OldMVA = sqrt( scaleH125a9*CutH125a9OldMVA[6]*pow( pow(backSum6OldMVA + CutH125a9OldMVA[6],-.5) - CutH125a9OldMVA[6]/2*pow(CutH125a9OldMVA[6] + backSum6OldMVA,-1.5),2) + backErr6OldMVA*pow(CutH125a9OldMVA[6]/2*pow(CutH125a9OldMVA[6] + backSum6OldMVA,-1.5),2) );
+  double err7H125a9OldMVA = sqrt( scaleH125a9*CutH125a9OldMVA[7]*pow( pow(backSum7OldMVA + CutH125a9OldMVA[7],-.5) - CutH125a9OldMVA[7]/2*pow(CutH125a9OldMVA[7] + backSum7OldMVA,-1.5),2) + backErr7OldMVA*pow(CutH125a9OldMVA[7]/2*pow(CutH125a9OldMVA[7] + backSum7OldMVA,-1.5),2) );
+  double err8H125a9OldMVA = sqrt( scaleH125a9*CutH125a9OldMVA[8]*pow( pow(backSum8OldMVA + CutH125a9OldMVA[8],-.5) - CutH125a9OldMVA[8]/2*pow(CutH125a9OldMVA[8] + backSum8OldMVA,-1.5),2) + backErr8OldMVA*pow(CutH125a9OldMVA[8]/2*pow(CutH125a9OldMVA[8] + backSum8OldMVA,-1.5),2) );
+  double err9H125a9OldMVA = sqrt( scaleH125a9*CutH125a9OldMVA[9]*pow( pow(backSum9OldMVA + CutH125a9OldMVA[9],-.5) - CutH125a9OldMVA[9]/2*pow(CutH125a9OldMVA[9] + backSum9OldMVA,-1.5),2) + backErr9OldMVA*pow(CutH125a9OldMVA[9]/2*pow(CutH125a9OldMVA[9] + backSum9OldMVA,-1.5),2) );
+  double err10H125a9OldMVA = sqrt( scaleH125a9*CutH125a9OldMVA[0]*pow( pow(backSum10OldMVA + CutH125a9OldMVA[0],-.5) - CutH125a9OldMVA[0]/2*pow(CutH125a9OldMVA[0] + backSum10OldMVA,-1.5),2) + backErr10OldMVA*pow(CutH125a9OldMVA[0]/2*pow(CutH125a9OldMVA[0] + backSum10OldMVA,-1.5),2) );
+  double err11H125a9OldMVA = sqrt( scaleH125a9*CutH125a9OldMVA[11]*pow( pow(backSum11OldMVA + CutH125a9OldMVA[11],-.5) - CutH125a9OldMVA[11]/2*pow(CutH125a9OldMVA[11] + backSum11OldMVA,-1.5),2) + backErr11OldMVA*pow(CutH125a9OldMVA[11]/2*pow(CutH125a9OldMVA[11] + backSum11OldMVA,-1.5),2) );
+  double err12H125a9OldMVA = sqrt( scaleH125a9*CutH125a9OldMVA[12]*pow( pow(backSum12OldMVA + CutH125a9OldMVA[12],-.5) - CutH125a9OldMVA[12]/2*pow(CutH125a9OldMVA[12] + backSum12OldMVA,-1.5),2) + backErr12OldMVA*pow(CutH125a9OldMVA[12]/2*pow(CutH125a9OldMVA[12] + backSum12OldMVA,-1.5),2) );
+
+  double err1H125a9New = sqrt( scaleH125a9*CutH125a9New[1]*pow( pow(backSum1New + CutH125a9New[1],-.5) - CutH125a9New[1]/2*pow(CutH125a9New[1] + backSum1New,-1.5),2) + backErr1New*pow(CutH125a9New[1]/2*pow(CutH125a9New[1] + backSum1New,-1.5),2) );
+  double err2H125a9New = sqrt( scaleH125a9*CutH125a9New[2]*pow( pow(backSum2New + CutH125a9New[2],-.5) - CutH125a9New[2]/2*pow(CutH125a9New[2] + backSum2New,-1.5),2) + backErr2New*pow(CutH125a9New[2]/2*pow(CutH125a9New[2] + backSum2New,-1.5),2) );
+  double err3H125a9New = sqrt( scaleH125a9*CutH125a9New[3]*pow( pow(backSum3New + CutH125a9New[3],-.5) - CutH125a9New[3]/2*pow(CutH125a9New[3] + backSum3New,-1.5),2) + backErr3New*pow(CutH125a9New[3]/2*pow(CutH125a9New[3] + backSum3New,-1.5),2) );
+  double err4H125a9New = sqrt( scaleH125a9*CutH125a9New[4]*pow( pow(backSum4New + CutH125a9New[4],-.5) - CutH125a9New[4]/2*pow(CutH125a9New[4] + backSum4New,-1.5),2) + backErr4New*pow(CutH125a9New[4]/2*pow(CutH125a9New[4] + backSum4New,-1.5),2) );
+  double err5H125a9New = sqrt( scaleH125a9*CutH125a9New[5]*pow( pow(backSum5New + CutH125a9New[5],-.5) - CutH125a9New[5]/2*pow(CutH125a9New[5] + backSum5New,-1.5),2) + backErr5New*pow(CutH125a9New[5]/2*pow(CutH125a9New[5] + backSum5New,-1.5),2) );
+  double err6H125a9New = sqrt( scaleH125a9*CutH125a9New[6]*pow( pow(backSum6New + CutH125a9New[6],-.5) - CutH125a9New[6]/2*pow(CutH125a9New[6] + backSum6New,-1.5),2) + backErr6New*pow(CutH125a9New[6]/2*pow(CutH125a9New[6] + backSum6New,-1.5),2) );
+  double err7H125a9New = sqrt( scaleH125a9*CutH125a9New[7]*pow( pow(backSum7New + CutH125a9New[7],-.5) - CutH125a9New[7]/2*pow(CutH125a9New[7] + backSum7New,-1.5),2) + backErr7New*pow(CutH125a9New[7]/2*pow(CutH125a9New[7] + backSum7New,-1.5),2) );
+  double err8H125a9New = sqrt( scaleH125a9*CutH125a9New[8]*pow( pow(backSum8New + CutH125a9New[8],-.5) - CutH125a9New[8]/2*pow(CutH125a9New[8] + backSum8New,-1.5),2) + backErr8New*pow(CutH125a9New[8]/2*pow(CutH125a9New[8] + backSum8New,-1.5),2) );
+  double err9H125a9New = sqrt( scaleH125a9*CutH125a9New[9]*pow( pow(backSum9New + CutH125a9New[9],-.5) - CutH125a9New[9]/2*pow(CutH125a9New[9] + backSum9New,-1.5),2) + backErr9New*pow(CutH125a9New[9]/2*pow(CutH125a9New[9] + backSum9New,-1.5),2) );
+  double err10H125a9New = sqrt( scaleH125a9*CutH125a9New[0]*pow( pow(backSum10New + CutH125a9New[0],-.5) - CutH125a9New[0]/2*pow(CutH125a9New[0] + backSum10New,-1.5),2) + backErr10New*pow(CutH125a9New[0]/2*pow(CutH125a9New[0] + backSum10New,-1.5),2) );
+  double err11H125a9New = sqrt( scaleH125a9*CutH125a9New[11]*pow( pow(backSum11New + CutH125a9New[11],-.5) - CutH125a9New[11]/2*pow(CutH125a9New[11] + backSum11New,-1.5),2) + backErr11New*pow(CutH125a9New[11]/2*pow(CutH125a9New[11] + backSum11New,-1.5),2) );
+  double err12H125a9New = sqrt( scaleH125a9*CutH125a9New[12]*pow( pow(backSum12New + CutH125a9New[12],-.5) - CutH125a9New[12]/2*pow(CutH125a9New[12] + backSum12New,-1.5),2) + backErr12New*pow(CutH125a9New[12]/2*pow(CutH125a9New[12] + backSum12New,-1.5),2) );
+
+  double err1H125a9NewMVA = sqrt( scaleH125a9*CutH125a9NewMVA[1]*pow( pow(backSum1NewMVA + CutH125a9NewMVA[1],-.5) - CutH125a9NewMVA[1]/2*pow(CutH125a9NewMVA[1] + backSum1NewMVA,-1.5),2) + backErr1NewMVA*pow(CutH125a9NewMVA[1]/2*pow(CutH125a9NewMVA[1] + backSum1NewMVA,-1.5),2) );
+  double err2H125a9NewMVA = sqrt( scaleH125a9*CutH125a9NewMVA[2]*pow( pow(backSum2NewMVA + CutH125a9NewMVA[2],-.5) - CutH125a9NewMVA[2]/2*pow(CutH125a9NewMVA[2] + backSum2NewMVA,-1.5),2) + backErr2NewMVA*pow(CutH125a9NewMVA[2]/2*pow(CutH125a9NewMVA[2] + backSum2NewMVA,-1.5),2) );
+  double err3H125a9NewMVA = sqrt( scaleH125a9*CutH125a9NewMVA[3]*pow( pow(backSum3NewMVA + CutH125a9NewMVA[3],-.5) - CutH125a9NewMVA[3]/2*pow(CutH125a9NewMVA[3] + backSum3NewMVA,-1.5),2) + backErr3NewMVA*pow(CutH125a9NewMVA[3]/2*pow(CutH125a9NewMVA[3] + backSum3NewMVA,-1.5),2) );
+  double err4H125a9NewMVA = sqrt( scaleH125a9*CutH125a9NewMVA[4]*pow( pow(backSum4NewMVA + CutH125a9NewMVA[4],-.5) - CutH125a9NewMVA[4]/2*pow(CutH125a9NewMVA[4] + backSum4NewMVA,-1.5),2) + backErr4NewMVA*pow(CutH125a9NewMVA[4]/2*pow(CutH125a9NewMVA[4] + backSum4NewMVA,-1.5),2) );
+  double err5H125a9NewMVA = sqrt( scaleH125a9*CutH125a9NewMVA[5]*pow( pow(backSum5NewMVA + CutH125a9NewMVA[5],-.5) - CutH125a9NewMVA[5]/2*pow(CutH125a9NewMVA[5] + backSum5NewMVA,-1.5),2) + backErr5NewMVA*pow(CutH125a9NewMVA[5]/2*pow(CutH125a9NewMVA[5] + backSum5NewMVA,-1.5),2) );
+  double err6H125a9NewMVA = sqrt( scaleH125a9*CutH125a9NewMVA[6]*pow( pow(backSum6NewMVA + CutH125a9NewMVA[6],-.5) - CutH125a9NewMVA[6]/2*pow(CutH125a9NewMVA[6] + backSum6NewMVA,-1.5),2) + backErr6NewMVA*pow(CutH125a9NewMVA[6]/2*pow(CutH125a9NewMVA[6] + backSum6NewMVA,-1.5),2) );
+  double err7H125a9NewMVA = sqrt( scaleH125a9*CutH125a9NewMVA[7]*pow( pow(backSum7NewMVA + CutH125a9NewMVA[7],-.5) - CutH125a9NewMVA[7]/2*pow(CutH125a9NewMVA[7] + backSum7NewMVA,-1.5),2) + backErr7NewMVA*pow(CutH125a9NewMVA[7]/2*pow(CutH125a9NewMVA[7] + backSum7NewMVA,-1.5),2) );
+  double err8H125a9NewMVA = sqrt( scaleH125a9*CutH125a9NewMVA[8]*pow( pow(backSum8NewMVA + CutH125a9NewMVA[8],-.5) - CutH125a9NewMVA[8]/2*pow(CutH125a9NewMVA[8] + backSum8NewMVA,-1.5),2) + backErr8NewMVA*pow(CutH125a9NewMVA[8]/2*pow(CutH125a9NewMVA[8] + backSum8NewMVA,-1.5),2) );
+  double err9H125a9NewMVA = sqrt( scaleH125a9*CutH125a9NewMVA[9]*pow( pow(backSum9NewMVA + CutH125a9NewMVA[9],-.5) - CutH125a9NewMVA[9]/2*pow(CutH125a9NewMVA[9] + backSum9NewMVA,-1.5),2) + backErr9NewMVA*pow(CutH125a9NewMVA[9]/2*pow(CutH125a9NewMVA[9] + backSum9NewMVA,-1.5),2) );
+  double err10H125a9NewMVA = sqrt( scaleH125a9*CutH125a9NewMVA[0]*pow( pow(backSum10NewMVA + CutH125a9NewMVA[0],-.5) - CutH125a9NewMVA[0]/2*pow(CutH125a9NewMVA[0] + backSum10NewMVA,-1.5),2) + backErr10NewMVA*pow(CutH125a9NewMVA[0]/2*pow(CutH125a9NewMVA[0] + backSum10NewMVA,-1.5),2) );
+  double err11H125a9NewMVA = sqrt( scaleH125a9*CutH125a9NewMVA[11]*pow( pow(backSum11NewMVA + CutH125a9NewMVA[11],-.5) - CutH125a9NewMVA[11]/2*pow(CutH125a9NewMVA[11] + backSum11NewMVA,-1.5),2) + backErr11NewMVA*pow(CutH125a9NewMVA[11]/2*pow(CutH125a9NewMVA[11] + backSum11NewMVA,-1.5),2) );
+  double err12H125a9NewMVA = sqrt( scaleH125a9*CutH125a9NewMVA[12]*pow( pow(backSum12NewMVA + CutH125a9NewMVA[12],-.5) - CutH125a9NewMVA[12]/2*pow(CutH125a9NewMVA[12] + backSum12NewMVA,-1.5),2) + backErr12NewMVA*pow(CutH125a9NewMVA[12]/2*pow(CutH125a9NewMVA[12] + backSum12NewMVA,-1.5),2) );
+
+
+  // H125a5              sqrt(          (SumS)^2            *             (S+B)^(-.5)                     -     (S/2)         *           (S+B)^(-1.5)
+  double err1H125a5Old = sqrt( scaleH125a5*CutH125a5Old[1]*pow( pow(backSum1Old + CutH125a5Old[1],-.5) - CutH125a5Old[1]/2*pow(CutH125a5Old[1] + backSum1Old,-1.5),2) + backErr1Old*pow(CutH125a5Old[1]/2*pow(CutH125a5Old[1] + backSum1Old,-1.5),2) );
+  double err2H125a5Old = sqrt( scaleH125a5*CutH125a5Old[2]*pow( pow(backSum2Old + CutH125a5Old[2],-.5) - CutH125a5Old[2]/2*pow(CutH125a5Old[2] + backSum2Old,-1.5),2) + backErr2Old*pow(CutH125a5Old[2]/2*pow(CutH125a5Old[2] + backSum2Old,-1.5),2) );
+  double err3H125a5Old = sqrt( scaleH125a5*CutH125a5Old[3]*pow( pow(backSum3Old + CutH125a5Old[3],-.5) - CutH125a5Old[3]/2*pow(CutH125a5Old[3] + backSum3Old,-1.5),2) + backErr3Old*pow(CutH125a5Old[3]/2*pow(CutH125a5Old[3] + backSum3Old,-1.5),2) );
+  double err4H125a5Old = sqrt( scaleH125a5*CutH125a5Old[4]*pow( pow(backSum4Old + CutH125a5Old[4],-.5) - CutH125a5Old[4]/2*pow(CutH125a5Old[4] + backSum4Old,-1.5),2) + backErr4Old*pow(CutH125a5Old[4]/2*pow(CutH125a5Old[4] + backSum4Old,-1.5),2) );
+  double err5H125a5Old = sqrt( scaleH125a5*CutH125a5Old[5]*pow( pow(backSum5Old + CutH125a5Old[5],-.5) - CutH125a5Old[5]/2*pow(CutH125a5Old[5] + backSum5Old,-1.5),2) + backErr5Old*pow(CutH125a5Old[5]/2*pow(CutH125a5Old[5] + backSum5Old,-1.5),2) );
+  double err6H125a5Old = sqrt( scaleH125a5*CutH125a5Old[6]*pow( pow(backSum6Old + CutH125a5Old[6],-.5) - CutH125a5Old[6]/2*pow(CutH125a5Old[6] + backSum6Old,-1.5),2) + backErr6Old*pow(CutH125a5Old[6]/2*pow(CutH125a5Old[6] + backSum6Old,-1.5),2) );
+  double err7H125a5Old = sqrt( scaleH125a5*CutH125a5Old[7]*pow( pow(backSum7Old + CutH125a5Old[7],-.5) - CutH125a5Old[7]/2*pow(CutH125a5Old[7] + backSum7Old,-1.5),2) + backErr7Old*pow(CutH125a5Old[7]/2*pow(CutH125a5Old[7] + backSum7Old,-1.5),2) );
+  double err8H125a5Old = sqrt( scaleH125a5*CutH125a5Old[8]*pow( pow(backSum8Old + CutH125a5Old[8],-.5) - CutH125a5Old[8]/2*pow(CutH125a5Old[8] + backSum8Old,-1.5),2) + backErr8Old*pow(CutH125a5Old[8]/2*pow(CutH125a5Old[8] + backSum8Old,-1.5),2) );
+  double err9H125a5Old = sqrt( scaleH125a5*CutH125a5Old[9]*pow( pow(backSum9Old + CutH125a5Old[9],-.5) - CutH125a5Old[9]/2*pow(CutH125a5Old[9] + backSum9Old,-1.5),2) + backErr9Old*pow(CutH125a5Old[9]/2*pow(CutH125a5Old[9] + backSum9Old,-1.5),2) );
+  double err10H125a5Old = sqrt( scaleH125a5*CutH125a5Old[0]*pow( pow(backSum10Old + CutH125a5Old[0],-.5) - CutH125a5Old[0]/2*pow(CutH125a5Old[0] + backSum10Old,-1.5),2) + backErr10Old*pow(CutH125a5Old[0]/2*pow(CutH125a5Old[0] + backSum10Old,-1.5),2) );
+  double err11H125a5Old = sqrt( scaleH125a5*CutH125a5Old[11]*pow( pow(backSum11Old + CutH125a5Old[11],-.5) - CutH125a5Old[11]/2*pow(CutH125a5Old[11] + backSum11Old,-1.5),2) + backErr11Old*pow(CutH125a5Old[11]/2*pow(CutH125a5Old[11] + backSum11Old,-1.5),2) );
+  double err12H125a5Old = sqrt( scaleH125a5*CutH125a5Old[12]*pow( pow(backSum12Old + CutH125a5Old[12],-.5) - CutH125a5Old[12]/2*pow(CutH125a5Old[12] + backSum12Old,-1.5),2) + backErr12Old*pow(CutH125a5Old[12]/2*pow(CutH125a5Old[12] + backSum12Old,-1.5),2) );
+
+  double err1H125a5OldMVA = sqrt( scaleH125a5*CutH125a5OldMVA[1]*pow( pow(backSum1OldMVA + CutH125a5OldMVA[1],-.5) - CutH125a5OldMVA[1]/2*pow(CutH125a5OldMVA[1] + backSum1OldMVA,-1.5),2) + backErr1OldMVA*pow(CutH125a5OldMVA[1]/2*pow(CutH125a5OldMVA[1] + backSum1OldMVA,-1.5),2) );
+  double err2H125a5OldMVA = sqrt( scaleH125a5*CutH125a5OldMVA[2]*pow( pow(backSum2OldMVA + CutH125a5OldMVA[2],-.5) - CutH125a5OldMVA[2]/2*pow(CutH125a5OldMVA[2] + backSum2OldMVA,-1.5),2) + backErr2OldMVA*pow(CutH125a5OldMVA[2]/2*pow(CutH125a5OldMVA[2] + backSum2OldMVA,-1.5),2) );
+  double err3H125a5OldMVA = sqrt( scaleH125a5*CutH125a5OldMVA[3]*pow( pow(backSum3OldMVA + CutH125a5OldMVA[3],-.5) - CutH125a5OldMVA[3]/2*pow(CutH125a5OldMVA[3] + backSum3OldMVA,-1.5),2) + backErr3OldMVA*pow(CutH125a5OldMVA[3]/2*pow(CutH125a5OldMVA[3] + backSum3OldMVA,-1.5),2) );
+  double err4H125a5OldMVA = sqrt( scaleH125a5*CutH125a5OldMVA[4]*pow( pow(backSum4OldMVA + CutH125a5OldMVA[4],-.5) - CutH125a5OldMVA[4]/2*pow(CutH125a5OldMVA[4] + backSum4OldMVA,-1.5),2) + backErr4OldMVA*pow(CutH125a5OldMVA[4]/2*pow(CutH125a5OldMVA[4] + backSum4OldMVA,-1.5),2) );
+  double err5H125a5OldMVA = sqrt( scaleH125a5*CutH125a5OldMVA[5]*pow( pow(backSum5OldMVA + CutH125a5OldMVA[5],-.5) - CutH125a5OldMVA[5]/2*pow(CutH125a5OldMVA[5] + backSum5OldMVA,-1.5),2) + backErr5OldMVA*pow(CutH125a5OldMVA[5]/2*pow(CutH125a5OldMVA[5] + backSum5OldMVA,-1.5),2) );
+  double err6H125a5OldMVA = sqrt( scaleH125a5*CutH125a5OldMVA[6]*pow( pow(backSum6OldMVA + CutH125a5OldMVA[6],-.5) - CutH125a5OldMVA[6]/2*pow(CutH125a5OldMVA[6] + backSum6OldMVA,-1.5),2) + backErr6OldMVA*pow(CutH125a5OldMVA[6]/2*pow(CutH125a5OldMVA[6] + backSum6OldMVA,-1.5),2) );
+  double err7H125a5OldMVA = sqrt( scaleH125a5*CutH125a5OldMVA[7]*pow( pow(backSum7OldMVA + CutH125a5OldMVA[7],-.5) - CutH125a5OldMVA[7]/2*pow(CutH125a5OldMVA[7] + backSum7OldMVA,-1.5),2) + backErr7OldMVA*pow(CutH125a5OldMVA[7]/2*pow(CutH125a5OldMVA[7] + backSum7OldMVA,-1.5),2) );
+  double err8H125a5OldMVA = sqrt( scaleH125a5*CutH125a5OldMVA[8]*pow( pow(backSum8OldMVA + CutH125a5OldMVA[8],-.5) - CutH125a5OldMVA[8]/2*pow(CutH125a5OldMVA[8] + backSum8OldMVA,-1.5),2) + backErr8OldMVA*pow(CutH125a5OldMVA[8]/2*pow(CutH125a5OldMVA[8] + backSum8OldMVA,-1.5),2) );
+  double err9H125a5OldMVA = sqrt( scaleH125a5*CutH125a5OldMVA[9]*pow( pow(backSum9OldMVA + CutH125a5OldMVA[9],-.5) - CutH125a5OldMVA[9]/2*pow(CutH125a5OldMVA[9] + backSum9OldMVA,-1.5),2) + backErr9OldMVA*pow(CutH125a5OldMVA[9]/2*pow(CutH125a5OldMVA[9] + backSum9OldMVA,-1.5),2) );
+  double err10H125a5OldMVA = sqrt( scaleH125a5*CutH125a5OldMVA[0]*pow( pow(backSum10OldMVA + CutH125a5OldMVA[0],-.5) - CutH125a5OldMVA[0]/2*pow(CutH125a5OldMVA[0] + backSum10OldMVA,-1.5),2) + backErr10OldMVA*pow(CutH125a5OldMVA[0]/2*pow(CutH125a5OldMVA[0] + backSum10OldMVA,-1.5),2) );
+  double err11H125a5OldMVA = sqrt( scaleH125a5*CutH125a5OldMVA[11]*pow( pow(backSum11OldMVA + CutH125a5OldMVA[11],-.5) - CutH125a5OldMVA[11]/2*pow(CutH125a5OldMVA[11] + backSum11OldMVA,-1.5),2) + backErr11OldMVA*pow(CutH125a5OldMVA[11]/2*pow(CutH125a5OldMVA[11] + backSum11OldMVA,-1.5),2) );
+  double err12H125a5OldMVA = sqrt( scaleH125a5*CutH125a5OldMVA[12]*pow( pow(backSum12OldMVA + CutH125a5OldMVA[12],-.5) - CutH125a5OldMVA[12]/2*pow(CutH125a5OldMVA[12] + backSum12OldMVA,-1.5),2) + backErr12OldMVA*pow(CutH125a5OldMVA[12]/2*pow(CutH125a5OldMVA[12] + backSum12OldMVA,-1.5),2) );
+
+  double err1H125a5New = sqrt( scaleH125a5*CutH125a5New[1]*pow( pow(backSum1New + CutH125a5New[1],-.5) - CutH125a5New[1]/2*pow(CutH125a5New[1] + backSum1New,-1.5),2) + backErr1New*pow(CutH125a5New[1]/2*pow(CutH125a5New[1] + backSum1New,-1.5),2) );
+  double err2H125a5New = sqrt( scaleH125a5*CutH125a5New[2]*pow( pow(backSum2New + CutH125a5New[2],-.5) - CutH125a5New[2]/2*pow(CutH125a5New[2] + backSum2New,-1.5),2) + backErr2New*pow(CutH125a5New[2]/2*pow(CutH125a5New[2] + backSum2New,-1.5),2) );
+  double err3H125a5New = sqrt( scaleH125a5*CutH125a5New[3]*pow( pow(backSum3New + CutH125a5New[3],-.5) - CutH125a5New[3]/2*pow(CutH125a5New[3] + backSum3New,-1.5),2) + backErr3New*pow(CutH125a5New[3]/2*pow(CutH125a5New[3] + backSum3New,-1.5),2) );
+  double err4H125a5New = sqrt( scaleH125a5*CutH125a5New[4]*pow( pow(backSum4New + CutH125a5New[4],-.5) - CutH125a5New[4]/2*pow(CutH125a5New[4] + backSum4New,-1.5),2) + backErr4New*pow(CutH125a5New[4]/2*pow(CutH125a5New[4] + backSum4New,-1.5),2) );
+  double err5H125a5New = sqrt( scaleH125a5*CutH125a5New[5]*pow( pow(backSum5New + CutH125a5New[5],-.5) - CutH125a5New[5]/2*pow(CutH125a5New[5] + backSum5New,-1.5),2) + backErr5New*pow(CutH125a5New[5]/2*pow(CutH125a5New[5] + backSum5New,-1.5),2) );
+  double err6H125a5New = sqrt( scaleH125a5*CutH125a5New[6]*pow( pow(backSum6New + CutH125a5New[6],-.5) - CutH125a5New[6]/2*pow(CutH125a5New[6] + backSum6New,-1.5),2) + backErr6New*pow(CutH125a5New[6]/2*pow(CutH125a5New[6] + backSum6New,-1.5),2) );
+  double err7H125a5New = sqrt( scaleH125a5*CutH125a5New[7]*pow( pow(backSum7New + CutH125a5New[7],-.5) - CutH125a5New[7]/2*pow(CutH125a5New[7] + backSum7New,-1.5),2) + backErr7New*pow(CutH125a5New[7]/2*pow(CutH125a5New[7] + backSum7New,-1.5),2) );
+  double err8H125a5New = sqrt( scaleH125a5*CutH125a5New[8]*pow( pow(backSum8New + CutH125a5New[8],-.5) - CutH125a5New[8]/2*pow(CutH125a5New[8] + backSum8New,-1.5),2) + backErr8New*pow(CutH125a5New[8]/2*pow(CutH125a5New[8] + backSum8New,-1.5),2) );
+  double err9H125a5New = sqrt( scaleH125a5*CutH125a5New[9]*pow( pow(backSum9New + CutH125a5New[9],-.5) - CutH125a5New[9]/2*pow(CutH125a5New[9] + backSum9New,-1.5),2) + backErr9New*pow(CutH125a5New[9]/2*pow(CutH125a5New[9] + backSum9New,-1.5),2) );
+  double err10H125a5New = sqrt( scaleH125a5*CutH125a5New[0]*pow( pow(backSum10New + CutH125a5New[0],-.5) - CutH125a5New[0]/2*pow(CutH125a5New[0] + backSum10New,-1.5),2) + backErr10New*pow(CutH125a5New[0]/2*pow(CutH125a5New[0] + backSum10New,-1.5),2) );
+  double err11H125a5New = sqrt( scaleH125a5*CutH125a5New[11]*pow( pow(backSum11New + CutH125a5New[11],-.5) - CutH125a5New[11]/2*pow(CutH125a5New[11] + backSum11New,-1.5),2) + backErr11New*pow(CutH125a5New[11]/2*pow(CutH125a5New[11] + backSum11New,-1.5),2) );
+  double err12H125a5New = sqrt( scaleH125a5*CutH125a5New[12]*pow( pow(backSum12New + CutH125a5New[12],-.5) - CutH125a5New[12]/2*pow(CutH125a5New[12] + backSum12New,-1.5),2) + backErr12New*pow(CutH125a5New[12]/2*pow(CutH125a5New[12] + backSum12New,-1.5),2) );
+
+  double err1H125a5NewMVA = sqrt( scaleH125a5*CutH125a5NewMVA[1]*pow( pow(backSum1NewMVA + CutH125a5NewMVA[1],-.5) - CutH125a5NewMVA[1]/2*pow(CutH125a5NewMVA[1] + backSum1NewMVA,-1.5),2) + backErr1NewMVA*pow(CutH125a5NewMVA[1]/2*pow(CutH125a5NewMVA[1] + backSum1NewMVA,-1.5),2) );
+  double err2H125a5NewMVA = sqrt( scaleH125a5*CutH125a5NewMVA[2]*pow( pow(backSum2NewMVA + CutH125a5NewMVA[2],-.5) - CutH125a5NewMVA[2]/2*pow(CutH125a5NewMVA[2] + backSum2NewMVA,-1.5),2) + backErr2NewMVA*pow(CutH125a5NewMVA[2]/2*pow(CutH125a5NewMVA[2] + backSum2NewMVA,-1.5),2) );
+  double err3H125a5NewMVA = sqrt( scaleH125a5*CutH125a5NewMVA[3]*pow( pow(backSum3NewMVA + CutH125a5NewMVA[3],-.5) - CutH125a5NewMVA[3]/2*pow(CutH125a5NewMVA[3] + backSum3NewMVA,-1.5),2) + backErr3NewMVA*pow(CutH125a5NewMVA[3]/2*pow(CutH125a5NewMVA[3] + backSum3NewMVA,-1.5),2) );
+  double err4H125a5NewMVA = sqrt( scaleH125a5*CutH125a5NewMVA[4]*pow( pow(backSum4NewMVA + CutH125a5NewMVA[4],-.5) - CutH125a5NewMVA[4]/2*pow(CutH125a5NewMVA[4] + backSum4NewMVA,-1.5),2) + backErr4NewMVA*pow(CutH125a5NewMVA[4]/2*pow(CutH125a5NewMVA[4] + backSum4NewMVA,-1.5),2) );
+  double err5H125a5NewMVA = sqrt( scaleH125a5*CutH125a5NewMVA[5]*pow( pow(backSum5NewMVA + CutH125a5NewMVA[5],-.5) - CutH125a5NewMVA[5]/2*pow(CutH125a5NewMVA[5] + backSum5NewMVA,-1.5),2) + backErr5NewMVA*pow(CutH125a5NewMVA[5]/2*pow(CutH125a5NewMVA[5] + backSum5NewMVA,-1.5),2) );
+  double err6H125a5NewMVA = sqrt( scaleH125a5*CutH125a5NewMVA[6]*pow( pow(backSum6NewMVA + CutH125a5NewMVA[6],-.5) - CutH125a5NewMVA[6]/2*pow(CutH125a5NewMVA[6] + backSum6NewMVA,-1.5),2) + backErr6NewMVA*pow(CutH125a5NewMVA[6]/2*pow(CutH125a5NewMVA[6] + backSum6NewMVA,-1.5),2) );
+  double err7H125a5NewMVA = sqrt( scaleH125a5*CutH125a5NewMVA[7]*pow( pow(backSum7NewMVA + CutH125a5NewMVA[7],-.5) - CutH125a5NewMVA[7]/2*pow(CutH125a5NewMVA[7] + backSum7NewMVA,-1.5),2) + backErr7NewMVA*pow(CutH125a5NewMVA[7]/2*pow(CutH125a5NewMVA[7] + backSum7NewMVA,-1.5),2) );
+  double err8H125a5NewMVA = sqrt( scaleH125a5*CutH125a5NewMVA[8]*pow( pow(backSum8NewMVA + CutH125a5NewMVA[8],-.5) - CutH125a5NewMVA[8]/2*pow(CutH125a5NewMVA[8] + backSum8NewMVA,-1.5),2) + backErr8NewMVA*pow(CutH125a5NewMVA[8]/2*pow(CutH125a5NewMVA[8] + backSum8NewMVA,-1.5),2) );
+  double err9H125a5NewMVA = sqrt( scaleH125a5*CutH125a5NewMVA[9]*pow( pow(backSum9NewMVA + CutH125a5NewMVA[9],-.5) - CutH125a5NewMVA[9]/2*pow(CutH125a5NewMVA[9] + backSum9NewMVA,-1.5),2) + backErr9NewMVA*pow(CutH125a5NewMVA[9]/2*pow(CutH125a5NewMVA[9] + backSum9NewMVA,-1.5),2) );
+  double err10H125a5NewMVA = sqrt( scaleH125a5*CutH125a5NewMVA[0]*pow( pow(backSum10NewMVA + CutH125a5NewMVA[0],-.5) - CutH125a5NewMVA[0]/2*pow(CutH125a5NewMVA[0] + backSum10NewMVA,-1.5),2) + backErr10NewMVA*pow(CutH125a5NewMVA[0]/2*pow(CutH125a5NewMVA[0] + backSum10NewMVA,-1.5),2) );
+  double err11H125a5NewMVA = sqrt( scaleH125a5*CutH125a5NewMVA[11]*pow( pow(backSum11NewMVA + CutH125a5NewMVA[11],-.5) - CutH125a5NewMVA[11]/2*pow(CutH125a5NewMVA[11] + backSum11NewMVA,-1.5),2) + backErr11NewMVA*pow(CutH125a5NewMVA[11]/2*pow(CutH125a5NewMVA[11] + backSum11NewMVA,-1.5),2) );
+  double err12H125a5NewMVA = sqrt( scaleH125a5*CutH125a5NewMVA[12]*pow( pow(backSum12NewMVA + CutH125a5NewMVA[12],-.5) - CutH125a5NewMVA[12]/2*pow(CutH125a5NewMVA[12] + backSum12NewMVA,-1.5),2) + backErr12NewMVA*pow(CutH125a5NewMVA[12]/2*pow(CutH125a5NewMVA[12] + backSum12NewMVA,-1.5),2) );
+
+
+  // H750a9              sqrt(          (SumS)^2            *             (S+B)^(-.5)                     -     (S/2)         *           (S+B)^(-1.5)
+  double err1H750a9Old = sqrt( scaleH750a9*CutH750a9Old[1]*pow( pow(backSum1Old + CutH750a9Old[1],-.5) - CutH750a9Old[1]/2*pow(CutH750a9Old[1] + backSum1Old,-1.5),2) + backErr1Old*pow(CutH750a9Old[1]/2*pow(CutH750a9Old[1] + backSum1Old,-1.5),2) );
+  double err2H750a9Old = sqrt( scaleH750a9*CutH750a9Old[2]*pow( pow(backSum2Old + CutH750a9Old[2],-.5) - CutH750a9Old[2]/2*pow(CutH750a9Old[2] + backSum2Old,-1.5),2) + backErr2Old*pow(CutH750a9Old[2]/2*pow(CutH750a9Old[2] + backSum2Old,-1.5),2) );
+  double err3H750a9Old = sqrt( scaleH750a9*CutH750a9Old[3]*pow( pow(backSum3Old + CutH750a9Old[3],-.5) - CutH750a9Old[3]/2*pow(CutH750a9Old[3] + backSum3Old,-1.5),2) + backErr3Old*pow(CutH750a9Old[3]/2*pow(CutH750a9Old[3] + backSum3Old,-1.5),2) );
+  double err4H750a9Old = sqrt( scaleH750a9*CutH750a9Old[4]*pow( pow(backSum4Old + CutH750a9Old[4],-.5) - CutH750a9Old[4]/2*pow(CutH750a9Old[4] + backSum4Old,-1.5),2) + backErr4Old*pow(CutH750a9Old[4]/2*pow(CutH750a9Old[4] + backSum4Old,-1.5),2) );
+  double err5H750a9Old = sqrt( scaleH750a9*CutH750a9Old[5]*pow( pow(backSum5Old + CutH750a9Old[5],-.5) - CutH750a9Old[5]/2*pow(CutH750a9Old[5] + backSum5Old,-1.5),2) + backErr5Old*pow(CutH750a9Old[5]/2*pow(CutH750a9Old[5] + backSum5Old,-1.5),2) );
+  double err6H750a9Old = sqrt( scaleH750a9*CutH750a9Old[6]*pow( pow(backSum6Old + CutH750a9Old[6],-.5) - CutH750a9Old[6]/2*pow(CutH750a9Old[6] + backSum6Old,-1.5),2) + backErr6Old*pow(CutH750a9Old[6]/2*pow(CutH750a9Old[6] + backSum6Old,-1.5),2) );
+  double err7H750a9Old = sqrt( scaleH750a9*CutH750a9Old[7]*pow( pow(backSum7Old + CutH750a9Old[7],-.5) - CutH750a9Old[7]/2*pow(CutH750a9Old[7] + backSum7Old,-1.5),2) + backErr7Old*pow(CutH750a9Old[7]/2*pow(CutH750a9Old[7] + backSum7Old,-1.5),2) );
+  double err8H750a9Old = sqrt( scaleH750a9*CutH750a9Old[8]*pow( pow(backSum8Old + CutH750a9Old[8],-.5) - CutH750a9Old[8]/2*pow(CutH750a9Old[8] + backSum8Old,-1.5),2) + backErr8Old*pow(CutH750a9Old[8]/2*pow(CutH750a9Old[8] + backSum8Old,-1.5),2) );
+  double err9H750a9Old = sqrt( scaleH750a9*CutH750a9Old[9]*pow( pow(backSum9Old + CutH750a9Old[9],-.5) - CutH750a9Old[9]/2*pow(CutH750a9Old[9] + backSum9Old,-1.5),2) + backErr9Old*pow(CutH750a9Old[9]/2*pow(CutH750a9Old[9] + backSum9Old,-1.5),2) );
+  double err10H750a9Old = sqrt( scaleH750a9*CutH750a9Old[0]*pow( pow(backSum10Old + CutH750a9Old[0],-.5) - CutH750a9Old[0]/2*pow(CutH750a9Old[0] + backSum10Old,-1.5),2) + backErr10Old*pow(CutH750a9Old[0]/2*pow(CutH750a9Old[0] + backSum10Old,-1.5),2) );
+  double err11H750a9Old = sqrt( scaleH750a9*CutH750a9Old[11]*pow( pow(backSum11Old + CutH750a9Old[11],-.5) - CutH750a9Old[11]/2*pow(CutH750a9Old[11] + backSum11Old,-1.5),2) + backErr11Old*pow(CutH750a9Old[11]/2*pow(CutH750a9Old[11] + backSum11Old,-1.5),2) );
+  double err12H750a9Old = sqrt( scaleH750a9*CutH750a9Old[12]*pow( pow(backSum12Old + CutH750a9Old[12],-.5) - CutH750a9Old[12]/2*pow(CutH750a9Old[12] + backSum12Old,-1.5),2) + backErr12Old*pow(CutH750a9Old[12]/2*pow(CutH750a9Old[12] + backSum12Old,-1.5),2) );
+
+  double err1H750a9OldMVA = sqrt( scaleH750a9*CutH750a9OldMVA[1]*pow( pow(backSum1OldMVA + CutH750a9OldMVA[1],-.5) - CutH750a9OldMVA[1]/2*pow(CutH750a9OldMVA[1] + backSum1OldMVA,-1.5),2) + backErr1OldMVA*pow(CutH750a9OldMVA[1]/2*pow(CutH750a9OldMVA[1] + backSum1OldMVA,-1.5),2) );
+  double err2H750a9OldMVA = sqrt( scaleH750a9*CutH750a9OldMVA[2]*pow( pow(backSum2OldMVA + CutH750a9OldMVA[2],-.5) - CutH750a9OldMVA[2]/2*pow(CutH750a9OldMVA[2] + backSum2OldMVA,-1.5),2) + backErr2OldMVA*pow(CutH750a9OldMVA[2]/2*pow(CutH750a9OldMVA[2] + backSum2OldMVA,-1.5),2) );
+  double err3H750a9OldMVA = sqrt( scaleH750a9*CutH750a9OldMVA[3]*pow( pow(backSum3OldMVA + CutH750a9OldMVA[3],-.5) - CutH750a9OldMVA[3]/2*pow(CutH750a9OldMVA[3] + backSum3OldMVA,-1.5),2) + backErr3OldMVA*pow(CutH750a9OldMVA[3]/2*pow(CutH750a9OldMVA[3] + backSum3OldMVA,-1.5),2) );
+  double err4H750a9OldMVA = sqrt( scaleH750a9*CutH750a9OldMVA[4]*pow( pow(backSum4OldMVA + CutH750a9OldMVA[4],-.5) - CutH750a9OldMVA[4]/2*pow(CutH750a9OldMVA[4] + backSum4OldMVA,-1.5),2) + backErr4OldMVA*pow(CutH750a9OldMVA[4]/2*pow(CutH750a9OldMVA[4] + backSum4OldMVA,-1.5),2) );
+  double err5H750a9OldMVA = sqrt( scaleH750a9*CutH750a9OldMVA[5]*pow( pow(backSum5OldMVA + CutH750a9OldMVA[5],-.5) - CutH750a9OldMVA[5]/2*pow(CutH750a9OldMVA[5] + backSum5OldMVA,-1.5),2) + backErr5OldMVA*pow(CutH750a9OldMVA[5]/2*pow(CutH750a9OldMVA[5] + backSum5OldMVA,-1.5),2) );
+  double err6H750a9OldMVA = sqrt( scaleH750a9*CutH750a9OldMVA[6]*pow( pow(backSum6OldMVA + CutH750a9OldMVA[6],-.5) - CutH750a9OldMVA[6]/2*pow(CutH750a9OldMVA[6] + backSum6OldMVA,-1.5),2) + backErr6OldMVA*pow(CutH750a9OldMVA[6]/2*pow(CutH750a9OldMVA[6] + backSum6OldMVA,-1.5),2) );
+  double err7H750a9OldMVA = sqrt( scaleH750a9*CutH750a9OldMVA[7]*pow( pow(backSum7OldMVA + CutH750a9OldMVA[7],-.5) - CutH750a9OldMVA[7]/2*pow(CutH750a9OldMVA[7] + backSum7OldMVA,-1.5),2) + backErr7OldMVA*pow(CutH750a9OldMVA[7]/2*pow(CutH750a9OldMVA[7] + backSum7OldMVA,-1.5),2) );
+  double err8H750a9OldMVA = sqrt( scaleH750a9*CutH750a9OldMVA[8]*pow( pow(backSum8OldMVA + CutH750a9OldMVA[8],-.5) - CutH750a9OldMVA[8]/2*pow(CutH750a9OldMVA[8] + backSum8OldMVA,-1.5),2) + backErr8OldMVA*pow(CutH750a9OldMVA[8]/2*pow(CutH750a9OldMVA[8] + backSum8OldMVA,-1.5),2) );
+  double err9H750a9OldMVA = sqrt( scaleH750a9*CutH750a9OldMVA[9]*pow( pow(backSum9OldMVA + CutH750a9OldMVA[9],-.5) - CutH750a9OldMVA[9]/2*pow(CutH750a9OldMVA[9] + backSum9OldMVA,-1.5),2) + backErr9OldMVA*pow(CutH750a9OldMVA[9]/2*pow(CutH750a9OldMVA[9] + backSum9OldMVA,-1.5),2) );
+  double err10H750a9OldMVA = sqrt( scaleH750a9*CutH750a9OldMVA[0]*pow( pow(backSum10OldMVA + CutH750a9OldMVA[0],-.5) - CutH750a9OldMVA[0]/2*pow(CutH750a9OldMVA[0] + backSum10OldMVA,-1.5),2) + backErr10OldMVA*pow(CutH750a9OldMVA[0]/2*pow(CutH750a9OldMVA[0] + backSum10OldMVA,-1.5),2) );
+  double err11H750a9OldMVA = sqrt( scaleH750a9*CutH750a9OldMVA[11]*pow( pow(backSum11OldMVA + CutH750a9OldMVA[11],-.5) - CutH750a9OldMVA[11]/2*pow(CutH750a9OldMVA[11] + backSum11OldMVA,-1.5),2) + backErr11OldMVA*pow(CutH750a9OldMVA[11]/2*pow(CutH750a9OldMVA[11] + backSum11OldMVA,-1.5),2) );
+  double err12H750a9OldMVA = sqrt( scaleH750a9*CutH750a9OldMVA[12]*pow( pow(backSum12OldMVA + CutH750a9OldMVA[12],-.5) - CutH750a9OldMVA[12]/2*pow(CutH750a9OldMVA[12] + backSum12OldMVA,-1.5),2) + backErr12OldMVA*pow(CutH750a9OldMVA[12]/2*pow(CutH750a9OldMVA[12] + backSum12OldMVA,-1.5),2) );
+
+  double err1H750a9New = sqrt( scaleH750a9*CutH750a9New[1]*pow( pow(backSum1New + CutH750a9New[1],-.5) - CutH750a9New[1]/2*pow(CutH750a9New[1] + backSum1New,-1.5),2) + backErr1New*pow(CutH750a9New[1]/2*pow(CutH750a9New[1] + backSum1New,-1.5),2) );
+  double err2H750a9New = sqrt( scaleH750a9*CutH750a9New[2]*pow( pow(backSum2New + CutH750a9New[2],-.5) - CutH750a9New[2]/2*pow(CutH750a9New[2] + backSum2New,-1.5),2) + backErr2New*pow(CutH750a9New[2]/2*pow(CutH750a9New[2] + backSum2New,-1.5),2) );
+  double err3H750a9New = sqrt( scaleH750a9*CutH750a9New[3]*pow( pow(backSum3New + CutH750a9New[3],-.5) - CutH750a9New[3]/2*pow(CutH750a9New[3] + backSum3New,-1.5),2) + backErr3New*pow(CutH750a9New[3]/2*pow(CutH750a9New[3] + backSum3New,-1.5),2) );
+  double err4H750a9New = sqrt( scaleH750a9*CutH750a9New[4]*pow( pow(backSum4New + CutH750a9New[4],-.5) - CutH750a9New[4]/2*pow(CutH750a9New[4] + backSum4New,-1.5),2) + backErr4New*pow(CutH750a9New[4]/2*pow(CutH750a9New[4] + backSum4New,-1.5),2) );
+  double err5H750a9New = sqrt( scaleH750a9*CutH750a9New[5]*pow( pow(backSum5New + CutH750a9New[5],-.5) - CutH750a9New[5]/2*pow(CutH750a9New[5] + backSum5New,-1.5),2) + backErr5New*pow(CutH750a9New[5]/2*pow(CutH750a9New[5] + backSum5New,-1.5),2) );
+  double err6H750a9New = sqrt( scaleH750a9*CutH750a9New[6]*pow( pow(backSum6New + CutH750a9New[6],-.5) - CutH750a9New[6]/2*pow(CutH750a9New[6] + backSum6New,-1.5),2) + backErr6New*pow(CutH750a9New[6]/2*pow(CutH750a9New[6] + backSum6New,-1.5),2) );
+  double err7H750a9New = sqrt( scaleH750a9*CutH750a9New[7]*pow( pow(backSum7New + CutH750a9New[7],-.5) - CutH750a9New[7]/2*pow(CutH750a9New[7] + backSum7New,-1.5),2) + backErr7New*pow(CutH750a9New[7]/2*pow(CutH750a9New[7] + backSum7New,-1.5),2) );
+  double err8H750a9New = sqrt( scaleH750a9*CutH750a9New[8]*pow( pow(backSum8New + CutH750a9New[8],-.5) - CutH750a9New[8]/2*pow(CutH750a9New[8] + backSum8New,-1.5),2) + backErr8New*pow(CutH750a9New[8]/2*pow(CutH750a9New[8] + backSum8New,-1.5),2) );
+  double err9H750a9New = sqrt( scaleH750a9*CutH750a9New[9]*pow( pow(backSum9New + CutH750a9New[9],-.5) - CutH750a9New[9]/2*pow(CutH750a9New[9] + backSum9New,-1.5),2) + backErr9New*pow(CutH750a9New[9]/2*pow(CutH750a9New[9] + backSum9New,-1.5),2) );
+  double err10H750a9New = sqrt( scaleH750a9*CutH750a9New[0]*pow( pow(backSum10New + CutH750a9New[0],-.5) - CutH750a9New[0]/2*pow(CutH750a9New[0] + backSum10New,-1.5),2) + backErr10New*pow(CutH750a9New[0]/2*pow(CutH750a9New[0] + backSum10New,-1.5),2) );
+  double err11H750a9New = sqrt( scaleH750a9*CutH750a9New[11]*pow( pow(backSum11New + CutH750a9New[11],-.5) - CutH750a9New[11]/2*pow(CutH750a9New[11] + backSum11New,-1.5),2) + backErr11New*pow(CutH750a9New[11]/2*pow(CutH750a9New[11] + backSum11New,-1.5),2) );
+  double err12H750a9New = sqrt( scaleH750a9*CutH750a9New[12]*pow( pow(backSum12New + CutH750a9New[12],-.5) - CutH750a9New[12]/2*pow(CutH750a9New[12] + backSum12New,-1.5),2) + backErr12New*pow(CutH750a9New[12]/2*pow(CutH750a9New[12] + backSum12New,-1.5),2) );
+
+  double err1H750a9NewMVA = sqrt( scaleH750a9*CutH750a9NewMVA[1]*pow( pow(backSum1NewMVA + CutH750a9NewMVA[1],-.5) - CutH750a9NewMVA[1]/2*pow(CutH750a9NewMVA[1] + backSum1NewMVA,-1.5),2) + backErr1NewMVA*pow(CutH750a9NewMVA[1]/2*pow(CutH750a9NewMVA[1] + backSum1NewMVA,-1.5),2) );
+  double err2H750a9NewMVA = sqrt( scaleH750a9*CutH750a9NewMVA[2]*pow( pow(backSum2NewMVA + CutH750a9NewMVA[2],-.5) - CutH750a9NewMVA[2]/2*pow(CutH750a9NewMVA[2] + backSum2NewMVA,-1.5),2) + backErr2NewMVA*pow(CutH750a9NewMVA[2]/2*pow(CutH750a9NewMVA[2] + backSum2NewMVA,-1.5),2) );
+  double err3H750a9NewMVA = sqrt( scaleH750a9*CutH750a9NewMVA[3]*pow( pow(backSum3NewMVA + CutH750a9NewMVA[3],-.5) - CutH750a9NewMVA[3]/2*pow(CutH750a9NewMVA[3] + backSum3NewMVA,-1.5),2) + backErr3NewMVA*pow(CutH750a9NewMVA[3]/2*pow(CutH750a9NewMVA[3] + backSum3NewMVA,-1.5),2) );
+  double err4H750a9NewMVA = sqrt( scaleH750a9*CutH750a9NewMVA[4]*pow( pow(backSum4NewMVA + CutH750a9NewMVA[4],-.5) - CutH750a9NewMVA[4]/2*pow(CutH750a9NewMVA[4] + backSum4NewMVA,-1.5),2) + backErr4NewMVA*pow(CutH750a9NewMVA[4]/2*pow(CutH750a9NewMVA[4] + backSum4NewMVA,-1.5),2) );
+  double err5H750a9NewMVA = sqrt( scaleH750a9*CutH750a9NewMVA[5]*pow( pow(backSum5NewMVA + CutH750a9NewMVA[5],-.5) - CutH750a9NewMVA[5]/2*pow(CutH750a9NewMVA[5] + backSum5NewMVA,-1.5),2) + backErr5NewMVA*pow(CutH750a9NewMVA[5]/2*pow(CutH750a9NewMVA[5] + backSum5NewMVA,-1.5),2) );
+  double err6H750a9NewMVA = sqrt( scaleH750a9*CutH750a9NewMVA[6]*pow( pow(backSum6NewMVA + CutH750a9NewMVA[6],-.5) - CutH750a9NewMVA[6]/2*pow(CutH750a9NewMVA[6] + backSum6NewMVA,-1.5),2) + backErr6NewMVA*pow(CutH750a9NewMVA[6]/2*pow(CutH750a9NewMVA[6] + backSum6NewMVA,-1.5),2) );
+  double err7H750a9NewMVA = sqrt( scaleH750a9*CutH750a9NewMVA[7]*pow( pow(backSum7NewMVA + CutH750a9NewMVA[7],-.5) - CutH750a9NewMVA[7]/2*pow(CutH750a9NewMVA[7] + backSum7NewMVA,-1.5),2) + backErr7NewMVA*pow(CutH750a9NewMVA[7]/2*pow(CutH750a9NewMVA[7] + backSum7NewMVA,-1.5),2) );
+  double err8H750a9NewMVA = sqrt( scaleH750a9*CutH750a9NewMVA[8]*pow( pow(backSum8NewMVA + CutH750a9NewMVA[8],-.5) - CutH750a9NewMVA[8]/2*pow(CutH750a9NewMVA[8] + backSum8NewMVA,-1.5),2) + backErr8NewMVA*pow(CutH750a9NewMVA[8]/2*pow(CutH750a9NewMVA[8] + backSum8NewMVA,-1.5),2) );
+  double err9H750a9NewMVA = sqrt( scaleH750a9*CutH750a9NewMVA[9]*pow( pow(backSum9NewMVA + CutH750a9NewMVA[9],-.5) - CutH750a9NewMVA[9]/2*pow(CutH750a9NewMVA[9] + backSum9NewMVA,-1.5),2) + backErr9NewMVA*pow(CutH750a9NewMVA[9]/2*pow(CutH750a9NewMVA[9] + backSum9NewMVA,-1.5),2) );
+  double err10H750a9NewMVA = sqrt( scaleH750a9*CutH750a9NewMVA[0]*pow( pow(backSum10NewMVA + CutH750a9NewMVA[0],-.5) - CutH750a9NewMVA[0]/2*pow(CutH750a9NewMVA[0] + backSum10NewMVA,-1.5),2) + backErr10NewMVA*pow(CutH750a9NewMVA[0]/2*pow(CutH750a9NewMVA[0] + backSum10NewMVA,-1.5),2) );
+  double err11H750a9NewMVA = sqrt( scaleH750a9*CutH750a9NewMVA[11]*pow( pow(backSum11NewMVA + CutH750a9NewMVA[11],-.5) - CutH750a9NewMVA[11]/2*pow(CutH750a9NewMVA[11] + backSum11NewMVA,-1.5),2) + backErr11NewMVA*pow(CutH750a9NewMVA[11]/2*pow(CutH750a9NewMVA[11] + backSum11NewMVA,-1.5),2) );
+  double err12H750a9NewMVA = sqrt( scaleH750a9*CutH750a9NewMVA[12]*pow( pow(backSum12NewMVA + CutH750a9NewMVA[12],-.5) - CutH750a9NewMVA[12]/2*pow(CutH750a9NewMVA[12] + backSum12NewMVA,-1.5),2) + backErr12NewMVA*pow(CutH750a9NewMVA[12]/2*pow(CutH750a9NewMVA[12] + backSum12NewMVA,-1.5),2) );
+
+
+
+std::cout << "\nH125a19\nS= " << CutH125a19Old[2] << "\nB= " << backSum2Old <<  "\npow(CutH125a19Old[2] + backSum2Old,-1.5)= " << pow(CutH125a19Old[2] + backSum2Old,-1.5) << "\npow(backSum12NewMVA + CutH750a9NewMVA[12],-.5)= " << pow(backSum12NewMVA + CutH750a9NewMVA[12],-.5) << "\nbackSum12NewMVA= " << backSum12NewMVA << "\nCutH750a9NewMVA[12]= " << CutH750a9NewMVA[12] << "\nTotalError= " << err1H125a19Old << std::endl;
+std::cout << "\nH125a9\nS= " << CutH125a9Old[2] << "\nB= " << backSum1Old << "\nTotalError= " << err1H125a9Old << std::endl;
+std::cout << "\nH125a5\nS= " << CutH125a5Old[2] << "\nB= " << backSum1Old << "\nTotalError= " << err1H125a5Old << std::endl;
+std::cout << "\nH750a9\nS= " << CutH750a9Old[2] << "\nB= " << backSum1Old <<  "\nTotalError= " << err1H750a9Old << std::endl;
+std::cout << "\nH125a19= " << err3H125a19Old << "\nH125a9= " << err3H125a9Old << "\nH125a5= " << err3H125a5Old << "\nH1750a9= " << err3H750a9Old << std::endl;
 
   //////////////////////////
   // H125 a19 4 tau DM's
   //////////////////////////
-  TH1F* OldH125a19ToBack_    = new TH1F("OldH125a19ToBack","", 10, -.5, 9.5);
+  TH1F* OldH125a19ToBack_    = new TH1F("OldH125a19ToBack","", 12, -.5, 11.5);
       OldH125a19ToBack_->GetXaxis()->SetBinLabel(1, CutLabelsSig[1].c_str() );
       OldH125a19ToBack_->GetXaxis()->SetBinLabel(2, CutLabelsSig[2].c_str() );
       OldH125a19ToBack_->GetXaxis()->SetBinLabel(3, CutLabelsSig[3].c_str() );
@@ -732,6 +1039,8 @@ std::cout << "Done writing output. Now plotting Signal to Background." << std::e
       OldH125a19ToBack_->GetXaxis()->SetBinLabel(8, CutLabelsSig[8].c_str() );
       OldH125a19ToBack_->GetXaxis()->SetBinLabel(9, CutLabelsSig[9].c_str() );
       OldH125a19ToBack_->GetXaxis()->SetBinLabel(10, CutLabelsSig[10].c_str() );
+      OldH125a19ToBack_->GetXaxis()->SetBinLabel(11, CutLabelsSig[11].c_str() );
+      OldH125a19ToBack_->GetXaxis()->SetBinLabel(12, CutLabelsSig[12].c_str() );
   OldH125a19ToBack_->SetBinContent(1, CutH125a19Old[1] / TMath::Sqrt(CutH125a19Old[1] + backSum1Old) );
   OldH125a19ToBack_->SetBinContent(2, CutH125a19Old[2] / TMath::Sqrt(CutH125a19Old[2] + backSum2Old) );
   OldH125a19ToBack_->SetBinContent(3, CutH125a19Old[3] / TMath::Sqrt(CutH125a19Old[3] + backSum3Old) );
@@ -742,9 +1051,23 @@ std::cout << "Done writing output. Now plotting Signal to Background." << std::e
   OldH125a19ToBack_->SetBinContent(8, CutH125a19Old[8] / TMath::Sqrt(CutH125a19Old[8] + backSum8Old) );
   OldH125a19ToBack_->SetBinContent(9, CutH125a19Old[9] / TMath::Sqrt(CutH125a19Old[9] + backSum9Old) );
   OldH125a19ToBack_->SetBinContent(10, CutH125a19Old[0] / TMath::Sqrt(CutH125a19Old[0] + backSum10Old) );
+  OldH125a19ToBack_->SetBinContent(11, CutH125a19Old[11] / TMath::Sqrt(CutH125a19Old[11] + backSum11Old) );
+  OldH125a19ToBack_->SetBinContent(12, CutH125a19Old[12] / TMath::Sqrt(CutH125a19Old[12] + backSum12Old) );
+  OldH125a19ToBack_->SetBinError(1, err1H125a19Old);
+  OldH125a19ToBack_->SetBinError(2, err2H125a19Old);
+  OldH125a19ToBack_->SetBinError(3, err3H125a19Old);
+  OldH125a19ToBack_->SetBinError(4, err4H125a19Old);
+  OldH125a19ToBack_->SetBinError(5, err5H125a19Old);
+  OldH125a19ToBack_->SetBinError(6, err6H125a19Old);
+  OldH125a19ToBack_->SetBinError(7, err7H125a19Old);
+  OldH125a19ToBack_->SetBinError(8, err8H125a19Old);
+  OldH125a19ToBack_->SetBinError(9, err9H125a19Old);
+  OldH125a19ToBack_->SetBinError(10, err10H125a19Old);
+  OldH125a19ToBack_->SetBinError(11, err11H125a19Old);
+  OldH125a19ToBack_->SetBinError(12, err12H125a19Old);
   OldH125a19ToBack_->GetYaxis()->SetTitle("S / sqrt (S + B)");
 
-  TH1F* OldMVAH125a19ToBack_    = new TH1F("OldMVAH125a19ToBack","", 10, -.5, 9.5);
+  TH1F* OldMVAH125a19ToBack_    = new TH1F("OldMVAH125a19ToBack","", 12, -.5, 11.5);
       OldMVAH125a19ToBack_->GetXaxis()->SetBinLabel(1, CutLabelsSig[1].c_str() );
       OldMVAH125a19ToBack_->GetXaxis()->SetBinLabel(2, CutLabelsSig[2].c_str() );
       OldMVAH125a19ToBack_->GetXaxis()->SetBinLabel(3, CutLabelsSig[3].c_str() );
@@ -755,6 +1078,8 @@ std::cout << "Done writing output. Now plotting Signal to Background." << std::e
       OldMVAH125a19ToBack_->GetXaxis()->SetBinLabel(8, CutLabelsSig[8].c_str() );
       OldMVAH125a19ToBack_->GetXaxis()->SetBinLabel(9, CutLabelsSig[9].c_str() );
       OldMVAH125a19ToBack_->GetXaxis()->SetBinLabel(10, CutLabelsSig[10].c_str() );
+      OldMVAH125a19ToBack_->GetXaxis()->SetBinLabel(11, CutLabelsSig[11].c_str() );
+      OldMVAH125a19ToBack_->GetXaxis()->SetBinLabel(12, CutLabelsSig[12].c_str() );
   OldMVAH125a19ToBack_->SetBinContent(1,CutH125a19OldMVA[1]/TMath::Sqrt(CutH125a19OldMVA[1]+ backSum1OldMVA) );
   OldMVAH125a19ToBack_->SetBinContent(2,CutH125a19OldMVA[2]/TMath::Sqrt(CutH125a19OldMVA[2]+ backSum2OldMVA) );
   OldMVAH125a19ToBack_->SetBinContent(3,CutH125a19OldMVA[3]/TMath::Sqrt(CutH125a19OldMVA[3]+ backSum3OldMVA) );
@@ -765,9 +1090,23 @@ std::cout << "Done writing output. Now plotting Signal to Background." << std::e
   OldMVAH125a19ToBack_->SetBinContent(8,CutH125a19OldMVA[8]/TMath::Sqrt(CutH125a19OldMVA[8]+ backSum8OldMVA) );
   OldMVAH125a19ToBack_->SetBinContent(9,CutH125a19OldMVA[9]/TMath::Sqrt(CutH125a19OldMVA[9]+ backSum9OldMVA) );
   OldMVAH125a19ToBack_->SetBinContent(10,CutH125a19OldMVA[0]/TMath::Sqrt(CutH125a19OldMVA[0]+ backSum10OldMVA) );
+  OldMVAH125a19ToBack_->SetBinContent(11, CutH125a19OldMVA[11] / TMath::Sqrt(CutH125a19OldMVA[11] + backSum11OldMVA) );
+  OldMVAH125a19ToBack_->SetBinContent(12, CutH125a19OldMVA[12] / TMath::Sqrt(CutH125a19OldMVA[12] + backSum12OldMVA) );
+  OldMVAH125a19ToBack_->SetBinError(1, err1H125a19OldMVA);
+  OldMVAH125a19ToBack_->SetBinError(2, err2H125a19OldMVA);
+  OldMVAH125a19ToBack_->SetBinError(3, err3H125a19OldMVA);
+  OldMVAH125a19ToBack_->SetBinError(4, err4H125a19OldMVA);
+  OldMVAH125a19ToBack_->SetBinError(5, err5H125a19OldMVA);
+  OldMVAH125a19ToBack_->SetBinError(6, err6H125a19OldMVA);
+  OldMVAH125a19ToBack_->SetBinError(7, err7H125a19OldMVA);
+  OldMVAH125a19ToBack_->SetBinError(8, err8H125a19OldMVA);
+  OldMVAH125a19ToBack_->SetBinError(9, err9H125a19OldMVA);
+  OldMVAH125a19ToBack_->SetBinError(10, err10H125a19OldMVA);
+  OldMVAH125a19ToBack_->SetBinError(11, err11H125a19OldMVA);
+  OldMVAH125a19ToBack_->SetBinError(12, err12H125a19OldMVA);
   OldMVAH125a19ToBack_->GetYaxis()->SetTitle("S / sqrt (S + B)");
 
-  TH1F* NewH125a19ToBack_    = new TH1F("NewH125a19ToBack","", 10, -.5, 9.5); 
+  TH1F* NewH125a19ToBack_    = new TH1F("NewH125a19ToBack","", 12, -.5, 11.5); 
       NewH125a19ToBack_->GetXaxis()->SetBinLabel(1, CutLabelsSig[1].c_str() );
       NewH125a19ToBack_->GetXaxis()->SetBinLabel(2, CutLabelsSig[2].c_str() );
       NewH125a19ToBack_->GetXaxis()->SetBinLabel(3, CutLabelsSig[3].c_str() );
@@ -778,6 +1117,8 @@ std::cout << "Done writing output. Now plotting Signal to Background." << std::e
       NewH125a19ToBack_->GetXaxis()->SetBinLabel(8, CutLabelsSig[8].c_str() );
       NewH125a19ToBack_->GetXaxis()->SetBinLabel(9, CutLabelsSig[9].c_str() );
       NewH125a19ToBack_->GetXaxis()->SetBinLabel(10, CutLabelsSig[10].c_str() );
+      NewH125a19ToBack_->GetXaxis()->SetBinLabel(11, CutLabelsSig[11].c_str() );
+      NewH125a19ToBack_->GetXaxis()->SetBinLabel(12, CutLabelsSig[12].c_str() );
   NewH125a19ToBack_->SetBinContent(1,CutH125a19New[1]/TMath::Sqrt(CutH125a19New[1] + backSum1New) );
   NewH125a19ToBack_->SetBinContent(2,CutH125a19New[2]/TMath::Sqrt(CutH125a19New[2] + backSum2New) );
   NewH125a19ToBack_->SetBinContent(3,CutH125a19New[3]/TMath::Sqrt(CutH125a19New[3] + backSum3New) );
@@ -788,9 +1129,23 @@ std::cout << "Done writing output. Now plotting Signal to Background." << std::e
   NewH125a19ToBack_->SetBinContent(8,CutH125a19New[8]/TMath::Sqrt(CutH125a19New[8] + backSum8New) );
   NewH125a19ToBack_->SetBinContent(9,CutH125a19New[9]/TMath::Sqrt(CutH125a19New[9] + backSum9New) );
   NewH125a19ToBack_->SetBinContent(10,CutH125a19New[0]/TMath::Sqrt(CutH125a19New[0]+ backSum10New) );
+  NewH125a19ToBack_->SetBinContent(11, CutH125a19New[11] / TMath::Sqrt(CutH125a19New[11] + backSum11New) );
+  NewH125a19ToBack_->SetBinContent(12, CutH125a19New[12] / TMath::Sqrt(CutH125a19New[12] + backSum12New) );
+  NewH125a19ToBack_->SetBinError(1, err1H125a19New);
+  NewH125a19ToBack_->SetBinError(2, err2H125a19New);
+  NewH125a19ToBack_->SetBinError(3, err3H125a19New);
+  NewH125a19ToBack_->SetBinError(4, err4H125a19New);
+  NewH125a19ToBack_->SetBinError(5, err5H125a19New);
+  NewH125a19ToBack_->SetBinError(6, err6H125a19New);
+  NewH125a19ToBack_->SetBinError(7, err7H125a19New);
+  NewH125a19ToBack_->SetBinError(8, err8H125a19New);
+  NewH125a19ToBack_->SetBinError(9, err9H125a19New);
+  NewH125a19ToBack_->SetBinError(10, err10H125a19New);
+  NewH125a19ToBack_->SetBinError(11, err11H125a19New);
+  NewH125a19ToBack_->SetBinError(12, err12H125a19New);
   NewH125a19ToBack_->GetYaxis()->SetTitle("S / sqrt (S + B)");
 
-  TH1F* NewMVAH125a19ToBack_ = new TH1F("NewMVAH125a19ToBack","", 10, -.5, 9.5); 
+  TH1F* NewMVAH125a19ToBack_ = new TH1F("NewMVAH125a19ToBack","", 12, -.5, 11.5); 
       NewMVAH125a19ToBack_->GetXaxis()->SetBinLabel(1, CutLabelsSig[1].c_str() );
       NewMVAH125a19ToBack_->GetXaxis()->SetBinLabel(2, CutLabelsSig[2].c_str() );
       NewMVAH125a19ToBack_->GetXaxis()->SetBinLabel(3, CutLabelsSig[3].c_str() );
@@ -801,6 +1156,8 @@ std::cout << "Done writing output. Now plotting Signal to Background." << std::e
       NewMVAH125a19ToBack_->GetXaxis()->SetBinLabel(8, CutLabelsSig[8].c_str() );
       NewMVAH125a19ToBack_->GetXaxis()->SetBinLabel(9, CutLabelsSig[9].c_str() );
       NewMVAH125a19ToBack_->GetXaxis()->SetBinLabel(10, CutLabelsSig[10].c_str() );
+      NewMVAH125a19ToBack_->GetXaxis()->SetBinLabel(11, CutLabelsSig[11].c_str() );
+      NewMVAH125a19ToBack_->GetXaxis()->SetBinLabel(12, CutLabelsSig[12].c_str() );
   NewMVAH125a19ToBack_->SetBinContent(1,CutH125a19NewMVA[1]/TMath::Sqrt(CutH125a19NewMVA[1]+ backSum1NewMVA) );
   NewMVAH125a19ToBack_->SetBinContent(2,CutH125a19NewMVA[2]/TMath::Sqrt(CutH125a19NewMVA[2]+ backSum2NewMVA) );
   NewMVAH125a19ToBack_->SetBinContent(3,CutH125a19NewMVA[3]/TMath::Sqrt(CutH125a19NewMVA[3]+ backSum3NewMVA) );
@@ -811,13 +1168,27 @@ std::cout << "Done writing output. Now plotting Signal to Background." << std::e
   NewMVAH125a19ToBack_->SetBinContent(8,CutH125a19NewMVA[8]/TMath::Sqrt(CutH125a19NewMVA[8]+ backSum8NewMVA) );
   NewMVAH125a19ToBack_->SetBinContent(9,CutH125a19NewMVA[9]/TMath::Sqrt(CutH125a19NewMVA[9]+ backSum9NewMVA) );
   NewMVAH125a19ToBack_->SetBinContent(10,CutH125a19NewMVA[0]/TMath::Sqrt(CutH125a19NewMVA[0]+ backSum10NewMVA) );
+  NewMVAH125a19ToBack_->SetBinContent(11, CutH125a19NewMVA[11] / TMath::Sqrt(CutH125a19NewMVA[11] + backSum11NewMVA) );
+  NewMVAH125a19ToBack_->SetBinContent(12, CutH125a19NewMVA[12] / TMath::Sqrt(CutH125a19NewMVA[12] + backSum12NewMVA) );
+  NewMVAH125a19ToBack_->SetBinError(1, err1H125a19NewMVA);
+  NewMVAH125a19ToBack_->SetBinError(2, err2H125a19NewMVA);
+  NewMVAH125a19ToBack_->SetBinError(3, err3H125a19NewMVA);
+  NewMVAH125a19ToBack_->SetBinError(4, err4H125a19NewMVA);
+  NewMVAH125a19ToBack_->SetBinError(5, err5H125a19NewMVA);
+  NewMVAH125a19ToBack_->SetBinError(6, err6H125a19NewMVA);
+  NewMVAH125a19ToBack_->SetBinError(7, err7H125a19NewMVA);
+  NewMVAH125a19ToBack_->SetBinError(8, err8H125a19NewMVA);
+  NewMVAH125a19ToBack_->SetBinError(9, err9H125a19NewMVA);
+  NewMVAH125a19ToBack_->SetBinError(10, err10H125a19NewMVA);
+  NewMVAH125a19ToBack_->SetBinError(11, err11H125a19NewMVA);
+  NewMVAH125a19ToBack_->SetBinError(12, err12H125a19NewMVA);
   NewMVAH125a19ToBack_->GetYaxis()->SetTitle("S / sqrt (S + B)");
 
 
   //////////////////////////
   // H125 a9 4 tau DM's
   //////////////////////////
-  TH1F* OldH125a9ToBack_    = new TH1F("OldH125a9ToBack","", 10, -.5, 9.5);
+  TH1F* OldH125a9ToBack_    = new TH1F("OldH125a9ToBack","", 12, -.5, 11.5);
       OldH125a9ToBack_->GetXaxis()->SetBinLabel(1, CutLabelsSig[1].c_str() );
       OldH125a9ToBack_->GetXaxis()->SetBinLabel(2, CutLabelsSig[2].c_str() );
       OldH125a9ToBack_->GetXaxis()->SetBinLabel(3, CutLabelsSig[3].c_str() );
@@ -828,6 +1199,8 @@ std::cout << "Done writing output. Now plotting Signal to Background." << std::e
       OldH125a9ToBack_->GetXaxis()->SetBinLabel(8, CutLabelsSig[8].c_str() );
       OldH125a9ToBack_->GetXaxis()->SetBinLabel(9, CutLabelsSig[9].c_str() );
       OldH125a9ToBack_->GetXaxis()->SetBinLabel(10, CutLabelsSig[10].c_str() );
+      OldH125a9ToBack_->GetXaxis()->SetBinLabel(11, CutLabelsSig[11].c_str() );
+      OldH125a9ToBack_->GetXaxis()->SetBinLabel(12, CutLabelsSig[12].c_str() );
   OldH125a9ToBack_->SetBinContent(1, CutH125a9Old[1] / TMath::Sqrt(CutH125a9Old[1] + backSum1Old) );
   OldH125a9ToBack_->SetBinContent(2, CutH125a9Old[2] / TMath::Sqrt(CutH125a9Old[2] + backSum2Old) );
   OldH125a9ToBack_->SetBinContent(3, CutH125a9Old[3] / TMath::Sqrt(CutH125a9Old[3] + backSum3Old) );
@@ -838,9 +1211,23 @@ std::cout << "Done writing output. Now plotting Signal to Background." << std::e
   OldH125a9ToBack_->SetBinContent(8, CutH125a9Old[8] / TMath::Sqrt(CutH125a9Old[8] + backSum8Old) );
   OldH125a9ToBack_->SetBinContent(9, CutH125a9Old[9] / TMath::Sqrt(CutH125a9Old[9] + backSum9Old) );
   OldH125a9ToBack_->SetBinContent(10, CutH125a9Old[0] / TMath::Sqrt(CutH125a9Old[0] + backSum10Old) );
+  OldH125a9ToBack_->SetBinContent(11, CutH125a9Old[11] / TMath::Sqrt(CutH125a9Old[11] + backSum11Old) );
+  OldH125a9ToBack_->SetBinContent(12, CutH125a9Old[12] / TMath::Sqrt(CutH125a9Old[12] + backSum12Old) );
+  OldH125a9ToBack_->SetBinError(1, err1H125a9Old);
+  OldH125a9ToBack_->SetBinError(2, err2H125a9Old);
+  OldH125a9ToBack_->SetBinError(3, err3H125a9Old);
+  OldH125a9ToBack_->SetBinError(4, err4H125a9Old);
+  OldH125a9ToBack_->SetBinError(5, err5H125a9Old);
+  OldH125a9ToBack_->SetBinError(6, err6H125a9Old);
+  OldH125a9ToBack_->SetBinError(7, err7H125a9Old);
+  OldH125a9ToBack_->SetBinError(8, err8H125a9Old);
+  OldH125a9ToBack_->SetBinError(9, err9H125a9Old);
+  OldH125a9ToBack_->SetBinError(10, err10H125a9Old);
+  OldH125a9ToBack_->SetBinError(11, err11H125a9Old);
+  OldH125a9ToBack_->SetBinError(12, err12H125a9Old);
   OldH125a9ToBack_->GetYaxis()->SetTitle("S / sqrt (S + B)");
 
-  TH1F* OldMVAH125a9ToBack_    = new TH1F("OldMVAH125a9ToBack","", 10, -.5, 9.5);
+  TH1F* OldMVAH125a9ToBack_    = new TH1F("OldMVAH125a9ToBack","", 12, -.5, 11.5);
       OldMVAH125a9ToBack_->GetXaxis()->SetBinLabel(1, CutLabelsSig[1].c_str() );
       OldMVAH125a9ToBack_->GetXaxis()->SetBinLabel(2, CutLabelsSig[2].c_str() );
       OldMVAH125a9ToBack_->GetXaxis()->SetBinLabel(3, CutLabelsSig[3].c_str() );
@@ -851,6 +1238,8 @@ std::cout << "Done writing output. Now plotting Signal to Background." << std::e
       OldMVAH125a9ToBack_->GetXaxis()->SetBinLabel(8, CutLabelsSig[8].c_str() );
       OldMVAH125a9ToBack_->GetXaxis()->SetBinLabel(9, CutLabelsSig[9].c_str() );
       OldMVAH125a9ToBack_->GetXaxis()->SetBinLabel(10, CutLabelsSig[10].c_str() );
+      OldMVAH125a9ToBack_->GetXaxis()->SetBinLabel(11, CutLabelsSig[11].c_str() );
+      OldMVAH125a9ToBack_->GetXaxis()->SetBinLabel(12, CutLabelsSig[12].c_str() );
   OldMVAH125a9ToBack_->SetBinContent(1, CutH125a9OldMVA[1] / TMath::Sqrt(CutH125a9OldMVA[1] + backSum1OldMVA) );
   OldMVAH125a9ToBack_->SetBinContent(2, CutH125a9OldMVA[2] / TMath::Sqrt(CutH125a9OldMVA[2] + backSum2OldMVA) );
   OldMVAH125a9ToBack_->SetBinContent(3, CutH125a9OldMVA[3] / TMath::Sqrt(CutH125a9OldMVA[3] + backSum3OldMVA) );
@@ -861,9 +1250,23 @@ std::cout << "Done writing output. Now plotting Signal to Background." << std::e
   OldMVAH125a9ToBack_->SetBinContent(8, CutH125a9OldMVA[8] / TMath::Sqrt(CutH125a9OldMVA[8] + backSum8OldMVA) );
   OldMVAH125a9ToBack_->SetBinContent(9, CutH125a9OldMVA[9] / TMath::Sqrt(CutH125a9OldMVA[9] + backSum9OldMVA) );
   OldMVAH125a9ToBack_->SetBinContent(10, CutH125a9OldMVA[0] / TMath::Sqrt(CutH125a9OldMVA[0] + backSum10OldMVA) );
+  OldMVAH125a9ToBack_->SetBinContent(11, CutH125a9OldMVA[11] / TMath::Sqrt(CutH125a9OldMVA[11] + backSum11OldMVA) );
+  OldMVAH125a9ToBack_->SetBinContent(12, CutH125a9OldMVA[12] / TMath::Sqrt(CutH125a9OldMVA[12] + backSum12OldMVA) );
+  OldMVAH125a9ToBack_->SetBinError(1, err1H125a9OldMVA);
+  OldMVAH125a9ToBack_->SetBinError(2, err2H125a9OldMVA);
+  OldMVAH125a9ToBack_->SetBinError(3, err3H125a9OldMVA);
+  OldMVAH125a9ToBack_->SetBinError(4, err4H125a9OldMVA);
+  OldMVAH125a9ToBack_->SetBinError(5, err5H125a9OldMVA);
+  OldMVAH125a9ToBack_->SetBinError(6, err6H125a9OldMVA);
+  OldMVAH125a9ToBack_->SetBinError(7, err7H125a9OldMVA);
+  OldMVAH125a9ToBack_->SetBinError(8, err8H125a9OldMVA);
+  OldMVAH125a9ToBack_->SetBinError(9, err9H125a9OldMVA);
+  OldMVAH125a9ToBack_->SetBinError(10, err10H125a9OldMVA);
+  OldMVAH125a9ToBack_->SetBinError(11, err11H125a9OldMVA);
+  OldMVAH125a9ToBack_->SetBinError(12, err12H125a9OldMVA);
   OldMVAH125a9ToBack_->GetYaxis()->SetTitle("S / sqrt (S + B)");
 
-  TH1F* NewH125a9ToBack_    = new TH1F("NewH125a9ToBack","", 10, -.5, 9.5);
+  TH1F* NewH125a9ToBack_    = new TH1F("NewH125a9ToBack","", 12, -.5, 11.5);
       NewH125a9ToBack_->GetXaxis()->SetBinLabel(1, CutLabelsSig[1].c_str() );
       NewH125a9ToBack_->GetXaxis()->SetBinLabel(2, CutLabelsSig[2].c_str() );
       NewH125a9ToBack_->GetXaxis()->SetBinLabel(3, CutLabelsSig[3].c_str() );
@@ -874,6 +1277,8 @@ std::cout << "Done writing output. Now plotting Signal to Background." << std::e
       NewH125a9ToBack_->GetXaxis()->SetBinLabel(8, CutLabelsSig[8].c_str() );
       NewH125a9ToBack_->GetXaxis()->SetBinLabel(9, CutLabelsSig[9].c_str() );
       NewH125a9ToBack_->GetXaxis()->SetBinLabel(10, CutLabelsSig[10].c_str() );
+      NewH125a9ToBack_->GetXaxis()->SetBinLabel(11, CutLabelsSig[11].c_str() );
+      NewH125a9ToBack_->GetXaxis()->SetBinLabel(12, CutLabelsSig[12].c_str() );
   NewH125a9ToBack_->SetBinContent(1, CutH125a9New[1] / TMath::Sqrt(CutH125a9New[1] + backSum1New) );
   NewH125a9ToBack_->SetBinContent(2, CutH125a9New[2] / TMath::Sqrt(CutH125a9New[2] + backSum2New) );
   NewH125a9ToBack_->SetBinContent(3, CutH125a9New[3] / TMath::Sqrt(CutH125a9New[3] + backSum3New) );
@@ -884,9 +1289,23 @@ std::cout << "Done writing output. Now plotting Signal to Background." << std::e
   NewH125a9ToBack_->SetBinContent(8, CutH125a9New[8] / TMath::Sqrt(CutH125a9New[8] + backSum8New) );
   NewH125a9ToBack_->SetBinContent(9, CutH125a9New[9] / TMath::Sqrt(CutH125a9New[9] + backSum9New) );
   NewH125a9ToBack_->SetBinContent(10, CutH125a9New[0] / TMath::Sqrt(CutH125a9New[0] + backSum10New) );
+  NewH125a9ToBack_->SetBinContent(11, CutH125a9New[11] / TMath::Sqrt(CutH125a9New[11] + backSum11New) );
+  NewH125a9ToBack_->SetBinContent(12, CutH125a9New[12] / TMath::Sqrt(CutH125a9New[12] + backSum12New) );
+  NewH125a9ToBack_->SetBinError(1, err1H125a9New);
+  NewH125a9ToBack_->SetBinError(2, err2H125a9New);
+  NewH125a9ToBack_->SetBinError(3, err3H125a9New);
+  NewH125a9ToBack_->SetBinError(4, err4H125a9New);
+  NewH125a9ToBack_->SetBinError(5, err5H125a9New);
+  NewH125a9ToBack_->SetBinError(6, err6H125a9New);
+  NewH125a9ToBack_->SetBinError(7, err7H125a9New);
+  NewH125a9ToBack_->SetBinError(8, err8H125a9New);
+  NewH125a9ToBack_->SetBinError(9, err9H125a9New);
+  NewH125a9ToBack_->SetBinError(10, err10H125a9New);
+  NewH125a9ToBack_->SetBinError(11, err11H125a9New);
+  NewH125a9ToBack_->SetBinError(12, err12H125a9New);
   NewH125a9ToBack_->GetYaxis()->SetTitle("S / sqrt (S + B)");
 
-  TH1F* NewMVAH125a9ToBack_    = new TH1F("NewMVAH125a9ToBack","", 10, -.5, 9.5);
+  TH1F* NewMVAH125a9ToBack_    = new TH1F("NewMVAH125a9ToBack","", 12, -.5, 11.5);
       NewMVAH125a9ToBack_->GetXaxis()->SetBinLabel(1, CutLabelsSig[1].c_str() );
       NewMVAH125a9ToBack_->GetXaxis()->SetBinLabel(2, CutLabelsSig[2].c_str() );
       NewMVAH125a9ToBack_->GetXaxis()->SetBinLabel(3, CutLabelsSig[3].c_str() );
@@ -897,6 +1316,8 @@ std::cout << "Done writing output. Now plotting Signal to Background." << std::e
       NewMVAH125a9ToBack_->GetXaxis()->SetBinLabel(8, CutLabelsSig[8].c_str() );
       NewMVAH125a9ToBack_->GetXaxis()->SetBinLabel(9, CutLabelsSig[9].c_str() );
       NewMVAH125a9ToBack_->GetXaxis()->SetBinLabel(10, CutLabelsSig[10].c_str() );
+      NewMVAH125a9ToBack_->GetXaxis()->SetBinLabel(11, CutLabelsSig[11].c_str() );
+      NewMVAH125a9ToBack_->GetXaxis()->SetBinLabel(12, CutLabelsSig[12].c_str() );
   NewMVAH125a9ToBack_->SetBinContent(1, CutH125a9NewMVA[1] / TMath::Sqrt(CutH125a9NewMVA[1] + backSum1NewMVA) );
   NewMVAH125a9ToBack_->SetBinContent(2, CutH125a9NewMVA[2] / TMath::Sqrt(CutH125a9NewMVA[2] + backSum2NewMVA) );
   NewMVAH125a9ToBack_->SetBinContent(3, CutH125a9NewMVA[3] / TMath::Sqrt(CutH125a9NewMVA[3] + backSum3NewMVA) );
@@ -907,12 +1328,26 @@ std::cout << "Done writing output. Now plotting Signal to Background." << std::e
   NewMVAH125a9ToBack_->SetBinContent(8, CutH125a9NewMVA[8] / TMath::Sqrt(CutH125a9NewMVA[8] + backSum8NewMVA) );
   NewMVAH125a9ToBack_->SetBinContent(9, CutH125a9NewMVA[9] / TMath::Sqrt(CutH125a9NewMVA[9] + backSum9NewMVA) );
   NewMVAH125a9ToBack_->SetBinContent(10, CutH125a9NewMVA[0] / TMath::Sqrt(CutH125a9NewMVA[0] + backSum10NewMVA) );
+  NewMVAH125a9ToBack_->SetBinContent(11, CutH125a9NewMVA[11] / TMath::Sqrt(CutH125a9NewMVA[11] + backSum11NewMVA) );
+  NewMVAH125a9ToBack_->SetBinContent(12, CutH125a9NewMVA[12] / TMath::Sqrt(CutH125a9NewMVA[12] + backSum12NewMVA) );
+  NewMVAH125a9ToBack_->SetBinError(1, err1H125a9NewMVA);
+  NewMVAH125a9ToBack_->SetBinError(2, err2H125a9NewMVA);
+  NewMVAH125a9ToBack_->SetBinError(3, err3H125a9NewMVA);
+  NewMVAH125a9ToBack_->SetBinError(4, err4H125a9NewMVA);
+  NewMVAH125a9ToBack_->SetBinError(5, err5H125a9NewMVA);
+  NewMVAH125a9ToBack_->SetBinError(6, err6H125a9NewMVA);
+  NewMVAH125a9ToBack_->SetBinError(7, err7H125a9NewMVA);
+  NewMVAH125a9ToBack_->SetBinError(8, err8H125a9NewMVA);
+  NewMVAH125a9ToBack_->SetBinError(9, err9H125a9NewMVA);
+  NewMVAH125a9ToBack_->SetBinError(10, err10H125a9NewMVA);
+  NewMVAH125a9ToBack_->SetBinError(11, err11H125a9NewMVA);
+  NewMVAH125a9ToBack_->SetBinError(12, err12H125a9NewMVA);
   NewMVAH125a9ToBack_->GetYaxis()->SetTitle("S / sqrt (S + B)");
 
   //////////////////////////
   // H125 a5 4 tau DM's
   //////////////////////////
-  TH1F* OldH125a5ToBack_    = new TH1F("OldH125a5ToBack","", 10, -.5, 9.5);
+  TH1F* OldH125a5ToBack_    = new TH1F("OldH125a5ToBack","", 12, -.5, 11.5);
       OldH125a5ToBack_->GetXaxis()->SetBinLabel(1, CutLabelsSig[1].c_str() );
       OldH125a5ToBack_->GetXaxis()->SetBinLabel(2, CutLabelsSig[2].c_str() );
       OldH125a5ToBack_->GetXaxis()->SetBinLabel(3, CutLabelsSig[3].c_str() );
@@ -923,6 +1358,8 @@ std::cout << "Done writing output. Now plotting Signal to Background." << std::e
       OldH125a5ToBack_->GetXaxis()->SetBinLabel(8, CutLabelsSig[8].c_str() );
       OldH125a5ToBack_->GetXaxis()->SetBinLabel(9, CutLabelsSig[9].c_str() );
       OldH125a5ToBack_->GetXaxis()->SetBinLabel(10, CutLabelsSig[10].c_str() );
+      OldH125a5ToBack_->GetXaxis()->SetBinLabel(11, CutLabelsSig[11].c_str() );
+      OldH125a5ToBack_->GetXaxis()->SetBinLabel(12, CutLabelsSig[12].c_str() );
   OldH125a5ToBack_->SetBinContent(1, CutH125a5Old[1] / TMath::Sqrt(CutH125a5Old[1] + backSum1Old) );
   OldH125a5ToBack_->SetBinContent(2, CutH125a5Old[2] / TMath::Sqrt(CutH125a5Old[2] + backSum2Old) );
   OldH125a5ToBack_->SetBinContent(3, CutH125a5Old[3] / TMath::Sqrt(CutH125a5Old[3] + backSum3Old) );
@@ -933,9 +1370,23 @@ std::cout << "Done writing output. Now plotting Signal to Background." << std::e
   OldH125a5ToBack_->SetBinContent(8, CutH125a5Old[8] / TMath::Sqrt(CutH125a5Old[8] + backSum8Old) );
   OldH125a5ToBack_->SetBinContent(9, CutH125a5Old[9] / TMath::Sqrt(CutH125a5Old[9] + backSum9Old) );
   OldH125a5ToBack_->SetBinContent(10, CutH125a5Old[0] / TMath::Sqrt(CutH125a5Old[0] + backSum10Old) );
+  OldH125a5ToBack_->SetBinContent(11, CutH125a5Old[11] / TMath::Sqrt(CutH125a5Old[11] + backSum11Old) );
+  OldH125a5ToBack_->SetBinContent(12, CutH125a5Old[12] / TMath::Sqrt(CutH125a5Old[12] + backSum12Old) );
+  OldH125a5ToBack_->SetBinError(1, err1H125a5Old);
+  OldH125a5ToBack_->SetBinError(2, err2H125a5Old);
+  OldH125a5ToBack_->SetBinError(3, err3H125a5Old);
+  OldH125a5ToBack_->SetBinError(4, err4H125a5Old);
+  OldH125a5ToBack_->SetBinError(5, err5H125a5Old);
+  OldH125a5ToBack_->SetBinError(6, err6H125a5Old);
+  OldH125a5ToBack_->SetBinError(7, err7H125a5Old);
+  OldH125a5ToBack_->SetBinError(8, err8H125a5Old);
+  OldH125a5ToBack_->SetBinError(9, err9H125a5Old);
+  OldH125a5ToBack_->SetBinError(10, err10H125a5Old);
+  OldH125a5ToBack_->SetBinError(11, err11H125a5Old);
+  OldH125a5ToBack_->SetBinError(12, err12H125a5Old);
   OldH125a5ToBack_->GetYaxis()->SetTitle("S / sqrt (S + B)");
 
-  TH1F* OldMVAH125a5ToBack_    = new TH1F("OldMVAH125a5ToBack","", 10, -.5, 9.5);
+  TH1F* OldMVAH125a5ToBack_    = new TH1F("OldMVAH125a5ToBack","", 12, -.5, 11.5);
       OldMVAH125a5ToBack_->GetXaxis()->SetBinLabel(1, CutLabelsSig[1].c_str() );
       OldMVAH125a5ToBack_->GetXaxis()->SetBinLabel(2, CutLabelsSig[2].c_str() );
       OldMVAH125a5ToBack_->GetXaxis()->SetBinLabel(3, CutLabelsSig[3].c_str() );
@@ -946,6 +1397,8 @@ std::cout << "Done writing output. Now plotting Signal to Background." << std::e
       OldMVAH125a5ToBack_->GetXaxis()->SetBinLabel(8, CutLabelsSig[8].c_str() );
       OldMVAH125a5ToBack_->GetXaxis()->SetBinLabel(9, CutLabelsSig[9].c_str() );
       OldMVAH125a5ToBack_->GetXaxis()->SetBinLabel(10, CutLabelsSig[10].c_str() );
+      OldMVAH125a5ToBack_->GetXaxis()->SetBinLabel(11, CutLabelsSig[11].c_str() );
+      OldMVAH125a5ToBack_->GetXaxis()->SetBinLabel(12, CutLabelsSig[12].c_str() );
   OldMVAH125a5ToBack_->SetBinContent(1, CutH125a5OldMVA[1] / TMath::Sqrt(CutH125a5OldMVA[1] + backSum1OldMVA) );
   OldMVAH125a5ToBack_->SetBinContent(2, CutH125a5OldMVA[2] / TMath::Sqrt(CutH125a5OldMVA[2] + backSum2OldMVA) );
   OldMVAH125a5ToBack_->SetBinContent(3, CutH125a5OldMVA[3] / TMath::Sqrt(CutH125a5OldMVA[3] + backSum3OldMVA) );
@@ -956,9 +1409,23 @@ std::cout << "Done writing output. Now plotting Signal to Background." << std::e
   OldMVAH125a5ToBack_->SetBinContent(8, CutH125a5OldMVA[8] / TMath::Sqrt(CutH125a5OldMVA[8] + backSum8OldMVA) );
   OldMVAH125a5ToBack_->SetBinContent(9, CutH125a5OldMVA[9] / TMath::Sqrt(CutH125a5OldMVA[9] + backSum9OldMVA) );
   OldMVAH125a5ToBack_->SetBinContent(10, CutH125a5OldMVA[0] / TMath::Sqrt(CutH125a5OldMVA[0] + backSum10OldMVA) );
+  OldMVAH125a5ToBack_->SetBinContent(11, CutH125a5OldMVA[11] / TMath::Sqrt(CutH125a5OldMVA[11] + backSum11OldMVA) );
+  OldMVAH125a5ToBack_->SetBinContent(12, CutH125a5OldMVA[12] / TMath::Sqrt(CutH125a5OldMVA[12] + backSum12OldMVA) );
+  OldMVAH125a5ToBack_->SetBinError(1, err1H125a5OldMVA);
+  OldMVAH125a5ToBack_->SetBinError(2, err2H125a5OldMVA);
+  OldMVAH125a5ToBack_->SetBinError(3, err3H125a5OldMVA);
+  OldMVAH125a5ToBack_->SetBinError(4, err4H125a5OldMVA);
+  OldMVAH125a5ToBack_->SetBinError(5, err5H125a5OldMVA);
+  OldMVAH125a5ToBack_->SetBinError(6, err6H125a5OldMVA);
+  OldMVAH125a5ToBack_->SetBinError(7, err7H125a5OldMVA);
+  OldMVAH125a5ToBack_->SetBinError(8, err8H125a5OldMVA);
+  OldMVAH125a5ToBack_->SetBinError(9, err9H125a5OldMVA);
+  OldMVAH125a5ToBack_->SetBinError(10, err10H125a5OldMVA);
+  OldMVAH125a5ToBack_->SetBinError(11, err11H125a5OldMVA);
+  OldMVAH125a5ToBack_->SetBinError(12, err12H125a5OldMVA);
   OldMVAH125a5ToBack_->GetYaxis()->SetTitle("S / sqrt (S + B)");
 
-  TH1F* NewH125a5ToBack_    = new TH1F("NewH125a5ToBack","", 10, -.5, 9.5);
+  TH1F* NewH125a5ToBack_    = new TH1F("NewH125a5ToBack","", 12, -.5, 11.5);
       NewH125a5ToBack_->GetXaxis()->SetBinLabel(1, CutLabelsSig[1].c_str() );
       NewH125a5ToBack_->GetXaxis()->SetBinLabel(2, CutLabelsSig[2].c_str() );
       NewH125a5ToBack_->GetXaxis()->SetBinLabel(3, CutLabelsSig[3].c_str() );
@@ -969,6 +1436,8 @@ std::cout << "Done writing output. Now plotting Signal to Background." << std::e
       NewH125a5ToBack_->GetXaxis()->SetBinLabel(8, CutLabelsSig[8].c_str() );
       NewH125a5ToBack_->GetXaxis()->SetBinLabel(9, CutLabelsSig[9].c_str() );
       NewH125a5ToBack_->GetXaxis()->SetBinLabel(10, CutLabelsSig[0].c_str() );
+      NewH125a5ToBack_->GetXaxis()->SetBinLabel(11, CutLabelsSig[11].c_str() );
+      NewH125a5ToBack_->GetXaxis()->SetBinLabel(12, CutLabelsSig[12].c_str() );
   NewH125a5ToBack_->SetBinContent(1, CutH125a5New[1] / TMath::Sqrt(CutH125a5New[1] + backSum1New) );
   NewH125a5ToBack_->SetBinContent(2, CutH125a5New[2] / TMath::Sqrt(CutH125a5New[2] + backSum2New) );
   NewH125a5ToBack_->SetBinContent(3, CutH125a5New[3] / TMath::Sqrt(CutH125a5New[3] + backSum3New) );
@@ -979,9 +1448,23 @@ std::cout << "Done writing output. Now plotting Signal to Background." << std::e
   NewH125a5ToBack_->SetBinContent(8, CutH125a5New[8] / TMath::Sqrt(CutH125a5New[8] + backSum8New) );
   NewH125a5ToBack_->SetBinContent(9, CutH125a5New[9] / TMath::Sqrt(CutH125a5New[9] + backSum9New) );
   NewH125a5ToBack_->SetBinContent(10, CutH125a5New[0] / TMath::Sqrt(CutH125a5New[0] + backSum10New) );
+  NewH125a5ToBack_->SetBinContent(11, CutH125a5New[11] / TMath::Sqrt(CutH125a5New[11] + backSum11New) );
+  NewH125a5ToBack_->SetBinContent(12, CutH125a5New[12] / TMath::Sqrt(CutH125a5New[12] + backSum12New) );
+  NewH125a5ToBack_->SetBinError(1, err1H125a5New);
+  NewH125a5ToBack_->SetBinError(2, err2H125a5New);
+  NewH125a5ToBack_->SetBinError(3, err3H125a5New);
+  NewH125a5ToBack_->SetBinError(4, err4H125a5New);
+  NewH125a5ToBack_->SetBinError(5, err5H125a5New);
+  NewH125a5ToBack_->SetBinError(6, err6H125a5New);
+  NewH125a5ToBack_->SetBinError(7, err7H125a5New);
+  NewH125a5ToBack_->SetBinError(8, err8H125a5New);
+  NewH125a5ToBack_->SetBinError(9, err9H125a5New);
+  NewH125a5ToBack_->SetBinError(10, err10H125a5New);
+  NewH125a5ToBack_->SetBinError(11, err11H125a5New);
+  NewH125a5ToBack_->SetBinError(12, err12H125a5New);
   NewH125a5ToBack_->GetYaxis()->SetTitle("S / sqrt (S + B)");
 
-  TH1F* NewMVAH125a5ToBack_    = new TH1F("NewMVAH125a5ToBack","", 10, -.5, 9.5);
+  TH1F* NewMVAH125a5ToBack_    = new TH1F("NewMVAH125a5ToBack","", 12, -.5, 11.5);
       NewMVAH125a5ToBack_->GetXaxis()->SetBinLabel(1, CutLabelsSig[1].c_str() );
       NewMVAH125a5ToBack_->GetXaxis()->SetBinLabel(2, CutLabelsSig[2].c_str() );
       NewMVAH125a5ToBack_->GetXaxis()->SetBinLabel(3, CutLabelsSig[3].c_str() );
@@ -992,6 +1475,8 @@ std::cout << "Done writing output. Now plotting Signal to Background." << std::e
       NewMVAH125a5ToBack_->GetXaxis()->SetBinLabel(8, CutLabelsSig[8].c_str() );
       NewMVAH125a5ToBack_->GetXaxis()->SetBinLabel(9, CutLabelsSig[9].c_str() );
       NewMVAH125a5ToBack_->GetXaxis()->SetBinLabel(10, CutLabelsSig[10].c_str() );
+      NewMVAH125a5ToBack_->GetXaxis()->SetBinLabel(11, CutLabelsSig[11].c_str() );
+      NewMVAH125a5ToBack_->GetXaxis()->SetBinLabel(12, CutLabelsSig[12].c_str() );
   NewMVAH125a5ToBack_->SetBinContent(1, CutH125a5NewMVA[1] / TMath::Sqrt(CutH125a5NewMVA[1] + backSum1NewMVA) );
   NewMVAH125a5ToBack_->SetBinContent(2, CutH125a5NewMVA[2] / TMath::Sqrt(CutH125a5NewMVA[2] + backSum2NewMVA) );
   NewMVAH125a5ToBack_->SetBinContent(3, CutH125a5NewMVA[3] / TMath::Sqrt(CutH125a5NewMVA[3] + backSum3NewMVA) );
@@ -1002,12 +1487,26 @@ std::cout << "Done writing output. Now plotting Signal to Background." << std::e
   NewMVAH125a5ToBack_->SetBinContent(8, CutH125a5NewMVA[8] / TMath::Sqrt(CutH125a5NewMVA[8] + backSum8NewMVA) );
   NewMVAH125a5ToBack_->SetBinContent(9, CutH125a5NewMVA[9] / TMath::Sqrt(CutH125a5NewMVA[9] + backSum9NewMVA) );
   NewMVAH125a5ToBack_->SetBinContent(10, CutH125a5NewMVA[0] / TMath::Sqrt(CutH125a5NewMVA[0] + backSum10NewMVA) );
+  NewMVAH125a5ToBack_->SetBinContent(11, CutH125a5NewMVA[11] / TMath::Sqrt(CutH125a5NewMVA[11] + backSum11NewMVA) );
+  NewMVAH125a5ToBack_->SetBinContent(12, CutH125a5NewMVA[12] / TMath::Sqrt(CutH125a5NewMVA[12] + backSum12NewMVA) );
+  NewMVAH125a5ToBack_->SetBinError(1, err1H125a5NewMVA);
+  NewMVAH125a5ToBack_->SetBinError(2, err2H125a5NewMVA);
+  NewMVAH125a5ToBack_->SetBinError(3, err3H125a5NewMVA);
+  NewMVAH125a5ToBack_->SetBinError(4, err4H125a5NewMVA);
+  NewMVAH125a5ToBack_->SetBinError(5, err5H125a5NewMVA);
+  NewMVAH125a5ToBack_->SetBinError(6, err6H125a5NewMVA);
+  NewMVAH125a5ToBack_->SetBinError(7, err7H125a5NewMVA);
+  NewMVAH125a5ToBack_->SetBinError(8, err8H125a5NewMVA);
+  NewMVAH125a5ToBack_->SetBinError(9, err9H125a5NewMVA);
+  NewMVAH125a5ToBack_->SetBinError(10, err10H125a5NewMVA);
+  NewMVAH125a5ToBack_->SetBinError(11, err11H125a5NewMVA);
+  NewMVAH125a5ToBack_->SetBinError(12, err12H125a5NewMVA);
   NewMVAH125a5ToBack_->GetYaxis()->SetTitle("S / sqrt (S + B)");
 
   //////////////////////////
   // H750 a9 4 tau DM's
   //////////////////////////
-  TH1F* OldH750a9ToBack_    = new TH1F("OldH750a9ToBack","", 10, -.5, 9.5);
+  TH1F* OldH750a9ToBack_    = new TH1F("OldH750a9ToBack","", 12, -.5, 11.5);
       OldH750a9ToBack_->GetXaxis()->SetBinLabel(1, CutLabelsSig[1].c_str() );
       OldH750a9ToBack_->GetXaxis()->SetBinLabel(2, CutLabelsSig[2].c_str() );
       OldH750a9ToBack_->GetXaxis()->SetBinLabel(3, CutLabelsSig[3].c_str() );
@@ -1018,6 +1517,8 @@ std::cout << "Done writing output. Now plotting Signal to Background." << std::e
       OldH750a9ToBack_->GetXaxis()->SetBinLabel(8, CutLabelsSig[8].c_str() );
       OldH750a9ToBack_->GetXaxis()->SetBinLabel(9, CutLabelsSig[9].c_str() );
       OldH750a9ToBack_->GetXaxis()->SetBinLabel(10, CutLabelsSig[10].c_str() );
+      OldH750a9ToBack_->GetXaxis()->SetBinLabel(11, CutLabelsSig[11].c_str() );
+      OldH750a9ToBack_->GetXaxis()->SetBinLabel(12, CutLabelsSig[12].c_str() );
   OldH750a9ToBack_->SetBinContent(1, CutH750a9Old[1] / TMath::Sqrt(CutH750a9Old[1] + backSum1Old) );
   OldH750a9ToBack_->SetBinContent(2, CutH750a9Old[2] / TMath::Sqrt(CutH750a9Old[2] + backSum2Old) );
   OldH750a9ToBack_->SetBinContent(3, CutH750a9Old[3] / TMath::Sqrt(CutH750a9Old[3] + backSum3Old) );
@@ -1028,9 +1529,23 @@ std::cout << "Done writing output. Now plotting Signal to Background." << std::e
   OldH750a9ToBack_->SetBinContent(8, CutH750a9Old[8] / TMath::Sqrt(CutH750a9Old[8] + backSum8Old) );
   OldH750a9ToBack_->SetBinContent(9, CutH750a9Old[9] / TMath::Sqrt(CutH750a9Old[9] + backSum9Old) );
   OldH750a9ToBack_->SetBinContent(10, CutH750a9Old[0] / TMath::Sqrt(CutH750a9Old[0] + backSum10Old) );
+  OldH750a9ToBack_->SetBinContent(11, CutH750a9Old[11] / TMath::Sqrt(CutH750a9Old[11] + backSum11Old) );
+  OldH750a9ToBack_->SetBinContent(12, CutH750a9Old[12] / TMath::Sqrt(CutH750a9Old[12] + backSum12Old) );
+  OldH750a9ToBack_->SetBinError(1, err1H750a9Old);
+  OldH750a9ToBack_->SetBinError(2, err2H750a9Old);
+  OldH750a9ToBack_->SetBinError(3, err3H750a9Old);
+  OldH750a9ToBack_->SetBinError(4, err4H750a9Old);
+  OldH750a9ToBack_->SetBinError(5, err5H750a9Old);
+  OldH750a9ToBack_->SetBinError(6, err6H750a9Old);
+  OldH750a9ToBack_->SetBinError(7, err7H750a9Old);
+  OldH750a9ToBack_->SetBinError(8, err8H750a9Old);
+  OldH750a9ToBack_->SetBinError(9, err9H750a9Old);
+  OldH750a9ToBack_->SetBinError(10, err10H750a9Old);
+  OldH750a9ToBack_->SetBinError(11, err11H750a9Old);
+  OldH750a9ToBack_->SetBinError(12, err12H750a9Old);
   OldH750a9ToBack_->GetYaxis()->SetTitle("S / sqrt (S + B)");
 
-  TH1F* OldMVAH750a9ToBack_    = new TH1F("OldMVAH750a9ToBack","", 10, -.5, 9.5);
+  TH1F* OldMVAH750a9ToBack_    = new TH1F("OldMVAH750a9ToBack","", 12, -.5, 11.5);
       OldMVAH750a9ToBack_->GetXaxis()->SetBinLabel(1, CutLabelsSig[1].c_str() );
       OldMVAH750a9ToBack_->GetXaxis()->SetBinLabel(2, CutLabelsSig[2].c_str() );
       OldMVAH750a9ToBack_->GetXaxis()->SetBinLabel(3, CutLabelsSig[3].c_str() );
@@ -1041,6 +1556,8 @@ std::cout << "Done writing output. Now plotting Signal to Background." << std::e
       OldMVAH750a9ToBack_->GetXaxis()->SetBinLabel(8, CutLabelsSig[8].c_str() );
       OldMVAH750a9ToBack_->GetXaxis()->SetBinLabel(9, CutLabelsSig[9].c_str() );
       OldMVAH750a9ToBack_->GetXaxis()->SetBinLabel(10, CutLabelsSig[10].c_str() );
+      OldMVAH750a9ToBack_->GetXaxis()->SetBinLabel(11, CutLabelsSig[11].c_str() );
+      OldMVAH750a9ToBack_->GetXaxis()->SetBinLabel(12, CutLabelsSig[12].c_str() );
   OldMVAH750a9ToBack_->SetBinContent(1, CutH750a9OldMVA[1] / TMath::Sqrt(CutH750a9OldMVA[1] + backSum1OldMVA) );
   OldMVAH750a9ToBack_->SetBinContent(2, CutH750a9OldMVA[2] / TMath::Sqrt(CutH750a9OldMVA[2] + backSum2OldMVA) );
   OldMVAH750a9ToBack_->SetBinContent(3, CutH750a9OldMVA[3] / TMath::Sqrt(CutH750a9OldMVA[3] + backSum3OldMVA) );
@@ -1051,9 +1568,23 @@ std::cout << "Done writing output. Now plotting Signal to Background." << std::e
   OldMVAH750a9ToBack_->SetBinContent(8, CutH750a9OldMVA[8] / TMath::Sqrt(CutH750a9OldMVA[8] + backSum8OldMVA) );
   OldMVAH750a9ToBack_->SetBinContent(9, CutH750a9OldMVA[9] / TMath::Sqrt(CutH750a9OldMVA[9] + backSum9OldMVA) );
   OldMVAH750a9ToBack_->SetBinContent(10, CutH750a9OldMVA[0] / TMath::Sqrt(CutH750a9OldMVA[0] + backSum10OldMVA) );
+  OldMVAH750a9ToBack_->SetBinContent(11, CutH750a9OldMVA[11] / TMath::Sqrt(CutH750a9OldMVA[11] + backSum11OldMVA) );
+  OldMVAH750a9ToBack_->SetBinContent(12, CutH750a9OldMVA[12] / TMath::Sqrt(CutH750a9OldMVA[12] + backSum12OldMVA) );
+  OldMVAH750a9ToBack_->SetBinError(1, err1H750a9OldMVA);
+  OldMVAH750a9ToBack_->SetBinError(2, err2H750a9OldMVA);
+  OldMVAH750a9ToBack_->SetBinError(3, err3H750a9OldMVA);
+  OldMVAH750a9ToBack_->SetBinError(4, err4H750a9OldMVA);
+  OldMVAH750a9ToBack_->SetBinError(5, err5H750a9OldMVA);
+  OldMVAH750a9ToBack_->SetBinError(6, err6H750a9OldMVA);
+  OldMVAH750a9ToBack_->SetBinError(7, err7H750a9OldMVA);
+  OldMVAH750a9ToBack_->SetBinError(8, err8H750a9OldMVA);
+  OldMVAH750a9ToBack_->SetBinError(9, err9H750a9OldMVA);
+  OldMVAH750a9ToBack_->SetBinError(10, err10H750a9OldMVA);
+  OldMVAH750a9ToBack_->SetBinError(11, err11H750a9OldMVA);
+  OldMVAH750a9ToBack_->SetBinError(12, err12H750a9OldMVA);
   OldMVAH750a9ToBack_->GetYaxis()->SetTitle("S / sqrt (S + B)");
 
-  TH1F* NewH750a9ToBack_    = new TH1F("NewH750a9ToBack","", 10, -.5, 9.5);
+  TH1F* NewH750a9ToBack_    = new TH1F("NewH750a9ToBack","", 12, -.5, 11.5);
       NewH750a9ToBack_->GetXaxis()->SetBinLabel(1, CutLabelsSig[1].c_str() );
       NewH750a9ToBack_->GetXaxis()->SetBinLabel(2, CutLabelsSig[2].c_str() );
       NewH750a9ToBack_->GetXaxis()->SetBinLabel(3, CutLabelsSig[3].c_str() );
@@ -1064,6 +1595,8 @@ std::cout << "Done writing output. Now plotting Signal to Background." << std::e
       NewH750a9ToBack_->GetXaxis()->SetBinLabel(8, CutLabelsSig[8].c_str() );
       NewH750a9ToBack_->GetXaxis()->SetBinLabel(9, CutLabelsSig[9].c_str() );
       NewH750a9ToBack_->GetXaxis()->SetBinLabel(10, CutLabelsSig[10].c_str() );
+      NewH750a9ToBack_->GetXaxis()->SetBinLabel(11, CutLabelsSig[11].c_str() );
+      NewH750a9ToBack_->GetXaxis()->SetBinLabel(12, CutLabelsSig[12].c_str() );
   NewH750a9ToBack_->SetBinContent(1, CutH750a9New[1] / TMath::Sqrt(CutH750a9New[1] + backSum1New) );
   NewH750a9ToBack_->SetBinContent(2, CutH750a9New[2] / TMath::Sqrt(CutH750a9New[2] + backSum2New) );
   NewH750a9ToBack_->SetBinContent(3, CutH750a9New[3] / TMath::Sqrt(CutH750a9New[3] + backSum3New) );
@@ -1074,9 +1607,23 @@ std::cout << "Done writing output. Now plotting Signal to Background." << std::e
   NewH750a9ToBack_->SetBinContent(8, CutH750a9New[8] / TMath::Sqrt(CutH750a9New[8] + backSum8New) );
   NewH750a9ToBack_->SetBinContent(9, CutH750a9New[9] / TMath::Sqrt(CutH750a9New[9] + backSum9New) );
   NewH750a9ToBack_->SetBinContent(10, CutH750a9New[0] / TMath::Sqrt(CutH750a9New[0] + backSum10New) );
+  NewH750a9ToBack_->SetBinContent(11, CutH750a9New[11] / TMath::Sqrt(CutH750a9New[11] + backSum11New) );
+  NewH750a9ToBack_->SetBinContent(12, CutH750a9New[12] / TMath::Sqrt(CutH750a9New[12] + backSum12New) );
+  NewH750a9ToBack_->SetBinError(1, err1H750a9New);
+  NewH750a9ToBack_->SetBinError(2, err2H750a9New);
+  NewH750a9ToBack_->SetBinError(3, err3H750a9New);
+  NewH750a9ToBack_->SetBinError(4, err4H750a9New);
+  NewH750a9ToBack_->SetBinError(5, err5H750a9New);
+  NewH750a9ToBack_->SetBinError(6, err6H750a9New);
+  NewH750a9ToBack_->SetBinError(7, err7H750a9New);
+  NewH750a9ToBack_->SetBinError(8, err8H750a9New);
+  NewH750a9ToBack_->SetBinError(9, err9H750a9New);
+  NewH750a9ToBack_->SetBinError(10, err10H750a9New);
+  NewH750a9ToBack_->SetBinError(11, err11H750a9New);
+  NewH750a9ToBack_->SetBinError(12, err12H750a9New);
   NewH750a9ToBack_->GetYaxis()->SetTitle("S / sqrt (S + B)");
 
-  TH1F* NewMVAH750a9ToBack_    = new TH1F("NewMVAH750a9ToBack","", 10, -.5, 9.5);
+  TH1F* NewMVAH750a9ToBack_    = new TH1F("NewMVAH750a9ToBack","", 12, -.5, 11.5);
       NewMVAH750a9ToBack_->GetXaxis()->SetBinLabel(1, CutLabelsSig[1].c_str() );
       NewMVAH750a9ToBack_->GetXaxis()->SetBinLabel(2, CutLabelsSig[2].c_str() );
       NewMVAH750a9ToBack_->GetXaxis()->SetBinLabel(3, CutLabelsSig[3].c_str() );
@@ -1087,6 +1634,8 @@ std::cout << "Done writing output. Now plotting Signal to Background." << std::e
       NewMVAH750a9ToBack_->GetXaxis()->SetBinLabel(8, CutLabelsSig[8].c_str() );
       NewMVAH750a9ToBack_->GetXaxis()->SetBinLabel(9, CutLabelsSig[9].c_str() );
       NewMVAH750a9ToBack_->GetXaxis()->SetBinLabel(10, CutLabelsSig[10].c_str() );
+      NewMVAH750a9ToBack_->GetXaxis()->SetBinLabel(11, CutLabelsSig[11].c_str() );
+      NewMVAH750a9ToBack_->GetXaxis()->SetBinLabel(12, CutLabelsSig[12].c_str() );
   NewMVAH750a9ToBack_->SetBinContent(1, CutH750a9NewMVA[1] / TMath::Sqrt(CutH750a9NewMVA[1] + backSum1NewMVA) );
   NewMVAH750a9ToBack_->SetBinContent(2, CutH750a9NewMVA[2] / TMath::Sqrt(CutH750a9NewMVA[2] + backSum2NewMVA) );
   NewMVAH750a9ToBack_->SetBinContent(3, CutH750a9NewMVA[3] / TMath::Sqrt(CutH750a9NewMVA[3] + backSum3NewMVA) );
@@ -1097,6 +1646,20 @@ std::cout << "Done writing output. Now plotting Signal to Background." << std::e
   NewMVAH750a9ToBack_->SetBinContent(8, CutH750a9NewMVA[8] / TMath::Sqrt(CutH750a9NewMVA[8] + backSum8NewMVA) );
   NewMVAH750a9ToBack_->SetBinContent(9, CutH750a9NewMVA[9] / TMath::Sqrt(CutH750a9NewMVA[9] + backSum9NewMVA) );
   NewMVAH750a9ToBack_->SetBinContent(10, CutH750a9NewMVA[0] / TMath::Sqrt(CutH750a9NewMVA[0] + backSum10NewMVA) );
+  NewMVAH750a9ToBack_->SetBinContent(11, CutH750a9NewMVA[11] / TMath::Sqrt(CutH750a9NewMVA[11] + backSum11NewMVA) );
+  NewMVAH750a9ToBack_->SetBinContent(12, CutH750a9NewMVA[12] / TMath::Sqrt(CutH750a9NewMVA[12] + backSum12NewMVA) );
+  NewMVAH750a9ToBack_->SetBinError(1, err1H750a9NewMVA);
+  NewMVAH750a9ToBack_->SetBinError(2, err2H750a9NewMVA);
+  NewMVAH750a9ToBack_->SetBinError(3, err3H750a9NewMVA);
+  NewMVAH750a9ToBack_->SetBinError(4, err4H750a9NewMVA);
+  NewMVAH750a9ToBack_->SetBinError(5, err5H750a9NewMVA);
+  NewMVAH750a9ToBack_->SetBinError(6, err6H750a9NewMVA);
+  NewMVAH750a9ToBack_->SetBinError(7, err7H750a9NewMVA);
+  NewMVAH750a9ToBack_->SetBinError(8, err8H750a9NewMVA);
+  NewMVAH750a9ToBack_->SetBinError(9, err9H750a9NewMVA);
+  NewMVAH750a9ToBack_->SetBinError(10, err10H750a9NewMVA);
+  NewMVAH750a9ToBack_->SetBinError(11, err11H750a9NewMVA);
+  NewMVAH750a9ToBack_->SetBinError(12, err12H750a9NewMVA);
   NewMVAH750a9ToBack_->GetYaxis()->SetTitle("S / sqrt (S + B)");
 
 /////////////////////////
@@ -1140,6 +1703,57 @@ std::cout << "Done writing output. Now plotting Signal to Background." << std::e
   NewMVAH125a5ToBack_->SetLineColor(kBlue+1);
   NewMVAH750a9ToBack_->SetLineColor(kGreen+1);
 
+  OldH125a19ToBack_->SetMarkerStyle(1);
+  OldH125a9ToBack_->SetMarkerStyle(1);
+  OldH125a5ToBack_->SetMarkerStyle(1);
+  OldH750a9ToBack_->SetMarkerStyle(1);
+  OldMVAH125a19ToBack_->SetMarkerStyle(1);
+  OldMVAH125a9ToBack_->SetMarkerStyle(1);
+  OldMVAH125a5ToBack_->SetMarkerStyle(1);
+  OldMVAH750a9ToBack_->SetMarkerStyle(1);
+  NewH125a19ToBack_->SetMarkerStyle(1);
+  NewH125a9ToBack_->SetMarkerStyle(1);
+  NewH125a5ToBack_->SetMarkerStyle(1);
+  NewH750a9ToBack_->SetMarkerStyle(1);
+  NewMVAH125a19ToBack_->SetMarkerStyle(1);
+  NewMVAH125a9ToBack_->SetMarkerStyle(1);
+  NewMVAH125a5ToBack_->SetMarkerStyle(1);
+  NewMVAH750a9ToBack_->SetMarkerStyle(1);
+
+  OldH125a19ToBack_->SetMarkerSize(20);
+  OldH125a9ToBack_->SetMarkerSize(20);
+  OldH125a5ToBack_->SetMarkerSize(20);
+  OldH750a9ToBack_->SetMarkerSize(20);
+  OldMVAH125a19ToBack_->SetMarkerSize(20);
+  OldMVAH125a9ToBack_->SetMarkerSize(20);
+  OldMVAH125a5ToBack_->SetMarkerSize(20);
+  OldMVAH750a9ToBack_->SetMarkerSize(20);
+  NewH125a19ToBack_->SetMarkerSize(20);
+  NewH125a9ToBack_->SetMarkerSize(20);
+  NewH125a5ToBack_->SetMarkerSize(20);
+  NewH750a9ToBack_->SetMarkerSize(20);
+  NewMVAH125a19ToBack_->SetMarkerSize(20);
+  NewMVAH125a9ToBack_->SetMarkerSize(20);
+  NewMVAH125a5ToBack_->SetMarkerSize(20);
+  NewMVAH750a9ToBack_->SetMarkerSize(20);
+
+ OldH125a19ToBack_->SetLineWidth(2);
+ OldH125a9ToBack_->SetLineWidth(2);
+ OldH125a5ToBack_->SetLineWidth(2);
+ OldH750a9ToBack_->SetLineWidth(2);
+ OldMVAH125a19ToBack_->SetLineWidth(2);
+ OldMVAH125a9ToBack_->SetLineWidth(2);
+ OldMVAH125a5ToBack_->SetLineWidth(2);
+ OldMVAH750a9ToBack_->SetLineWidth(2);
+ NewH125a19ToBack_->SetLineWidth(2);
+ NewH125a9ToBack_->SetLineWidth(2);
+ NewH125a5ToBack_->SetLineWidth(2);
+ NewH750a9ToBack_->SetLineWidth(2);
+ NewMVAH125a19ToBack_->SetLineWidth(2);
+ NewMVAH125a9ToBack_->SetLineWidth(2);
+ NewMVAH125a5ToBack_->SetLineWidth(2);
+ NewMVAH750a9ToBack_->SetLineWidth(2);
+
   legToBack = new TLegend(0.1,0.7,0.25,0.9);
   legToBack->AddEntry(OldH125a19ToBack_, "H125a19","L");
   legToBack->AddEntry(OldH125a9ToBack_, "H125a9","L");
@@ -1147,68 +1761,68 @@ std::cout << "Done writing output. Now plotting Signal to Background." << std::e
   legToBack->AddEntry(OldH750a9ToBack_, "H750a9","L");
 
   OldSigToBackCanvas.cd();
-  OldH125a19ToBack_->Draw();
-  OldH125a9ToBack_->Draw("SAME");
-  OldH125a5ToBack_->Draw("SAME");
-  OldH750a9ToBack_->Draw("SAME");  
+  OldH125a19ToBack_->Draw("E1");
+  OldH125a9ToBack_->Draw("SAME E1");
+  OldH125a5ToBack_->Draw("SAME E1");
+  OldH750a9ToBack_->Draw("SAME E1");  
   legToBack->Draw();
   OldSigToBackCanvas.Write();
 
   OldMVASigToBackCanvas.cd();
-  OldMVAH125a19ToBack_->Draw();
-  OldMVAH125a9ToBack_->Draw("SAME");
-  OldMVAH125a5ToBack_->Draw("SAME");
-  OldMVAH750a9ToBack_->Draw("SAME");
+  OldMVAH125a19ToBack_->Draw("E1");
+  OldMVAH125a9ToBack_->Draw("SAME E1");
+  OldMVAH125a5ToBack_->Draw("SAME E1");
+  OldMVAH750a9ToBack_->Draw("SAME E1");
   legToBack->Draw();
   OldMVASigToBackCanvas.Write();
 
   NewSigToBackCanvas.cd();
-  NewH125a19ToBack_->Draw();
-  NewH125a9ToBack_->Draw("SAME");
-  NewH125a5ToBack_->Draw("SAME");
-  NewH750a9ToBack_->Draw("SAME");
+  NewH125a19ToBack_->Draw("E1");
+  NewH125a9ToBack_->Draw("SAME E1");
+  NewH125a5ToBack_->Draw("SAME E1");
+  NewH750a9ToBack_->Draw("SAME E1");
   legToBack->Draw();
   NewSigToBackCanvas.Write();
 
   NewMVASigToBackCanvas.cd();
-  NewMVAH125a19ToBack_->Draw();
-  NewMVAH125a9ToBack_->Draw("SAME");
-  NewMVAH125a5ToBack_->Draw("SAME");
-  NewMVAH750a9ToBack_->Draw("SAME");
+  NewMVAH125a19ToBack_->Draw("E1");
+  NewMVAH125a9ToBack_->Draw("SAME E1");
+  NewMVAH125a5ToBack_->Draw("SAME E1");
+  NewMVAH750a9ToBack_->Draw("SAME E1");
   legToBack->Draw();
   NewMVASigToBackCanvas.Write();
 
   TotalSigToBackCanvas.cd(1);
   NewMVAH125a19ToBack_->SetTitle("NewMVA");
-  NewMVAH125a19ToBack_->Draw();
-  NewMVAH125a9ToBack_->Draw("SAME");
-  NewMVAH125a5ToBack_->Draw("SAME");
-  NewMVAH750a9ToBack_->Draw("SAME");
+  NewMVAH125a19ToBack_->Draw("E1");
+  NewMVAH125a9ToBack_->Draw("SAME E1");
+  NewMVAH125a5ToBack_->Draw("SAME E1");
+  NewMVAH750a9ToBack_->Draw("SAME E1");
   legToBack->Draw();
   TotalSigToBackCanvas.cd(2);
   NewH125a19ToBack_->SetTitle("New");
-  NewH125a19ToBack_->Draw();
-  NewH125a9ToBack_->Draw("SAME");
-  NewH125a5ToBack_->Draw("SAME");
-  NewH750a9ToBack_->Draw("SAME");
+  NewH125a19ToBack_->Draw("E1");
+  NewH125a9ToBack_->Draw("SAME E1");
+  NewH125a5ToBack_->Draw("SAME E1");
+  NewH750a9ToBack_->Draw("SAME E1");
   legToBack->Draw();
   TotalSigToBackCanvas.cd(3);
   OldMVAH125a19ToBack_->SetTitle("OldMVA");
-  OldMVAH125a19ToBack_->Draw();
-  OldMVAH125a9ToBack_->Draw("SAME");
-  OldMVAH125a5ToBack_->Draw("SAME");
-  OldMVAH750a9ToBack_->Draw("SAME");
+  OldMVAH125a19ToBack_->Draw("E1");
+  OldMVAH125a9ToBack_->Draw("SAME E1");
+  OldMVAH125a5ToBack_->Draw("SAME E1");
+  OldMVAH750a9ToBack_->Draw("SAME E1");
   legToBack->Draw();
   TotalSigToBackCanvas.cd(4);
   OldH125a19ToBack_->SetTitle("Old");
-  OldH125a19ToBack_->Draw();
-  OldH125a9ToBack_->Draw("SAME");
-  OldH125a5ToBack_->Draw("SAME");
-  OldH750a9ToBack_->Draw("SAME");
+  OldH125a19ToBack_->Draw("E1");
+  OldH125a9ToBack_->Draw("SAME E1");
+  OldH125a5ToBack_->Draw("SAME E1");
+  OldH750a9ToBack_->Draw("SAME E1");
   legToBack->Draw();
 
   TotalSigToBackCanvas.Write();
-  for (int i=0; i < 8;i++)
+  for (int i=0; i < 12;i++)
   {
     std::cout << "NewMVAH125a19 bin #" << i << "= " << NewMVAH125a19ToBack_->GetBinContent(i) << std::endl;
     std::cout << "NewMVAH125a9 bin #" << i << "= " << NewMVAH125a9ToBack_->GetBinContent(i) << std::endl;
@@ -1335,6 +1949,8 @@ cout << "Histograms assigned." << endl;
   Cuts[19] = NEventsCuts_->GetBinContent(20);
   Cuts[20] = NEventsCuts_->GetBinContent(21);
   Cuts[21] = NEventsCuts_->GetBinContent(22);
+  Cuts[22] = NEventsCuts_->GetBinContent(23);
+  Cuts[23] = NEventsCuts_->GetBinContent(24);
 
   //Saving label names
   labels[0] = NEventsCuts_->GetXaxis()->GetBinLabel(1);
@@ -1359,6 +1975,8 @@ cout << "Histograms assigned." << endl;
   labels[19] = NEventsCuts_->GetXaxis()->GetBinLabel(20);
   labels[20] = NEventsCuts_->GetXaxis()->GetBinLabel(21);
   labels[21] = NEventsCuts_->GetXaxis()->GetBinLabel(22);
+  labels[22] = NEventsCuts_->GetXaxis()->GetBinLabel(23);
+  labels[23] = NEventsCuts_->GetXaxis()->GetBinLabel(24);
 
   //Setting Color for Overlaid Lepton Matched histograms
   MatchedTauMuPtLepton_->SetLineColor(color);
@@ -1733,6 +2351,8 @@ cout << "Histograms assigned." << endl;
   Cuts[8] = NEventsCuts_->GetBinContent(9);
   Cuts[9] = NEventsCuts_->GetBinContent(10);
   Cuts[10] = NEventsCuts_->GetBinContent(11);
+  Cuts[11] = NEventsCuts_->GetBinContent(12);
+  Cuts[12] = NEventsCuts_->GetBinContent(13);
 
   //Saving label names
   labels[0] = NEventsCuts_->GetXaxis()->GetBinLabel(1);
@@ -1746,6 +2366,8 @@ cout << "Histograms assigned." << endl;
   labels[8] = NEventsCuts_->GetXaxis()->GetBinLabel(9);
   labels[9] = NEventsCuts_->GetXaxis()->GetBinLabel(10);
   labels[10] = NEventsCuts_->GetXaxis()->GetBinLabel(11); 
+  labels[11] = NEventsCuts_->GetXaxis()->GetBinLabel(12);
+  labels[12] = NEventsCuts_->GetXaxis()->GetBinLabel(13);
 
   //Setting Color for Overlaid  Matched histograms
   MatchedTauMuPt_->SetLineColor(color);
