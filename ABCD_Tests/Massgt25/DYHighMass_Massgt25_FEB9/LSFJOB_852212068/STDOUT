@@ -1,0 +1,94 @@
+@(#)CERN job starter $Date: 2010/06/23 14:22:16 $
+Working directory is </pool/lsf/ktos/852212068> on <b640bfe8c8.cern.ch>
+
+/pool/lsf/ktos/852212068
+17-Feb-2017 16:06:17 CET  Initiating request to open file root://eoscms//eos/cms/store/group/phys_higgs/HiggsExo/ktos/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/DYHighMass_Massgt25_FEB9/170214_211931/0000/RegionB_selection_44.root
+%MSG-w XrdAdaptor:  file_open 17-Feb-2017 16:06:19 CET pre-events
+Data is served from cern.ch instead of original site eoscms
+%MSG
+17-Feb-2017 16:06:21 CET  Successfully opened file root://eoscms//eos/cms/store/group/phys_higgs/HiggsExo/ktos/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/DYHighMass_Massgt25_FEB9/170214_211931/0000/RegionB_selection_44.root
+Begin Job
+Begin processing the 1st record. Run 1, Event 273058595, LumiSection 546118 at 17-Feb-2017 16:06:28.470 CET
+
+<------------THIS IS A NEW EVENT------------>
+	removedMuonRefs.size= 1
+17-Feb-2017 16:06:28 CET  Closed file root://eoscms//eos/cms/store/group/phys_higgs/HiggsExo/ktos/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/DYHighMass_Massgt25_FEB9/170214_211931/0000/RegionB_selection_44.root
+<----------------Declared Canvases-------------->
+after formatting
+<----------------Formatted Canvases and Histos-------------->
+DONE
+
+TrigReport ---------- Event  Summary ------------
+TrigReport Events total = 1 passed = 1 failed = 0
+
+TrigReport ---------- Path   Summary ------------
+TrigReport  Trig Bit#   Executed     Passed     Failed      Error Name
+TrigReport     1    0          1          1          0          0 p2
+
+TrigReport -------End-Path   Summary ------------
+TrigReport  Trig Bit#   Executed     Passed     Failed      Error Name
+
+TrigReport ---------- Modules in Path: p2 ------------
+TrigReport  Trig Bit#    Visited     Passed     Failed      Error Name
+TrigReport     1    0          1          1          0          0 ggh
+
+TrigReport ---------- Module Summary ------------
+TrigReport    Visited   Executed     Passed     Failed      Error Name
+TrigReport          1          1          1          0          0 TriggerResults
+TrigReport          1          1          1          0          0 ggh
+
+TimeReport ---------- Event  Summary ---[sec]----
+TimeReport       event loop CPU/event = 0.452247
+TimeReport      event loop Real/event = 0.549876
+TimeReport     sum Streams Real/event = 0.060011
+TimeReport efficiency CPU/Real/thread = 0.822452
+
+TimeReport ---------- Path   Summary ---[Real sec]----
+TimeReport  per event     per exec  Name
+TimeReport   0.032534     0.032534  p2
+TimeReport  per event     per exec  Name
+
+TimeReport -------End-Path   Summary ---[Real sec]----
+TimeReport  per event     per exec  Name
+TimeReport  per event     per exec  Name
+
+TimeReport ---------- Modules in Path: p2 ---[Real sec]----
+TimeReport  per event    per visit  Name
+TimeReport   0.010251     0.010251  ggh
+TimeReport  per event    per visit  Name
+
+TimeReport ---------- Module Summary ---[Real sec]----
+TimeReport  per event     per exec    per visit  Name
+TimeReport   0.000064     0.000064     0.000064  TriggerResults
+TimeReport   0.010251     0.010251     0.010251  ggh
+TimeReport  per event     per exec    per visit  Name
+
+T---Report end!
+
+
+=============================================
+
+MessageLogger Summary
+
+ type     category        sev    module        subroutine        count    total
+ ---- -------------------- -- ---------------- ----------------  -----    -----
+    1 XrdAdaptor           -w file_open                              1        1
+    2 fileAction           -s file_close                             1        1
+    3 fileAction           -s file_open                              2        2
+
+ type    category    Examples: run/evt        run/evt          run/evt
+ ---- -------------------- ---------------- ---------------- ----------------
+    1 XrdAdaptor           pre-events                        
+    2 fileAction           PostEndRun                        
+    3 fileAction           pre-events       pre-events       
+
+Severity    # Occurrences   Total Occurrences
+--------    -------------   -----------------
+Warning                 1                   1
+System                  3                   3
+
+Job finished at Fri Feb 17 16:06:29 CET 2017 on node 
+ under linux version Scientific Linux CERN SLC release 6.8 (Carbon)
+
+CERN statistics: This process used approximately : 0:00:27 KSI2K hours (27 KSI2K seconds)
+                 This process corresponds to     : 0:01:47 HS06  hours (107 HS06  seconds)

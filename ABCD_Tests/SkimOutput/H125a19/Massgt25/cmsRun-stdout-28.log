@@ -1,0 +1,707 @@
+Beginning CMSSW wrapper script
+ slc6_amd64_gcc530 scramv1 CMSSW
+Performing SCRAM setup...
+Completed SCRAM setup
+Retrieving SCRAM project...
+Untarring  /export/data1/condor/execute/dir_33967/glide_5Tlg9H/execute/dir_54117/sandbox.tar.gz
+Completed SCRAM project
+Executing CMSSW
+cmsRun  -j FrameworkJobReport.xml PSet.py
+17-Feb-2017 17:43:24 EST  Initiating request to open file file:/mnt/hadoop/cms/store/mc/RunIISpring16DR80/SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-19_TuneCUETP8M1_13TeV_madgraph_pythia8/AODSIM/premix_withHLT_80X_mcRun2_asymptotic_v14-v1/130000/50870FFC-AEA3-E611-86DB-7845C4FC3641.root
+17-Feb-2017 17:43:39 EST  Fallback request to file root://cmsxrootd.fnal.gov//store/mc/RunIISpring16DR80/SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-19_TuneCUETP8M1_13TeV_madgraph_pythia8/AODSIM/premix_withHLT_80X_mcRun2_asymptotic_v14-v1/130000/50870FFC-AEA3-E611-86DB-7845C4FC3641.root
+%MSG-w XrdAdaptor:  file_open 17-Feb-2017 17:43:43 EST pre-events
+Data is served from T2_US_Florida instead of original site T1_US_FNAL
+%MSG
+17-Feb-2017 17:43:46 EST  Successfully opened file root://cmsxrootd.fnal.gov//store/mc/RunIISpring16DR80/SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-19_TuneCUETP8M1_13TeV_madgraph_pythia8/AODSIM/premix_withHLT_80X_mcRun2_asymptotic_v14-v1/130000/50870FFC-AEA3-E611-86DB-7845C4FC3641.root
+Begin processing the 1st record. Run 1, Event 288764, LumiSection 1803 at 17-Feb-2017 17:44:59.302 EST
+Begin processing the 101st record. Run 1, Event 288863, LumiSection 1803 at 17-Feb-2017 17:45:02.730 EST
+Begin processing the 201st record. Run 1, Event 288964, LumiSection 1804 at 17-Feb-2017 17:45:05.147 EST
+Begin processing the 301st record. Run 1, Event 289061, LumiSection 1804 at 17-Feb-2017 17:45:05.738 EST
+Begin processing the 401st record. Run 1, Event 289161, LumiSection 1805 at 17-Feb-2017 17:45:10.889 EST
+17-Feb-2017 17:45:10 EST  Closed file root://cmsxrootd.fnal.gov//store/mc/RunIISpring16DR80/SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-19_TuneCUETP8M1_13TeV_madgraph_pythia8/AODSIM/premix_withHLT_80X_mcRun2_asymptotic_v14-v1/130000/50870FFC-AEA3-E611-86DB-7845C4FC3641.root
+17-Feb-2017 17:45:10 EST  Initiating request to open file file:/mnt/hadoop/cms/store/mc/RunIISpring16DR80/SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-19_TuneCUETP8M1_13TeV_madgraph_pythia8/AODSIM/premix_withHLT_80X_mcRun2_asymptotic_v14-v1/130000/A402F48C-83A3-E611-9D13-7845C4FC3B57.root
+17-Feb-2017 17:45:10 EST  Fallback request to file root://cmsxrootd.fnal.gov//store/mc/RunIISpring16DR80/SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-19_TuneCUETP8M1_13TeV_madgraph_pythia8/AODSIM/premix_withHLT_80X_mcRun2_asymptotic_v14-v1/130000/A402F48C-83A3-E611-9D13-7845C4FC3B57.root
+%MSG-w XrdAdaptor:  file_open 17-Feb-2017 17:45:13 EST PostProcessEvent
+Data is served from T2_US_Florida instead of original site T1_US_FNAL
+%MSG
+17-Feb-2017 17:45:13 EST  Successfully opened file root://cmsxrootd.fnal.gov//store/mc/RunIISpring16DR80/SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-19_TuneCUETP8M1_13TeV_madgraph_pythia8/AODSIM/premix_withHLT_80X_mcRun2_asymptotic_v14-v1/130000/A402F48C-83A3-E611-9D13-7845C4FC3B57.root
+Begin processing the 501st record. Run 1, Event 120251, LumiSection 751 at 17-Feb-2017 17:45:27.172 EST
+Begin processing the 601st record. Run 1, Event 120350, LumiSection 751 at 17-Feb-2017 17:45:27.660 EST
+Begin processing the 701st record. Run 1, Event 120448, LumiSection 752 at 17-Feb-2017 17:45:32.734 EST
+Begin processing the 801st record. Run 1, Event 120549, LumiSection 752 at 17-Feb-2017 17:45:33.209 EST
+Begin processing the 901st record. Run 1, Event 120652, LumiSection 753 at 17-Feb-2017 17:45:36.444 EST
+Begin processing the 1001st record. Run 1, Event 120747, LumiSection 753 at 17-Feb-2017 17:45:37.020 EST
+Begin processing the 1101st record. Run 1, Event 120849, LumiSection 754 at 17-Feb-2017 17:46:10.481 EST
+Begin processing the 1201st record. Run 1, Event 120950, LumiSection 754 at 17-Feb-2017 17:46:11.188 EST
+Begin processing the 1301st record. Run 1, Event 121051, LumiSection 756 at 17-Feb-2017 17:46:13.789 EST
+Begin processing the 1401st record. Run 1, Event 121151, LumiSection 756 at 17-Feb-2017 17:46:16.730 EST
+Begin processing the 1501st record. Run 1, Event 121250, LumiSection 757 at 17-Feb-2017 17:46:17.392 EST
+Begin processing the 1601st record. Run 1, Event 121350, LumiSection 757 at 17-Feb-2017 17:46:20.588 EST
+Begin processing the 1701st record. Run 1, Event 121447, LumiSection 758 at 17-Feb-2017 17:46:21.341 EST
+Begin processing the 1801st record. Run 1, Event 121550, LumiSection 758 at 17-Feb-2017 17:46:24.527 EST
+Begin processing the 1901st record. Run 1, Event 121650, LumiSection 759 at 17-Feb-2017 17:46:25.995 EST
+Begin processing the 2001st record. Run 1, Event 121751, LumiSection 759 at 17-Feb-2017 17:46:30.746 EST
+Begin processing the 2101st record. Run 1, Event 123451, LumiSection 771 at 17-Feb-2017 17:46:31.484 EST
+Begin processing the 2201st record. Run 1, Event 123553, LumiSection 771 at 17-Feb-2017 17:46:35.074 EST
+Begin processing the 2301st record. Run 1, Event 123652, LumiSection 772 at 17-Feb-2017 17:46:37.194 EST
+Begin processing the 2401st record. Run 1, Event 123753, LumiSection 772 at 17-Feb-2017 17:46:39.917 EST
+Begin processing the 2501st record. Run 1, Event 123853, LumiSection 773 at 17-Feb-2017 17:46:40.567 EST
+Begin processing the 2601st record. Run 1, Event 123951, LumiSection 773 at 17-Feb-2017 17:46:44.057 EST
+Begin processing the 2701st record. Run 1, Event 124053, LumiSection 774 at 17-Feb-2017 17:46:48.693 EST
+Begin processing the 2801st record. Run 1, Event 124152, LumiSection 774 at 17-Feb-2017 17:46:52.040 EST
+Begin processing the 2901st record. Run 1, Event 124252, LumiSection 776 at 17-Feb-2017 17:46:52.811 EST
+Begin processing the 3001st record. Run 1, Event 124355, LumiSection 776 at 17-Feb-2017 17:46:56.147 EST
+Begin processing the 3101st record. Run 1, Event 124450, LumiSection 777 at 17-Feb-2017 17:46:56.800 EST
+Begin processing the 3201st record. Run 1, Event 124549, LumiSection 777 at 17-Feb-2017 17:47:16.489 EST
+Begin processing the 3301st record. Run 1, Event 124652, LumiSection 778 at 17-Feb-2017 17:47:30.211 EST
+Begin processing the 3401st record. Run 1, Event 124751, LumiSection 778 at 17-Feb-2017 17:47:33.518 EST
+Begin processing the 3501st record. Run 1, Event 124849, LumiSection 779 at 17-Feb-2017 17:47:36.906 EST
+Begin processing the 3601st record. Run 1, Event 124951, LumiSection 779 at 17-Feb-2017 17:47:39.063 EST
+Begin processing the 3701st record. Run 1, Event 128255, LumiSection 801 at 17-Feb-2017 17:47:41.872 EST
+Begin processing the 3801st record. Run 1, Event 128357, LumiSection 801 at 17-Feb-2017 17:47:42.275 EST
+Begin processing the 3901st record. Run 1, Event 128456, LumiSection 802 at 17-Feb-2017 17:47:44.716 EST
+Begin processing the 4001st record. Run 1, Event 128557, LumiSection 802 at 17-Feb-2017 17:47:46.718 EST
+Begin processing the 4101st record. Run 1, Event 128656, LumiSection 803 at 17-Feb-2017 17:47:49.338 EST
+Begin processing the 4201st record. Run 1, Event 128759, LumiSection 803 at 17-Feb-2017 17:47:50.910 EST
+Begin processing the 4301st record. Run 1, Event 128857, LumiSection 804 at 17-Feb-2017 17:47:53.525 EST
+Begin processing the 4401st record. Run 1, Event 128956, LumiSection 804 at 17-Feb-2017 17:47:54.288 EST
+Begin processing the 4501st record. Run 1, Event 135464, LumiSection 846 at 17-Feb-2017 17:47:57.610 EST
+Begin processing the 4601st record. Run 1, Event 135563, LumiSection 846 at 17-Feb-2017 17:48:01.975 EST
+Begin processing the 4701st record. Run 1, Event 135664, LumiSection 847 at 17-Feb-2017 17:48:04.668 EST
+Begin processing the 4801st record. Run 1, Event 135764, LumiSection 847 at 17-Feb-2017 17:48:05.312 EST
+Begin processing the 4901st record. Run 1, Event 135865, LumiSection 848 at 17-Feb-2017 17:48:09.488 EST
+Begin processing the 5001st record. Run 1, Event 135963, LumiSection 848 at 17-Feb-2017 17:48:10.221 EST
+Begin processing the 5101st record. Run 1, Event 136066, LumiSection 849 at 17-Feb-2017 17:48:13.416 EST
+Begin processing the 5201st record. Run 1, Event 136167, LumiSection 849 at 17-Feb-2017 17:48:14.231 EST
+Begin processing the 5301st record. Run 1, Event 173108, LumiSection 1081 at 17-Feb-2017 17:48:18.591 EST
+Begin processing the 5401st record. Run 1, Event 173209, LumiSection 1081 at 17-Feb-2017 17:48:21.477 EST
+Begin processing the 5501st record. Run 1, Event 173310, LumiSection 1082 at 17-Feb-2017 17:48:22.624 EST
+Begin processing the 5601st record. Run 1, Event 173410, LumiSection 1082 at 17-Feb-2017 17:48:25.285 EST
+Begin processing the 5701st record. Run 1, Event 173510, LumiSection 1083 at 17-Feb-2017 17:48:26.005 EST
+Begin processing the 5801st record. Run 1, Event 173610, LumiSection 1083 at 17-Feb-2017 17:48:29.614 EST
+Begin processing the 5901st record. Run 1, Event 173710, LumiSection 1084 at 17-Feb-2017 17:48:30.092 EST
+Begin processing the 6001st record. Run 1, Event 173810, LumiSection 1084 at 17-Feb-2017 17:48:53.921 EST
+Begin processing the 6101st record. Run 1, Event 197141, LumiSection 1231 at 17-Feb-2017 17:48:54.475 EST
+Begin processing the 6201st record. Run 1, Event 197238, LumiSection 1231 at 17-Feb-2017 17:48:56.298 EST
+Begin processing the 6301st record. Run 1, Event 197340, LumiSection 1232 at 17-Feb-2017 17:49:16.610 EST
+Begin processing the 6401st record. Run 1, Event 197439, LumiSection 1232 at 17-Feb-2017 17:49:17.145 EST
+Begin processing the 6501st record. Run 1, Event 197539, LumiSection 1233 at 17-Feb-2017 17:49:18.293 EST
+Begin processing the 6601st record. Run 1, Event 197638, LumiSection 1233 at 17-Feb-2017 17:49:20.981 EST
+Begin processing the 6701st record. Run 1, Event 197738, LumiSection 1234 at 17-Feb-2017 17:49:25.274 EST
+Begin processing the 6801st record. Run 1, Event 197838, LumiSection 1234 at 17-Feb-2017 17:49:25.909 EST
+Begin processing the 6901st record. Run 1, Event 197938, LumiSection 1236 at 17-Feb-2017 17:49:26.441 EST
+Begin processing the 7001st record. Run 1, Event 198039, LumiSection 1236 at 17-Feb-2017 17:49:29.024 EST
+Begin processing the 7101st record. Run 1, Event 198140, LumiSection 1237 at 17-Feb-2017 17:49:37.904 EST
+Begin processing the 7201st record. Run 1, Event 198239, LumiSection 1237 at 17-Feb-2017 17:49:40.488 EST
+17-Feb-2017 17:49:40 EST  Closed file root://cmsxrootd.fnal.gov//store/mc/RunIISpring16DR80/SUSYGluGluToHToAA_AToMuMu_AToTauTau_M-19_TuneCUETP8M1_13TeV_madgraph_pythia8/AODSIM/premix_withHLT_80X_mcRun2_asymptotic_v14-v1/130000/A402F48C-83A3-E611-9D13-7845C4FC3B57.root
+
+TrigReport ---------- Event  Summary ------------
+TrigReport Events total = 7209 passed = 0 failed = 7209
+
+TrigReport ---------- Path   Summary ------------
+TrigReport  Trig Bit#   Executed     Passed     Failed      Error Name
+TrigReport     1    0       7209          0       7209          0 p
+
+TrigReport -------End-Path   Summary ------------
+TrigReport  Trig Bit#   Executed     Passed     Failed      Error Name
+TrigReport     0    0       7209       7209          0          0 e
+
+TrigReport ---------- Modules in Path: p ------------
+TrigReport  Trig Bit#    Visited     Passed     Failed      Error Name
+TrigReport     1    0       7209       7128         81          0 MuonIWant
+TrigReport     1    1       7128       2396       4732          0 HighestPtAndMuonSignDRSelector
+TrigReport     1    2       2396       2246        150          0 Mu1Mu2PtRankMuonID
+TrigReport     1    3       2246         14       2232          0 InvMassCut
+TrigReport     1    4         14         14          0          0 Mu1Mu2EtaCut
+TrigReport     1    5         14         13          1          0 Isolate
+TrigReport     1    6         13         11          2          0 PtEtaCut
+TrigReport     1    7         11         10          1          0 Mu45Selector
+TrigReport     1    8         10          8          2          0 Mu3
+TrigReport     1    9          8          8          0          0 Mu3ID
+TrigReport     1   10          8          6          2          0 tauMuonPtSelector
+TrigReport     1   11          6          6          0          0 CleanJets
+TrigReport     1   12          6          6          0          0 ak4PFJetTracksAssociatorAtVertex
+TrigReport     1   13          6          6          0          0 recoTauAK4PFJets08Region
+TrigReport     1   14          6          6          0          0 recoTauPileUpVertices
+TrigReport     1   15          6          6          0          0 pfRecoTauTagInfoProducer
+TrigReport     1   16          6          6          0          0 ak4PFJetsLegacyHPSPiZeros
+TrigReport     1   17          6          6          0          0 ak4PFJetsRecoTauChargedHadrons
+TrigReport     1   18          6          6          0          0 combinatoricRecoTaus
+TrigReport     1   19          6          6          0          0 hpsSelectionDiscriminator
+TrigReport     1   20          6          6          0          0 hpsPFTauProducerSansRefs
+TrigReport     1   21          6          6          0          0 hpsPFTauProducer
+TrigReport     1   22          6          6          0          0 hpsPFTauDiscriminationByDecayModeFindingNewDMs
+TrigReport     1   23          6          6          0          0 hpsPFTauDiscriminationByDecayModeFindingOldDMs
+TrigReport     1   24          6          6          0          0 hpsPFTauDiscriminationByDecayModeFinding
+TrigReport     1   25          6          6          0          0 hpsPFTauDiscriminationByLooseChargedIsolation
+TrigReport     1   26          6          6          0          0 hpsPFTauDiscriminationByLooseIsolation
+TrigReport     1   27          6          6          0          0 hpsPFTauDiscriminationByLooseCombinedIsolationDBSumPtCorr3Hits
+TrigReport     1   28          6          6          0          0 hpsPFTauDiscriminationByMediumCombinedIsolationDBSumPtCorr3Hits
+TrigReport     1   29          6          6          0          0 hpsPFTauDiscriminationByTightCombinedIsolationDBSumPtCorr3Hits
+TrigReport     1   30          6          6          0          0 hpsPFTauDiscriminationByRawCombinedIsolationDBSumPtCorr3Hits
+TrigReport     1   31          6          6          0          0 hpsPFTauDiscriminationByLooseCombinedIsolationDBSumPtCorr3HitsdR03
+TrigReport     1   32          6          6          0          0 hpsPFTauDiscriminationByMediumCombinedIsolationDBSumPtCorr3HitsdR03
+TrigReport     1   33          6          6          0          0 hpsPFTauDiscriminationByTightCombinedIsolationDBSumPtCorr3HitsdR03
+TrigReport     1   34          6          6          0          0 hpsPFTauDiscriminationByLoosePileupWeightedIsolation3Hits
+TrigReport     1   35          6          6          0          0 hpsPFTauDiscriminationByMediumPileupWeightedIsolation3Hits
+TrigReport     1   36          6          6          0          0 hpsPFTauDiscriminationByTightPileupWeightedIsolation3Hits
+TrigReport     1   37          6          6          0          0 hpsPFTauDiscriminationByPhotonPtSumOutsideSignalCone
+TrigReport     1   38          6          6          0          0 hpsPFTauDiscriminationByRawPileupWeightedIsolation3Hits
+TrigReport     1   39          6          6          0          0 hpsPFTauDiscriminationByLooseElectronRejection
+TrigReport     1   40          6          6          0          0 hpsPFTauDiscriminationByMediumElectronRejection
+TrigReport     1   41          6          6          0          0 hpsPFTauDiscriminationByTightElectronRejection
+TrigReport     1   42          6          6          0          0 hpsPFTauDiscriminationByMVA6rawElectronRejection
+TrigReport     1   43          6          6          0          0 hpsPFTauDiscriminationByMVA6VLooseElectronRejection
+TrigReport     1   44          6          6          0          0 hpsPFTauDiscriminationByMVA6LooseElectronRejection
+TrigReport     1   45          6          6          0          0 hpsPFTauDiscriminationByMVA6MediumElectronRejection
+TrigReport     1   46          6          6          0          0 hpsPFTauDiscriminationByMVA6TightElectronRejection
+TrigReport     1   47          6          6          0          0 hpsPFTauDiscriminationByMVA6VTightElectronRejection
+TrigReport     1   48          6          6          0          0 hpsPFTauDiscriminationByDeadECALElectronRejection
+TrigReport     1   49          6          6          0          0 hpsPFTauDiscriminationByLooseMuonRejection3
+TrigReport     1   50          6          6          0          0 hpsPFTauDiscriminationByTightMuonRejection3
+TrigReport     1   51          6          6          0          0 hpsPFTauPrimaryVertexProducer
+TrigReport     1   52          6          6          0          0 hpsPFTauSecondaryVertexProducer
+TrigReport     1   53          6          6          0          0 hpsPFTauTransverseImpactParameters
+TrigReport     1   54          6          6          0          0 hpsPFTauChargedIsoPtSum
+TrigReport     1   55          6          6          0          0 hpsPFTauNeutralIsoPtSum
+TrigReport     1   56          6          6          0          0 hpsPFTauPUcorrPtSum
+TrigReport     1   57          6          6          0          0 hpsPFTauNeutralIsoPtSumWeight
+TrigReport     1   58          6          6          0          0 hpsPFTauFootprintCorrection
+TrigReport     1   59          6          6          0          0 hpsPFTauPhotonPtSumOutsideSignalCone
+TrigReport     1   60          6          6          0          0 hpsPFTauDiscriminationByIsolationMVArun2v1DBoldDMwLTraw
+TrigReport     1   61          6          6          0          0 hpsPFTauDiscriminationByVLooseIsolationMVArun2v1DBoldDMwLT
+TrigReport     1   62          6          6          0          0 hpsPFTauDiscriminationByLooseIsolationMVArun2v1DBoldDMwLT
+TrigReport     1   63          6          6          0          0 hpsPFTauDiscriminationByMediumIsolationMVArun2v1DBoldDMwLT
+TrigReport     1   64          6          6          0          0 hpsPFTauDiscriminationByTightIsolationMVArun2v1DBoldDMwLT
+TrigReport     1   65          6          6          0          0 hpsPFTauDiscriminationByVTightIsolationMVArun2v1DBoldDMwLT
+TrigReport     1   66          6          6          0          0 hpsPFTauDiscriminationByVVTightIsolationMVArun2v1DBoldDMwLT
+TrigReport     1   67          6          6          0          0 hpsPFTauDiscriminationByIsolationMVArun2v1DBnewDMwLTraw
+TrigReport     1   68          6          6          0          0 hpsPFTauDiscriminationByVLooseIsolationMVArun2v1DBnewDMwLT
+TrigReport     1   69          6          6          0          0 hpsPFTauDiscriminationByLooseIsolationMVArun2v1DBnewDMwLT
+TrigReport     1   70          6          6          0          0 hpsPFTauDiscriminationByMediumIsolationMVArun2v1DBnewDMwLT
+TrigReport     1   71          6          6          0          0 hpsPFTauDiscriminationByTightIsolationMVArun2v1DBnewDMwLT
+TrigReport     1   72          6          6          0          0 hpsPFTauDiscriminationByVTightIsolationMVArun2v1DBnewDMwLT
+TrigReport     1   73          6          6          0          0 hpsPFTauDiscriminationByVVTightIsolationMVArun2v1DBnewDMwLT
+TrigReport     1   74          6          6          0          0 hpsPFTauDiscriminationByIsolationMVArun2v1PWoldDMwLTraw
+TrigReport     1   75          6          6          0          0 hpsPFTauDiscriminationByVLooseIsolationMVArun2v1PWoldDMwLT
+TrigReport     1   76          6          6          0          0 hpsPFTauDiscriminationByLooseIsolationMVArun2v1PWoldDMwLT
+TrigReport     1   77          6          6          0          0 hpsPFTauDiscriminationByMediumIsolationMVArun2v1PWoldDMwLT
+TrigReport     1   78          6          6          0          0 hpsPFTauDiscriminationByTightIsolationMVArun2v1PWoldDMwLT
+TrigReport     1   79          6          6          0          0 hpsPFTauDiscriminationByVTightIsolationMVArun2v1PWoldDMwLT
+TrigReport     1   80          6          6          0          0 hpsPFTauDiscriminationByVVTightIsolationMVArun2v1PWoldDMwLT
+TrigReport     1   81          6          6          0          0 hpsPFTauDiscriminationByIsolationMVArun2v1PWnewDMwLTraw
+TrigReport     1   82          6          6          0          0 hpsPFTauDiscriminationByVLooseIsolationMVArun2v1PWnewDMwLT
+TrigReport     1   83          6          6          0          0 hpsPFTauDiscriminationByLooseIsolationMVArun2v1PWnewDMwLT
+TrigReport     1   84          6          6          0          0 hpsPFTauDiscriminationByMediumIsolationMVArun2v1PWnewDMwLT
+TrigReport     1   85          6          6          0          0 hpsPFTauDiscriminationByTightIsolationMVArun2v1PWnewDMwLT
+TrigReport     1   86          6          6          0          0 hpsPFTauDiscriminationByVTightIsolationMVArun2v1PWnewDMwLT
+TrigReport     1   87          6          6          0          0 hpsPFTauDiscriminationByVVTightIsolationMVArun2v1PWnewDMwLT
+TrigReport     1   88          6          6          0          0 hpsPFTauChargedIsoPtSumdR03
+TrigReport     1   89          6          6          0          0 hpsPFTauNeutralIsoPtSumdR03
+TrigReport     1   90          6          6          0          0 hpsPFTauPUcorrPtSumdR03
+TrigReport     1   91          6          6          0          0 hpsPFTauNeutralIsoPtSumWeightdR03
+TrigReport     1   92          6          6          0          0 hpsPFTauFootprintCorrectiondR03
+TrigReport     1   93          6          6          0          0 hpsPFTauPhotonPtSumOutsideSignalConedR03
+TrigReport     1   94          6          6          0          0 hpsPFTauDiscriminationByIsolationMVArun2v1DBdR03oldDMwLTraw
+TrigReport     1   95          6          6          0          0 hpsPFTauDiscriminationByVLooseIsolationMVArun2v1DBdR03oldDMwLT
+TrigReport     1   96          6          6          0          0 hpsPFTauDiscriminationByLooseIsolationMVArun2v1DBdR03oldDMwLT
+TrigReport     1   97          6          6          0          0 hpsPFTauDiscriminationByMediumIsolationMVArun2v1DBdR03oldDMwLT
+TrigReport     1   98          6          6          0          0 hpsPFTauDiscriminationByTightIsolationMVArun2v1DBdR03oldDMwLT
+TrigReport     1   99          6          6          0          0 hpsPFTauDiscriminationByVTightIsolationMVArun2v1DBdR03oldDMwLT
+TrigReport     1  100          6          6          0          0 hpsPFTauDiscriminationByVVTightIsolationMVArun2v1DBdR03oldDMwLT
+TrigReport     1  101          6          6          0          0 hpsPFTauDiscriminationByIsolationMVArun2v1PWdR03oldDMwLTraw
+TrigReport     1  102          6          6          0          0 hpsPFTauDiscriminationByVLooseIsolationMVArun2v1PWdR03oldDMwLT
+TrigReport     1  103          6          6          0          0 hpsPFTauDiscriminationByLooseIsolationMVArun2v1PWdR03oldDMwLT
+TrigReport     1  104          6          6          0          0 hpsPFTauDiscriminationByMediumIsolationMVArun2v1PWdR03oldDMwLT
+TrigReport     1  105          6          6          0          0 hpsPFTauDiscriminationByTightIsolationMVArun2v1PWdR03oldDMwLT
+TrigReport     1  106          6          6          0          0 hpsPFTauDiscriminationByVTightIsolationMVArun2v1PWdR03oldDMwLT
+TrigReport     1  107          6          6          0          0 hpsPFTauDiscriminationByVVTightIsolationMVArun2v1PWdR03oldDMwLT
+TrigReport     1  108          6          6          0          0 pfImpactParameterTagInfos
+TrigReport     1  109          6          6          0          0 pfTrackCountingHighEffBJetTags
+TrigReport     1  110          6          6          0          0 pfJetProbabilityBJetTags
+TrigReport     1  111          6          6          0          0 pfJetBProbabilityBJetTags
+TrigReport     1  112          6          6          0          0 pfSecondaryVertexTagInfos
+TrigReport     1  113          6          6          0          0 pfSimpleSecondaryVertexHighEffBJetTags
+TrigReport     1  114          6          6          0          0 pfCombinedSecondaryVertexV2BJetTags
+TrigReport     1  115          6          6          0          0 inclusiveCandidateVertexFinder
+TrigReport     1  116          6          6          0          0 candidateVertexMerger
+TrigReport     1  117          6          6          0          0 candidateVertexArbitrator
+TrigReport     1  118          6          6          0          0 inclusiveCandidateSecondaryVertices
+TrigReport     1  119          6          6          0          0 pfInclusiveSecondaryVertexFinderTagInfos
+TrigReport     1  120          6          6          0          0 pfSimpleInclusiveSecondaryVertexHighEffBJetTags
+TrigReport     1  121          6          6          0          0 pfCombinedInclusiveSecondaryVertexV2BJetTags
+TrigReport     1  122          6          6          0          0 softPFMuonsTagInfos
+TrigReport     1  123          6          6          0          0 softPFMuonBJetTags
+TrigReport     1  124          6          6          0          0 softPFElectronsTagInfos
+TrigReport     1  125          6          6          0          0 softPFElectronBJetTags
+TrigReport     1  126          6          6          0          0 pfCombinedMVAV2BJetTags
+TrigReport     1  127          6          0          6          0 muHadTauSelector
+TrigReport     1  128          0          0          0          0 muHadIsoTauSelector
+
+TrigReport ------ Modules in End-Path: e ------------
+TrigReport  Trig Bit#    Visited     Passed     Failed      Error Name
+TrigReport     0    0       7209       7209          0          0 antiSelectedOutput
+
+TrigReport ---------- Module Summary ------------
+TrigReport    Visited   Executed     Passed     Failed      Error Name
+TrigReport          6          6          6          0          0 CleanJets
+TrigReport       7128       7128       2396       4732          0 HighestPtAndMuonSignDRSelector
+TrigReport       2246       2246         14       2232          0 InvMassCut
+TrigReport         14         14         13          1          0 Isolate
+TrigReport         14         14         14          0          0 Mu1Mu2EtaCut
+TrigReport       2396       2396       2246        150          0 Mu1Mu2PtRankMuonID
+TrigReport         10         10          8          2          0 Mu3
+TrigReport          8          8          8          0          0 Mu3ID
+TrigReport         11         11         10          1          0 Mu45Selector
+TrigReport       7209       7209       7128         81          0 MuonIWant
+TrigReport         13         13         11          2          0 PtEtaCut
+TrigReport       7209       7209       7209          0          0 TriggerResults
+TrigReport          6          6          6          0          0 ak4PFJetTracksAssociatorAtVertex
+TrigReport          6          6          6          0          0 ak4PFJetsLegacyHPSPiZeros
+TrigReport          6          6          6          0          0 ak4PFJetsRecoTauChargedHadrons
+TrigReport       7209       7209       7209          0          0 antiSelectedOutput
+TrigReport          6          6          6          0          0 candidateVertexArbitrator
+TrigReport          6          6          6          0          0 candidateVertexMerger
+TrigReport          6          6          6          0          0 combinatoricRecoTaus
+TrigReport          6          6          6          0          0 hpsPFTauChargedIsoPtSum
+TrigReport          6          6          6          0          0 hpsPFTauChargedIsoPtSumdR03
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByDeadECALElectronRejection
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByDecayModeFinding
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByDecayModeFindingNewDMs
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByDecayModeFindingOldDMs
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByIsolationMVArun2v1DBdR03oldDMwLTraw
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByIsolationMVArun2v1DBnewDMwLTraw
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByIsolationMVArun2v1DBoldDMwLTraw
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByIsolationMVArun2v1PWdR03oldDMwLTraw
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByIsolationMVArun2v1PWnewDMwLTraw
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByIsolationMVArun2v1PWoldDMwLTraw
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByLooseChargedIsolation
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByLooseCombinedIsolationDBSumPtCorr3Hits
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByLooseCombinedIsolationDBSumPtCorr3HitsdR03
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByLooseElectronRejection
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByLooseIsolation
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByLooseIsolationMVArun2v1DBdR03oldDMwLT
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByLooseIsolationMVArun2v1DBnewDMwLT
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByLooseIsolationMVArun2v1DBoldDMwLT
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByLooseIsolationMVArun2v1PWdR03oldDMwLT
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByLooseIsolationMVArun2v1PWnewDMwLT
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByLooseIsolationMVArun2v1PWoldDMwLT
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByLooseMuonRejection3
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByLoosePileupWeightedIsolation3Hits
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByMVA6LooseElectronRejection
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByMVA6MediumElectronRejection
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByMVA6TightElectronRejection
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByMVA6VLooseElectronRejection
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByMVA6VTightElectronRejection
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByMVA6rawElectronRejection
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByMediumCombinedIsolationDBSumPtCorr3Hits
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByMediumCombinedIsolationDBSumPtCorr3HitsdR03
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByMediumElectronRejection
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByMediumIsolationMVArun2v1DBdR03oldDMwLT
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByMediumIsolationMVArun2v1DBnewDMwLT
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByMediumIsolationMVArun2v1DBoldDMwLT
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByMediumIsolationMVArun2v1PWdR03oldDMwLT
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByMediumIsolationMVArun2v1PWnewDMwLT
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByMediumIsolationMVArun2v1PWoldDMwLT
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByMediumPileupWeightedIsolation3Hits
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByPhotonPtSumOutsideSignalCone
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByRawCombinedIsolationDBSumPtCorr3Hits
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByRawPileupWeightedIsolation3Hits
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByTightCombinedIsolationDBSumPtCorr3Hits
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByTightCombinedIsolationDBSumPtCorr3HitsdR03
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByTightElectronRejection
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByTightIsolationMVArun2v1DBdR03oldDMwLT
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByTightIsolationMVArun2v1DBnewDMwLT
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByTightIsolationMVArun2v1DBoldDMwLT
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByTightIsolationMVArun2v1PWdR03oldDMwLT
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByTightIsolationMVArun2v1PWnewDMwLT
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByTightIsolationMVArun2v1PWoldDMwLT
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByTightMuonRejection3
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByTightPileupWeightedIsolation3Hits
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByVLooseIsolationMVArun2v1DBdR03oldDMwLT
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByVLooseIsolationMVArun2v1DBnewDMwLT
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByVLooseIsolationMVArun2v1DBoldDMwLT
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByVLooseIsolationMVArun2v1PWdR03oldDMwLT
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByVLooseIsolationMVArun2v1PWnewDMwLT
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByVLooseIsolationMVArun2v1PWoldDMwLT
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByVTightIsolationMVArun2v1DBdR03oldDMwLT
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByVTightIsolationMVArun2v1DBnewDMwLT
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByVTightIsolationMVArun2v1DBoldDMwLT
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByVTightIsolationMVArun2v1PWdR03oldDMwLT
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByVTightIsolationMVArun2v1PWnewDMwLT
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByVTightIsolationMVArun2v1PWoldDMwLT
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByVVTightIsolationMVArun2v1DBdR03oldDMwLT
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByVVTightIsolationMVArun2v1DBnewDMwLT
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByVVTightIsolationMVArun2v1DBoldDMwLT
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByVVTightIsolationMVArun2v1PWdR03oldDMwLT
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByVVTightIsolationMVArun2v1PWnewDMwLT
+TrigReport          6          6          6          0          0 hpsPFTauDiscriminationByVVTightIsolationMVArun2v1PWoldDMwLT
+TrigReport          6          6          6          0          0 hpsPFTauFootprintCorrection
+TrigReport          6          6          6          0          0 hpsPFTauFootprintCorrectiondR03
+TrigReport          6          6          6          0          0 hpsPFTauNeutralIsoPtSum
+TrigReport          6          6          6          0          0 hpsPFTauNeutralIsoPtSumWeight
+TrigReport          6          6          6          0          0 hpsPFTauNeutralIsoPtSumWeightdR03
+TrigReport          6          6          6          0          0 hpsPFTauNeutralIsoPtSumdR03
+TrigReport          6          6          6          0          0 hpsPFTauPUcorrPtSum
+TrigReport          6          6          6          0          0 hpsPFTauPUcorrPtSumdR03
+TrigReport          6          6          6          0          0 hpsPFTauPhotonPtSumOutsideSignalCone
+TrigReport          6          6          6          0          0 hpsPFTauPhotonPtSumOutsideSignalConedR03
+TrigReport          6          6          6          0          0 hpsPFTauPrimaryVertexProducer
+TrigReport          6          6          6          0          0 hpsPFTauProducer
+TrigReport          6          6          6          0          0 hpsPFTauProducerSansRefs
+TrigReport          6          6          6          0          0 hpsPFTauSecondaryVertexProducer
+TrigReport          6          6          6          0          0 hpsPFTauTransverseImpactParameters
+TrigReport          6          6          6          0          0 hpsSelectionDiscriminator
+TrigReport          6          6          6          0          0 inclusiveCandidateSecondaryVertices
+TrigReport          6          6          6          0          0 inclusiveCandidateVertexFinder
+TrigReport          0          0          0          0          0 muHadIsoTauSelector
+TrigReport          6          6          0          6          0 muHadTauSelector
+TrigReport          6          6          6          0          0 pfCombinedInclusiveSecondaryVertexV2BJetTags
+TrigReport          6          6          6          0          0 pfCombinedMVAV2BJetTags
+TrigReport          6          6          6          0          0 pfCombinedSecondaryVertexV2BJetTags
+TrigReport          6          6          6          0          0 pfImpactParameterTagInfos
+TrigReport          6          6          6          0          0 pfInclusiveSecondaryVertexFinderTagInfos
+TrigReport          6          6          6          0          0 pfJetBProbabilityBJetTags
+TrigReport          6          6          6          0          0 pfJetProbabilityBJetTags
+TrigReport          6          6          6          0          0 pfRecoTauTagInfoProducer
+TrigReport          6          6          6          0          0 pfSecondaryVertexTagInfos
+TrigReport          6          6          6          0          0 pfSimpleInclusiveSecondaryVertexHighEffBJetTags
+TrigReport          6          6          6          0          0 pfSimpleSecondaryVertexHighEffBJetTags
+TrigReport          6          6          6          0          0 pfTrackCountingHighEffBJetTags
+TrigReport          6          6          6          0          0 recoTauAK4PFJets08Region
+TrigReport          6          6          6          0          0 recoTauPileUpVertices
+TrigReport          6          6          6          0          0 softPFElectronBJetTags
+TrigReport          6          6          6          0          0 softPFElectronsTagInfos
+TrigReport          6          6          6          0          0 softPFMuonBJetTags
+TrigReport          6          6          6          0          0 softPFMuonsTagInfos
+TrigReport          8          8          6          2          0 tauMuonPtSelector
+
+TimeReport ---------- Event  Summary ---[sec]----
+TimeReport       event loop CPU/event = 0.009634
+TimeReport      event loop Real/event = 0.047338
+TimeReport     sum Streams Real/event = 0.036460
+TimeReport efficiency CPU/Real/thread = 0.203514
+
+TimeReport ---------- Path   Summary ---[Real sec]----
+TimeReport  per event     per exec  Name
+TimeReport   0.035096     0.035096  p
+TimeReport  per event     per exec  Name
+
+TimeReport -------End-Path   Summary ---[Real sec]----
+TimeReport  per event     per exec  Name
+TimeReport   0.000003     0.000003  e
+TimeReport  per event     per exec  Name
+
+TimeReport ---------- Modules in Path: p ---[Real sec]----
+TimeReport  per event    per visit  Name
+TimeReport   0.000027     0.000027  MuonIWant
+TimeReport   0.000007     0.000007  HighestPtAndMuonSignDRSelector
+TimeReport   0.009381     0.028225  Mu1Mu2PtRankMuonID
+TimeReport   0.000001     0.000004  InvMassCut
+TimeReport   0.000000     0.000005  Mu1Mu2EtaCut
+TimeReport   0.000000     0.000118  Isolate
+TimeReport   0.000000     0.000009  PtEtaCut
+TimeReport   0.000005     0.003036  Mu45Selector
+TimeReport   0.000000     0.000018  Mu3
+TimeReport   0.000000     0.000039  Mu3ID
+TimeReport   0.000000     0.000005  tauMuonPtSelector
+TimeReport   0.000002     0.002621  CleanJets
+TimeReport   0.000001     0.000650  ak4PFJetTracksAssociatorAtVertex
+TimeReport   0.000002     0.002531  recoTauAK4PFJets08Region
+TimeReport   0.000000     0.000171  recoTauPileUpVertices
+TimeReport   0.000003     0.003180  pfRecoTauTagInfoProducer
+TimeReport   0.000001     0.001256  ak4PFJetsLegacyHPSPiZeros
+TimeReport   0.000973     1.168678  ak4PFJetsRecoTauChargedHadrons
+TimeReport   0.000215     0.258571  combinatoricRecoTaus
+TimeReport   0.000000     0.000396  hpsSelectionDiscriminator
+TimeReport   0.000001     0.000688  hpsPFTauProducerSansRefs
+TimeReport   0.000000     0.000129  hpsPFTauProducer
+TimeReport   0.000000     0.000040  hpsPFTauDiscriminationByDecayModeFindingNewDMs
+TimeReport   0.000000     0.000025  hpsPFTauDiscriminationByDecayModeFindingOldDMs
+TimeReport   0.000000     0.000024  hpsPFTauDiscriminationByDecayModeFinding
+TimeReport   0.000004     0.004555  hpsPFTauDiscriminationByLooseChargedIsolation
+TimeReport   0.000000     0.000081  hpsPFTauDiscriminationByLooseIsolation
+TimeReport   0.000004     0.004382  hpsPFTauDiscriminationByLooseCombinedIsolationDBSumPtCorr3Hits
+TimeReport   0.000004     0.004380  hpsPFTauDiscriminationByMediumCombinedIsolationDBSumPtCorr3Hits
+TimeReport   0.000004     0.004470  hpsPFTauDiscriminationByTightCombinedIsolationDBSumPtCorr3Hits
+TimeReport   0.000004     0.004511  hpsPFTauDiscriminationByRawCombinedIsolationDBSumPtCorr3Hits
+TimeReport   0.000004     0.004455  hpsPFTauDiscriminationByLooseCombinedIsolationDBSumPtCorr3HitsdR03
+TimeReport   0.000004     0.004498  hpsPFTauDiscriminationByMediumCombinedIsolationDBSumPtCorr3HitsdR03
+TimeReport   0.000004     0.004437  hpsPFTauDiscriminationByTightCombinedIsolationDBSumPtCorr3HitsdR03
+TimeReport   0.000002     0.002985  hpsPFTauDiscriminationByLoosePileupWeightedIsolation3Hits
+TimeReport   0.000002     0.002961  hpsPFTauDiscriminationByMediumPileupWeightedIsolation3Hits
+TimeReport   0.000002     0.002970  hpsPFTauDiscriminationByTightPileupWeightedIsolation3Hits
+TimeReport   0.000002     0.002960  hpsPFTauDiscriminationByPhotonPtSumOutsideSignalCone
+TimeReport   0.000002     0.002364  hpsPFTauDiscriminationByRawPileupWeightedIsolation3Hits
+TimeReport   0.000000     0.000021  hpsPFTauDiscriminationByLooseElectronRejection
+TimeReport   0.000000     0.000016  hpsPFTauDiscriminationByMediumElectronRejection
+TimeReport   0.000000     0.000018  hpsPFTauDiscriminationByTightElectronRejection
+TimeReport   0.001312     1.576321  hpsPFTauDiscriminationByMVA6rawElectronRejection
+TimeReport   0.000019     0.023343  hpsPFTauDiscriminationByMVA6VLooseElectronRejection
+TimeReport   0.000001     0.000734  hpsPFTauDiscriminationByMVA6LooseElectronRejection
+TimeReport   0.000001     0.000747  hpsPFTauDiscriminationByMVA6MediumElectronRejection
+TimeReport   0.000001     0.000677  hpsPFTauDiscriminationByMVA6TightElectronRejection
+TimeReport   0.000001     0.000642  hpsPFTauDiscriminationByMVA6VTightElectronRejection
+TimeReport   0.000457     0.549603  hpsPFTauDiscriminationByDeadECALElectronRejection
+TimeReport   0.000907     1.090275  hpsPFTauDiscriminationByLooseMuonRejection3
+TimeReport   0.000000     0.000052  hpsPFTauDiscriminationByTightMuonRejection3
+TimeReport   0.000016     0.018900  hpsPFTauPrimaryVertexProducer
+TimeReport   0.000000     0.000584  hpsPFTauSecondaryVertexProducer
+TimeReport   0.000000     0.000209  hpsPFTauTransverseImpactParameters
+TimeReport   0.000000     0.000251  hpsPFTauChargedIsoPtSum
+TimeReport   0.000000     0.000146  hpsPFTauNeutralIsoPtSum
+TimeReport   0.000005     0.005505  hpsPFTauPUcorrPtSum
+TimeReport   0.000003     0.003625  hpsPFTauNeutralIsoPtSumWeight
+TimeReport   0.000000     0.000164  hpsPFTauFootprintCorrection
+TimeReport   0.000000     0.000123  hpsPFTauPhotonPtSumOutsideSignalCone
+TimeReport   0.000002     0.001910  hpsPFTauDiscriminationByIsolationMVArun2v1DBoldDMwLTraw
+TimeReport   0.000004     0.004295  hpsPFTauDiscriminationByVLooseIsolationMVArun2v1DBoldDMwLT
+TimeReport   0.000000     0.000150  hpsPFTauDiscriminationByLooseIsolationMVArun2v1DBoldDMwLT
+TimeReport   0.000000     0.000128  hpsPFTauDiscriminationByMediumIsolationMVArun2v1DBoldDMwLT
+TimeReport   0.000000     0.000124  hpsPFTauDiscriminationByTightIsolationMVArun2v1DBoldDMwLT
+TimeReport   0.000000     0.000120  hpsPFTauDiscriminationByVTightIsolationMVArun2v1DBoldDMwLT
+TimeReport   0.000000     0.000122  hpsPFTauDiscriminationByVVTightIsolationMVArun2v1DBoldDMwLT
+TimeReport   0.000033     0.039459  hpsPFTauDiscriminationByIsolationMVArun2v1DBnewDMwLTraw
+TimeReport   0.000003     0.003851  hpsPFTauDiscriminationByVLooseIsolationMVArun2v1DBnewDMwLT
+TimeReport   0.000000     0.000150  hpsPFTauDiscriminationByLooseIsolationMVArun2v1DBnewDMwLT
+TimeReport   0.000000     0.000123  hpsPFTauDiscriminationByMediumIsolationMVArun2v1DBnewDMwLT
+TimeReport   0.000000     0.000126  hpsPFTauDiscriminationByTightIsolationMVArun2v1DBnewDMwLT
+TimeReport   0.000000     0.000122  hpsPFTauDiscriminationByVTightIsolationMVArun2v1DBnewDMwLT
+TimeReport   0.000000     0.000123  hpsPFTauDiscriminationByVVTightIsolationMVArun2v1DBnewDMwLT
+TimeReport   0.000002     0.001835  hpsPFTauDiscriminationByIsolationMVArun2v1PWoldDMwLTraw
+TimeReport   0.000003     0.003884  hpsPFTauDiscriminationByVLooseIsolationMVArun2v1PWoldDMwLT
+TimeReport   0.000000     0.000164  hpsPFTauDiscriminationByLooseIsolationMVArun2v1PWoldDMwLT
+TimeReport   0.000000     0.000122  hpsPFTauDiscriminationByMediumIsolationMVArun2v1PWoldDMwLT
+TimeReport   0.000000     0.000122  hpsPFTauDiscriminationByTightIsolationMVArun2v1PWoldDMwLT
+TimeReport   0.000000     0.000112  hpsPFTauDiscriminationByVTightIsolationMVArun2v1PWoldDMwLT
+TimeReport   0.000000     0.000114  hpsPFTauDiscriminationByVVTightIsolationMVArun2v1PWoldDMwLT
+TimeReport   0.000002     0.001909  hpsPFTauDiscriminationByIsolationMVArun2v1PWnewDMwLTraw
+TimeReport   0.000003     0.003852  hpsPFTauDiscriminationByVLooseIsolationMVArun2v1PWnewDMwLT
+TimeReport   0.000000     0.000169  hpsPFTauDiscriminationByLooseIsolationMVArun2v1PWnewDMwLT
+TimeReport   0.000000     0.000151  hpsPFTauDiscriminationByMediumIsolationMVArun2v1PWnewDMwLT
+TimeReport   0.000000     0.000127  hpsPFTauDiscriminationByTightIsolationMVArun2v1PWnewDMwLT
+TimeReport   0.000000     0.000119  hpsPFTauDiscriminationByVTightIsolationMVArun2v1PWnewDMwLT
+TimeReport   0.000000     0.000118  hpsPFTauDiscriminationByVVTightIsolationMVArun2v1PWnewDMwLT
+TimeReport   0.000000     0.000191  hpsPFTauChargedIsoPtSumdR03
+TimeReport   0.000000     0.000142  hpsPFTauNeutralIsoPtSumdR03
+TimeReport   0.000004     0.005389  hpsPFTauPUcorrPtSumdR03
+TimeReport   0.000003     0.003412  hpsPFTauNeutralIsoPtSumWeightdR03
+TimeReport   0.000000     0.000171  hpsPFTauFootprintCorrectiondR03
+TimeReport   0.000000     0.000131  hpsPFTauPhotonPtSumOutsideSignalConedR03
+TimeReport   0.000017     0.020770  hpsPFTauDiscriminationByIsolationMVArun2v1DBdR03oldDMwLTraw
+TimeReport   0.000003     0.003869  hpsPFTauDiscriminationByVLooseIsolationMVArun2v1DBdR03oldDMwLT
+TimeReport   0.000000     0.000160  hpsPFTauDiscriminationByLooseIsolationMVArun2v1DBdR03oldDMwLT
+TimeReport   0.000000     0.000142  hpsPFTauDiscriminationByMediumIsolationMVArun2v1DBdR03oldDMwLT
+TimeReport   0.000000     0.000127  hpsPFTauDiscriminationByTightIsolationMVArun2v1DBdR03oldDMwLT
+TimeReport   0.000000     0.000127  hpsPFTauDiscriminationByVTightIsolationMVArun2v1DBdR03oldDMwLT
+TimeReport   0.000000     0.000125  hpsPFTauDiscriminationByVVTightIsolationMVArun2v1DBdR03oldDMwLT
+TimeReport   0.000001     0.001705  hpsPFTauDiscriminationByIsolationMVArun2v1PWdR03oldDMwLTraw
+TimeReport   0.000000     0.000275  hpsPFTauDiscriminationByVLooseIsolationMVArun2v1PWdR03oldDMwLT
+TimeReport   0.000000     0.000116  hpsPFTauDiscriminationByLooseIsolationMVArun2v1PWdR03oldDMwLT
+TimeReport   0.000000     0.000113  hpsPFTauDiscriminationByMediumIsolationMVArun2v1PWdR03oldDMwLT
+TimeReport   0.000000     0.000113  hpsPFTauDiscriminationByTightIsolationMVArun2v1PWdR03oldDMwLT
+TimeReport   0.000000     0.000123  hpsPFTauDiscriminationByVTightIsolationMVArun2v1PWdR03oldDMwLT
+TimeReport   0.000000     0.000119  hpsPFTauDiscriminationByVVTightIsolationMVArun2v1PWdR03oldDMwLT
+TimeReport   0.000043     0.051744  pfImpactParameterTagInfos
+TimeReport   0.000000     0.000191  pfTrackCountingHighEffBJetTags
+TimeReport   0.000000     0.000100  pfJetProbabilityBJetTags
+TimeReport   0.000000     0.000091  pfJetBProbabilityBJetTags
+TimeReport   0.000002     0.002683  pfSecondaryVertexTagInfos
+TimeReport   0.000000     0.000088  pfSimpleSecondaryVertexHighEffBJetTags
+TimeReport   0.000027     0.032260  pfCombinedSecondaryVertexV2BJetTags
+TimeReport   0.000008     0.009483  inclusiveCandidateVertexFinder
+TimeReport   0.000000     0.000052  candidateVertexMerger
+TimeReport   0.000006     0.006684  candidateVertexArbitrator
+TimeReport   0.000000     0.000022  inclusiveCandidateSecondaryVertices
+TimeReport   0.000000     0.000546  pfInclusiveSecondaryVertexFinderTagInfos
+TimeReport   0.000000     0.000121  pfSimpleInclusiveSecondaryVertexHighEffBJetTags
+TimeReport   0.000001     0.000934  pfCombinedInclusiveSecondaryVertexV2BJetTags
+TimeReport   0.000000     0.000217  softPFMuonsTagInfos
+TimeReport   0.000001     0.000870  softPFMuonBJetTags
+TimeReport   0.000214     0.257677  softPFElectronsTagInfos
+TimeReport   0.000002     0.001865  softPFElectronBJetTags
+TimeReport   0.000002     0.003003  pfCombinedMVAV2BJetTags
+TimeReport   0.000000     0.000122  muHadTauSelector
+TimeReport   0.000000     0.000000  muHadIsoTauSelector
+TimeReport  per event    per visit  Name
+
+TimeReport ------ Modules in End-Path: e ---[Real sec]----
+TimeReport  per event    per visit  Name
+TimeReport   0.000000     0.000000  antiSelectedOutput
+TimeReport  per event    per visit  Name
+
+TimeReport ---------- Module Summary ---[Real sec]----
+TimeReport  per event     per exec    per visit  Name
+TimeReport   0.000002     0.002621     0.002621  CleanJets
+TimeReport   0.000007     0.000007     0.000007  HighestPtAndMuonSignDRSelector
+TimeReport   0.000001     0.000004     0.000004  InvMassCut
+TimeReport   0.000000     0.000118     0.000118  Isolate
+TimeReport   0.000000     0.000005     0.000005  Mu1Mu2EtaCut
+TimeReport   0.009381     0.028225     0.028225  Mu1Mu2PtRankMuonID
+TimeReport   0.000000     0.000018     0.000018  Mu3
+TimeReport   0.000000     0.000039     0.000039  Mu3ID
+TimeReport   0.000005     0.003036     0.003036  Mu45Selector
+TimeReport   0.000027     0.000027     0.000027  MuonIWant
+TimeReport   0.000000     0.000009     0.000009  PtEtaCut
+TimeReport   0.000019     0.000019     0.000019  TriggerResults
+TimeReport   0.000001     0.000650     0.000650  ak4PFJetTracksAssociatorAtVertex
+TimeReport   0.000001     0.001256     0.001256  ak4PFJetsLegacyHPSPiZeros
+TimeReport   0.000973     1.168678     1.168678  ak4PFJetsRecoTauChargedHadrons
+TimeReport   0.000000     0.000000     0.000000  antiSelectedOutput
+TimeReport   0.000006     0.006684     0.006684  candidateVertexArbitrator
+TimeReport   0.000000     0.000052     0.000052  candidateVertexMerger
+TimeReport   0.000215     0.258571     0.258571  combinatoricRecoTaus
+TimeReport   0.000000     0.000251     0.000251  hpsPFTauChargedIsoPtSum
+TimeReport   0.000000     0.000191     0.000191  hpsPFTauChargedIsoPtSumdR03
+TimeReport   0.000457     0.549603     0.549603  hpsPFTauDiscriminationByDeadECALElectronRejection
+TimeReport   0.000000     0.000024     0.000024  hpsPFTauDiscriminationByDecayModeFinding
+TimeReport   0.000000     0.000040     0.000040  hpsPFTauDiscriminationByDecayModeFindingNewDMs
+TimeReport   0.000000     0.000025     0.000025  hpsPFTauDiscriminationByDecayModeFindingOldDMs
+TimeReport   0.000017     0.020770     0.020770  hpsPFTauDiscriminationByIsolationMVArun2v1DBdR03oldDMwLTraw
+TimeReport   0.000033     0.039459     0.039459  hpsPFTauDiscriminationByIsolationMVArun2v1DBnewDMwLTraw
+TimeReport   0.000002     0.001910     0.001910  hpsPFTauDiscriminationByIsolationMVArun2v1DBoldDMwLTraw
+TimeReport   0.000001     0.001705     0.001705  hpsPFTauDiscriminationByIsolationMVArun2v1PWdR03oldDMwLTraw
+TimeReport   0.000002     0.001909     0.001909  hpsPFTauDiscriminationByIsolationMVArun2v1PWnewDMwLTraw
+TimeReport   0.000002     0.001835     0.001835  hpsPFTauDiscriminationByIsolationMVArun2v1PWoldDMwLTraw
+TimeReport   0.000004     0.004555     0.004555  hpsPFTauDiscriminationByLooseChargedIsolation
+TimeReport   0.000004     0.004382     0.004382  hpsPFTauDiscriminationByLooseCombinedIsolationDBSumPtCorr3Hits
+TimeReport   0.000004     0.004455     0.004455  hpsPFTauDiscriminationByLooseCombinedIsolationDBSumPtCorr3HitsdR03
+TimeReport   0.000000     0.000021     0.000021  hpsPFTauDiscriminationByLooseElectronRejection
+TimeReport   0.000000     0.000081     0.000081  hpsPFTauDiscriminationByLooseIsolation
+TimeReport   0.000000     0.000160     0.000160  hpsPFTauDiscriminationByLooseIsolationMVArun2v1DBdR03oldDMwLT
+TimeReport   0.000000     0.000150     0.000150  hpsPFTauDiscriminationByLooseIsolationMVArun2v1DBnewDMwLT
+TimeReport   0.000000     0.000150     0.000150  hpsPFTauDiscriminationByLooseIsolationMVArun2v1DBoldDMwLT
+TimeReport   0.000000     0.000116     0.000116  hpsPFTauDiscriminationByLooseIsolationMVArun2v1PWdR03oldDMwLT
+TimeReport   0.000000     0.000169     0.000169  hpsPFTauDiscriminationByLooseIsolationMVArun2v1PWnewDMwLT
+TimeReport   0.000000     0.000164     0.000164  hpsPFTauDiscriminationByLooseIsolationMVArun2v1PWoldDMwLT
+TimeReport   0.000907     1.090275     1.090275  hpsPFTauDiscriminationByLooseMuonRejection3
+TimeReport   0.000002     0.002985     0.002985  hpsPFTauDiscriminationByLoosePileupWeightedIsolation3Hits
+TimeReport   0.000001     0.000734     0.000734  hpsPFTauDiscriminationByMVA6LooseElectronRejection
+TimeReport   0.000001     0.000747     0.000747  hpsPFTauDiscriminationByMVA6MediumElectronRejection
+TimeReport   0.000001     0.000677     0.000677  hpsPFTauDiscriminationByMVA6TightElectronRejection
+TimeReport   0.000019     0.023343     0.023343  hpsPFTauDiscriminationByMVA6VLooseElectronRejection
+TimeReport   0.000001     0.000642     0.000642  hpsPFTauDiscriminationByMVA6VTightElectronRejection
+TimeReport   0.001312     1.576321     1.576321  hpsPFTauDiscriminationByMVA6rawElectronRejection
+TimeReport   0.000004     0.004380     0.004380  hpsPFTauDiscriminationByMediumCombinedIsolationDBSumPtCorr3Hits
+TimeReport   0.000004     0.004498     0.004498  hpsPFTauDiscriminationByMediumCombinedIsolationDBSumPtCorr3HitsdR03
+TimeReport   0.000000     0.000016     0.000016  hpsPFTauDiscriminationByMediumElectronRejection
+TimeReport   0.000000     0.000142     0.000142  hpsPFTauDiscriminationByMediumIsolationMVArun2v1DBdR03oldDMwLT
+TimeReport   0.000000     0.000123     0.000123  hpsPFTauDiscriminationByMediumIsolationMVArun2v1DBnewDMwLT
+TimeReport   0.000000     0.000128     0.000128  hpsPFTauDiscriminationByMediumIsolationMVArun2v1DBoldDMwLT
+TimeReport   0.000000     0.000113     0.000113  hpsPFTauDiscriminationByMediumIsolationMVArun2v1PWdR03oldDMwLT
+TimeReport   0.000000     0.000151     0.000151  hpsPFTauDiscriminationByMediumIsolationMVArun2v1PWnewDMwLT
+TimeReport   0.000000     0.000122     0.000122  hpsPFTauDiscriminationByMediumIsolationMVArun2v1PWoldDMwLT
+TimeReport   0.000002     0.002961     0.002961  hpsPFTauDiscriminationByMediumPileupWeightedIsolation3Hits
+TimeReport   0.000002     0.002960     0.002960  hpsPFTauDiscriminationByPhotonPtSumOutsideSignalCone
+TimeReport   0.000004     0.004511     0.004511  hpsPFTauDiscriminationByRawCombinedIsolationDBSumPtCorr3Hits
+TimeReport   0.000002     0.002364     0.002364  hpsPFTauDiscriminationByRawPileupWeightedIsolation3Hits
+TimeReport   0.000004     0.004470     0.004470  hpsPFTauDiscriminationByTightCombinedIsolationDBSumPtCorr3Hits
+TimeReport   0.000004     0.004437     0.004437  hpsPFTauDiscriminationByTightCombinedIsolationDBSumPtCorr3HitsdR03
+TimeReport   0.000000     0.000018     0.000018  hpsPFTauDiscriminationByTightElectronRejection
+TimeReport   0.000000     0.000127     0.000127  hpsPFTauDiscriminationByTightIsolationMVArun2v1DBdR03oldDMwLT
+TimeReport   0.000000     0.000126     0.000126  hpsPFTauDiscriminationByTightIsolationMVArun2v1DBnewDMwLT
+TimeReport   0.000000     0.000124     0.000124  hpsPFTauDiscriminationByTightIsolationMVArun2v1DBoldDMwLT
+TimeReport   0.000000     0.000113     0.000113  hpsPFTauDiscriminationByTightIsolationMVArun2v1PWdR03oldDMwLT
+TimeReport   0.000000     0.000127     0.000127  hpsPFTauDiscriminationByTightIsolationMVArun2v1PWnewDMwLT
+TimeReport   0.000000     0.000122     0.000122  hpsPFTauDiscriminationByTightIsolationMVArun2v1PWoldDMwLT
+TimeReport   0.000000     0.000052     0.000052  hpsPFTauDiscriminationByTightMuonRejection3
+TimeReport   0.000002     0.002970     0.002970  hpsPFTauDiscriminationByTightPileupWeightedIsolation3Hits
+TimeReport   0.000003     0.003869     0.003869  hpsPFTauDiscriminationByVLooseIsolationMVArun2v1DBdR03oldDMwLT
+TimeReport   0.000003     0.003851     0.003851  hpsPFTauDiscriminationByVLooseIsolationMVArun2v1DBnewDMwLT
+TimeReport   0.000004     0.004295     0.004295  hpsPFTauDiscriminationByVLooseIsolationMVArun2v1DBoldDMwLT
+TimeReport   0.000000     0.000275     0.000275  hpsPFTauDiscriminationByVLooseIsolationMVArun2v1PWdR03oldDMwLT
+TimeReport   0.000003     0.003852     0.003852  hpsPFTauDiscriminationByVLooseIsolationMVArun2v1PWnewDMwLT
+TimeReport   0.000003     0.003884     0.003884  hpsPFTauDiscriminationByVLooseIsolationMVArun2v1PWoldDMwLT
+TimeReport   0.000000     0.000127     0.000127  hpsPFTauDiscriminationByVTightIsolationMVArun2v1DBdR03oldDMwLT
+TimeReport   0.000000     0.000122     0.000122  hpsPFTauDiscriminationByVTightIsolationMVArun2v1DBnewDMwLT
+TimeReport   0.000000     0.000120     0.000120  hpsPFTauDiscriminationByVTightIsolationMVArun2v1DBoldDMwLT
+TimeReport   0.000000     0.000123     0.000123  hpsPFTauDiscriminationByVTightIsolationMVArun2v1PWdR03oldDMwLT
+TimeReport   0.000000     0.000119     0.000119  hpsPFTauDiscriminationByVTightIsolationMVArun2v1PWnewDMwLT
+TimeReport   0.000000     0.000112     0.000112  hpsPFTauDiscriminationByVTightIsolationMVArun2v1PWoldDMwLT
+TimeReport   0.000000     0.000125     0.000125  hpsPFTauDiscriminationByVVTightIsolationMVArun2v1DBdR03oldDMwLT
+TimeReport   0.000000     0.000123     0.000123  hpsPFTauDiscriminationByVVTightIsolationMVArun2v1DBnewDMwLT
+TimeReport   0.000000     0.000122     0.000122  hpsPFTauDiscriminationByVVTightIsolationMVArun2v1DBoldDMwLT
+TimeReport   0.000000     0.000119     0.000119  hpsPFTauDiscriminationByVVTightIsolationMVArun2v1PWdR03oldDMwLT
+TimeReport   0.000000     0.000118     0.000118  hpsPFTauDiscriminationByVVTightIsolationMVArun2v1PWnewDMwLT
+TimeReport   0.000000     0.000114     0.000114  hpsPFTauDiscriminationByVVTightIsolationMVArun2v1PWoldDMwLT
+TimeReport   0.000000     0.000164     0.000164  hpsPFTauFootprintCorrection
+TimeReport   0.000000     0.000171     0.000171  hpsPFTauFootprintCorrectiondR03
+TimeReport   0.000000     0.000146     0.000146  hpsPFTauNeutralIsoPtSum
+TimeReport   0.000003     0.003625     0.003625  hpsPFTauNeutralIsoPtSumWeight
+TimeReport   0.000003     0.003412     0.003412  hpsPFTauNeutralIsoPtSumWeightdR03
+TimeReport   0.000000     0.000142     0.000142  hpsPFTauNeutralIsoPtSumdR03
+TimeReport   0.000005     0.005505     0.005505  hpsPFTauPUcorrPtSum
+TimeReport   0.000004     0.005389     0.005389  hpsPFTauPUcorrPtSumdR03
+TimeReport   0.000000     0.000123     0.000123  hpsPFTauPhotonPtSumOutsideSignalCone
+TimeReport   0.000000     0.000131     0.000131  hpsPFTauPhotonPtSumOutsideSignalConedR03
+TimeReport   0.000016     0.018900     0.018900  hpsPFTauPrimaryVertexProducer
+TimeReport   0.000000     0.000129     0.000129  hpsPFTauProducer
+TimeReport   0.000001     0.000688     0.000688  hpsPFTauProducerSansRefs
+TimeReport   0.000000     0.000584     0.000584  hpsPFTauSecondaryVertexProducer
+TimeReport   0.000000     0.000209     0.000209  hpsPFTauTransverseImpactParameters
+TimeReport   0.000000     0.000396     0.000396  hpsSelectionDiscriminator
+TimeReport   0.000000     0.000022     0.000022  inclusiveCandidateSecondaryVertices
+TimeReport   0.000008     0.009483     0.009483  inclusiveCandidateVertexFinder
+TimeReport   0.000000     0.000000     0.000000  muHadIsoTauSelector
+TimeReport   0.000000     0.000122     0.000122  muHadTauSelector
+TimeReport   0.000001     0.000934     0.000934  pfCombinedInclusiveSecondaryVertexV2BJetTags
+TimeReport   0.000002     0.003003     0.003003  pfCombinedMVAV2BJetTags
+TimeReport   0.000027     0.032260     0.032260  pfCombinedSecondaryVertexV2BJetTags
+TimeReport   0.000043     0.051744     0.051744  pfImpactParameterTagInfos
+TimeReport   0.000000     0.000546     0.000546  pfInclusiveSecondaryVertexFinderTagInfos
+TimeReport   0.000000     0.000091     0.000091  pfJetBProbabilityBJetTags
+TimeReport   0.000000     0.000100     0.000100  pfJetProbabilityBJetTags
+TimeReport   0.000003     0.003180     0.003180  pfRecoTauTagInfoProducer
+TimeReport   0.000002     0.002683     0.002683  pfSecondaryVertexTagInfos
+TimeReport   0.000000     0.000121     0.000121  pfSimpleInclusiveSecondaryVertexHighEffBJetTags
+TimeReport   0.000000     0.000088     0.000088  pfSimpleSecondaryVertexHighEffBJetTags
+TimeReport   0.000000     0.000191     0.000191  pfTrackCountingHighEffBJetTags
+TimeReport   0.000002     0.002531     0.002531  recoTauAK4PFJets08Region
+TimeReport   0.000000     0.000171     0.000171  recoTauPileUpVertices
+TimeReport   0.000002     0.001865     0.001865  softPFElectronBJetTags
+TimeReport   0.000214     0.257677     0.257677  softPFElectronsTagInfos
+TimeReport   0.000001     0.000870     0.000870  softPFMuonBJetTags
+TimeReport   0.000000     0.000217     0.000217  softPFMuonsTagInfos
+TimeReport   0.000000     0.000005     0.000005  tauMuonPtSelector
+TimeReport  per event     per exec    per visit  Name
+
+T---Report end!
+
+TimeReport> Time report complete in 341.481 seconds
+ Time Summary: 
+ - Min event:   7.29561e-05
+ - Max event:   29.1873
+ - Avg event:   0.0351616
+ - Total loop:  339.905
+ - Total job:   341.481
+ Event Throughput: 21.2089 ev/s
+ CPU Summary: 
+ - Total loop:  68.2016
+ - Total job:   69.5144
+
+
+=============================================
+
+MessageLogger Summary
+
+ type     category        sev    module        subroutine        count    total
+ ---- -------------------- -- ---------------- ----------------  -----    -----
+    1 XrdAdaptor           -w file_open                              2        2
+    2 TimeReport           -e AfterModEndJob                         1        1
+    3 fileAction           -s file_close                             2        2
+    4 fileAction           -s file_open                              6        6
+
+ type    category    Examples: run/evt        run/evt          run/evt
+ ---- -------------------- ---------------- ---------------- ----------------
+    1 XrdAdaptor           pre-events       PostProcessEvent 
+    2 TimeReport           PostEndRun                        
+    3 fileAction           PostProcessEvent PostEndRun       
+    4 fileAction           pre-events       pre-events       PostProcessEvent
+
+Severity    # Occurrences   Total Occurrences
+--------    -------------   -----------------
+Warning                 2                   2
+Error                   1                   1
+System                  8                   8
+Complete
+process id is 54443 status is 0

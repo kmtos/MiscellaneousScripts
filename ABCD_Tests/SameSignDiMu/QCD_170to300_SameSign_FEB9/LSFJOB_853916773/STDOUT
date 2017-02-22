@@ -1,0 +1,36 @@
+@(#)CERN job starter $Date: 2010/06/23 14:22:16 $
+Working directory is </pool/lsf/ktos/853916773> on <b633409a03.cern.ch>
+
+/pool/lsf/ktos/853916773
+21-Feb-2017 20:00:26 CET  Initiating request to open file root://eoscms//eos/cms/store/group/phys_higgs/HiggsExo/ktos/QCD_Pt-170to300_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/QCD_170to300_SameSignDiMu_FEB9/170214_220135/0000/RegionB_selection_35.root
+[2017-02-21 20:00:27.698356 +0100][Error  ][XRootD            ] [eoscms:1094] Handling error while processing kXR_open (file: /eos/cms/store/group/phys_higgs/HiggsExo/ktos/QCD_Pt-170to300_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/QCD_170to300_SameSignDiMu_FEB9/170214_220135/0000/RegionB_selection_35.root, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ): [ERROR] Error response.
+%MSG-w XrdAdaptorInternal:  file_open 21-Feb-2017 20:00:27 CET pre-events
+Failed to open file at URL root://eoscms:1094//eos/cms/store/group/phys_higgs/HiggsExo/ktos/QCD_Pt-170to300_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/QCD_170to300_SameSignDiMu_FEB9/170214_220135/0000/RegionB_selection_35.root.
+%MSG
+[2017-02-21 20:00:27.722788 +0100][Error  ][XRootD            ] [eoscms:1094] Handling error while processing kXR_open (file: /eos/cms/store/group/phys_higgs/HiggsExo/ktos/QCD_Pt-170to300_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/QCD_170to300_SameSignDiMu_FEB9/170214_220135/0000/RegionB_selection_35.root?tried=, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ): [ERROR] Error response.
+%MSG-w XrdAdaptorInternal:  file_open 21-Feb-2017 20:00:27 CET pre-events
+Failed to open file at URL root://eoscms:1094//eos/cms/store/group/phys_higgs/HiggsExo/ktos/QCD_Pt-170to300_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/QCD_170to300_SameSignDiMu_FEB9/170214_220135/0000/RegionB_selection_35.root?tried=.
+%MSG
+----- Begin Fatal Exception 21-Feb-2017 20:00:27 CET-----------------------
+An exception of category 'FileOpenError' occurred while
+   [0] Constructing the EventProcessor
+   [1] Constructing input source of type PoolSource
+   [2] Calling RootFileSequenceBase::initTheFile()
+   [3] Calling StorageFactory::open()
+   [4] Calling XrdFile::open()
+Exception Message:
+Failed to open the file 'root://eoscms//eos/cms/store/group/phys_higgs/HiggsExo/ktos/QCD_Pt-170to300_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/QCD_170to300_SameSignDiMu_FEB9/170214_220135/0000/RegionB_selection_35.root'
+   Additional Info:
+      [a] Input file root://eoscms//eos/cms/store/group/phys_higgs/HiggsExo/ktos/QCD_Pt-170to300_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/QCD_170to300_SameSignDiMu_FEB9/170214_220135/0000/RegionB_selection_35.root could not be opened.
+      [b] XrdCl::File::Open(name='root://eoscms//eos/cms/store/group/phys_higgs/HiggsExo/ktos/QCD_Pt-170to300_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/QCD_170to300_SameSignDiMu_FEB9/170214_220135/0000/RegionB_selection_35.root', flags=0x10, permissions=0660) => error '[ERROR] Server responded with an error: [3011] Unable to open file /eos/cms/store/group/phys_higgs/HiggsExo/ktos/QCD_Pt-170to300_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/QCD_170to300_SameSignDiMu_FEB9/170214_220135/0000/RegionB_selection_35.root; No such file or directory
+' (errno=3011, code=400). No additional data servers were found.
+      [c] Last URL tried: root://eoscms:1094//eos/cms/store/group/phys_higgs/HiggsExo/ktos/QCD_Pt-170to300_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/QCD_170to300_SameSignDiMu_FEB9/170214_220135/0000/RegionB_selection_35.root?tried=
+      [d] Problematic data server: eoscms:1094
+      [e] Disabled source: eoscms:1094
+----- End Fatal Exception -------------------------------------------------
+
+Job finished at Tue Feb 21 20:00:27 CET 2017 on node 
+ under linux version Scientific Linux CERN SLC release 6.8 (Carbon)
+
+CERN statistics: This process used approximately : 0:00:08 KSI2K hours (8 KSI2K seconds)
+                 This process corresponds to     : 0:00:32 HS06  hours (32 HS06  seconds)

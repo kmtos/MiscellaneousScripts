@@ -1,0 +1,1610 @@
+Beginning CMSSW wrapper script
+ slc6_amd64_gcc530 scramv1 CMSSW
+Performing SCRAM setup...
+Completed SCRAM setup
+Retrieving SCRAM project...
+Untarring  /scratch/dir_4013230/glide_qgmdt8/execute/dir_115536/sandbox.tar.gz
+Completed SCRAM project
+Executing CMSSW
+cmsRun  -j FrameworkJobReport.xml PSet.py
+17-Feb-2017 23:10:37 GMT  Initiating request to open file root://dc2-grid-64.brunel.ac.uk//dpm/brunel.ac.uk/home/cms/store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/5A0BD175-AF34-E611-86AC-0CC47A7EECE8.root
+[2017-02-17 23:10:38.254133 +0000][Error  ][XRootD            ] [dc2-grid-64.brunel.ac.uk:1094] Handling error while processing kXR_open (file: /dpm/brunel.ac.uk/home/cms/store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/5A0BD175-AF34-E611-86AC-0CC47A7EECE8.root, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ): [ERROR] Error response.
+%MSG-w XrdAdaptorInternal:  file_open 17-Feb-2017 23:10:38 GMT pre-events
+Failed to open file at URL root://dc2-grid-64.brunel.ac.uk:1094//dpm/brunel.ac.uk/home/cms/store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/5A0BD175-AF34-E611-86AC-0CC47A7EECE8.root.
+%MSG
+[2017-02-17 23:10:38.268996 +0000][Error  ][XRootD            ] [dc2-grid-64.brunel.ac.uk:1094] Handling error while processing kXR_open (file: /dpm/brunel.ac.uk/home/cms/store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/5A0BD175-AF34-E611-86AC-0CC47A7EECE8.root?tried=, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ): [ERROR] Error response.
+%MSG-w XrdAdaptorInternal:  file_open 17-Feb-2017 23:10:38 GMT pre-events
+Failed to open file at URL root://dc2-grid-64.brunel.ac.uk:1094//dpm/brunel.ac.uk/home/cms/store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/5A0BD175-AF34-E611-86AC-0CC47A7EECE8.root?tried=.
+%MSG
+17-Feb-2017 23:10:38 GMT  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/5A0BD175-AF34-E611-86AC-0CC47A7EECE8.root
+[2017-02-17 23:10:38.304851 +0000][Error  ][AsyncSock         ] [xrootd-cms.infn.it:1094 #0.0] Unable to connect: Connection refused
+[2017-02-17 23:11:24.380519 +0000][Error  ][AsyncSock         ] [t2-cms-xrootd03.desy.de:1094 #0.0] Socket error while handshaking: [ERROR] Socket timeout
+[2017-02-17 23:12:09.430474 +0000][Error  ][AsyncSock         ] [t2-cms-xrootd03.desy.de:1094 #0.0] Socket error while handshaking: [ERROR] Socket timeout
+[2017-02-17 23:12:09.430652 +0000][Error  ][PostMaster        ] [t2-cms-xrootd03.desy.de:1094 #0] Unable to recover: [ERROR] Socket timeout.
+[2017-02-17 23:12:09.430709 +0000][Error  ][XRootD            ] [t2-cms-xrootd03.desy.de:1094] Impossible to send message kXR_open (file: /store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/5A0BD175-AF34-E611-86AC-0CC47A7EECE8.root, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ). Trying to recover.
+[2017-02-17 23:12:09.430730 +0000][Error  ][XRootD            ] [t2-cms-xrootd03.desy.de:1094] Handling error while processing kXR_open (file: /store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/5A0BD175-AF34-E611-86AC-0CC47A7EECE8.root, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ): [FATAL] Socket timeout.
+%MSG-w XrdAdaptor:  file_open 17-Feb-2017 23:12:11 GMT pre-events
+Data is served from T1_UK_RAL instead of original site infn.it
+%MSG
+17-Feb-2017 23:12:14 GMT  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/5A0BD175-AF34-E611-86AC-0CC47A7EECE8.root
+Begin processing the 1st record. Run 1, Event 6484169, LumiSection 7403 at 17-Feb-2017 23:12:37.805 GMT
+Begin processing the 101st record. Run 1, Event 6484818, LumiSection 7403 at 17-Feb-2017 23:12:40.711 GMT
+Begin processing the 201st record. Run 1, Event 6485509, LumiSection 7404 at 17-Feb-2017 23:12:41.259 GMT
+Begin processing the 301st record. Run 1, Event 13105192, LumiSection 14961 at 17-Feb-2017 23:12:42.010 GMT
+Begin processing the 401st record. Run 1, Event 13105788, LumiSection 14961 at 17-Feb-2017 23:12:42.553 GMT
+Begin processing the 501st record. Run 1, Event 13106474, LumiSection 14962 at 17-Feb-2017 23:12:43.055 GMT
+Begin processing the 601st record. Run 1, Event 6353182, LumiSection 7253 at 17-Feb-2017 23:12:43.866 GMT
+Begin processing the 701st record. Run 1, Event 6353847, LumiSection 7253 at 17-Feb-2017 23:12:44.334 GMT
+Begin processing the 801st record. Run 1, Event 6354407, LumiSection 7254 at 17-Feb-2017 23:12:44.920 GMT
+Begin processing the 901st record. Run 1, Event 6570127, LumiSection 7501 at 17-Feb-2017 23:12:45.737 GMT
+Begin processing the 1001st record. Run 1, Event 6570781, LumiSection 7501 at 17-Feb-2017 23:12:46.653 GMT
+Begin processing the 1101st record. Run 1, Event 6571471, LumiSection 7502 at 17-Feb-2017 23:12:48.753 GMT
+Begin processing the 1201st record. Run 1, Event 11933223, LumiSection 13623 at 17-Feb-2017 23:12:49.587 GMT
+Begin processing the 1301st record. Run 1, Event 11933956, LumiSection 13623 at 17-Feb-2017 23:12:50.330 GMT
+Begin processing the 1401st record. Run 1, Event 7530102, LumiSection 8597 at 17-Feb-2017 23:12:50.996 GMT
+Begin processing the 1501st record. Run 1, Event 7530766, LumiSection 8597 at 17-Feb-2017 23:12:51.687 GMT
+Begin processing the 1601st record. Run 1, Event 7531499, LumiSection 8598 at 17-Feb-2017 23:12:52.489 GMT
+Begin processing the 1701st record. Run 1, Event 18354254, LumiSection 20953 at 17-Feb-2017 23:12:53.241 GMT
+Begin processing the 1801st record. Run 1, Event 18354865, LumiSection 20953 at 17-Feb-2017 23:12:53.984 GMT
+Begin processing the 1901st record. Run 1, Event 18355512, LumiSection 20954 at 17-Feb-2017 23:12:54.751 GMT
+Begin processing the 2001st record. Run 1, Event 8469632, LumiSection 9669 at 17-Feb-2017 23:12:55.612 GMT
+Begin processing the 2101st record. Run 1, Event 8470276, LumiSection 9669 at 17-Feb-2017 23:12:56.446 GMT
+Begin processing the 2201st record. Run 1, Event 16787672, LumiSection 19165 at 17-Feb-2017 23:12:58.476 GMT
+Begin processing the 2301st record. Run 1, Event 16788305, LumiSection 19165 at 17-Feb-2017 23:12:58.989 GMT
+Begin processing the 2401st record. Run 1, Event 16788916, LumiSection 19165 at 17-Feb-2017 23:12:59.502 GMT
+Begin processing the 2501st record. Run 1, Event 9504324, LumiSection 10850 at 17-Feb-2017 23:13:00.043 GMT
+Begin processing the 2601st record. Run 1, Event 24878797, LumiSection 28401 at 17-Feb-2017 23:13:00.590 GMT
+Begin processing the 2701st record. Run 1, Event 24879503, LumiSection 28401 at 17-Feb-2017 23:13:01.216 GMT
+Begin processing the 2801st record. Run 1, Event 25142978, LumiSection 28703 at 17-Feb-2017 23:13:01.732 GMT
+Begin processing the 2901st record. Run 1, Event 25143739, LumiSection 28703 at 17-Feb-2017 23:13:02.332 GMT
+Begin processing the 3001st record. Run 1, Event 25144389, LumiSection 28704 at 17-Feb-2017 23:13:02.873 GMT
+Begin processing the 3101st record. Run 1, Event 9618904, LumiSection 10981 at 17-Feb-2017 23:13:03.514 GMT
+Begin processing the 3201st record. Run 1, Event 9619424, LumiSection 10981 at 17-Feb-2017 23:13:04.111 GMT
+Begin processing the 3301st record. Run 1, Event 9619939, LumiSection 10982 at 17-Feb-2017 23:13:05.913 GMT
+Begin processing the 3401st record. Run 1, Event 9909606, LumiSection 11313 at 17-Feb-2017 23:13:06.481 GMT
+Begin processing the 3501st record. Run 1, Event 9910226, LumiSection 11313 at 17-Feb-2017 23:13:07.079 GMT
+Begin processing the 3601st record. Run 1, Event 9910731, LumiSection 11314 at 17-Feb-2017 23:13:07.653 GMT
+Begin processing the 3701st record. Run 1, Event 9681332, LumiSection 11052 at 17-Feb-2017 23:13:08.222 GMT
+Begin processing the 3801st record. Run 1, Event 10207141, LumiSection 11652 at 17-Feb-2017 23:13:08.755 GMT
+Begin processing the 3901st record. Run 1, Event 14250475, LumiSection 16268 at 17-Feb-2017 23:13:09.310 GMT
+Begin processing the 4001st record. Run 1, Event 14341693, LumiSection 16372 at 17-Feb-2017 23:13:09.861 GMT
+Begin processing the 4101st record. Run 1, Event 15009291, LumiSection 17134 at 17-Feb-2017 23:13:10.413 GMT
+Begin processing the 4201st record. Run 1, Event 8202958, LumiSection 9365 at 17-Feb-2017 23:13:12.376 GMT
+Begin processing the 4301st record. Run 1, Event 8203674, LumiSection 9365 at 17-Feb-2017 23:13:12.894 GMT
+Begin processing the 4401st record. Run 1, Event 8204353, LumiSection 9366 at 17-Feb-2017 23:13:13.224 GMT
+Begin processing the 4501st record. Run 1, Event 17502873, LumiSection 19981 at 17-Feb-2017 23:13:13.945 GMT
+Begin processing the 4601st record. Run 1, Event 17503544, LumiSection 19981 at 17-Feb-2017 23:13:14.760 GMT
+Begin processing the 4701st record. Run 1, Event 17504173, LumiSection 19982 at 17-Feb-2017 23:13:15.625 GMT
+Begin processing the 4801st record. Run 1, Event 7031342, LumiSection 8027 at 17-Feb-2017 23:13:17.185 GMT
+Begin processing the 4901st record. Run 1, Event 7031988, LumiSection 8027 at 17-Feb-2017 23:13:19.365 GMT
+Begin processing the 5001st record. Run 1, Event 7041409, LumiSection 8039 at 17-Feb-2017 23:13:20.177 GMT
+Begin processing the 5101st record. Run 1, Event 7042002, LumiSection 8039 at 17-Feb-2017 23:13:21.026 GMT
+Begin processing the 5201st record. Run 1, Event 7042728, LumiSection 8040 at 17-Feb-2017 23:13:21.863 GMT
+Begin processing the 5301st record. Run 1, Event 7474363, LumiSection 8533 at 17-Feb-2017 23:13:22.735 GMT
+Begin processing the 5401st record. Run 1, Event 7474962, LumiSection 8533 at 17-Feb-2017 23:13:23.464 GMT
+Begin processing the 5501st record. Run 1, Event 2759784, LumiSection 3151 at 17-Feb-2017 23:13:24.488 GMT
+Begin processing the 5601st record. Run 1, Event 2760326, LumiSection 3151 at 17-Feb-2017 23:13:25.222 GMT
+Begin processing the 5701st record. Run 1, Event 2760998, LumiSection 3152 at 17-Feb-2017 23:13:27.748 GMT
+Begin processing the 5801st record. Run 1, Event 4087947, LumiSection 4667 at 17-Feb-2017 23:13:28.612 GMT
+Begin processing the 5901st record. Run 1, Event 4088517, LumiSection 4667 at 17-Feb-2017 23:13:29.304 GMT
+Begin processing the 6001st record. Run 1, Event 4089143, LumiSection 4668 at 17-Feb-2017 23:13:29.987 GMT
+Begin processing the 6101st record. Run 1, Event 9042743, LumiSection 10323 at 17-Feb-2017 23:13:30.756 GMT
+Begin processing the 6201st record. Run 1, Event 9043351, LumiSection 10323 at 17-Feb-2017 23:13:31.517 GMT
+Begin processing the 6301st record. Run 1, Event 15868499, LumiSection 18115 at 17-Feb-2017 23:13:33.797 GMT
+Begin processing the 6401st record. Run 1, Event 15869143, LumiSection 18115 at 17-Feb-2017 23:13:34.513 GMT
+Begin processing the 6501st record. Run 1, Event 16022167, LumiSection 18291 at 17-Feb-2017 23:13:35.237 GMT
+Begin processing the 6601st record. Run 1, Event 16022695, LumiSection 18291 at 17-Feb-2017 23:13:35.972 GMT
+Begin processing the 6701st record. Run 1, Event 16023282, LumiSection 18291 at 17-Feb-2017 23:13:36.749 GMT
+Begin processing the 6801st record. Run 1, Event 4632868, LumiSection 5289 at 17-Feb-2017 23:13:37.469 GMT
+Begin processing the 6901st record. Run 1, Event 4633510, LumiSection 5289 at 17-Feb-2017 23:13:38.239 GMT
+Begin processing the 7001st record. Run 1, Event 9022904, LumiSection 10301 at 17-Feb-2017 23:13:40.108 GMT
+Begin processing the 7101st record. Run 1, Event 9023609, LumiSection 10301 at 17-Feb-2017 23:13:40.778 GMT
+Begin processing the 7201st record. Run 1, Event 9024276, LumiSection 10302 at 17-Feb-2017 23:13:41.412 GMT
+Begin processing the 7301st record. Run 1, Event 9562774, LumiSection 10917 at 17-Feb-2017 23:13:42.041 GMT
+Begin processing the 7401st record. Run 1, Event 9563369, LumiSection 10917 at 17-Feb-2017 23:13:42.693 GMT
+Begin processing the 7501st record. Run 1, Event 2419857, LumiSection 2763 at 17-Feb-2017 23:13:43.223 GMT
+Begin processing the 7601st record. Run 1, Event 2420480, LumiSection 2763 at 17-Feb-2017 23:13:43.780 GMT
+Begin processing the 7701st record. Run 1, Event 2421133, LumiSection 2764 at 17-Feb-2017 23:13:44.372 GMT
+Begin processing the 7801st record. Run 1, Event 3346830, LumiSection 3821 at 17-Feb-2017 23:13:44.922 GMT
+Begin processing the 7901st record. Run 1, Event 3347458, LumiSection 3821 at 17-Feb-2017 23:13:45.449 GMT
+Begin processing the 8001st record. Run 1, Event 4066400, LumiSection 4643 at 17-Feb-2017 23:13:45.986 GMT
+Begin processing the 8101st record. Run 1, Event 4067026, LumiSection 4643 at 17-Feb-2017 23:13:47.887 GMT
+Begin processing the 8201st record. Run 1, Event 4067681, LumiSection 4644 at 17-Feb-2017 23:13:48.627 GMT
+Begin processing the 8301st record. Run 1, Event 4262856, LumiSection 4867 at 17-Feb-2017 23:13:49.322 GMT
+Begin processing the 8401st record. Run 1, Event 4263457, LumiSection 4867 at 17-Feb-2017 23:13:49.981 GMT
+Begin processing the 8501st record. Run 1, Event 3218574, LumiSection 3675 at 17-Feb-2017 23:13:50.679 GMT
+Begin processing the 8601st record. Run 1, Event 3219151, LumiSection 3675 at 17-Feb-2017 23:13:51.380 GMT
+Begin processing the 8701st record. Run 1, Event 3219891, LumiSection 3676 at 17-Feb-2017 23:13:52.178 GMT
+Begin processing the 8801st record. Run 1, Event 3238051, LumiSection 3697 at 17-Feb-2017 23:13:52.934 GMT
+Begin processing the 8901st record. Run 1, Event 3238681, LumiSection 3697 at 17-Feb-2017 23:13:53.765 GMT
+Begin processing the 9001st record. Run 1, Event 3239345, LumiSection 3698 at 17-Feb-2017 23:13:54.255 GMT
+Begin processing the 9101st record. Run 1, Event 4030204, LumiSection 4601 at 17-Feb-2017 23:13:55.063 GMT
+Begin processing the 9201st record. Run 1, Event 4030895, LumiSection 4602 at 17-Feb-2017 23:13:56.375 GMT
+Begin processing the 9301st record. Run 1, Event 4063141, LumiSection 4639 at 17-Feb-2017 23:13:57.086 GMT
+Begin processing the 9401st record. Run 1, Event 4063780, LumiSection 4639 at 17-Feb-2017 23:13:57.823 GMT
+17-Feb-2017 23:13:58 GMT  Closed file root://xrootd-cms.infn.it//store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/5A0BD175-AF34-E611-86AC-0CC47A7EECE8.root
+17-Feb-2017 23:13:58 GMT  Initiating request to open file root://dc2-grid-64.brunel.ac.uk//dpm/brunel.ac.uk/home/cms/store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/3E6B7437-D934-E611-A7F1-003048F02CBE.root
+[2017-02-17 23:13:59.324739 +0000][Error  ][XRootD            ] [dc2-grid-64.brunel.ac.uk:1094] Handling error while processing kXR_open (file: /dpm/brunel.ac.uk/home/cms/store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/3E6B7437-D934-E611-A7F1-003048F02CBE.root, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ): [ERROR] Error response.
+%MSG-w XrdAdaptorInternal:  file_open 17-Feb-2017 23:13:59 GMT PostProcessEvent
+Failed to open file at URL root://dc2-grid-64.brunel.ac.uk:1094//dpm/brunel.ac.uk/home/cms/store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/3E6B7437-D934-E611-A7F1-003048F02CBE.root.
+%MSG
+[2017-02-17 23:13:59.340954 +0000][Error  ][XRootD            ] [dc2-grid-64.brunel.ac.uk:1094] Handling error while processing kXR_open (file: /dpm/brunel.ac.uk/home/cms/store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/3E6B7437-D934-E611-A7F1-003048F02CBE.root?tried=, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ): [ERROR] Error response.
+%MSG-w XrdAdaptorInternal:  file_open 17-Feb-2017 23:13:59 GMT PostProcessEvent
+Failed to open file at URL root://dc2-grid-64.brunel.ac.uk:1094//dpm/brunel.ac.uk/home/cms/store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/3E6B7437-D934-E611-A7F1-003048F02CBE.root?tried=.
+%MSG
+17-Feb-2017 23:13:59 GMT  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/3E6B7437-D934-E611-A7F1-003048F02CBE.root
+[2017-02-17 23:14:00.418732 +0000][Error  ][XRootD            ] [t2-cms-xrootd03.desy.de:1094] Handling error while processing kXR_open (file: /store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/3E6B7437-D934-E611-A7F1-003048F02CBE.root, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ): [FATAL] Socket timeout.
+%MSG-w XrdAdaptor:  file_open 17-Feb-2017 23:14:06 GMT PostProcessEvent
+Data is served from ciemat.es instead of original site infn.it
+%MSG
+17-Feb-2017 23:14:06 GMT  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/3E6B7437-D934-E611-A7F1-003048F02CBE.root
+%MSG-w XrdAdaptor:  (NoModuleName) 17-Feb-2017 23:14:12 GMT pre-events
+Data is now served from ciemat.es, T1_UK_RAL instead of previous ciemat.es
+%MSG
+%MSG-w XrdAdaptor:  AfterFile 17-Feb-2017 23:14:13 GMT PostProcessEvent
+Data is now served from T1_UK_RAL instead of previous ciemat.es, T1_UK_RAL
+%MSG
+Begin processing the 9501st record. Run 1, Event 425984, LumiSection 487 at 17-Feb-2017 23:14:21.706 GMT
+Begin processing the 9601st record. Run 1, Event 426646, LumiSection 487 at 17-Feb-2017 23:14:22.461 GMT
+Begin processing the 9701st record. Run 1, Event 427281, LumiSection 488 at 17-Feb-2017 23:14:23.183 GMT
+Begin processing the 9801st record. Run 1, Event 6440860, LumiSection 7353 at 17-Feb-2017 23:14:23.923 GMT
+Begin processing the 9901st record. Run 1, Event 6441471, LumiSection 7353 at 17-Feb-2017 23:14:24.670 GMT
+Begin processing the 10001st record. Run 1, Event 6643654, LumiSection 7585 at 17-Feb-2017 23:14:25.506 GMT
+Begin processing the 10101st record. Run 1, Event 6644348, LumiSection 7585 at 17-Feb-2017 23:14:26.269 GMT
+Begin processing the 10201st record. Run 1, Event 6645026, LumiSection 7586 at 17-Feb-2017 23:14:27.033 GMT
+Begin processing the 10301st record. Run 1, Event 11717805, LumiSection 13377 at 17-Feb-2017 23:14:27.808 GMT
+Begin processing the 10401st record. Run 1, Event 11718570, LumiSection 13377 at 17-Feb-2017 23:14:28.562 GMT
+Begin processing the 10501st record. Run 1, Event 6763275, LumiSection 7721 at 17-Feb-2017 23:14:29.384 GMT
+Begin processing the 10601st record. Run 1, Event 6763941, LumiSection 7721 at 17-Feb-2017 23:14:31.875 GMT
+Begin processing the 10701st record. Run 1, Event 6794383, LumiSection 7757 at 17-Feb-2017 23:14:32.751 GMT
+Begin processing the 10801st record. Run 1, Event 6795018, LumiSection 7757 at 17-Feb-2017 23:14:33.568 GMT
+Begin processing the 10901st record. Run 1, Event 6795731, LumiSection 7758 at 17-Feb-2017 23:14:34.080 GMT
+Begin processing the 11001st record. Run 1, Event 11843898, LumiSection 13521 at 17-Feb-2017 23:14:34.547 GMT
+Begin processing the 11101st record. Run 1, Event 11844663, LumiSection 13521 at 17-Feb-2017 23:14:35.069 GMT
+Begin processing the 11201st record. Run 1, Event 12705599, LumiSection 14505 at 17-Feb-2017 23:14:35.557 GMT
+Begin processing the 11301st record. Run 1, Event 12706225, LumiSection 14505 at 17-Feb-2017 23:14:36.135 GMT
+Begin processing the 11401st record. Run 1, Event 11120045, LumiSection 12695 at 17-Feb-2017 23:14:36.536 GMT
+Begin processing the 11501st record. Run 1, Event 11120622, LumiSection 12695 at 17-Feb-2017 23:14:37.136 GMT
+Begin processing the 11601st record. Run 1, Event 11121283, LumiSection 12696 at 17-Feb-2017 23:14:37.682 GMT
+Begin processing the 11701st record. Run 1, Event 11382948, LumiSection 12995 at 17-Feb-2017 23:14:40.040 GMT
+Begin processing the 11801st record. Run 1, Event 11383584, LumiSection 12995 at 17-Feb-2017 23:14:40.567 GMT
+Begin processing the 11901st record. Run 1, Event 11384194, LumiSection 12996 at 17-Feb-2017 23:14:41.111 GMT
+Begin processing the 12001st record. Run 1, Event 19431767, LumiSection 22183 at 17-Feb-2017 23:14:41.784 GMT
+Begin processing the 12101st record. Run 1, Event 19432425, LumiSection 22183 at 17-Feb-2017 23:14:42.377 GMT
+Begin processing the 12201st record. Run 1, Event 19433104, LumiSection 22184 at 17-Feb-2017 23:14:42.983 GMT
+Begin processing the 12301st record. Run 1, Event 20809118, LumiSection 23755 at 17-Feb-2017 23:14:43.595 GMT
+Begin processing the 12401st record. Run 1, Event 20809718, LumiSection 23755 at 17-Feb-2017 23:14:44.188 GMT
+Begin processing the 12501st record. Run 1, Event 12961451, LumiSection 14797 at 17-Feb-2017 23:14:44.817 GMT
+Begin processing the 12601st record. Run 1, Event 12962198, LumiSection 14797 at 17-Feb-2017 23:14:45.454 GMT
+Begin processing the 12701st record. Run 1, Event 12962663, LumiSection 14798 at 17-Feb-2017 23:14:46.065 GMT
+Begin processing the 12801st record. Run 1, Event 13052671, LumiSection 14901 at 17-Feb-2017 23:14:49.333 GMT
+Begin processing the 12901st record. Run 1, Event 13053324, LumiSection 14901 at 17-Feb-2017 23:14:50.105 GMT
+Begin processing the 13001st record. Run 1, Event 13053979, LumiSection 14902 at 17-Feb-2017 23:14:50.919 GMT
+Begin processing the 13101st record. Run 1, Event 473435, LumiSection 541 at 17-Feb-2017 23:14:51.922 GMT
+Begin processing the 13201st record. Run 1, Event 474025, LumiSection 541 at 17-Feb-2017 23:14:52.695 GMT
+Begin processing the 13301st record. Run 1, Event 474660, LumiSection 542 at 17-Feb-2017 23:14:53.349 GMT
+Begin processing the 13401st record. Run 1, Event 836171, LumiSection 955 at 17-Feb-2017 23:14:54.002 GMT
+Begin processing the 13501st record. Run 1, Event 836880, LumiSection 955 at 17-Feb-2017 23:14:54.382 GMT
+Begin processing the 13601st record. Run 1, Event 837396, LumiSection 956 at 17-Feb-2017 23:14:55.138 GMT
+Begin processing the 13701st record. Run 1, Event 1021969, LumiSection 1167 at 17-Feb-2017 23:14:55.919 GMT
+Begin processing the 13801st record. Run 1, Event 1022745, LumiSection 1168 at 17-Feb-2017 23:14:56.758 GMT
+Begin processing the 13901st record. Run 1, Event 1056569, LumiSection 1207 at 17-Feb-2017 23:14:59.826 GMT
+Begin processing the 14001st record. Run 1, Event 1057246, LumiSection 1207 at 17-Feb-2017 23:15:00.657 GMT
+Begin processing the 14101st record. Run 1, Event 657125, LumiSection 751 at 17-Feb-2017 23:15:01.401 GMT
+Begin processing the 14201st record. Run 1, Event 657744, LumiSection 751 at 17-Feb-2017 23:15:02.108 GMT
+Begin processing the 14301st record. Run 1, Event 658407, LumiSection 752 at 17-Feb-2017 23:15:02.823 GMT
+Begin processing the 14401st record. Run 1, Event 895587, LumiSection 1023 at 17-Feb-2017 23:15:03.577 GMT
+Begin processing the 14501st record. Run 1, Event 896259, LumiSection 1023 at 17-Feb-2017 23:15:04.375 GMT
+Begin processing the 14601st record. Run 1, Event 896936, LumiSection 1024 at 17-Feb-2017 23:15:05.145 GMT
+Begin processing the 14701st record. Run 1, Event 922132, LumiSection 1053 at 17-Feb-2017 23:15:05.845 GMT
+Begin processing the 14801st record. Run 1, Event 922933, LumiSection 1054 at 17-Feb-2017 23:15:06.282 GMT
+Begin processing the 14901st record. Run 1, Event 962173, LumiSection 1099 at 17-Feb-2017 23:15:07.115 GMT
+Begin processing the 15001st record. Run 1, Event 962799, LumiSection 1099 at 17-Feb-2017 23:15:09.956 GMT
+Begin processing the 15101st record. Run 1, Event 963471, LumiSection 1100 at 17-Feb-2017 23:15:10.753 GMT
+Begin processing the 15201st record. Run 1, Event 1922511, LumiSection 2195 at 17-Feb-2017 23:15:11.576 GMT
+Begin processing the 15301st record. Run 1, Event 1923123, LumiSection 2195 at 17-Feb-2017 23:15:12.363 GMT
+Begin processing the 15401st record. Run 1, Event 1995683, LumiSection 2279 at 17-Feb-2017 23:15:13.151 GMT
+Begin processing the 15501st record. Run 1, Event 1996374, LumiSection 2279 at 17-Feb-2017 23:15:13.949 GMT
+Begin processing the 15601st record. Run 1, Event 1996968, LumiSection 2280 at 17-Feb-2017 23:15:14.741 GMT
+Begin processing the 15701st record. Run 1, Event 2015135, LumiSection 2301 at 17-Feb-2017 23:15:15.549 GMT
+Begin processing the 15801st record. Run 1, Event 2015739, LumiSection 2301 at 17-Feb-2017 23:15:16.343 GMT
+Begin processing the 15901st record. Run 1, Event 2016361, LumiSection 2302 at 17-Feb-2017 23:15:17.192 GMT
+Begin processing the 16001st record. Run 1, Event 2057255, LumiSection 2349 at 17-Feb-2017 23:15:17.952 GMT
+Begin processing the 16101st record. Run 1, Event 2057819, LumiSection 2349 at 17-Feb-2017 23:15:19.905 GMT
+Begin processing the 16201st record. Run 1, Event 2279671, LumiSection 2603 at 17-Feb-2017 23:15:20.675 GMT
+Begin processing the 16301st record. Run 1, Event 2280341, LumiSection 2603 at 17-Feb-2017 23:15:21.357 GMT
+Begin processing the 16401st record. Run 1, Event 2280882, LumiSection 2604 at 17-Feb-2017 23:15:22.135 GMT
+Begin processing the 16501st record. Run 1, Event 2328833, LumiSection 2659 at 17-Feb-2017 23:15:23.469 GMT
+Begin processing the 16601st record. Run 1, Event 2329384, LumiSection 2659 at 17-Feb-2017 23:15:24.358 GMT
+Begin processing the 16701st record. Run 1, Event 2329964, LumiSection 2660 at 17-Feb-2017 23:15:25.109 GMT
+Begin processing the 16801st record. Run 1, Event 2344584, LumiSection 2677 at 17-Feb-2017 23:15:25.947 GMT
+Begin processing the 16901st record. Run 1, Event 2345233, LumiSection 2677 at 17-Feb-2017 23:15:26.722 GMT
+Begin processing the 17001st record. Run 1, Event 2345886, LumiSection 2678 at 17-Feb-2017 23:15:27.422 GMT
+Begin processing the 17101st record. Run 1, Event 2703891, LumiSection 3087 at 17-Feb-2017 23:15:28.075 GMT
+Begin processing the 17201st record. Run 1, Event 2704529, LumiSection 3087 at 17-Feb-2017 23:15:28.747 GMT
+Begin processing the 17301st record. Run 1, Event 741582, LumiSection 847 at 17-Feb-2017 23:15:31.909 GMT
+Begin processing the 17401st record. Run 1, Event 742270, LumiSection 847 at 17-Feb-2017 23:15:33.403 GMT
+Begin processing the 17501st record. Run 1, Event 18497641, LumiSection 21117 at 17-Feb-2017 23:15:34.091 GMT
+Begin processing the 17601st record. Run 1, Event 18498162, LumiSection 21117 at 17-Feb-2017 23:15:34.932 GMT
+Begin processing the 17701st record. Run 1, Event 18498786, LumiSection 21117 at 17-Feb-2017 23:15:35.575 GMT
+Begin processing the 17801st record. Run 1, Event 1336486, LumiSection 1526 at 17-Feb-2017 23:15:36.136 GMT
+Begin processing the 17901st record. Run 1, Event 1619307, LumiSection 1849 at 17-Feb-2017 23:15:36.485 GMT
+Begin processing the 18001st record. Run 1, Event 1619906, LumiSection 1849 at 17-Feb-2017 23:15:37.044 GMT
+Begin processing the 18101st record. Run 1, Event 1620574, LumiSection 1850 at 17-Feb-2017 23:15:37.600 GMT
+Begin processing the 18201st record. Run 1, Event 1624770, LumiSection 1855 at 17-Feb-2017 23:15:38.177 GMT
+Begin processing the 18301st record. Run 1, Event 1625403, LumiSection 1856 at 17-Feb-2017 23:15:40.711 GMT
+Begin processing the 18401st record. Run 1, Event 4542670, LumiSection 5186 at 17-Feb-2017 23:15:41.686 GMT
+Begin processing the 18501st record. Run 1, Event 4693995, LumiSection 5359 at 17-Feb-2017 23:15:42.268 GMT
+Begin processing the 18601st record. Run 1, Event 4694673, LumiSection 5359 at 17-Feb-2017 23:15:42.787 GMT
+Begin processing the 18701st record. Run 1, Event 4695303, LumiSection 5360 at 17-Feb-2017 23:15:43.231 GMT
+Begin processing the 18801st record. Run 1, Event 4708201, LumiSection 5375 at 17-Feb-2017 23:15:43.486 GMT
+Begin processing the 18901st record. Run 1, Event 4708913, LumiSection 5376 at 17-Feb-2017 23:15:43.936 GMT
+Begin processing the 19001st record. Run 1, Event 10543352, LumiSection 12036 at 17-Feb-2017 23:15:44.389 GMT
+Begin processing the 19101st record. Run 1, Event 10573779, LumiSection 12071 at 17-Feb-2017 23:15:44.901 GMT
+Begin processing the 19201st record. Run 1, Event 10574491, LumiSection 12071 at 17-Feb-2017 23:15:45.449 GMT
+Begin processing the 19301st record. Run 1, Event 10771420, LumiSection 12297 at 17-Feb-2017 23:15:45.952 GMT
+Begin processing the 19401st record. Run 1, Event 10771920, LumiSection 12297 at 17-Feb-2017 23:15:52.391 GMT
+Begin processing the 19501st record. Run 1, Event 10772641, LumiSection 12298 at 17-Feb-2017 23:15:52.950 GMT
+Begin processing the 19601st record. Run 1, Event 11065821, LumiSection 12633 at 17-Feb-2017 23:15:53.484 GMT
+Begin processing the 19701st record. Run 1, Event 11066566, LumiSection 12633 at 17-Feb-2017 23:15:53.817 GMT
+Begin processing the 19801st record. Run 1, Event 11067201, LumiSection 12634 at 17-Feb-2017 23:15:54.369 GMT
+Begin processing the 19901st record. Run 1, Event 20828330, LumiSection 23777 at 17-Feb-2017 23:15:54.900 GMT
+Begin processing the 20001st record. Run 1, Event 20828981, LumiSection 23777 at 17-Feb-2017 23:15:55.444 GMT
+Begin processing the 20101st record. Run 1, Event 12496670, LumiSection 14266 at 17-Feb-2017 23:15:55.986 GMT
+Begin processing the 20201st record. Run 1, Event 12521881, LumiSection 14295 at 17-Feb-2017 23:15:56.543 GMT
+Begin processing the 20301st record. Run 1, Event 12522532, LumiSection 14295 at 17-Feb-2017 23:15:57.105 GMT
+Begin processing the 20401st record. Run 1, Event 12523153, LumiSection 14296 at 17-Feb-2017 23:15:57.694 GMT
+Begin processing the 20501st record. Run 1, Event 12903971, LumiSection 14731 at 17-Feb-2017 23:16:02.082 GMT
+Begin processing the 20601st record. Run 1, Event 12904647, LumiSection 14731 at 17-Feb-2017 23:16:02.400 GMT
+Begin processing the 20701st record. Run 1, Event 13012141, LumiSection 14855 at 17-Feb-2017 23:16:02.942 GMT
+Begin processing the 20801st record. Run 1, Event 13012879, LumiSection 14855 at 17-Feb-2017 23:16:03.493 GMT
+Begin processing the 20901st record. Run 1, Event 13013580, LumiSection 14856 at 17-Feb-2017 23:16:04.047 GMT
+Begin processing the 21001st record. Run 1, Event 13124644, LumiSection 14983 at 17-Feb-2017 23:16:04.596 GMT
+Begin processing the 21101st record. Run 1, Event 13125252, LumiSection 14983 at 17-Feb-2017 23:16:05.143 GMT
+Begin processing the 21201st record. Run 1, Event 13125958, LumiSection 14984 at 17-Feb-2017 23:16:05.689 GMT
+Begin processing the 21301st record. Run 1, Event 14054150, LumiSection 16044 at 17-Feb-2017 23:16:06.238 GMT
+17-Feb-2017 23:16:06 GMT  Closed file root://xrootd-cms.infn.it//store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/3E6B7437-D934-E611-A7F1-003048F02CBE.root
+17-Feb-2017 23:16:06 GMT  Initiating request to open file root://dc2-grid-64.brunel.ac.uk//dpm/brunel.ac.uk/home/cms/store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/262A3A6E-E534-E611-8D59-002481E0D69C.root
+[2017-02-17 23:16:07.547056 +0000][Error  ][XRootD            ] [dc2-grid-64.brunel.ac.uk:1094] Handling error while processing kXR_open (file: /dpm/brunel.ac.uk/home/cms/store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/262A3A6E-E534-E611-8D59-002481E0D69C.root, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ): [ERROR] Error response.
+%MSG-w XrdAdaptorInternal:  file_open 17-Feb-2017 23:16:07 GMT PostProcessEvent
+Failed to open file at URL root://dc2-grid-64.brunel.ac.uk:1094//dpm/brunel.ac.uk/home/cms/store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/262A3A6E-E534-E611-8D59-002481E0D69C.root.
+%MSG
+[2017-02-17 23:16:07.556662 +0000][Error  ][XRootD            ] [dc2-grid-64.brunel.ac.uk:1094] Handling error while processing kXR_open (file: /dpm/brunel.ac.uk/home/cms/store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/262A3A6E-E534-E611-8D59-002481E0D69C.root?tried=, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ): [ERROR] Error response.
+%MSG-w XrdAdaptorInternal:  file_open 17-Feb-2017 23:16:07 GMT PostProcessEvent
+Failed to open file at URL root://dc2-grid-64.brunel.ac.uk:1094//dpm/brunel.ac.uk/home/cms/store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/262A3A6E-E534-E611-8D59-002481E0D69C.root?tried=.
+%MSG
+17-Feb-2017 23:16:07 GMT  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/262A3A6E-E534-E611-8D59-002481E0D69C.root
+[2017-02-17 23:16:53.678511 +0000][Error  ][AsyncSock         ] [t2-cms-xrootd03.desy.de:1094 #0.0] Socket error while handshaking: [ERROR] Socket timeout
+[2017-02-17 23:17:38.739459 +0000][Error  ][AsyncSock         ] [t2-cms-xrootd03.desy.de:1094 #0.0] Socket error while handshaking: [ERROR] Socket timeout
+[2017-02-17 23:17:38.739533 +0000][Error  ][PostMaster        ] [t2-cms-xrootd03.desy.de:1094 #0] Unable to recover: [ERROR] Socket timeout.
+[2017-02-17 23:17:38.739552 +0000][Error  ][XRootD            ] [t2-cms-xrootd03.desy.de:1094] Impossible to send message kXR_open (file: /store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/262A3A6E-E534-E611-8D59-002481E0D69C.root, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ). Trying to recover.
+[2017-02-17 23:17:38.739575 +0000][Error  ][XRootD            ] [t2-cms-xrootd03.desy.de:1094] Handling error while processing kXR_open (file: /store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/262A3A6E-E534-E611-8D59-002481E0D69C.root, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ): [FATAL] Socket timeout.
+%MSG-w XrdAdaptor:  file_open 17-Feb-2017 23:17:40 GMT PostProcessEvent
+Data is served from T1_UK_RAL instead of original site infn.it
+%MSG
+17-Feb-2017 23:17:40 GMT  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/262A3A6E-E534-E611-8D59-002481E0D69C.root
+Begin processing the 21401st record. Run 1, Event 439976, LumiSection 503 at 17-Feb-2017 23:17:55.642 GMT
+Begin processing the 21501st record. Run 1, Event 440703, LumiSection 503 at 17-Feb-2017 23:17:56.357 GMT
+Begin processing the 21601st record. Run 1, Event 441365, LumiSection 504 at 17-Feb-2017 23:17:57.050 GMT
+Begin processing the 21701st record. Run 1, Event 443723, LumiSection 507 at 17-Feb-2017 23:17:57.687 GMT
+Begin processing the 21801st record. Run 1, Event 444417, LumiSection 507 at 17-Feb-2017 23:17:58.309 GMT
+Begin processing the 21901st record. Run 1, Event 478331, LumiSection 547 at 17-Feb-2017 23:17:58.873 GMT
+Begin processing the 22001st record. Run 1, Event 479128, LumiSection 547 at 17-Feb-2017 23:17:59.412 GMT
+Begin processing the 22101st record. Run 1, Event 479780, LumiSection 548 at 17-Feb-2017 23:18:00.076 GMT
+Begin processing the 22201st record. Run 1, Event 487458, LumiSection 557 at 17-Feb-2017 23:18:00.608 GMT
+Begin processing the 22301st record. Run 1, Event 488124, LumiSection 557 at 17-Feb-2017 23:18:01.083 GMT
+Begin processing the 22401st record. Run 1, Event 551845, LumiSection 630 at 17-Feb-2017 23:18:01.586 GMT
+Begin processing the 22501st record. Run 1, Event 585821, LumiSection 669 at 17-Feb-2017 23:18:02.129 GMT
+Begin processing the 22601st record. Run 1, Event 586497, LumiSection 670 at 17-Feb-2017 23:18:02.650 GMT
+Begin processing the 22701st record. Run 1, Event 646704, LumiSection 739 at 17-Feb-2017 23:18:03.175 GMT
+Begin processing the 22801st record. Run 1, Event 647302, LumiSection 739 at 17-Feb-2017 23:18:03.760 GMT
+Begin processing the 22901st record. Run 1, Event 647970, LumiSection 740 at 17-Feb-2017 23:18:04.254 GMT
+Begin processing the 23001st record. Run 1, Event 1084793, LumiSection 1239 at 17-Feb-2017 23:18:04.803 GMT
+Begin processing the 23101st record. Run 1, Event 1085535, LumiSection 1239 at 17-Feb-2017 23:18:05.346 GMT
+Begin processing the 23201st record. Run 1, Event 1086123, LumiSection 1240 at 17-Feb-2017 23:18:05.832 GMT
+Begin processing the 23301st record. Run 1, Event 953699, LumiSection 1089 at 17-Feb-2017 23:18:06.329 GMT
+Begin processing the 23401st record. Run 1, Event 954307, LumiSection 1089 at 17-Feb-2017 23:18:06.778 GMT
+Begin processing the 23501st record. Run 1, Event 1329844, LumiSection 1519 at 17-Feb-2017 23:18:09.967 GMT
+Begin processing the 23601st record. Run 1, Event 1330518, LumiSection 1519 at 17-Feb-2017 23:18:10.490 GMT
+Begin processing the 23701st record. Run 1, Event 1331131, LumiSection 1520 at 17-Feb-2017 23:18:10.964 GMT
+Begin processing the 23801st record. Run 1, Event 1550812, LumiSection 1771 at 17-Feb-2017 23:18:11.506 GMT
+Begin processing the 23901st record. Run 1, Event 1551468, LumiSection 1771 at 17-Feb-2017 23:18:12.080 GMT
+Begin processing the 24001st record. Run 1, Event 1552189, LumiSection 1772 at 17-Feb-2017 23:18:12.663 GMT
+Begin processing the 24101st record. Run 1, Event 1642260, LumiSection 1875 at 17-Feb-2017 23:18:13.227 GMT
+Begin processing the 24201st record. Run 1, Event 1642882, LumiSection 1875 at 17-Feb-2017 23:18:13.748 GMT
+Begin processing the 24301st record. Run 1, Event 1127073, LumiSection 1287 at 17-Feb-2017 23:18:14.414 GMT
+Begin processing the 24401st record. Run 1, Event 1127755, LumiSection 1287 at 17-Feb-2017 23:18:15.064 GMT
+Begin processing the 24501st record. Run 1, Event 1170409, LumiSection 1337 at 17-Feb-2017 23:18:15.604 GMT
+Begin processing the 24601st record. Run 1, Event 1171026, LumiSection 1337 at 17-Feb-2017 23:18:16.158 GMT
+Begin processing the 24701st record. Run 1, Event 1171661, LumiSection 1338 at 17-Feb-2017 23:18:16.624 GMT
+Begin processing the 24801st record. Run 1, Event 1172378, LumiSection 1339 at 17-Feb-2017 23:18:17.090 GMT
+Begin processing the 24901st record. Run 1, Event 1173095, LumiSection 1339 at 17-Feb-2017 23:18:17.654 GMT
+Begin processing the 25001st record. Run 1, Event 1173742, LumiSection 1340 at 17-Feb-2017 23:18:18.248 GMT
+Begin processing the 25101st record. Run 1, Event 1198894, LumiSection 1369 at 17-Feb-2017 23:18:18.870 GMT
+Begin processing the 25201st record. Run 1, Event 1199492, LumiSection 1369 at 17-Feb-2017 23:18:19.491 GMT
+Begin processing the 25301st record. Run 1, Event 1110787, LumiSection 1269 at 17-Feb-2017 23:18:20.186 GMT
+Begin processing the 25401st record. Run 1, Event 1111521, LumiSection 1269 at 17-Feb-2017 23:18:21.655 GMT
+Begin processing the 25501st record. Run 1, Event 1112195, LumiSection 1270 at 17-Feb-2017 23:18:22.434 GMT
+Begin processing the 25601st record. Run 1, Event 1254744, LumiSection 1433 at 17-Feb-2017 23:18:23.188 GMT
+Begin processing the 25701st record. Run 1, Event 1255486, LumiSection 1433 at 17-Feb-2017 23:18:23.920 GMT
+Begin processing the 25801st record. Run 1, Event 1256099, LumiSection 1434 at 17-Feb-2017 23:18:24.552 GMT
+Begin processing the 25901st record. Run 1, Event 1470662, LumiSection 1679 at 17-Feb-2017 23:18:25.097 GMT
+Begin processing the 26001st record. Run 1, Event 1471313, LumiSection 1680 at 17-Feb-2017 23:18:25.463 GMT
+Begin processing the 26101st record. Run 1, Event 1199903, LumiSection 1370 at 17-Feb-2017 23:18:26.057 GMT
+Begin processing the 26201st record. Run 1, Event 1212877, LumiSection 1385 at 17-Feb-2017 23:18:26.630 GMT
+Begin processing the 26301st record. Run 1, Event 1213520, LumiSection 1385 at 17-Feb-2017 23:18:27.225 GMT
+Begin processing the 26401st record. Run 1, Event 1496274, LumiSection 1709 at 17-Feb-2017 23:18:27.840 GMT
+Begin processing the 26501st record. Run 1, Event 1496969, LumiSection 1709 at 17-Feb-2017 23:18:29.377 GMT
+Begin processing the 26601st record. Run 1, Event 1497775, LumiSection 1710 at 17-Feb-2017 23:18:30.194 GMT
+Begin processing the 26701st record. Run 1, Event 1649123, LumiSection 1883 at 17-Feb-2017 23:18:30.767 GMT
+Begin processing the 26801st record. Run 1, Event 1649732, LumiSection 1883 at 17-Feb-2017 23:18:31.314 GMT
+Begin processing the 26901st record. Run 1, Event 1723530, LumiSection 1968 at 17-Feb-2017 23:18:31.855 GMT
+Begin processing the 27001st record. Run 1, Event 7122142, LumiSection 8131 at 17-Feb-2017 23:18:32.417 GMT
+Begin processing the 27101st record. Run 1, Event 7122763, LumiSection 8131 at 17-Feb-2017 23:18:32.972 GMT
+Begin processing the 27201st record. Run 1, Event 7123514, LumiSection 8132 at 17-Feb-2017 23:18:34.325 GMT
+Begin processing the 27301st record. Run 1, Event 7141697, LumiSection 8153 at 17-Feb-2017 23:18:34.672 GMT
+Begin processing the 27401st record. Run 1, Event 7142281, LumiSection 8153 at 17-Feb-2017 23:18:35.208 GMT
+Begin processing the 27501st record. Run 1, Event 7178003, LumiSection 8195 at 17-Feb-2017 23:18:37.137 GMT
+Begin processing the 27601st record. Run 1, Event 7178633, LumiSection 8195 at 17-Feb-2017 23:18:37.712 GMT
+Begin processing the 27701st record. Run 1, Event 7179382, LumiSection 8196 at 17-Feb-2017 23:18:38.227 GMT
+Begin processing the 27801st record. Run 1, Event 2268712, LumiSection 2590 at 17-Feb-2017 23:18:38.787 GMT
+Begin processing the 27901st record. Run 1, Event 2912344, LumiSection 3325 at 17-Feb-2017 23:18:39.518 GMT
+Begin processing the 28001st record. Run 1, Event 2913015, LumiSection 3325 at 17-Feb-2017 23:18:40.266 GMT
+Begin processing the 28101st record. Run 1, Event 3542587, LumiSection 4045 at 17-Feb-2017 23:18:41.130 GMT
+Begin processing the 28201st record. Run 1, Event 3543211, LumiSection 4045 at 17-Feb-2017 23:18:41.836 GMT
+Begin processing the 28301st record. Run 1, Event 3543801, LumiSection 4045 at 17-Feb-2017 23:18:42.542 GMT
+Begin processing the 28401st record. Run 1, Event 3549760, LumiSection 4053 at 17-Feb-2017 23:18:43.269 GMT
+Begin processing the 28501st record. Run 1, Event 3550385, LumiSection 4053 at 17-Feb-2017 23:18:43.965 GMT
+Begin processing the 28601st record. Run 1, Event 3551107, LumiSection 4054 at 17-Feb-2017 23:18:47.584 GMT
+Begin processing the 28701st record. Run 1, Event 5406593, LumiSection 6172 at 17-Feb-2017 23:18:48.298 GMT
+Begin processing the 28801st record. Run 1, Event 5538667, LumiSection 6323 at 17-Feb-2017 23:18:49.043 GMT
+Begin processing the 28901st record. Run 1, Event 5539265, LumiSection 6323 at 17-Feb-2017 23:18:49.850 GMT
+Begin processing the 29001st record. Run 1, Event 5704680, LumiSection 6513 at 17-Feb-2017 23:18:50.567 GMT
+Begin processing the 29101st record. Run 1, Event 5705308, LumiSection 6513 at 17-Feb-2017 23:18:51.340 GMT
+Begin processing the 29201st record. Run 1, Event 5705966, LumiSection 6514 at 17-Feb-2017 23:18:52.094 GMT
+Begin processing the 29301st record. Run 1, Event 5706618, LumiSection 6515 at 17-Feb-2017 23:18:52.810 GMT
+Begin processing the 29401st record. Run 1, Event 5707154, LumiSection 6515 at 17-Feb-2017 23:18:53.510 GMT
+Begin processing the 29501st record. Run 1, Event 5707918, LumiSection 6516 at 17-Feb-2017 23:18:54.122 GMT
+Begin processing the 29601st record. Run 1, Event 1173841, LumiSection 1341 at 17-Feb-2017 23:18:54.857 GMT
+Begin processing the 29701st record. Run 1, Event 1174440, LumiSection 1341 at 17-Feb-2017 23:18:57.025 GMT
+Begin processing the 29801st record. Run 1, Event 1175020, LumiSection 1341 at 17-Feb-2017 23:18:57.653 GMT
+Begin processing the 29901st record. Run 1, Event 1387587, LumiSection 1585 at 17-Feb-2017 23:18:58.278 GMT
+Begin processing the 30001st record. Run 1, Event 1388235, LumiSection 1585 at 17-Feb-2017 23:18:58.886 GMT
+Begin processing the 30101st record. Run 1, Event 1388887, LumiSection 1586 at 17-Feb-2017 23:18:59.520 GMT
+Begin processing the 30201st record. Run 1, Event 7533811, LumiSection 8601 at 17-Feb-2017 23:19:00.206 GMT
+Begin processing the 30301st record. Run 1, Event 7534443, LumiSection 8601 at 17-Feb-2017 23:19:00.811 GMT
+Begin processing the 30401st record. Run 1, Event 7535140, LumiSection 8602 at 17-Feb-2017 23:19:01.523 GMT
+Begin processing the 30501st record. Run 1, Event 18007063, LumiSection 20557 at 17-Feb-2017 23:19:02.202 GMT
+Begin processing the 30601st record. Run 1, Event 18007705, LumiSection 20557 at 17-Feb-2017 23:19:03.042 GMT
+Begin processing the 30701st record. Run 1, Event 18008459, LumiSection 20558 at 17-Feb-2017 23:19:04.870 GMT
+Begin processing the 30801st record. Run 1, Event 18897428, LumiSection 21573 at 17-Feb-2017 23:19:05.603 GMT
+Begin processing the 30901st record. Run 1, Event 18898076, LumiSection 21573 at 17-Feb-2017 23:19:06.346 GMT
+Begin processing the 31001st record. Run 1, Event 18898667, LumiSection 21574 at 17-Feb-2017 23:19:07.091 GMT
+Begin processing the 31101st record. Run 1, Event 19081435, LumiSection 21783 at 17-Feb-2017 23:19:07.832 GMT
+Begin processing the 31201st record. Run 1, Event 19082057, LumiSection 21783 at 17-Feb-2017 23:19:08.564 GMT
+Begin processing the 31301st record. Run 1, Event 19082658, LumiSection 21784 at 17-Feb-2017 23:19:09.253 GMT
+Begin processing the 31401st record. Run 1, Event 20056976, LumiSection 22897 at 17-Feb-2017 23:19:09.873 GMT
+Begin processing the 31501st record. Run 1, Event 20057613, LumiSection 22897 at 17-Feb-2017 23:19:10.527 GMT
+Begin processing the 31601st record. Run 1, Event 20058201, LumiSection 22898 at 17-Feb-2017 23:19:11.259 GMT
+Begin processing the 31701st record. Run 1, Event 20074618, LumiSection 22917 at 17-Feb-2017 23:19:12.054 GMT
+Begin processing the 31801st record. Run 1, Event 20075183, LumiSection 22917 at 17-Feb-2017 23:19:14.108 GMT
+Begin processing the 31901st record. Run 1, Event 20075806, LumiSection 22918 at 17-Feb-2017 23:19:14.905 GMT
+Begin processing the 32001st record. Run 1, Event 20136045, LumiSection 22987 at 17-Feb-2017 23:19:15.643 GMT
+Begin processing the 32101st record. Run 1, Event 20136788, LumiSection 22987 at 17-Feb-2017 23:19:16.482 GMT
+Begin processing the 32201st record. Run 1, Event 20137463, LumiSection 22988 at 17-Feb-2017 23:19:17.251 GMT
+Begin processing the 32301st record. Run 1, Event 22506370, LumiSection 25693 at 17-Feb-2017 23:19:17.972 GMT
+Begin processing the 32401st record. Run 1, Event 22507072, LumiSection 25693 at 17-Feb-2017 23:19:18.704 GMT
+Begin processing the 32501st record. Run 1, Event 22507702, LumiSection 25694 at 17-Feb-2017 23:19:19.413 GMT
+Begin processing the 32601st record. Run 1, Event 22645054, LumiSection 25851 at 17-Feb-2017 23:19:20.139 GMT
+Begin processing the 32701st record. Run 1, Event 22645723, LumiSection 25851 at 17-Feb-2017 23:19:21.046 GMT
+Begin processing the 32801st record. Run 1, Event 22688437, LumiSection 25901 at 17-Feb-2017 23:19:22.110 GMT
+Begin processing the 32901st record. Run 1, Event 22689058, LumiSection 25901 at 17-Feb-2017 23:19:22.834 GMT
+Begin processing the 33001st record. Run 1, Event 22689679, LumiSection 25901 at 17-Feb-2017 23:19:23.571 GMT
+17-Feb-2017 23:19:24 GMT  Closed file root://xrootd-cms.infn.it//store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/262A3A6E-E534-E611-8D59-002481E0D69C.root
+17-Feb-2017 23:19:24 GMT  Initiating request to open file root://dc2-grid-64.brunel.ac.uk//dpm/brunel.ac.uk/home/cms/store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/BCB12559-D834-E611-9E63-047D7BD6DE16.root
+[2017-02-17 23:19:25.257651 +0000][Error  ][XRootD            ] [dc2-grid-64.brunel.ac.uk:1094] Handling error while processing kXR_open (file: /dpm/brunel.ac.uk/home/cms/store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/BCB12559-D834-E611-9E63-047D7BD6DE16.root, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ): [ERROR] Error response.
+%MSG-w XrdAdaptorInternal:  file_open 17-Feb-2017 23:19:25 GMT PostProcessEvent
+Failed to open file at URL root://dc2-grid-64.brunel.ac.uk:1094//dpm/brunel.ac.uk/home/cms/store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/BCB12559-D834-E611-9E63-047D7BD6DE16.root.
+%MSG
+[2017-02-17 23:19:25.266948 +0000][Error  ][XRootD            ] [dc2-grid-64.brunel.ac.uk:1094] Handling error while processing kXR_open (file: /dpm/brunel.ac.uk/home/cms/store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/BCB12559-D834-E611-9E63-047D7BD6DE16.root?tried=, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ): [ERROR] Error response.
+%MSG-w XrdAdaptorInternal:  file_open 17-Feb-2017 23:19:25 GMT PostProcessEvent
+Failed to open file at URL root://dc2-grid-64.brunel.ac.uk:1094//dpm/brunel.ac.uk/home/cms/store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/BCB12559-D834-E611-9E63-047D7BD6DE16.root?tried=.
+%MSG
+17-Feb-2017 23:19:25 GMT  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/BCB12559-D834-E611-9E63-047D7BD6DE16.root
+[2017-02-17 23:19:26.339710 +0000][Error  ][XRootD            ] [t2-cms-xrootd03.desy.de:1094] Handling error while processing kXR_open (file: /store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/BCB12559-D834-E611-9E63-047D7BD6DE16.root, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ): [FATAL] Socket timeout.
+%MSG-w XrdAdaptor:  file_open 17-Feb-2017 23:19:32 GMT PostProcessEvent
+Data is served from ciemat.es instead of original site infn.it
+%MSG
+17-Feb-2017 23:19:32 GMT  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/BCB12559-D834-E611-9E63-047D7BD6DE16.root
+%MSG-w XrdAdaptor:  (NoModuleName) 17-Feb-2017 23:19:38 GMT pre-events
+Data is now served from ciemat.es, T1_UK_RAL instead of previous ciemat.es
+%MSG
+%MSG-w XrdAdaptor:  AfterFile 17-Feb-2017 23:19:40 GMT PostProcessEvent
+Data is now served from T1_UK_RAL instead of previous ciemat.es, T1_UK_RAL
+%MSG
+Begin processing the 33101st record. Run 1, Event 450380, LumiSection 515 at 17-Feb-2017 23:19:45.348 GMT
+Begin processing the 33201st record. Run 1, Event 451083, LumiSection 515 at 17-Feb-2017 23:19:46.171 GMT
+Begin processing the 33301st record. Run 1, Event 451784, LumiSection 516 at 17-Feb-2017 23:19:46.691 GMT
+Begin processing the 33401st record. Run 1, Event 795765, LumiSection 909 at 17-Feb-2017 23:19:47.328 GMT
+Begin processing the 33501st record. Run 1, Event 796423, LumiSection 909 at 17-Feb-2017 23:19:48.052 GMT
+Begin processing the 33601st record. Run 1, Event 797124, LumiSection 910 at 17-Feb-2017 23:19:48.739 GMT
+Begin processing the 33701st record. Run 1, Event 17534600, LumiSection 20017 at 17-Feb-2017 23:19:49.271 GMT
+Begin processing the 33801st record. Run 1, Event 17535256, LumiSection 20017 at 17-Feb-2017 23:19:49.776 GMT
+Begin processing the 33901st record. Run 1, Event 17984293, LumiSection 20531 at 17-Feb-2017 23:19:50.284 GMT
+Begin processing the 34001st record. Run 1, Event 17985046, LumiSection 20531 at 17-Feb-2017 23:19:50.846 GMT
+Begin processing the 34101st record. Run 1, Event 2188523, LumiSection 2499 at 17-Feb-2017 23:19:51.420 GMT
+Begin processing the 34201st record. Run 1, Event 2189316, LumiSection 2499 at 17-Feb-2017 23:19:53.447 GMT
+Begin processing the 34301st record. Run 1, Event 2189941, LumiSection 2500 at 17-Feb-2017 23:19:53.842 GMT
+Begin processing the 34401st record. Run 1, Event 2300973, LumiSection 2627 at 17-Feb-2017 23:19:54.367 GMT
+Begin processing the 34501st record. Run 1, Event 2301569, LumiSection 2627 at 17-Feb-2017 23:19:54.946 GMT
+Begin processing the 34601st record. Run 1, Event 2388001, LumiSection 2727 at 17-Feb-2017 23:19:55.497 GMT
+Begin processing the 34701st record. Run 1, Event 2388545, LumiSection 2727 at 17-Feb-2017 23:19:56.156 GMT
+Begin processing the 34801st record. Run 1, Event 2389088, LumiSection 2727 at 17-Feb-2017 23:19:56.823 GMT
+Begin processing the 34901st record. Run 1, Event 3327097, LumiSection 3799 at 17-Feb-2017 23:19:57.370 GMT
+Begin processing the 35001st record. Run 1, Event 3327741, LumiSection 3799 at 17-Feb-2017 23:19:57.914 GMT
+Begin processing the 35101st record. Run 1, Event 3334192, LumiSection 3807 at 17-Feb-2017 23:19:58.466 GMT
+Begin processing the 35201st record. Run 1, Event 3334805, LumiSection 3807 at 17-Feb-2017 23:19:59.021 GMT
+Begin processing the 35301st record. Run 1, Event 3335454, LumiSection 3808 at 17-Feb-2017 23:20:01.945 GMT
+Begin processing the 35401st record. Run 1, Event 3337963, LumiSection 3811 at 17-Feb-2017 23:20:02.496 GMT
+Begin processing the 35501st record. Run 1, Event 3338586, LumiSection 3811 at 17-Feb-2017 23:20:03.050 GMT
+Begin processing the 35601st record. Run 1, Event 3339206, LumiSection 3812 at 17-Feb-2017 23:20:03.627 GMT
+Begin processing the 35701st record. Run 1, Event 3459060, LumiSection 3949 at 17-Feb-2017 23:20:04.181 GMT
+Begin processing the 35801st record. Run 1, Event 3459653, LumiSection 3949 at 17-Feb-2017 23:20:04.663 GMT
+Begin processing the 35901st record. Run 1, Event 23751890, LumiSection 27115 at 17-Feb-2017 23:20:05.194 GMT
+Begin processing the 36001st record. Run 1, Event 23752585, LumiSection 27115 at 17-Feb-2017 23:20:05.662 GMT
+Begin processing the 36101st record. Run 1, Event 4131387, LumiSection 4717 at 17-Feb-2017 23:20:06.166 GMT
+Begin processing the 36201st record. Run 1, Event 4132048, LumiSection 4717 at 17-Feb-2017 23:20:06.653 GMT
+Begin processing the 36301st record. Run 1, Event 4132689, LumiSection 4718 at 17-Feb-2017 23:20:07.180 GMT
+Begin processing the 36401st record. Run 1, Event 9278879, LumiSection 10593 at 17-Feb-2017 23:20:12.230 GMT
+Begin processing the 36501st record. Run 1, Event 9279527, LumiSection 10593 at 17-Feb-2017 23:20:12.831 GMT
+Begin processing the 36601st record. Run 1, Event 9280096, LumiSection 10594 at 17-Feb-2017 23:20:13.376 GMT
+Begin processing the 36701st record. Run 1, Event 9767728, LumiSection 11151 at 17-Feb-2017 23:20:13.840 GMT
+Begin processing the 36801st record. Run 1, Event 9768352, LumiSection 11151 at 17-Feb-2017 23:20:14.204 GMT
+Begin processing the 36901st record. Run 1, Event 9769049, LumiSection 11152 at 17-Feb-2017 23:20:14.760 GMT
+Begin processing the 37001st record. Run 1, Event 10205892, LumiSection 11651 at 17-Feb-2017 23:20:15.468 GMT
+Begin processing the 37101st record. Run 1, Event 10206572, LumiSection 11651 at 17-Feb-2017 23:20:16.012 GMT
+Begin processing the 37201st record. Run 1, Event 636477, LumiSection 727 at 17-Feb-2017 23:20:16.760 GMT
+Begin processing the 37301st record. Run 1, Event 637103, LumiSection 727 at 17-Feb-2017 23:20:17.291 GMT
+Begin processing the 37401st record. Run 1, Event 849772, LumiSection 971 at 17-Feb-2017 23:20:19.773 GMT
+Begin processing the 37501st record. Run 1, Event 850417, LumiSection 971 at 17-Feb-2017 23:20:20.349 GMT
+Begin processing the 37601st record. Run 1, Event 851082, LumiSection 972 at 17-Feb-2017 23:20:20.931 GMT
+Begin processing the 37701st record. Run 1, Event 1704877, LumiSection 1947 at 17-Feb-2017 23:20:21.267 GMT
+Begin processing the 37801st record. Run 1, Event 1705565, LumiSection 1947 at 17-Feb-2017 23:20:21.869 GMT
+Begin processing the 37901st record. Run 1, Event 1706098, LumiSection 1948 at 17-Feb-2017 23:20:22.414 GMT
+Begin processing the 38001st record. Run 1, Event 7076652, LumiSection 8079 at 17-Feb-2017 23:20:22.998 GMT
+Begin processing the 38101st record. Run 1, Event 7077238, LumiSection 8079 at 17-Feb-2017 23:20:23.693 GMT
+Begin processing the 38201st record. Run 1, Event 1144251, LumiSection 1307 at 17-Feb-2017 23:20:24.194 GMT
+Begin processing the 38301st record. Run 1, Event 1144877, LumiSection 1307 at 17-Feb-2017 23:20:24.664 GMT
+Begin processing the 38401st record. Run 1, Event 1145491, LumiSection 1308 at 17-Feb-2017 23:20:25.259 GMT
+Begin processing the 38501st record. Run 1, Event 1268852, LumiSection 1449 at 17-Feb-2017 23:20:26.873 GMT
+Begin processing the 38601st record. Run 1, Event 1269580, LumiSection 1449 at 17-Feb-2017 23:20:27.222 GMT
+Begin processing the 38701st record. Run 1, Event 1270176, LumiSection 1450 at 17-Feb-2017 23:20:27.811 GMT
+Begin processing the 38801st record. Run 1, Event 1601915, LumiSection 1829 at 17-Feb-2017 23:20:28.404 GMT
+Begin processing the 38901st record. Run 1, Event 1602590, LumiSection 1829 at 17-Feb-2017 23:20:28.972 GMT
+Begin processing the 39001st record. Run 1, Event 1706624, LumiSection 1949 at 17-Feb-2017 23:20:29.525 GMT
+Begin processing the 39101st record. Run 1, Event 1707219, LumiSection 1949 at 17-Feb-2017 23:20:30.091 GMT
+Begin processing the 39201st record. Run 1, Event 2330348, LumiSection 2661 at 17-Feb-2017 23:20:30.650 GMT
+Begin processing the 39301st record. Run 1, Event 2330973, LumiSection 2661 at 17-Feb-2017 23:20:31.213 GMT
+Begin processing the 39401st record. Run 1, Event 2331574, LumiSection 2662 at 17-Feb-2017 23:20:31.738 GMT
+Begin processing the 39501st record. Run 1, Event 2333894, LumiSection 2665 at 17-Feb-2017 23:20:33.684 GMT
+Begin processing the 39601st record. Run 1, Event 2334552, LumiSection 2665 at 17-Feb-2017 23:20:34.228 GMT
+Begin processing the 39701st record. Run 1, Event 2335167, LumiSection 2666 at 17-Feb-2017 23:20:34.699 GMT
+Begin processing the 39801st record. Run 1, Event 3078514, LumiSection 3515 at 17-Feb-2017 23:20:35.250 GMT
+Begin processing the 39901st record. Run 1, Event 3079114, LumiSection 3515 at 17-Feb-2017 23:20:35.758 GMT
+Begin processing the 40001st record. Run 1, Event 3079702, LumiSection 3516 at 17-Feb-2017 23:20:36.309 GMT
+Begin processing the 40101st record. Run 1, Event 3686597, LumiSection 4209 at 17-Feb-2017 23:20:36.921 GMT
+Begin processing the 40201st record. Run 1, Event 3687259, LumiSection 4209 at 17-Feb-2017 23:20:37.505 GMT
+Begin processing the 40301st record. Run 1, Event 2351599, LumiSection 2685 at 17-Feb-2017 23:20:37.897 GMT
+Begin processing the 40401st record. Run 1, Event 2352177, LumiSection 2685 at 17-Feb-2017 23:20:38.462 GMT
+Begin processing the 40501st record. Run 1, Event 2352765, LumiSection 2686 at 17-Feb-2017 23:20:39.014 GMT
+Begin processing the 40601st record. Run 1, Event 9177366, LumiSection 10477 at 17-Feb-2017 23:20:41.510 GMT
+Begin processing the 40701st record. Run 1, Event 9177905, LumiSection 10477 at 17-Feb-2017 23:20:42.023 GMT
+Begin processing the 40801st record. Run 1, Event 9178554, LumiSection 10478 at 17-Feb-2017 23:20:42.604 GMT
+Begin processing the 40901st record. Run 1, Event 9543564, LumiSection 10895 at 17-Feb-2017 23:20:43.101 GMT
+Begin processing the 41001st record. Run 1, Event 9544118, LumiSection 10895 at 17-Feb-2017 23:20:43.693 GMT
+Begin processing the 41101st record. Run 1, Event 9544716, LumiSection 10896 at 17-Feb-2017 23:20:44.183 GMT
+Begin processing the 41201st record. Run 1, Event 9804655, LumiSection 11193 at 17-Feb-2017 23:20:44.438 GMT
+Begin processing the 41301st record. Run 1, Event 9805315, LumiSection 11193 at 17-Feb-2017 23:20:44.854 GMT
+Begin processing the 41401st record. Run 1, Event 1118239, LumiSection 1277 at 17-Feb-2017 23:20:45.568 GMT
+Begin processing the 41501st record. Run 1, Event 1118914, LumiSection 1277 at 17-Feb-2017 23:20:46.090 GMT
+Begin processing the 41601st record. Run 1, Event 1137243, LumiSection 1299 at 17-Feb-2017 23:20:46.612 GMT
+Begin processing the 41701st record. Run 1, Event 1137830, LumiSection 1299 at 17-Feb-2017 23:20:49.228 GMT
+Begin processing the 41801st record. Run 1, Event 1138503, LumiSection 1300 at 17-Feb-2017 23:20:49.761 GMT
+Begin processing the 41901st record. Run 1, Event 1153303, LumiSection 1317 at 17-Feb-2017 23:20:50.385 GMT
+Begin processing the 42001st record. Run 1, Event 1153930, LumiSection 1317 at 17-Feb-2017 23:20:50.992 GMT
+Begin processing the 42101st record. Run 1, Event 1154561, LumiSection 1318 at 17-Feb-2017 23:20:51.451 GMT
+Begin processing the 42201st record. Run 1, Event 1298958, LumiSection 1483 at 17-Feb-2017 23:20:51.895 GMT
+Begin processing the 42301st record. Run 1, Event 1334649, LumiSection 1524 at 17-Feb-2017 23:20:52.383 GMT
+Begin processing the 42401st record. Run 1, Event 1344067, LumiSection 1535 at 17-Feb-2017 23:20:52.904 GMT
+Begin processing the 42501st record. Run 1, Event 1344695, LumiSection 1535 at 17-Feb-2017 23:20:53.448 GMT
+Begin processing the 42601st record. Run 1, Event 1345305, LumiSection 1536 at 17-Feb-2017 23:20:53.902 GMT
+Begin processing the 42701st record. Run 1, Event 1377531, LumiSection 1573 at 17-Feb-2017 23:20:56.635 GMT
+Begin processing the 42801st record. Run 1, Event 1378107, LumiSection 1573 at 17-Feb-2017 23:20:57.655 GMT
+Begin processing the 42901st record. Run 1, Event 1378716, LumiSection 1574 at 17-Feb-2017 23:20:58.282 GMT
+Begin processing the 43001st record. Run 1, Event 1379427, LumiSection 1575 at 17-Feb-2017 23:20:58.882 GMT
+Begin processing the 43101st record. Run 1, Event 1379980, LumiSection 1575 at 17-Feb-2017 23:20:59.474 GMT
+Begin processing the 43201st record. Run 1, Event 10126651, LumiSection 11561 at 17-Feb-2017 23:21:00.122 GMT
+Begin processing the 43301st record. Run 1, Event 10127331, LumiSection 11561 at 17-Feb-2017 23:21:00.800 GMT
+Begin processing the 43401st record. Run 1, Event 10127994, LumiSection 11562 at 17-Feb-2017 23:21:01.567 GMT
+Begin processing the 43501st record. Run 1, Event 15741971, LumiSection 17971 at 17-Feb-2017 23:21:02.173 GMT
+Begin processing the 43601st record. Run 1, Event 15742632, LumiSection 17971 at 17-Feb-2017 23:21:02.729 GMT
+Begin processing the 43701st record. Run 1, Event 15743353, LumiSection 17972 at 17-Feb-2017 23:21:03.279 GMT
+Begin processing the 43801st record. Run 1, Event 15752839, LumiSection 17983 at 17-Feb-2017 23:21:05.501 GMT
+Begin processing the 43901st record. Run 1, Event 15753428, LumiSection 17983 at 17-Feb-2017 23:21:06.016 GMT
+Begin processing the 44001st record. Run 1, Event 24799734, LumiSection 28311 at 17-Feb-2017 23:21:06.582 GMT
+Begin processing the 44101st record. Run 1, Event 24800354, LumiSection 28311 at 17-Feb-2017 23:21:07.173 GMT
+Begin processing the 44201st record. Run 1, Event 10308562, LumiSection 11768 at 17-Feb-2017 23:21:07.689 GMT
+Begin processing the 44301st record. Run 1, Event 13958614, LumiSection 15935 at 17-Feb-2017 23:21:08.214 GMT
+Begin processing the 44401st record. Run 1, Event 13959249, LumiSection 15935 at 17-Feb-2017 23:21:08.921 GMT
+Begin processing the 44501st record. Run 1, Event 13959911, LumiSection 15936 at 17-Feb-2017 23:21:09.475 GMT
+Begin processing the 44601st record. Run 1, Event 14372359, LumiSection 16407 at 17-Feb-2017 23:21:10.021 GMT
+Begin processing the 44701st record. Run 1, Event 14373006, LumiSection 16408 at 17-Feb-2017 23:21:10.567 GMT
+Begin processing the 44801st record. Run 1, Event 14373610, LumiSection 16409 at 17-Feb-2017 23:21:11.116 GMT
+Begin processing the 44901st record. Run 1, Event 14374381, LumiSection 16409 at 17-Feb-2017 23:21:12.284 GMT
+Begin processing the 45001st record. Run 1, Event 14374951, LumiSection 16410 at 17-Feb-2017 23:21:12.747 GMT
+17-Feb-2017 23:21:12 GMT  Closed file root://xrootd-cms.infn.it//store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/BCB12559-D834-E611-9E63-047D7BD6DE16.root
+17-Feb-2017 23:21:12 GMT  Initiating request to open file root://dc2-grid-64.brunel.ac.uk//dpm/brunel.ac.uk/home/cms/store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/7A5B866A-E534-E611-A0BC-0025907DCA38.root
+[2017-02-17 23:21:13.993854 +0000][Error  ][XRootD            ] [dc2-grid-64.brunel.ac.uk:1094] Handling error while processing kXR_open (file: /dpm/brunel.ac.uk/home/cms/store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/7A5B866A-E534-E611-A0BC-0025907DCA38.root, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ): [ERROR] Error response.
+%MSG-w XrdAdaptorInternal:  file_open 17-Feb-2017 23:21:13 GMT PostProcessEvent
+Failed to open file at URL root://dc2-grid-64.brunel.ac.uk:1094//dpm/brunel.ac.uk/home/cms/store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/7A5B866A-E534-E611-A0BC-0025907DCA38.root.
+%MSG
+[2017-02-17 23:21:14.003432 +0000][Error  ][XRootD            ] [dc2-grid-64.brunel.ac.uk:1094] Handling error while processing kXR_open (file: /dpm/brunel.ac.uk/home/cms/store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/7A5B866A-E534-E611-A0BC-0025907DCA38.root?tried=, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ): [ERROR] Error response.
+%MSG-w XrdAdaptorInternal:  file_open 17-Feb-2017 23:21:14 GMT PostProcessEvent
+Failed to open file at URL root://dc2-grid-64.brunel.ac.uk:1094//dpm/brunel.ac.uk/home/cms/store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/7A5B866A-E534-E611-A0BC-0025907DCA38.root?tried=.
+%MSG
+17-Feb-2017 23:21:14 GMT  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/7A5B866A-E534-E611-A0BC-0025907DCA38.root
+[2017-02-17 23:22:00.132454 +0000][Error  ][AsyncSock         ] [t2-cms-xrootd03.desy.de:1094 #0.0] Socket error while handshaking: [ERROR] Socket timeout
+[2017-02-17 23:22:45.196464 +0000][Error  ][AsyncSock         ] [t2-cms-xrootd03.desy.de:1094 #0.0] Socket error while handshaking: [ERROR] Socket timeout
+[2017-02-17 23:22:45.196559 +0000][Error  ][PostMaster        ] [t2-cms-xrootd03.desy.de:1094 #0] Unable to recover: [ERROR] Socket timeout.
+[2017-02-17 23:22:45.196587 +0000][Error  ][XRootD            ] [t2-cms-xrootd03.desy.de:1094] Impossible to send message kXR_open (file: /store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/7A5B866A-E534-E611-A0BC-0025907DCA38.root, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ). Trying to recover.
+[2017-02-17 23:22:45.196611 +0000][Error  ][XRootD            ] [t2-cms-xrootd03.desy.de:1094] Handling error while processing kXR_open (file: /store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/7A5B866A-E534-E611-A0BC-0025907DCA38.root, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ): [FATAL] Socket timeout.
+%MSG-w XrdAdaptor:  file_open 17-Feb-2017 23:22:46 GMT PostProcessEvent
+Data is served from T1_UK_RAL instead of original site infn.it
+%MSG
+17-Feb-2017 23:22:47 GMT  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/7A5B866A-E534-E611-A0BC-0025907DCA38.root
+Begin processing the 45101st record. Run 1, Event 452455, LumiSection 517 at 17-Feb-2017 23:22:58.759 GMT
+Begin processing the 45201st record. Run 1, Event 453151, LumiSection 517 at 17-Feb-2017 23:22:59.492 GMT
+Begin processing the 45301st record. Run 1, Event 488902, LumiSection 559 at 17-Feb-2017 23:22:59.926 GMT
+Begin processing the 45401st record. Run 1, Event 489582, LumiSection 559 at 17-Feb-2017 23:23:00.743 GMT
+Begin processing the 45501st record. Run 1, Event 490317, LumiSection 560 at 17-Feb-2017 23:23:01.701 GMT
+Begin processing the 45601st record. Run 1, Event 503259, LumiSection 575 at 17-Feb-2017 23:23:02.437 GMT
+Begin processing the 45701st record. Run 1, Event 503856, LumiSection 575 at 17-Feb-2017 23:23:03.193 GMT
+Begin processing the 45801st record. Run 1, Event 504486, LumiSection 576 at 17-Feb-2017 23:23:03.944 GMT
+Begin processing the 45901st record. Run 1, Event 569977, LumiSection 651 at 17-Feb-2017 23:23:04.722 GMT
+Begin processing the 46001st record. Run 1, Event 607946, LumiSection 695 at 17-Feb-2017 23:23:05.521 GMT
+Begin processing the 46101st record. Run 1, Event 608559, LumiSection 695 at 17-Feb-2017 23:23:08.282 GMT
+Begin processing the 46201st record. Run 1, Event 609146, LumiSection 695 at 17-Feb-2017 23:23:08.785 GMT
+Begin processing the 46301st record. Run 1, Event 707889, LumiSection 809 at 17-Feb-2017 23:23:09.611 GMT
+Begin processing the 46401st record. Run 1, Event 708563, LumiSection 809 at 17-Feb-2017 23:23:10.408 GMT
+Begin processing the 46501st record. Run 1, Event 709243, LumiSection 810 at 17-Feb-2017 23:23:11.418 GMT
+Begin processing the 46601st record. Run 1, Event 1284573, LumiSection 1467 at 17-Feb-2017 23:23:12.241 GMT
+Begin processing the 46701st record. Run 1, Event 1285200, LumiSection 1467 at 17-Feb-2017 23:23:13.046 GMT
+Begin processing the 46801st record. Run 1, Event 1285889, LumiSection 1468 at 17-Feb-2017 23:23:13.855 GMT
+Begin processing the 46901st record. Run 1, Event 1288228, LumiSection 1471 at 17-Feb-2017 23:23:14.667 GMT
+Begin processing the 47001st record. Run 1, Event 1288900, LumiSection 1471 at 17-Feb-2017 23:23:15.472 GMT
+Begin processing the 47101st record. Run 1, Event 1545748, LumiSection 1765 at 17-Feb-2017 23:23:17.708 GMT
+Begin processing the 47201st record. Run 1, Event 1546367, LumiSection 1765 at 17-Feb-2017 23:23:18.501 GMT
+Begin processing the 47301st record. Run 1, Event 1608460, LumiSection 1837 at 17-Feb-2017 23:23:19.328 GMT
+Begin processing the 47401st record. Run 1, Event 1609093, LumiSection 1837 at 17-Feb-2017 23:23:20.109 GMT
+Begin processing the 47501st record. Run 1, Event 1609721, LumiSection 1838 at 17-Feb-2017 23:23:20.907 GMT
+Begin processing the 47601st record. Run 1, Event 1638443, LumiSection 1871 at 17-Feb-2017 23:23:21.712 GMT
+Begin processing the 47701st record. Run 1, Event 1639077, LumiSection 1871 at 17-Feb-2017 23:23:22.488 GMT
+Begin processing the 47801st record. Run 1, Event 1639690, LumiSection 1872 at 17-Feb-2017 23:23:23.286 GMT
+Begin processing the 47901st record. Run 1, Event 1717291, LumiSection 1961 at 17-Feb-2017 23:23:24.084 GMT
+Begin processing the 48001st record. Run 1, Event 1717896, LumiSection 1961 at 17-Feb-2017 23:23:24.553 GMT
+Begin processing the 48101st record. Run 1, Event 1643143, LumiSection 1876 at 17-Feb-2017 23:23:25.308 GMT
+Begin processing the 48201st record. Run 1, Event 7425390, LumiSection 8477 at 17-Feb-2017 23:23:28.029 GMT
+Begin processing the 48301st record. Run 1, Event 7425976, LumiSection 8477 at 17-Feb-2017 23:23:28.803 GMT
+Begin processing the 48401st record. Run 1, Event 7607204, LumiSection 8685 at 17-Feb-2017 23:23:29.517 GMT
+Begin processing the 48501st record. Run 1, Event 7607888, LumiSection 8685 at 17-Feb-2017 23:23:30.211 GMT
+Begin processing the 48601st record. Run 1, Event 7608525, LumiSection 8686 at 17-Feb-2017 23:23:30.871 GMT
+Begin processing the 48701st record. Run 1, Event 8052536, LumiSection 9193 at 17-Feb-2017 23:23:31.673 GMT
+Begin processing the 48801st record. Run 1, Event 8053236, LumiSection 9193 at 17-Feb-2017 23:23:32.576 GMT
+Begin processing the 48901st record. Run 1, Event 8053924, LumiSection 9194 at 17-Feb-2017 23:23:33.161 GMT
+Begin processing the 49001st record. Run 1, Event 463320, LumiSection 529 at 17-Feb-2017 23:23:34.142 GMT
+Begin processing the 49101st record. Run 1, Event 464041, LumiSection 530 at 17-Feb-2017 23:23:35.069 GMT
+Begin processing the 49201st record. Run 1, Event 501573, LumiSection 573 at 17-Feb-2017 23:23:38.150 GMT
+Begin processing the 49301st record. Run 1, Event 502173, LumiSection 573 at 17-Feb-2017 23:23:38.950 GMT
+Begin processing the 49401st record. Run 1, Event 511609, LumiSection 585 at 17-Feb-2017 23:23:39.749 GMT
+Begin processing the 49501st record. Run 1, Event 512309, LumiSection 585 at 17-Feb-2017 23:23:40.463 GMT
+Begin processing the 49601st record. Run 1, Event 512967, LumiSection 586 at 17-Feb-2017 23:23:41.132 GMT
+Begin processing the 49701st record. Run 1, Event 536277, LumiSection 613 at 17-Feb-2017 23:23:41.849 GMT
+Begin processing the 49801st record. Run 1, Event 536842, LumiSection 613 at 17-Feb-2017 23:23:42.748 GMT
+Begin processing the 49901st record. Run 1, Event 488487, LumiSection 558 at 17-Feb-2017 23:23:43.595 GMT
+Begin processing the 50001st record. Run 1, Event 508368, LumiSection 581 at 17-Feb-2017 23:23:44.501 GMT
+Begin processing the 50101st record. Run 1, Event 509008, LumiSection 581 at 17-Feb-2017 23:23:45.502 GMT
+Begin processing the 50201st record. Run 1, Event 509673, LumiSection 582 at 17-Feb-2017 23:23:48.117 GMT
+Begin processing the 50301st record. Run 1, Event 589102, LumiSection 673 at 17-Feb-2017 23:23:48.837 GMT
+Begin processing the 50401st record. Run 1, Event 589761, LumiSection 673 at 17-Feb-2017 23:23:49.637 GMT
+Begin processing the 50501st record. Run 1, Event 590368, LumiSection 674 at 17-Feb-2017 23:23:50.665 GMT
+Begin processing the 50601st record. Run 1, Event 662854, LumiSection 757 at 17-Feb-2017 23:23:51.391 GMT
+Begin processing the 50701st record. Run 1, Event 663529, LumiSection 757 at 17-Feb-2017 23:23:52.109 GMT
+Begin processing the 50801st record. Run 1, Event 1547215, LumiSection 1767 at 17-Feb-2017 23:23:52.830 GMT
+Begin processing the 50901st record. Run 1, Event 1547869, LumiSection 1767 at 17-Feb-2017 23:23:53.570 GMT
+Begin processing the 51001st record. Run 1, Event 1548622, LumiSection 1768 at 17-Feb-2017 23:23:54.289 GMT
+Begin processing the 51101st record. Run 1, Event 1684221, LumiSection 1923 at 17-Feb-2017 23:23:55.048 GMT
+Begin processing the 51201st record. Run 1, Event 1684853, LumiSection 1923 at 17-Feb-2017 23:23:57.803 GMT
+Begin processing the 51301st record. Run 1, Event 7356772, LumiSection 8399 at 17-Feb-2017 23:23:58.527 GMT
+Begin processing the 51401st record. Run 1, Event 7357494, LumiSection 8399 at 17-Feb-2017 23:23:59.336 GMT
+Begin processing the 51501st record. Run 1, Event 7358036, LumiSection 8400 at 17-Feb-2017 23:24:00.066 GMT
+Begin processing the 51601st record. Run 1, Event 7372700, LumiSection 8417 at 17-Feb-2017 23:24:00.724 GMT
+Begin processing the 51701st record. Run 1, Event 7373334, LumiSection 8417 at 17-Feb-2017 23:24:01.454 GMT
+Begin processing the 51801st record. Run 1, Event 2078161, LumiSection 2373 at 17-Feb-2017 23:24:02.115 GMT
+Begin processing the 51901st record. Run 1, Event 2078859, LumiSection 2373 at 17-Feb-2017 23:24:02.935 GMT
+Begin processing the 52001st record. Run 1, Event 2079557, LumiSection 2374 at 17-Feb-2017 23:24:03.893 GMT
+Begin processing the 52101st record. Run 1, Event 2150397, LumiSection 2455 at 17-Feb-2017 23:24:04.755 GMT
+Begin processing the 52201st record. Run 1, Event 2151056, LumiSection 2456 at 17-Feb-2017 23:24:05.557 GMT
+Begin processing the 52301st record. Run 1, Event 2197276, LumiSection 2509 at 17-Feb-2017 23:24:09.237 GMT
+Begin processing the 52401st record. Run 1, Event 2197824, LumiSection 2509 at 17-Feb-2017 23:24:10.051 GMT
+Begin processing the 52501st record. Run 1, Event 2198459, LumiSection 2510 at 17-Feb-2017 23:24:10.932 GMT
+Begin processing the 52601st record. Run 1, Event 2249891, LumiSection 2569 at 17-Feb-2017 23:24:11.857 GMT
+Begin processing the 52701st record. Run 1, Event 2250544, LumiSection 2569 at 17-Feb-2017 23:24:12.363 GMT
+Begin processing the 52801st record. Run 1, Event 465976, LumiSection 532 at 17-Feb-2017 23:24:13.084 GMT
+Begin processing the 52901st record. Run 1, Event 470098, LumiSection 537 at 17-Feb-2017 23:24:13.612 GMT
+Begin processing the 53001st record. Run 1, Event 470775, LumiSection 537 at 17-Feb-2017 23:24:14.128 GMT
+Begin processing the 53101st record. Run 1, Event 495978, LumiSection 567 at 17-Feb-2017 23:24:14.694 GMT
+Begin processing the 53201st record. Run 1, Event 496560, LumiSection 567 at 17-Feb-2017 23:24:15.259 GMT
+Begin processing the 53301st record. Run 1, Event 497235, LumiSection 568 at 17-Feb-2017 23:24:15.843 GMT
+Begin processing the 53401st record. Run 1, Event 510065, LumiSection 583 at 17-Feb-2017 23:24:18.138 GMT
+Begin processing the 53501st record. Run 1, Event 510738, LumiSection 583 at 17-Feb-2017 23:24:18.917 GMT
+Begin processing the 53601st record. Run 1, Event 511461, LumiSection 584 at 17-Feb-2017 23:24:19.494 GMT
+Begin processing the 53701st record. Run 1, Event 794115, LumiSection 907 at 17-Feb-2017 23:24:20.053 GMT
+Begin processing the 53801st record. Run 1, Event 794686, LumiSection 907 at 17-Feb-2017 23:24:20.660 GMT
+Begin processing the 53901st record. Run 1, Event 795336, LumiSection 908 at 17-Feb-2017 23:24:21.221 GMT
+Begin processing the 54001st record. Run 1, Event 7297636, LumiSection 8331 at 17-Feb-2017 23:24:21.799 GMT
+Begin processing the 54101st record. Run 1, Event 7298292, LumiSection 8331 at 17-Feb-2017 23:24:22.263 GMT
+Begin processing the 54201st record. Run 1, Event 7298810, LumiSection 8332 at 17-Feb-2017 23:24:22.699 GMT
+Begin processing the 54301st record. Run 1, Event 7348536, LumiSection 8389 at 17-Feb-2017 23:24:23.308 GMT
+Begin processing the 54401st record. Run 1, Event 7349247, LumiSection 8390 at 17-Feb-2017 23:24:25.238 GMT
+Begin processing the 54501st record. Run 1, Event 7381477, LumiSection 8427 at 17-Feb-2017 23:24:25.809 GMT
+Begin processing the 54601st record. Run 1, Event 7382210, LumiSection 8427 at 17-Feb-2017 23:24:26.377 GMT
+Begin processing the 54701st record. Run 1, Event 1731321, LumiSection 1977 at 17-Feb-2017 23:24:27.038 GMT
+Begin processing the 54801st record. Run 1, Event 1732099, LumiSection 1977 at 17-Feb-2017 23:24:27.841 GMT
+Begin processing the 54901st record. Run 1, Event 7060589, LumiSection 8061 at 17-Feb-2017 23:24:28.440 GMT
+Begin processing the 55001st record. Run 1, Event 7061093, LumiSection 8061 at 17-Feb-2017 23:24:28.977 GMT
+Begin processing the 55101st record. Run 1, Event 7061701, LumiSection 8061 at 17-Feb-2017 23:24:29.590 GMT
+Begin processing the 55201st record. Run 1, Event 7123739, LumiSection 8133 at 17-Feb-2017 23:24:30.039 GMT
+Begin processing the 55301st record. Run 1, Event 7124382, LumiSection 8133 at 17-Feb-2017 23:24:30.522 GMT
+Begin processing the 55401st record. Run 1, Event 7124946, LumiSection 8134 at 17-Feb-2017 23:24:31.045 GMT
+Begin processing the 55501st record. Run 1, Event 7158898, LumiSection 8173 at 17-Feb-2017 23:24:33.031 GMT
+Begin processing the 55601st record. Run 1, Event 7159507, LumiSection 8173 at 17-Feb-2017 23:24:33.556 GMT
+Begin processing the 55701st record. Run 1, Event 3407423, LumiSection 3890 at 17-Feb-2017 23:24:34.076 GMT
+Begin processing the 55801st record. Run 1, Event 8953114, LumiSection 10221 at 17-Feb-2017 23:24:34.603 GMT
+Begin processing the 55901st record. Run 1, Event 8953757, LumiSection 10221 at 17-Feb-2017 23:24:35.293 GMT
+Begin processing the 56001st record. Run 1, Event 8954471, LumiSection 10222 at 17-Feb-2017 23:24:35.811 GMT
+Begin processing the 56101st record. Run 1, Event 8998934, LumiSection 10273 at 17-Feb-2017 23:24:36.277 GMT
+Begin processing the 56201st record. Run 1, Event 8999600, LumiSection 10274 at 17-Feb-2017 23:24:36.727 GMT
+Begin processing the 56301st record. Run 1, Event 9007273, LumiSection 10283 at 17-Feb-2017 23:24:37.202 GMT
+Begin processing the 56401st record. Run 1, Event 9007896, LumiSection 10283 at 17-Feb-2017 23:24:37.660 GMT
+Begin processing the 56501st record. Run 1, Event 9008449, LumiSection 10284 at 17-Feb-2017 23:24:38.115 GMT
+17-Feb-2017 23:24:38 GMT  Closed file root://xrootd-cms.infn.it//store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/7A5B866A-E534-E611-A0BC-0025907DCA38.root
+17-Feb-2017 23:24:38 GMT  Initiating request to open file root://dc2-grid-64.brunel.ac.uk//dpm/brunel.ac.uk/home/cms/store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/CE09ED03-E834-E611-A07E-002590A2CD44.root
+[2017-02-17 23:24:39.442303 +0000][Error  ][XRootD            ] [dc2-grid-64.brunel.ac.uk:1094] Handling error while processing kXR_open (file: /dpm/brunel.ac.uk/home/cms/store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/CE09ED03-E834-E611-A07E-002590A2CD44.root, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ): [ERROR] Error response.
+%MSG-w XrdAdaptorInternal:  file_open 17-Feb-2017 23:24:39 GMT PostProcessEvent
+Failed to open file at URL root://dc2-grid-64.brunel.ac.uk:1094//dpm/brunel.ac.uk/home/cms/store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/CE09ED03-E834-E611-A07E-002590A2CD44.root.
+%MSG
+[2017-02-17 23:24:39.451459 +0000][Error  ][XRootD            ] [dc2-grid-64.brunel.ac.uk:1094] Handling error while processing kXR_open (file: /dpm/brunel.ac.uk/home/cms/store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/CE09ED03-E834-E611-A07E-002590A2CD44.root?tried=, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ): [ERROR] Error response.
+%MSG-w XrdAdaptorInternal:  file_open 17-Feb-2017 23:24:39 GMT PostProcessEvent
+Failed to open file at URL root://dc2-grid-64.brunel.ac.uk:1094//dpm/brunel.ac.uk/home/cms/store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/CE09ED03-E834-E611-A07E-002590A2CD44.root?tried=.
+%MSG
+17-Feb-2017 23:24:39 GMT  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/CE09ED03-E834-E611-A07E-002590A2CD44.root
+[2017-02-17 23:24:40.529940 +0000][Error  ][XRootD            ] [t2-cms-xrootd03.desy.de:1094] Handling error while processing kXR_open (file: /store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/CE09ED03-E834-E611-A07E-002590A2CD44.root, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ): [FATAL] Socket timeout.
+%MSG-w XrdAdaptor:  file_open 17-Feb-2017 23:24:46 GMT PostProcessEvent
+Data is served from ciemat.es instead of original site infn.it
+%MSG
+17-Feb-2017 23:24:46 GMT  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/CE09ED03-E834-E611-A07E-002590A2CD44.root
+%MSG-w XrdAdaptor:  (NoModuleName) 17-Feb-2017 23:24:53 GMT pre-events
+Data is now served from ciemat.es, T1_UK_RAL instead of previous ciemat.es
+%MSG
+Begin processing the 56601st record. Run 1, Event 454169, LumiSection 519 at 17-Feb-2017 23:25:00.721 GMT
+Begin processing the 56701st record. Run 1, Event 454779, LumiSection 519 at 17-Feb-2017 23:25:01.182 GMT
+Begin processing the 56801st record. Run 1, Event 520353, LumiSection 595 at 17-Feb-2017 23:25:01.713 GMT
+Begin processing the 56901st record. Run 1, Event 520856, LumiSection 595 at 17-Feb-2017 23:25:02.234 GMT
+Begin processing the 57001st record. Run 1, Event 521500, LumiSection 595 at 17-Feb-2017 23:25:02.861 GMT
+Begin processing the 57101st record. Run 1, Event 532634, LumiSection 609 at 17-Feb-2017 23:25:03.548 GMT
+Begin processing the 57201st record. Run 1, Event 533431, LumiSection 609 at 17-Feb-2017 23:25:04.031 GMT
+Begin processing the 57301st record. Run 1, Event 534062, LumiSection 610 at 17-Feb-2017 23:25:04.495 GMT
+Begin processing the 57401st record. Run 1, Event 550573, LumiSection 629 at 17-Feb-2017 23:25:04.984 GMT
+Begin processing the 57501st record. Run 1, Event 551265, LumiSection 629 at 17-Feb-2017 23:25:05.488 GMT
+Begin processing the 57601st record. Run 1, Event 1049855, LumiSection 1199 at 17-Feb-2017 23:25:05.997 GMT
+Begin processing the 57701st record. Run 1, Event 1050448, LumiSection 1199 at 17-Feb-2017 23:25:10.938 GMT
+Begin processing the 57801st record. Run 1, Event 1051076, LumiSection 1200 at 17-Feb-2017 23:25:11.402 GMT
+Begin processing the 57901st record. Run 1, Event 1491452, LumiSection 1703 at 17-Feb-2017 23:25:11.846 GMT
+Begin processing the 58001st record. Run 1, Event 1492047, LumiSection 1703 at 17-Feb-2017 23:25:12.285 GMT
+Begin processing the 58101st record. Run 1, Event 1492692, LumiSection 1704 at 17-Feb-2017 23:25:12.810 GMT
+Begin processing the 58201st record. Run 1, Event 8399650, LumiSection 9589 at 17-Feb-2017 23:25:13.306 GMT
+Begin processing the 58301st record. Run 1, Event 8400367, LumiSection 9589 at 17-Feb-2017 23:25:13.766 GMT
+Begin processing the 58401st record. Run 1, Event 16591659, LumiSection 18941 at 17-Feb-2017 23:25:14.214 GMT
+Begin processing the 58501st record. Run 1, Event 16592220, LumiSection 18941 at 17-Feb-2017 23:25:14.679 GMT
+Begin processing the 58601st record. Run 1, Event 1293105, LumiSection 1477 at 17-Feb-2017 23:25:15.150 GMT
+Begin processing the 58701st record. Run 1, Event 1293698, LumiSection 1477 at 17-Feb-2017 23:25:15.638 GMT
+Begin processing the 58801st record. Run 1, Event 1294429, LumiSection 1478 at 17-Feb-2017 23:25:21.159 GMT
+Begin processing the 58901st record. Run 1, Event 7202842, LumiSection 8223 at 17-Feb-2017 23:25:21.716 GMT
+Begin processing the 59001st record. Run 1, Event 7203584, LumiSection 8223 at 17-Feb-2017 23:25:22.262 GMT
+Begin processing the 59101st record. Run 1, Event 7256844, LumiSection 8285 at 17-Feb-2017 23:25:22.810 GMT
+Begin processing the 59201st record. Run 1, Event 7257547, LumiSection 8285 at 17-Feb-2017 23:25:23.344 GMT
+Begin processing the 59301st record. Run 1, Event 7258179, LumiSection 8286 at 17-Feb-2017 23:25:23.888 GMT
+Begin processing the 59401st record. Run 1, Event 7446358, LumiSection 8501 at 17-Feb-2017 23:25:24.439 GMT
+Begin processing the 59501st record. Run 1, Event 7447126, LumiSection 8501 at 17-Feb-2017 23:25:25.004 GMT
+Begin processing the 59601st record. Run 1, Event 1552292, LumiSection 1773 at 17-Feb-2017 23:25:25.575 GMT
+Begin processing the 59701st record. Run 1, Event 1552945, LumiSection 1773 at 17-Feb-2017 23:25:26.100 GMT
+Begin processing the 59801st record. Run 1, Event 1553601, LumiSection 1774 at 17-Feb-2017 23:25:26.547 GMT
+Begin processing the 59901st record. Run 1, Event 7463675, LumiSection 8521 at 17-Feb-2017 23:25:31.588 GMT
+Begin processing the 60001st record. Run 1, Event 7464360, LumiSection 8521 at 17-Feb-2017 23:25:32.203 GMT
+Begin processing the 60101st record. Run 1, Event 7465011, LumiSection 8522 at 17-Feb-2017 23:25:32.782 GMT
+Begin processing the 60201st record. Run 1, Event 7971926, LumiSection 9101 at 17-Feb-2017 23:25:33.419 GMT
+Begin processing the 60301st record. Run 1, Event 7972590, LumiSection 9101 at 17-Feb-2017 23:25:34.089 GMT
+Begin processing the 60401st record. Run 1, Event 7973247, LumiSection 9102 at 17-Feb-2017 23:25:34.665 GMT
+Begin processing the 60501st record. Run 1, Event 8361067, LumiSection 9545 at 17-Feb-2017 23:25:35.241 GMT
+Begin processing the 60601st record. Run 1, Event 8361672, LumiSection 9545 at 17-Feb-2017 23:25:35.809 GMT
+Begin processing the 60701st record. Run 1, Event 673238, LumiSection 769 at 17-Feb-2017 23:25:36.451 GMT
+Begin processing the 60801st record. Run 1, Event 673824, LumiSection 769 at 17-Feb-2017 23:25:37.011 GMT
+Begin processing the 60901st record. Run 1, Event 876013, LumiSection 1001 at 17-Feb-2017 23:25:37.601 GMT
+Begin processing the 61001st record. Run 1, Event 876675, LumiSection 1001 at 17-Feb-2017 23:25:43.306 GMT
+Begin processing the 61101st record. Run 1, Event 877308, LumiSection 1002 at 17-Feb-2017 23:25:43.838 GMT
+Begin processing the 61201st record. Run 1, Event 902339, LumiSection 1031 at 17-Feb-2017 23:25:44.259 GMT
+Begin processing the 61301st record. Run 1, Event 902910, LumiSection 1031 at 17-Feb-2017 23:25:44.882 GMT
+Begin processing the 61401st record. Run 1, Event 903568, LumiSection 1032 at 17-Feb-2017 23:25:45.350 GMT
+Begin processing the 61501st record. Run 1, Event 923450, LumiSection 1055 at 17-Feb-2017 23:25:45.789 GMT
+Begin processing the 61601st record. Run 1, Event 924121, LumiSection 1055 at 17-Feb-2017 23:25:46.320 GMT
+Begin processing the 61701st record. Run 1, Event 6423046, LumiSection 7333 at 17-Feb-2017 23:25:46.777 GMT
+Begin processing the 61801st record. Run 1, Event 6423775, LumiSection 7333 at 17-Feb-2017 23:25:47.255 GMT
+Begin processing the 61901st record. Run 1, Event 6424476, LumiSection 7334 at 17-Feb-2017 23:25:47.798 GMT
+Begin processing the 62001st record. Run 1, Event 6433844, LumiSection 7345 at 17-Feb-2017 23:25:48.331 GMT
+%MSG-w XrdAdaptor:  PostProcessPath 17-Feb-2017 23:25:52 GMT PostProcessEvent
+Data is now served from T1_UK_RAL instead of previous ciemat.es, T1_UK_RAL
+%MSG
+Begin processing the 62101st record. Run 1, Event 6434507, LumiSection 7345 at 17-Feb-2017 23:25:53.106 GMT
+Begin processing the 62201st record. Run 1, Event 6561314, LumiSection 7491 at 17-Feb-2017 23:25:53.609 GMT
+Begin processing the 62301st record. Run 1, Event 6561904, LumiSection 7491 at 17-Feb-2017 23:25:54.832 GMT
+Begin processing the 62401st record. Run 1, Event 6562494, LumiSection 7491 at 17-Feb-2017 23:25:55.344 GMT
+Begin processing the 62501st record. Run 1, Event 6838268, LumiSection 7807 at 17-Feb-2017 23:25:56.032 GMT
+Begin processing the 62601st record. Run 1, Event 6838941, LumiSection 7807 at 17-Feb-2017 23:25:56.556 GMT
+Begin processing the 62701st record. Run 1, Event 6839668, LumiSection 7808 at 17-Feb-2017 23:25:57.064 GMT
+Begin processing the 62801st record. Run 1, Event 9534389, LumiSection 10885 at 17-Feb-2017 23:25:57.614 GMT
+Begin processing the 62901st record. Run 1, Event 9535094, LumiSection 10885 at 17-Feb-2017 23:25:58.126 GMT
+Begin processing the 63001st record. Run 1, Event 9535642, LumiSection 10885 at 17-Feb-2017 23:25:58.703 GMT
+Begin processing the 63101st record. Run 1, Event 9574805, LumiSection 10931 at 17-Feb-2017 23:25:59.291 GMT
+Begin processing the 63201st record. Run 1, Event 9575615, LumiSection 10931 at 17-Feb-2017 23:26:01.554 GMT
+Begin processing the 63301st record. Run 1, Event 9576171, LumiSection 10932 at 17-Feb-2017 23:26:02.218 GMT
+Begin processing the 63401st record. Run 1, Event 9773010, LumiSection 11157 at 17-Feb-2017 23:26:02.769 GMT
+Begin processing the 63501st record. Run 1, Event 9773694, LumiSection 11157 at 17-Feb-2017 23:26:03.412 GMT
+Begin processing the 63601st record. Run 1, Event 9774316, LumiSection 11158 at 17-Feb-2017 23:26:04.039 GMT
+Begin processing the 63701st record. Run 1, Event 13655163, LumiSection 15589 at 17-Feb-2017 23:26:04.757 GMT
+Begin processing the 63801st record. Run 1, Event 13655735, LumiSection 15589 at 17-Feb-2017 23:26:05.289 GMT
+Begin processing the 63901st record. Run 1, Event 13656401, LumiSection 15590 at 17-Feb-2017 23:26:05.799 GMT
+Begin processing the 64001st record. Run 1, Event 13658814, LumiSection 15593 at 17-Feb-2017 23:26:06.335 GMT
+Begin processing the 64101st record. Run 1, Event 13659417, LumiSection 15593 at 17-Feb-2017 23:26:06.879 GMT
+Begin processing the 64201st record. Run 1, Event 13660039, LumiSection 15594 at 17-Feb-2017 23:26:07.356 GMT
+Begin processing the 64301st record. Run 1, Event 13660677, LumiSection 15595 at 17-Feb-2017 23:26:10.355 GMT
+Begin processing the 64401st record. Run 1, Event 13661333, LumiSection 15595 at 17-Feb-2017 23:26:10.924 GMT
+Begin processing the 64501st record. Run 1, Event 13661936, LumiSection 15596 at 17-Feb-2017 23:26:11.464 GMT
+Begin processing the 64601st record. Run 1, Event 736377, LumiSection 841 at 17-Feb-2017 23:26:12.158 GMT
+Begin processing the 64701st record. Run 1, Event 737037, LumiSection 841 at 17-Feb-2017 23:26:12.955 GMT
+Begin processing the 64801st record. Run 1, Event 7659936, LumiSection 8745 at 17-Feb-2017 23:26:13.519 GMT
+Begin processing the 64901st record. Run 1, Event 7660655, LumiSection 8745 at 17-Feb-2017 23:26:14.006 GMT
+Begin processing the 65001st record. Run 1, Event 7661240, LumiSection 8746 at 17-Feb-2017 23:26:14.481 GMT
+Begin processing the 65101st record. Run 1, Event 7684667, LumiSection 8773 at 17-Feb-2017 23:26:15.018 GMT
+Begin processing the 65201st record. Run 1, Event 7685341, LumiSection 8773 at 17-Feb-2017 23:26:15.534 GMT
+Begin processing the 65301st record. Run 1, Event 7685982, LumiSection 8774 at 17-Feb-2017 23:26:18.319 GMT
+Begin processing the 65401st record. Run 1, Event 7902021, LumiSection 9021 at 17-Feb-2017 23:26:18.697 GMT
+Begin processing the 65501st record. Run 1, Event 7902662, LumiSection 9021 at 17-Feb-2017 23:26:19.266 GMT
+Begin processing the 65601st record. Run 1, Event 2509417, LumiSection 2865 at 17-Feb-2017 23:26:19.953 GMT
+Begin processing the 65701st record. Run 1, Event 2510012, LumiSection 2865 at 17-Feb-2017 23:26:20.556 GMT
+Begin processing the 65801st record. Run 1, Event 9546688, LumiSection 10899 at 17-Feb-2017 23:26:21.086 GMT
+Begin processing the 65901st record. Run 1, Event 9547383, LumiSection 10899 at 17-Feb-2017 23:26:21.584 GMT
+Begin processing the 66001st record. Run 1, Event 9548056, LumiSection 10900 at 17-Feb-2017 23:26:22.116 GMT
+Begin processing the 66101st record. Run 1, Event 9681857, LumiSection 11053 at 17-Feb-2017 23:26:22.650 GMT
+Begin processing the 66201st record. Run 1, Event 9682462, LumiSection 11053 at 17-Feb-2017 23:26:23.176 GMT
+Begin processing the 66301st record. Run 1, Event 9683033, LumiSection 11054 at 17-Feb-2017 23:26:23.675 GMT
+Begin processing the 66401st record. Run 1, Event 15156970, LumiSection 17303 at 17-Feb-2017 23:26:26.398 GMT
+Begin processing the 66501st record. Run 1, Event 15157540, LumiSection 17303 at 17-Feb-2017 23:26:27.135 GMT
+Begin processing the 66601st record. Run 1, Event 4302789, LumiSection 4912 at 17-Feb-2017 23:26:27.646 GMT
+Begin processing the 66701st record. Run 1, Event 4744906, LumiSection 5417 at 17-Feb-2017 23:26:28.008 GMT
+Begin processing the 66801st record. Run 1, Event 4745504, LumiSection 5417 at 17-Feb-2017 23:26:28.625 GMT
+Begin processing the 66901st record. Run 1, Event 4746150, LumiSection 5418 at 17-Feb-2017 23:26:29.215 GMT
+Begin processing the 67001st record. Run 1, Event 4795810, LumiSection 5475 at 17-Feb-2017 23:26:29.815 GMT
+Begin processing the 67101st record. Run 1, Event 4796374, LumiSection 5475 at 17-Feb-2017 23:26:30.406 GMT
+Begin processing the 67201st record. Run 1, Event 4800577, LumiSection 5481 at 17-Feb-2017 23:26:31.102 GMT
+Begin processing the 67301st record. Run 1, Event 4801167, LumiSection 5481 at 17-Feb-2017 23:26:31.915 GMT
+Begin processing the 67401st record. Run 1, Event 4801838, LumiSection 5482 at 17-Feb-2017 23:26:34.073 GMT
+Begin processing the 67501st record. Run 1, Event 4788021, LumiSection 5466 at 17-Feb-2017 23:26:34.633 GMT
+Begin processing the 67601st record. Run 1, Event 4792112, LumiSection 5471 at 17-Feb-2017 23:26:35.178 GMT
+Begin processing the 67701st record. Run 1, Event 4792714, LumiSection 5471 at 17-Feb-2017 23:26:35.743 GMT
+Begin processing the 67801st record. Run 1, Event 4797019, LumiSection 5477 at 17-Feb-2017 23:26:36.367 GMT
+Begin processing the 67901st record. Run 1, Event 4797687, LumiSection 5477 at 17-Feb-2017 23:26:36.961 GMT
+Begin processing the 68001st record. Run 1, Event 4798322, LumiSection 5478 at 17-Feb-2017 23:26:37.312 GMT
+Begin processing the 68101st record. Run 1, Event 9916511, LumiSection 11321 at 17-Feb-2017 23:26:37.847 GMT
+Begin processing the 68201st record. Run 1, Event 9917248, LumiSection 11321 at 17-Feb-2017 23:26:38.404 GMT
+Begin processing the 68301st record. Run 1, Event 9917804, LumiSection 11322 at 17-Feb-2017 23:26:38.947 GMT
+17-Feb-2017 23:26:39 GMT  Closed file root://xrootd-cms.infn.it//store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/CE09ED03-E834-E611-A07E-002590A2CD44.root
+17-Feb-2017 23:26:39 GMT  Initiating request to open file root://dc2-grid-64.brunel.ac.uk//dpm/brunel.ac.uk/home/cms/store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/7EB77878-D534-E611-9A52-0025907DC9BA.root
+[2017-02-17 23:26:40.257451 +0000][Error  ][XRootD            ] [dc2-grid-64.brunel.ac.uk:1094] Handling error while processing kXR_open (file: /dpm/brunel.ac.uk/home/cms/store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/7EB77878-D534-E611-9A52-0025907DC9BA.root, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ): [ERROR] Error response.
+%MSG-w XrdAdaptorInternal:  file_open 17-Feb-2017 23:26:40 GMT PostProcessEvent
+Failed to open file at URL root://dc2-grid-64.brunel.ac.uk:1094//dpm/brunel.ac.uk/home/cms/store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/7EB77878-D534-E611-9A52-0025907DC9BA.root.
+%MSG
+[2017-02-17 23:26:40.267242 +0000][Error  ][XRootD            ] [dc2-grid-64.brunel.ac.uk:1094] Handling error while processing kXR_open (file: /dpm/brunel.ac.uk/home/cms/store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/7EB77878-D534-E611-9A52-0025907DC9BA.root?tried=, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ): [ERROR] Error response.
+%MSG-w XrdAdaptorInternal:  file_open 17-Feb-2017 23:26:40 GMT PostProcessEvent
+Failed to open file at URL root://dc2-grid-64.brunel.ac.uk:1094//dpm/brunel.ac.uk/home/cms/store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/7EB77878-D534-E611-9A52-0025907DC9BA.root?tried=.
+%MSG
+17-Feb-2017 23:26:40 GMT  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/7EB77878-D534-E611-9A52-0025907DC9BA.root
+[2017-02-17 23:27:26.394498 +0000][Error  ][AsyncSock         ] [t2-cms-xrootd03.desy.de:1094 #0.0] Socket error while handshaking: [ERROR] Socket timeout
+[2017-02-17 23:28:11.450472 +0000][Error  ][AsyncSock         ] [t2-cms-xrootd03.desy.de:1094 #0.0] Socket error while handshaking: [ERROR] Socket timeout
+[2017-02-17 23:28:11.450555 +0000][Error  ][PostMaster        ] [t2-cms-xrootd03.desy.de:1094 #0] Unable to recover: [ERROR] Socket timeout.
+[2017-02-17 23:28:11.450579 +0000][Error  ][XRootD            ] [t2-cms-xrootd03.desy.de:1094] Impossible to send message kXR_open (file: /store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/7EB77878-D534-E611-9A52-0025907DC9BA.root, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ). Trying to recover.
+[2017-02-17 23:28:11.450604 +0000][Error  ][XRootD            ] [t2-cms-xrootd03.desy.de:1094] Handling error while processing kXR_open (file: /store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/7EB77878-D534-E611-9A52-0025907DC9BA.root, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ): [FATAL] Socket timeout.
+%MSG-w XrdAdaptor:  file_open 17-Feb-2017 23:28:12 GMT PostProcessEvent
+Data is served from T1_UK_RAL instead of original site infn.it
+%MSG
+17-Feb-2017 23:28:13 GMT  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/7EB77878-D534-E611-9A52-0025907DC9BA.root
+Begin processing the 68401st record. Run 1, Event 455939, LumiSection 521 at 17-Feb-2017 23:28:18.839 GMT
+Begin processing the 68501st record. Run 1, Event 456572, LumiSection 521 at 17-Feb-2017 23:28:19.194 GMT
+Begin processing the 68601st record. Run 1, Event 457190, LumiSection 522 at 17-Feb-2017 23:28:19.919 GMT
+Begin processing the 68701st record. Run 1, Event 641830, LumiSection 733 at 17-Feb-2017 23:28:20.649 GMT
+Begin processing the 68801st record. Run 1, Event 642495, LumiSection 733 at 17-Feb-2017 23:28:21.278 GMT
+Begin processing the 68901st record. Run 1, Event 1096843, LumiSection 1253 at 17-Feb-2017 23:28:21.838 GMT
+Begin processing the 69001st record. Run 1, Event 1097431, LumiSection 1253 at 17-Feb-2017 23:28:22.410 GMT
+Begin processing the 69101st record. Run 1, Event 1097986, LumiSection 1253 at 17-Feb-2017 23:28:22.969 GMT
+Begin processing the 69201st record. Run 1, Event 1443838, LumiSection 1649 at 17-Feb-2017 23:28:23.318 GMT
+Begin processing the 69301st record. Run 1, Event 1444566, LumiSection 1649 at 17-Feb-2017 23:28:23.876 GMT
+Begin processing the 69401st record. Run 1, Event 1177225, LumiSection 1344 at 17-Feb-2017 23:28:25.828 GMT
+Begin processing the 69501st record. Run 1, Event 1260306, LumiSection 1439 at 17-Feb-2017 23:28:26.321 GMT
+Begin processing the 69601st record. Run 1, Event 1260966, LumiSection 1439 at 17-Feb-2017 23:28:26.947 GMT
+Begin processing the 69701st record. Run 1, Event 1264995, LumiSection 1445 at 17-Feb-2017 23:28:27.465 GMT
+Begin processing the 69801st record. Run 1, Event 1265624, LumiSection 1445 at 17-Feb-2017 23:28:27.750 GMT
+Begin processing the 69901st record. Run 1, Event 1266234, LumiSection 1446 at 17-Feb-2017 23:28:28.200 GMT
+Begin processing the 70001st record. Run 1, Event 1457833, LumiSection 1665 at 17-Feb-2017 23:28:28.696 GMT
+Begin processing the 70101st record. Run 1, Event 1458499, LumiSection 1665 at 17-Feb-2017 23:28:29.318 GMT
+Begin processing the 70201st record. Run 1, Event 1459108, LumiSection 1666 at 17-Feb-2017 23:28:29.990 GMT
+Begin processing the 70301st record. Run 1, Event 1978396, LumiSection 2259 at 17-Feb-2017 23:28:30.615 GMT
+Begin processing the 70401st record. Run 1, Event 1979024, LumiSection 2259 at 17-Feb-2017 23:28:31.249 GMT
+Begin processing the 70501st record. Run 1, Event 1979727, LumiSection 2260 at 17-Feb-2017 23:28:33.138 GMT
+Begin processing the 70601st record. Run 1, Event 2069735, LumiSection 2363 at 17-Feb-2017 23:28:33.882 GMT
+Begin processing the 70701st record. Run 1, Event 2070443, LumiSection 2364 at 17-Feb-2017 23:28:34.699 GMT
+Begin processing the 70801st record. Run 1, Event 2093915, LumiSection 2391 at 17-Feb-2017 23:28:35.448 GMT
+Begin processing the 70901st record. Run 1, Event 2094527, LumiSection 2391 at 17-Feb-2017 23:28:36.328 GMT
+Begin processing the 71001st record. Run 1, Event 2095273, LumiSection 2392 at 17-Feb-2017 23:28:37.144 GMT
+Begin processing the 71101st record. Run 1, Event 3558815, LumiSection 4063 at 17-Feb-2017 23:28:37.905 GMT
+Begin processing the 71201st record. Run 1, Event 3559392, LumiSection 4063 at 17-Feb-2017 23:28:38.359 GMT
+Begin processing the 71301st record. Run 1, Event 2136201, LumiSection 2439 at 17-Feb-2017 23:28:39.056 GMT
+Begin processing the 71401st record. Run 1, Event 2136853, LumiSection 2439 at 17-Feb-2017 23:28:39.727 GMT
+Begin processing the 71501st record. Run 1, Event 2824229, LumiSection 3225 at 17-Feb-2017 23:28:40.478 GMT
+Begin processing the 71601st record. Run 1, Event 2824880, LumiSection 3225 at 17-Feb-2017 23:28:44.580 GMT
+Begin processing the 71701st record. Run 1, Event 2825559, LumiSection 3226 at 17-Feb-2017 23:28:45.128 GMT
+Begin processing the 71801st record. Run 1, Event 3618098, LumiSection 4131 at 17-Feb-2017 23:28:45.680 GMT
+Begin processing the 71901st record. Run 1, Event 3618848, LumiSection 4131 at 17-Feb-2017 23:28:46.043 GMT
+Begin processing the 72001st record. Run 1, Event 3619454, LumiSection 4132 at 17-Feb-2017 23:28:46.612 GMT
+Begin processing the 72101st record. Run 1, Event 3995009, LumiSection 4561 at 17-Feb-2017 23:28:47.200 GMT
+Begin processing the 72201st record. Run 1, Event 3995619, LumiSection 4561 at 17-Feb-2017 23:28:47.814 GMT
+Begin processing the 72301st record. Run 1, Event 1242566, LumiSection 1419 at 17-Feb-2017 23:28:48.669 GMT
+Begin processing the 72401st record. Run 1, Event 1243153, LumiSection 1419 at 17-Feb-2017 23:28:49.057 GMT
+Begin processing the 72501st record. Run 1, Event 1243733, LumiSection 1420 at 17-Feb-2017 23:28:49.639 GMT
+Begin processing the 72601st record. Run 1, Event 1486088, LumiSection 1697 at 17-Feb-2017 23:28:51.481 GMT
+Begin processing the 72701st record. Run 1, Event 1486704, LumiSection 1697 at 17-Feb-2017 23:28:52.212 GMT
+Begin processing the 72801st record. Run 1, Event 1487280, LumiSection 1698 at 17-Feb-2017 23:28:52.779 GMT
+Begin processing the 72901st record. Run 1, Event 1745396, LumiSection 1993 at 17-Feb-2017 23:28:53.334 GMT
+Begin processing the 73001st record. Run 1, Event 1745992, LumiSection 1993 at 17-Feb-2017 23:28:53.874 GMT
+Begin processing the 73101st record. Run 1, Event 1746662, LumiSection 1994 at 17-Feb-2017 23:28:54.424 GMT
+Begin processing the 73201st record. Run 1, Event 7479838, LumiSection 8539 at 17-Feb-2017 23:28:54.957 GMT
+Begin processing the 73301st record. Run 1, Event 7480391, LumiSection 8539 at 17-Feb-2017 23:28:56.002 GMT
+Begin processing the 73401st record. Run 1, Event 8276362, LumiSection 9448 at 17-Feb-2017 23:28:56.523 GMT
+Begin processing the 73501st record. Run 1, Event 8359342, LumiSection 9543 at 17-Feb-2017 23:28:57.064 GMT
+Begin processing the 73601st record. Run 1, Event 8359994, LumiSection 9543 at 17-Feb-2017 23:28:57.622 GMT
+Begin processing the 73701st record. Run 1, Event 8386910, LumiSection 9575 at 17-Feb-2017 23:28:59.544 GMT
+Begin processing the 73801st record. Run 1, Event 8387618, LumiSection 9575 at 17-Feb-2017 23:29:00.108 GMT
+Begin processing the 73901st record. Run 1, Event 8388197, LumiSection 9576 at 17-Feb-2017 23:29:00.658 GMT
+Begin processing the 74001st record. Run 1, Event 8402881, LumiSection 9593 at 17-Feb-2017 23:29:01.217 GMT
+Begin processing the 74101st record. Run 1, Event 8403480, LumiSection 9593 at 17-Feb-2017 23:29:01.738 GMT
+Begin processing the 74201st record. Run 1, Event 8404155, LumiSection 9594 at 17-Feb-2017 23:29:02.042 GMT
+Begin processing the 74301st record. Run 1, Event 16348347, LumiSection 18663 at 17-Feb-2017 23:29:02.536 GMT
+Begin processing the 74401st record. Run 1, Event 16348883, LumiSection 18663 at 17-Feb-2017 23:29:03.097 GMT
+Begin processing the 74501st record. Run 1, Event 16349505, LumiSection 18664 at 17-Feb-2017 23:29:03.674 GMT
+Begin processing the 74601st record. Run 1, Event 16416638, LumiSection 18741 at 17-Feb-2017 23:29:04.246 GMT
+Begin processing the 74701st record. Run 1, Event 16417265, LumiSection 18741 at 17-Feb-2017 23:29:05.837 GMT
+Begin processing the 74801st record. Run 1, Event 16417862, LumiSection 18742 at 17-Feb-2017 23:29:06.464 GMT
+Begin processing the 74901st record. Run 1, Event 16435992, LumiSection 18763 at 17-Feb-2017 23:29:07.150 GMT
+Begin processing the 75001st record. Run 1, Event 16436627, LumiSection 18763 at 17-Feb-2017 23:29:07.917 GMT
+Begin processing the 75101st record. Run 1, Event 16437242, LumiSection 18764 at 17-Feb-2017 23:29:08.427 GMT
+Begin processing the 75201st record. Run 1, Event 16513340, LumiSection 18851 at 17-Feb-2017 23:29:09.200 GMT
+Begin processing the 75301st record. Run 1, Event 1844992, LumiSection 2107 at 17-Feb-2017 23:29:10.041 GMT
+Begin processing the 75401st record. Run 1, Event 1845648, LumiSection 2107 at 17-Feb-2017 23:29:10.696 GMT
+Begin processing the 75501st record. Run 1, Event 1846325, LumiSection 2108 at 17-Feb-2017 23:29:11.276 GMT
+Begin processing the 75601st record. Run 1, Event 2097368, LumiSection 2395 at 17-Feb-2017 23:29:11.853 GMT
+Begin processing the 75701st record. Run 1, Event 2098016, LumiSection 2395 at 17-Feb-2017 23:29:13.767 GMT
+Begin processing the 75801st record. Run 1, Event 2098666, LumiSection 2396 at 17-Feb-2017 23:29:14.606 GMT
+Begin processing the 75901st record. Run 1, Event 2635438, LumiSection 3009 at 17-Feb-2017 23:29:15.570 GMT
+Begin processing the 76001st record. Run 1, Event 2636193, LumiSection 3009 at 17-Feb-2017 23:29:16.927 GMT
+Begin processing the 76101st record. Run 1, Event 3467249, LumiSection 3959 at 17-Feb-2017 23:29:17.924 GMT
+Begin processing the 76201st record. Run 1, Event 3467932, LumiSection 3959 at 17-Feb-2017 23:29:18.706 GMT
+Begin processing the 76301st record. Run 1, Event 2235696, LumiSection 2553 at 17-Feb-2017 23:29:19.478 GMT
+Begin processing the 76401st record. Run 1, Event 2236301, LumiSection 2553 at 17-Feb-2017 23:29:20.166 GMT
+Begin processing the 76501st record. Run 1, Event 2237008, LumiSection 2554 at 17-Feb-2017 23:29:20.874 GMT
+Begin processing the 76601st record. Run 1, Event 2789636, LumiSection 3185 at 17-Feb-2017 23:29:21.607 GMT
+Begin processing the 76701st record. Run 1, Event 2790286, LumiSection 3185 at 17-Feb-2017 23:29:22.351 GMT
+Begin processing the 76801st record. Run 1, Event 2790855, LumiSection 3186 at 17-Feb-2017 23:29:24.276 GMT
+Begin processing the 76901st record. Run 1, Event 3495892, LumiSection 3991 at 17-Feb-2017 23:29:24.987 GMT
+Begin processing the 77001st record. Run 1, Event 3496547, LumiSection 3992 at 17-Feb-2017 23:29:25.781 GMT
+Begin processing the 77101st record. Run 1, Event 3679327, LumiSection 4201 at 17-Feb-2017 23:29:26.549 GMT
+Begin processing the 77201st record. Run 1, Event 3679898, LumiSection 4201 at 17-Feb-2017 23:29:27.250 GMT
+Begin processing the 77301st record. Run 1, Event 2445815, LumiSection 2793 at 17-Feb-2017 23:29:27.986 GMT
+Begin processing the 77401st record. Run 1, Event 2446483, LumiSection 2793 at 17-Feb-2017 23:29:28.724 GMT
+Begin processing the 77501st record. Run 1, Event 2447171, LumiSection 2794 at 17-Feb-2017 23:29:29.498 GMT
+Begin processing the 77601st record. Run 1, Event 2491607, LumiSection 2845 at 17-Feb-2017 23:29:30.292 GMT
+Begin processing the 77701st record. Run 1, Event 2492220, LumiSection 2845 at 17-Feb-2017 23:29:30.997 GMT
+Begin processing the 77801st record. Run 1, Event 2492936, LumiSection 2846 at 17-Feb-2017 23:29:33.238 GMT
+Begin processing the 77901st record. Run 1, Event 2595267, LumiSection 2963 at 17-Feb-2017 23:29:33.966 GMT
+Begin processing the 78001st record. Run 1, Event 2595983, LumiSection 2963 at 17-Feb-2017 23:29:34.786 GMT
+Begin processing the 78101st record. Run 1, Event 2706916, LumiSection 3091 at 17-Feb-2017 23:29:35.500 GMT
+Begin processing the 78201st record. Run 1, Event 2707606, LumiSection 3091 at 17-Feb-2017 23:29:36.219 GMT
+Begin processing the 78301st record. Run 1, Event 2697697, LumiSection 3080 at 17-Feb-2017 23:29:36.941 GMT
+Begin processing the 78401st record. Run 1, Event 8968771, LumiSection 10239 at 17-Feb-2017 23:29:37.650 GMT
+Begin processing the 78501st record. Run 1, Event 8969493, LumiSection 10239 at 17-Feb-2017 23:29:38.358 GMT
+Begin processing the 78601st record. Run 1, Event 8970134, LumiSection 10240 at 17-Feb-2017 23:29:39.118 GMT
+Begin processing the 78701st record. Run 1, Event 14000835, LumiSection 15983 at 17-Feb-2017 23:29:39.895 GMT
+Begin processing the 78801st record. Run 1, Event 14001468, LumiSection 15983 at 17-Feb-2017 23:29:40.649 GMT
+Begin processing the 78901st record. Run 1, Event 14009083, LumiSection 15993 at 17-Feb-2017 23:29:41.827 GMT
+Begin processing the 79001st record. Run 1, Event 14009753, LumiSection 15993 at 17-Feb-2017 23:29:42.592 GMT
+Begin processing the 79101st record. Run 1, Event 14010453, LumiSection 15994 at 17-Feb-2017 23:29:43.333 GMT
+17-Feb-2017 23:29:43 GMT  Closed file root://xrootd-cms.infn.it//store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/7EB77878-D534-E611-9A52-0025907DC9BA.root
+17-Feb-2017 23:29:43 GMT  Initiating request to open file root://dc2-grid-64.brunel.ac.uk//dpm/brunel.ac.uk/home/cms/store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/44EBE767-CD34-E611-BD6E-0CC47A7FC858.root
+[2017-02-17 23:29:44.734749 +0000][Error  ][XRootD            ] [dc2-grid-64.brunel.ac.uk:1094] Handling error while processing kXR_open (file: /dpm/brunel.ac.uk/home/cms/store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/44EBE767-CD34-E611-BD6E-0CC47A7FC858.root, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ): [ERROR] Error response.
+%MSG-w XrdAdaptorInternal:  file_open 17-Feb-2017 23:29:44 GMT PostProcessEvent
+Failed to open file at URL root://dc2-grid-64.brunel.ac.uk:1094//dpm/brunel.ac.uk/home/cms/store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/44EBE767-CD34-E611-BD6E-0CC47A7FC858.root.
+%MSG
+[2017-02-17 23:29:44.744288 +0000][Error  ][XRootD            ] [dc2-grid-64.brunel.ac.uk:1094] Handling error while processing kXR_open (file: /dpm/brunel.ac.uk/home/cms/store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/44EBE767-CD34-E611-BD6E-0CC47A7FC858.root?tried=, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ): [ERROR] Error response.
+%MSG-w XrdAdaptorInternal:  file_open 17-Feb-2017 23:29:44 GMT PostProcessEvent
+Failed to open file at URL root://dc2-grid-64.brunel.ac.uk:1094//dpm/brunel.ac.uk/home/cms/store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/44EBE767-CD34-E611-BD6E-0CC47A7FC858.root?tried=.
+%MSG
+17-Feb-2017 23:29:44 GMT  Fallback request to file root://xrootd-cms.infn.it//store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/44EBE767-CD34-E611-BD6E-0CC47A7FC858.root
+[2017-02-17 23:29:45.823812 +0000][Error  ][XRootD            ] [t2-cms-xrootd03.desy.de:1094] Handling error while processing kXR_open (file: /store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/44EBE767-CD34-E611-BD6E-0CC47A7FC858.root, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ): [FATAL] Socket timeout.
+%MSG-w XrdAdaptor:  file_open 17-Feb-2017 23:29:50 GMT PostProcessEvent
+Data is served from ciemat.es instead of original site infn.it
+%MSG
+17-Feb-2017 23:29:50 GMT  Successfully opened file root://xrootd-cms.infn.it//store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/44EBE767-CD34-E611-BD6E-0CC47A7FC858.root
+%MSG-w XrdAdaptor:  (NoModuleName) 17-Feb-2017 23:29:59 GMT pre-events
+Data is now served from ciemat.es, T1_UK_RAL instead of previous ciemat.es
+%MSG
+Begin processing the 79201st record. Run 1, Event 483869, LumiSection 553 at 17-Feb-2017 23:30:05.074 GMT
+Begin processing the 79301st record. Run 1, Event 484491, LumiSection 553 at 17-Feb-2017 23:30:05.621 GMT
+Begin processing the 79401st record. Run 1, Event 485172, LumiSection 554 at 17-Feb-2017 23:30:06.218 GMT
+Begin processing the 79501st record. Run 1, Event 1100805, LumiSection 1257 at 17-Feb-2017 23:30:06.816 GMT
+Begin processing the 79601st record. Run 1, Event 1101595, LumiSection 1258 at 17-Feb-2017 23:30:07.399 GMT
+Begin processing the 79701st record. Run 1, Event 1119807, LumiSection 1279 at 17-Feb-2017 23:30:07.982 GMT
+Begin processing the 79801st record. Run 1, Event 1120466, LumiSection 1279 at 17-Feb-2017 23:30:08.533 GMT
+Begin processing the 79901st record. Run 1, Event 1121202, LumiSection 1280 at 17-Feb-2017 23:30:09.068 GMT
+Begin processing the 80001st record. Run 1, Event 652375, LumiSection 745 at 17-Feb-2017 23:30:15.723 GMT
+Begin processing the 80101st record. Run 1, Event 653045, LumiSection 746 at 17-Feb-2017 23:30:16.241 GMT
+Begin processing the 80201st record. Run 1, Event 1799451, LumiSection 2055 at 17-Feb-2017 23:30:22.301 GMT
+Begin processing the 80301st record. Run 1, Event 1800020, LumiSection 2055 at 17-Feb-2017 23:30:22.835 GMT
+Begin processing the 80401st record. Run 1, Event 1800637, LumiSection 2056 at 17-Feb-2017 23:30:23.372 GMT
+Begin processing the 80501st record. Run 1, Event 2036159, LumiSection 2325 at 17-Feb-2017 23:30:23.961 GMT
+Begin processing the 80601st record. Run 1, Event 2036826, LumiSection 2325 at 17-Feb-2017 23:30:24.565 GMT
+Begin processing the 80701st record. Run 1, Event 2037485, LumiSection 2326 at 17-Feb-2017 23:30:25.166 GMT
+Begin processing the 80801st record. Run 1, Event 1875177, LumiSection 2141 at 17-Feb-2017 23:30:30.823 GMT
+Begin processing the 80901st record. Run 1, Event 1875786, LumiSection 2141 at 17-Feb-2017 23:30:31.373 GMT
+Begin processing the 81001st record. Run 1, Event 1876365, LumiSection 2142 at 17-Feb-2017 23:30:31.945 GMT
+Begin processing the 81101st record. Run 1, Event 2123994, LumiSection 2425 at 17-Feb-2017 23:30:37.065 GMT
+Begin processing the 81201st record. Run 1, Event 2124623, LumiSection 2425 at 17-Feb-2017 23:30:37.597 GMT
+Begin processing the 81301st record. Run 1, Event 1177354, LumiSection 1345 at 17-Feb-2017 23:30:38.309 GMT
+Begin processing the 81401st record. Run 1, Event 1178108, LumiSection 1345 at 17-Feb-2017 23:30:43.287 GMT
+Begin processing the 81501st record. Run 1, Event 1178676, LumiSection 1346 at 17-Feb-2017 23:30:43.745 GMT
+17-Feb-2017 23:30:44 GMT  Closed file root://xrootd-cms.infn.it//store/mc/RunIISpring16reHLT80/QCD_Pt-1000toInf_MuEnrichedPt5_TuneCUETP8M1_13TeV_pythia8/AODSIM/PUSpring16RAWAODSIM_reHLT_80X_mcRun2_asymptotic_v14-v1/90000/44EBE767-CD34-E611-BD6E-0CC47A7FC858.root
+
+TrigReport ---------- Event  Summary ------------
+TrigReport Events total = 81556 passed = 0 failed = 81556
+
+TrigReport ---------- Path   Summary ------------
+TrigReport  Trig Bit#   Executed     Passed     Failed      Error Name
+TrigReport     1    0      81556          0      81556          0 p
+
+TrigReport -------End-Path   Summary ------------
+TrigReport  Trig Bit#   Executed     Passed     Failed      Error Name
+TrigReport     0    0      81556      81556          0          0 e
+
+TrigReport ---------- Modules in Path: p ------------
+TrigReport  Trig Bit#    Visited     Passed     Failed      Error Name
+TrigReport     1    0      81556      81231        325          0 MuonIWant
+TrigReport     1    1      81231      39247      41984          0 HighestPtAndMuonSignDRSelector
+TrigReport     1    2      39247          0      39247          0 Mu1Mu2PtRankMuonID
+TrigReport     1    3          0          0          0          0 InvMassCut
+TrigReport     1    4          0          0          0          0 Mu1Mu2EtaCut
+TrigReport     1    5          0          0          0          0 Isolate
+TrigReport     1    6          0          0          0          0 PtEtaCut
+TrigReport     1    7          0          0          0          0 Mu45Selector
+TrigReport     1    8          0          0          0          0 Mu3
+TrigReport     1    9          0          0          0          0 Mu3ID
+TrigReport     1   10          0          0          0          0 tauMuonPtSelector
+TrigReport     1   11          0          0          0          0 CleanJets
+TrigReport     1   12          0          0          0          0 ak4PFJetTracksAssociatorAtVertex
+TrigReport     1   13          0          0          0          0 recoTauAK4PFJets08Region
+TrigReport     1   14          0          0          0          0 recoTauPileUpVertices
+TrigReport     1   15          0          0          0          0 pfRecoTauTagInfoProducer
+TrigReport     1   16          0          0          0          0 ak4PFJetsLegacyHPSPiZeros
+TrigReport     1   17          0          0          0          0 ak4PFJetsRecoTauChargedHadrons
+TrigReport     1   18          0          0          0          0 combinatoricRecoTaus
+TrigReport     1   19          0          0          0          0 hpsSelectionDiscriminator
+TrigReport     1   20          0          0          0          0 hpsPFTauProducerSansRefs
+TrigReport     1   21          0          0          0          0 hpsPFTauProducer
+TrigReport     1   22          0          0          0          0 hpsPFTauDiscriminationByDecayModeFindingNewDMs
+TrigReport     1   23          0          0          0          0 hpsPFTauDiscriminationByDecayModeFindingOldDMs
+TrigReport     1   24          0          0          0          0 hpsPFTauDiscriminationByDecayModeFinding
+TrigReport     1   25          0          0          0          0 hpsPFTauDiscriminationByLooseChargedIsolation
+TrigReport     1   26          0          0          0          0 hpsPFTauDiscriminationByLooseIsolation
+TrigReport     1   27          0          0          0          0 hpsPFTauDiscriminationByLooseCombinedIsolationDBSumPtCorr3Hits
+TrigReport     1   28          0          0          0          0 hpsPFTauDiscriminationByMediumCombinedIsolationDBSumPtCorr3Hits
+TrigReport     1   29          0          0          0          0 hpsPFTauDiscriminationByTightCombinedIsolationDBSumPtCorr3Hits
+TrigReport     1   30          0          0          0          0 hpsPFTauDiscriminationByRawCombinedIsolationDBSumPtCorr3Hits
+TrigReport     1   31          0          0          0          0 hpsPFTauDiscriminationByLooseCombinedIsolationDBSumPtCorr3HitsdR03
+TrigReport     1   32          0          0          0          0 hpsPFTauDiscriminationByMediumCombinedIsolationDBSumPtCorr3HitsdR03
+TrigReport     1   33          0          0          0          0 hpsPFTauDiscriminationByTightCombinedIsolationDBSumPtCorr3HitsdR03
+TrigReport     1   34          0          0          0          0 hpsPFTauDiscriminationByLoosePileupWeightedIsolation3Hits
+TrigReport     1   35          0          0          0          0 hpsPFTauDiscriminationByMediumPileupWeightedIsolation3Hits
+TrigReport     1   36          0          0          0          0 hpsPFTauDiscriminationByTightPileupWeightedIsolation3Hits
+TrigReport     1   37          0          0          0          0 hpsPFTauDiscriminationByPhotonPtSumOutsideSignalCone
+TrigReport     1   38          0          0          0          0 hpsPFTauDiscriminationByRawPileupWeightedIsolation3Hits
+TrigReport     1   39          0          0          0          0 hpsPFTauDiscriminationByLooseElectronRejection
+TrigReport     1   40          0          0          0          0 hpsPFTauDiscriminationByMediumElectronRejection
+TrigReport     1   41          0          0          0          0 hpsPFTauDiscriminationByTightElectronRejection
+TrigReport     1   42          0          0          0          0 hpsPFTauDiscriminationByMVA6rawElectronRejection
+TrigReport     1   43          0          0          0          0 hpsPFTauDiscriminationByMVA6VLooseElectronRejection
+TrigReport     1   44          0          0          0          0 hpsPFTauDiscriminationByMVA6LooseElectronRejection
+TrigReport     1   45          0          0          0          0 hpsPFTauDiscriminationByMVA6MediumElectronRejection
+TrigReport     1   46          0          0          0          0 hpsPFTauDiscriminationByMVA6TightElectronRejection
+TrigReport     1   47          0          0          0          0 hpsPFTauDiscriminationByMVA6VTightElectronRejection
+TrigReport     1   48          0          0          0          0 hpsPFTauDiscriminationByDeadECALElectronRejection
+TrigReport     1   49          0          0          0          0 hpsPFTauDiscriminationByLooseMuonRejection3
+TrigReport     1   50          0          0          0          0 hpsPFTauDiscriminationByTightMuonRejection3
+TrigReport     1   51          0          0          0          0 hpsPFTauPrimaryVertexProducer
+TrigReport     1   52          0          0          0          0 hpsPFTauSecondaryVertexProducer
+TrigReport     1   53          0          0          0          0 hpsPFTauTransverseImpactParameters
+TrigReport     1   54          0          0          0          0 hpsPFTauChargedIsoPtSum
+TrigReport     1   55          0          0          0          0 hpsPFTauNeutralIsoPtSum
+TrigReport     1   56          0          0          0          0 hpsPFTauPUcorrPtSum
+TrigReport     1   57          0          0          0          0 hpsPFTauNeutralIsoPtSumWeight
+TrigReport     1   58          0          0          0          0 hpsPFTauFootprintCorrection
+TrigReport     1   59          0          0          0          0 hpsPFTauPhotonPtSumOutsideSignalCone
+TrigReport     1   60          0          0          0          0 hpsPFTauDiscriminationByIsolationMVArun2v1DBoldDMwLTraw
+TrigReport     1   61          0          0          0          0 hpsPFTauDiscriminationByVLooseIsolationMVArun2v1DBoldDMwLT
+TrigReport     1   62          0          0          0          0 hpsPFTauDiscriminationByLooseIsolationMVArun2v1DBoldDMwLT
+TrigReport     1   63          0          0          0          0 hpsPFTauDiscriminationByMediumIsolationMVArun2v1DBoldDMwLT
+TrigReport     1   64          0          0          0          0 hpsPFTauDiscriminationByTightIsolationMVArun2v1DBoldDMwLT
+TrigReport     1   65          0          0          0          0 hpsPFTauDiscriminationByVTightIsolationMVArun2v1DBoldDMwLT
+TrigReport     1   66          0          0          0          0 hpsPFTauDiscriminationByVVTightIsolationMVArun2v1DBoldDMwLT
+TrigReport     1   67          0          0          0          0 hpsPFTauDiscriminationByIsolationMVArun2v1DBnewDMwLTraw
+TrigReport     1   68          0          0          0          0 hpsPFTauDiscriminationByVLooseIsolationMVArun2v1DBnewDMwLT
+TrigReport     1   69          0          0          0          0 hpsPFTauDiscriminationByLooseIsolationMVArun2v1DBnewDMwLT
+TrigReport     1   70          0          0          0          0 hpsPFTauDiscriminationByMediumIsolationMVArun2v1DBnewDMwLT
+TrigReport     1   71          0          0          0          0 hpsPFTauDiscriminationByTightIsolationMVArun2v1DBnewDMwLT
+TrigReport     1   72          0          0          0          0 hpsPFTauDiscriminationByVTightIsolationMVArun2v1DBnewDMwLT
+TrigReport     1   73          0          0          0          0 hpsPFTauDiscriminationByVVTightIsolationMVArun2v1DBnewDMwLT
+TrigReport     1   74          0          0          0          0 hpsPFTauDiscriminationByIsolationMVArun2v1PWoldDMwLTraw
+TrigReport     1   75          0          0          0          0 hpsPFTauDiscriminationByVLooseIsolationMVArun2v1PWoldDMwLT
+TrigReport     1   76          0          0          0          0 hpsPFTauDiscriminationByLooseIsolationMVArun2v1PWoldDMwLT
+TrigReport     1   77          0          0          0          0 hpsPFTauDiscriminationByMediumIsolationMVArun2v1PWoldDMwLT
+TrigReport     1   78          0          0          0          0 hpsPFTauDiscriminationByTightIsolationMVArun2v1PWoldDMwLT
+TrigReport     1   79          0          0          0          0 hpsPFTauDiscriminationByVTightIsolationMVArun2v1PWoldDMwLT
+TrigReport     1   80          0          0          0          0 hpsPFTauDiscriminationByVVTightIsolationMVArun2v1PWoldDMwLT
+TrigReport     1   81          0          0          0          0 hpsPFTauDiscriminationByIsolationMVArun2v1PWnewDMwLTraw
+TrigReport     1   82          0          0          0          0 hpsPFTauDiscriminationByVLooseIsolationMVArun2v1PWnewDMwLT
+TrigReport     1   83          0          0          0          0 hpsPFTauDiscriminationByLooseIsolationMVArun2v1PWnewDMwLT
+TrigReport     1   84          0          0          0          0 hpsPFTauDiscriminationByMediumIsolationMVArun2v1PWnewDMwLT
+TrigReport     1   85          0          0          0          0 hpsPFTauDiscriminationByTightIsolationMVArun2v1PWnewDMwLT
+TrigReport     1   86          0          0          0          0 hpsPFTauDiscriminationByVTightIsolationMVArun2v1PWnewDMwLT
+TrigReport     1   87          0          0          0          0 hpsPFTauDiscriminationByVVTightIsolationMVArun2v1PWnewDMwLT
+TrigReport     1   88          0          0          0          0 hpsPFTauChargedIsoPtSumdR03
+TrigReport     1   89          0          0          0          0 hpsPFTauNeutralIsoPtSumdR03
+TrigReport     1   90          0          0          0          0 hpsPFTauPUcorrPtSumdR03
+TrigReport     1   91          0          0          0          0 hpsPFTauNeutralIsoPtSumWeightdR03
+TrigReport     1   92          0          0          0          0 hpsPFTauFootprintCorrectiondR03
+TrigReport     1   93          0          0          0          0 hpsPFTauPhotonPtSumOutsideSignalConedR03
+TrigReport     1   94          0          0          0          0 hpsPFTauDiscriminationByIsolationMVArun2v1DBdR03oldDMwLTraw
+TrigReport     1   95          0          0          0          0 hpsPFTauDiscriminationByVLooseIsolationMVArun2v1DBdR03oldDMwLT
+TrigReport     1   96          0          0          0          0 hpsPFTauDiscriminationByLooseIsolationMVArun2v1DBdR03oldDMwLT
+TrigReport     1   97          0          0          0          0 hpsPFTauDiscriminationByMediumIsolationMVArun2v1DBdR03oldDMwLT
+TrigReport     1   98          0          0          0          0 hpsPFTauDiscriminationByTightIsolationMVArun2v1DBdR03oldDMwLT
+TrigReport     1   99          0          0          0          0 hpsPFTauDiscriminationByVTightIsolationMVArun2v1DBdR03oldDMwLT
+TrigReport     1  100          0          0          0          0 hpsPFTauDiscriminationByVVTightIsolationMVArun2v1DBdR03oldDMwLT
+TrigReport     1  101          0          0          0          0 hpsPFTauDiscriminationByIsolationMVArun2v1PWdR03oldDMwLTraw
+TrigReport     1  102          0          0          0          0 hpsPFTauDiscriminationByVLooseIsolationMVArun2v1PWdR03oldDMwLT
+TrigReport     1  103          0          0          0          0 hpsPFTauDiscriminationByLooseIsolationMVArun2v1PWdR03oldDMwLT
+TrigReport     1  104          0          0          0          0 hpsPFTauDiscriminationByMediumIsolationMVArun2v1PWdR03oldDMwLT
+TrigReport     1  105          0          0          0          0 hpsPFTauDiscriminationByTightIsolationMVArun2v1PWdR03oldDMwLT
+TrigReport     1  106          0          0          0          0 hpsPFTauDiscriminationByVTightIsolationMVArun2v1PWdR03oldDMwLT
+TrigReport     1  107          0          0          0          0 hpsPFTauDiscriminationByVVTightIsolationMVArun2v1PWdR03oldDMwLT
+TrigReport     1  108          0          0          0          0 pfImpactParameterTagInfos
+TrigReport     1  109          0          0          0          0 pfTrackCountingHighEffBJetTags
+TrigReport     1  110          0          0          0          0 pfJetProbabilityBJetTags
+TrigReport     1  111          0          0          0          0 pfJetBProbabilityBJetTags
+TrigReport     1  112          0          0          0          0 pfSecondaryVertexTagInfos
+TrigReport     1  113          0          0          0          0 pfSimpleSecondaryVertexHighEffBJetTags
+TrigReport     1  114          0          0          0          0 pfCombinedSecondaryVertexV2BJetTags
+TrigReport     1  115          0          0          0          0 inclusiveCandidateVertexFinder
+TrigReport     1  116          0          0          0          0 candidateVertexMerger
+TrigReport     1  117          0          0          0          0 candidateVertexArbitrator
+TrigReport     1  118          0          0          0          0 inclusiveCandidateSecondaryVertices
+TrigReport     1  119          0          0          0          0 pfInclusiveSecondaryVertexFinderTagInfos
+TrigReport     1  120          0          0          0          0 pfSimpleInclusiveSecondaryVertexHighEffBJetTags
+TrigReport     1  121          0          0          0          0 pfCombinedInclusiveSecondaryVertexV2BJetTags
+TrigReport     1  122          0          0          0          0 softPFMuonsTagInfos
+TrigReport     1  123          0          0          0          0 softPFMuonBJetTags
+TrigReport     1  124          0          0          0          0 softPFElectronsTagInfos
+TrigReport     1  125          0          0          0          0 softPFElectronBJetTags
+TrigReport     1  126          0          0          0          0 pfCombinedMVAV2BJetTags
+TrigReport     1  127          0          0          0          0 muHadTauSelector
+TrigReport     1  128          0          0          0          0 muHadIsoTauSelector
+
+TrigReport ------ Modules in End-Path: e ------------
+TrigReport  Trig Bit#    Visited     Passed     Failed      Error Name
+TrigReport     0    0      81556      81556          0          0 antiSelectedOutput
+
+TrigReport ---------- Module Summary ------------
+TrigReport    Visited   Executed     Passed     Failed      Error Name
+TrigReport          0          0          0          0          0 CleanJets
+TrigReport      81231      81231      39247      41984          0 HighestPtAndMuonSignDRSelector
+TrigReport          0          0          0          0          0 InvMassCut
+TrigReport          0          0          0          0          0 Isolate
+TrigReport          0          0          0          0          0 Mu1Mu2EtaCut
+TrigReport      39247      39247          0      39247          0 Mu1Mu2PtRankMuonID
+TrigReport          0          0          0          0          0 Mu3
+TrigReport          0          0          0          0          0 Mu3ID
+TrigReport          0          0          0          0          0 Mu45Selector
+TrigReport      81556      81556      81231        325          0 MuonIWant
+TrigReport          0          0          0          0          0 PtEtaCut
+TrigReport      81556      81556      81556          0          0 TriggerResults
+TrigReport          0          0          0          0          0 ak4PFJetTracksAssociatorAtVertex
+TrigReport          0          0          0          0          0 ak4PFJetsLegacyHPSPiZeros
+TrigReport          0          0          0          0          0 ak4PFJetsRecoTauChargedHadrons
+TrigReport      81556      81556      81556          0          0 antiSelectedOutput
+TrigReport          0          0          0          0          0 candidateVertexArbitrator
+TrigReport          0          0          0          0          0 candidateVertexMerger
+TrigReport          0          0          0          0          0 combinatoricRecoTaus
+TrigReport          0          0          0          0          0 hpsPFTauChargedIsoPtSum
+TrigReport          0          0          0          0          0 hpsPFTauChargedIsoPtSumdR03
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByDeadECALElectronRejection
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByDecayModeFinding
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByDecayModeFindingNewDMs
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByDecayModeFindingOldDMs
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByIsolationMVArun2v1DBdR03oldDMwLTraw
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByIsolationMVArun2v1DBnewDMwLTraw
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByIsolationMVArun2v1DBoldDMwLTraw
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByIsolationMVArun2v1PWdR03oldDMwLTraw
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByIsolationMVArun2v1PWnewDMwLTraw
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByIsolationMVArun2v1PWoldDMwLTraw
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByLooseChargedIsolation
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByLooseCombinedIsolationDBSumPtCorr3Hits
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByLooseCombinedIsolationDBSumPtCorr3HitsdR03
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByLooseElectronRejection
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByLooseIsolation
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByLooseIsolationMVArun2v1DBdR03oldDMwLT
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByLooseIsolationMVArun2v1DBnewDMwLT
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByLooseIsolationMVArun2v1DBoldDMwLT
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByLooseIsolationMVArun2v1PWdR03oldDMwLT
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByLooseIsolationMVArun2v1PWnewDMwLT
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByLooseIsolationMVArun2v1PWoldDMwLT
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByLooseMuonRejection3
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByLoosePileupWeightedIsolation3Hits
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByMVA6LooseElectronRejection
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByMVA6MediumElectronRejection
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByMVA6TightElectronRejection
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByMVA6VLooseElectronRejection
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByMVA6VTightElectronRejection
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByMVA6rawElectronRejection
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByMediumCombinedIsolationDBSumPtCorr3Hits
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByMediumCombinedIsolationDBSumPtCorr3HitsdR03
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByMediumElectronRejection
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByMediumIsolationMVArun2v1DBdR03oldDMwLT
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByMediumIsolationMVArun2v1DBnewDMwLT
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByMediumIsolationMVArun2v1DBoldDMwLT
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByMediumIsolationMVArun2v1PWdR03oldDMwLT
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByMediumIsolationMVArun2v1PWnewDMwLT
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByMediumIsolationMVArun2v1PWoldDMwLT
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByMediumPileupWeightedIsolation3Hits
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByPhotonPtSumOutsideSignalCone
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByRawCombinedIsolationDBSumPtCorr3Hits
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByRawPileupWeightedIsolation3Hits
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByTightCombinedIsolationDBSumPtCorr3Hits
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByTightCombinedIsolationDBSumPtCorr3HitsdR03
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByTightElectronRejection
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByTightIsolationMVArun2v1DBdR03oldDMwLT
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByTightIsolationMVArun2v1DBnewDMwLT
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByTightIsolationMVArun2v1DBoldDMwLT
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByTightIsolationMVArun2v1PWdR03oldDMwLT
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByTightIsolationMVArun2v1PWnewDMwLT
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByTightIsolationMVArun2v1PWoldDMwLT
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByTightMuonRejection3
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByTightPileupWeightedIsolation3Hits
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByVLooseIsolationMVArun2v1DBdR03oldDMwLT
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByVLooseIsolationMVArun2v1DBnewDMwLT
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByVLooseIsolationMVArun2v1DBoldDMwLT
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByVLooseIsolationMVArun2v1PWdR03oldDMwLT
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByVLooseIsolationMVArun2v1PWnewDMwLT
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByVLooseIsolationMVArun2v1PWoldDMwLT
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByVTightIsolationMVArun2v1DBdR03oldDMwLT
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByVTightIsolationMVArun2v1DBnewDMwLT
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByVTightIsolationMVArun2v1DBoldDMwLT
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByVTightIsolationMVArun2v1PWdR03oldDMwLT
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByVTightIsolationMVArun2v1PWnewDMwLT
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByVTightIsolationMVArun2v1PWoldDMwLT
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByVVTightIsolationMVArun2v1DBdR03oldDMwLT
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByVVTightIsolationMVArun2v1DBnewDMwLT
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByVVTightIsolationMVArun2v1DBoldDMwLT
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByVVTightIsolationMVArun2v1PWdR03oldDMwLT
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByVVTightIsolationMVArun2v1PWnewDMwLT
+TrigReport          0          0          0          0          0 hpsPFTauDiscriminationByVVTightIsolationMVArun2v1PWoldDMwLT
+TrigReport          0          0          0          0          0 hpsPFTauFootprintCorrection
+TrigReport          0          0          0          0          0 hpsPFTauFootprintCorrectiondR03
+TrigReport          0          0          0          0          0 hpsPFTauNeutralIsoPtSum
+TrigReport          0          0          0          0          0 hpsPFTauNeutralIsoPtSumWeight
+TrigReport          0          0          0          0          0 hpsPFTauNeutralIsoPtSumWeightdR03
+TrigReport          0          0          0          0          0 hpsPFTauNeutralIsoPtSumdR03
+TrigReport          0          0          0          0          0 hpsPFTauPUcorrPtSum
+TrigReport          0          0          0          0          0 hpsPFTauPUcorrPtSumdR03
+TrigReport          0          0          0          0          0 hpsPFTauPhotonPtSumOutsideSignalCone
+TrigReport          0          0          0          0          0 hpsPFTauPhotonPtSumOutsideSignalConedR03
+TrigReport          0          0          0          0          0 hpsPFTauPrimaryVertexProducer
+TrigReport          0          0          0          0          0 hpsPFTauProducer
+TrigReport          0          0          0          0          0 hpsPFTauProducerSansRefs
+TrigReport          0          0          0          0          0 hpsPFTauSecondaryVertexProducer
+TrigReport          0          0          0          0          0 hpsPFTauTransverseImpactParameters
+TrigReport          0          0          0          0          0 hpsSelectionDiscriminator
+TrigReport          0          0          0          0          0 inclusiveCandidateSecondaryVertices
+TrigReport          0          0          0          0          0 inclusiveCandidateVertexFinder
+TrigReport          0          0          0          0          0 muHadIsoTauSelector
+TrigReport          0          0          0          0          0 muHadTauSelector
+TrigReport          0          0          0          0          0 pfCombinedInclusiveSecondaryVertexV2BJetTags
+TrigReport          0          0          0          0          0 pfCombinedMVAV2BJetTags
+TrigReport          0          0          0          0          0 pfCombinedSecondaryVertexV2BJetTags
+TrigReport          0          0          0          0          0 pfImpactParameterTagInfos
+TrigReport          0          0          0          0          0 pfInclusiveSecondaryVertexFinderTagInfos
+TrigReport          0          0          0          0          0 pfJetBProbabilityBJetTags
+TrigReport          0          0          0          0          0 pfJetProbabilityBJetTags
+TrigReport          0          0          0          0          0 pfRecoTauTagInfoProducer
+TrigReport          0          0          0          0          0 pfSecondaryVertexTagInfos
+TrigReport          0          0          0          0          0 pfSimpleInclusiveSecondaryVertexHighEffBJetTags
+TrigReport          0          0          0          0          0 pfSimpleSecondaryVertexHighEffBJetTags
+TrigReport          0          0          0          0          0 pfTrackCountingHighEffBJetTags
+TrigReport          0          0          0          0          0 recoTauAK4PFJets08Region
+TrigReport          0          0          0          0          0 recoTauPileUpVertices
+TrigReport          0          0          0          0          0 softPFElectronBJetTags
+TrigReport          0          0          0          0          0 softPFElectronsTagInfos
+TrigReport          0          0          0          0          0 softPFMuonBJetTags
+TrigReport          0          0          0          0          0 softPFMuonsTagInfos
+TrigReport          0          0          0          0          0 tauMuonPtSelector
+
+TimeReport ---------- Event  Summary ---[sec]----
+TimeReport       event loop CPU/event = 0.006611
+TimeReport      event loop Real/event = 0.013420
+TimeReport     sum Streams Real/event = 0.007264
+TimeReport efficiency CPU/Real/thread = 0.492608
+
+TimeReport ---------- Path   Summary ---[Real sec]----
+TimeReport  per event     per exec  Name
+TimeReport   0.005940     0.005940  p
+TimeReport  per event     per exec  Name
+
+TimeReport -------End-Path   Summary ---[Real sec]----
+TimeReport  per event     per exec  Name
+TimeReport   0.000003     0.000003  e
+TimeReport  per event     per exec  Name
+
+TimeReport ---------- Modules in Path: p ---[Real sec]----
+TimeReport  per event    per visit  Name
+TimeReport   0.000029     0.000029  MuonIWant
+TimeReport   0.000009     0.000009  HighestPtAndMuonSignDRSelector
+TimeReport   0.000007     0.000014  Mu1Mu2PtRankMuonID
+TimeReport   0.000000     0.000000  InvMassCut
+TimeReport   0.000000     0.000000  Mu1Mu2EtaCut
+TimeReport   0.000000     0.000000  Isolate
+TimeReport   0.000000     0.000000  PtEtaCut
+TimeReport   0.000000     0.000000  Mu45Selector
+TimeReport   0.000000     0.000000  Mu3
+TimeReport   0.000000     0.000000  Mu3ID
+TimeReport   0.000000     0.000000  tauMuonPtSelector
+TimeReport   0.000000     0.000000  CleanJets
+TimeReport   0.000000     0.000000  ak4PFJetTracksAssociatorAtVertex
+TimeReport   0.000000     0.000000  recoTauAK4PFJets08Region
+TimeReport   0.000000     0.000000  recoTauPileUpVertices
+TimeReport   0.000000     0.000000  pfRecoTauTagInfoProducer
+TimeReport   0.000000     0.000000  ak4PFJetsLegacyHPSPiZeros
+TimeReport   0.000000     0.000000  ak4PFJetsRecoTauChargedHadrons
+TimeReport   0.000000     0.000000  combinatoricRecoTaus
+TimeReport   0.000000     0.000000  hpsSelectionDiscriminator
+TimeReport   0.000000     0.000000  hpsPFTauProducerSansRefs
+TimeReport   0.000000     0.000000  hpsPFTauProducer
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByDecayModeFindingNewDMs
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByDecayModeFindingOldDMs
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByDecayModeFinding
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByLooseChargedIsolation
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByLooseIsolation
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByLooseCombinedIsolationDBSumPtCorr3Hits
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByMediumCombinedIsolationDBSumPtCorr3Hits
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByTightCombinedIsolationDBSumPtCorr3Hits
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByRawCombinedIsolationDBSumPtCorr3Hits
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByLooseCombinedIsolationDBSumPtCorr3HitsdR03
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByMediumCombinedIsolationDBSumPtCorr3HitsdR03
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByTightCombinedIsolationDBSumPtCorr3HitsdR03
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByLoosePileupWeightedIsolation3Hits
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByMediumPileupWeightedIsolation3Hits
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByTightPileupWeightedIsolation3Hits
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByPhotonPtSumOutsideSignalCone
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByRawPileupWeightedIsolation3Hits
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByLooseElectronRejection
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByMediumElectronRejection
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByTightElectronRejection
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByMVA6rawElectronRejection
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByMVA6VLooseElectronRejection
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByMVA6LooseElectronRejection
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByMVA6MediumElectronRejection
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByMVA6TightElectronRejection
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByMVA6VTightElectronRejection
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByDeadECALElectronRejection
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByLooseMuonRejection3
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByTightMuonRejection3
+TimeReport   0.000000     0.000000  hpsPFTauPrimaryVertexProducer
+TimeReport   0.000000     0.000000  hpsPFTauSecondaryVertexProducer
+TimeReport   0.000000     0.000000  hpsPFTauTransverseImpactParameters
+TimeReport   0.000000     0.000000  hpsPFTauChargedIsoPtSum
+TimeReport   0.000000     0.000000  hpsPFTauNeutralIsoPtSum
+TimeReport   0.000000     0.000000  hpsPFTauPUcorrPtSum
+TimeReport   0.000000     0.000000  hpsPFTauNeutralIsoPtSumWeight
+TimeReport   0.000000     0.000000  hpsPFTauFootprintCorrection
+TimeReport   0.000000     0.000000  hpsPFTauPhotonPtSumOutsideSignalCone
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByIsolationMVArun2v1DBoldDMwLTraw
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByVLooseIsolationMVArun2v1DBoldDMwLT
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByLooseIsolationMVArun2v1DBoldDMwLT
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByMediumIsolationMVArun2v1DBoldDMwLT
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByTightIsolationMVArun2v1DBoldDMwLT
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByVTightIsolationMVArun2v1DBoldDMwLT
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByVVTightIsolationMVArun2v1DBoldDMwLT
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByIsolationMVArun2v1DBnewDMwLTraw
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByVLooseIsolationMVArun2v1DBnewDMwLT
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByLooseIsolationMVArun2v1DBnewDMwLT
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByMediumIsolationMVArun2v1DBnewDMwLT
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByTightIsolationMVArun2v1DBnewDMwLT
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByVTightIsolationMVArun2v1DBnewDMwLT
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByVVTightIsolationMVArun2v1DBnewDMwLT
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByIsolationMVArun2v1PWoldDMwLTraw
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByVLooseIsolationMVArun2v1PWoldDMwLT
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByLooseIsolationMVArun2v1PWoldDMwLT
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByMediumIsolationMVArun2v1PWoldDMwLT
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByTightIsolationMVArun2v1PWoldDMwLT
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByVTightIsolationMVArun2v1PWoldDMwLT
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByVVTightIsolationMVArun2v1PWoldDMwLT
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByIsolationMVArun2v1PWnewDMwLTraw
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByVLooseIsolationMVArun2v1PWnewDMwLT
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByLooseIsolationMVArun2v1PWnewDMwLT
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByMediumIsolationMVArun2v1PWnewDMwLT
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByTightIsolationMVArun2v1PWnewDMwLT
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByVTightIsolationMVArun2v1PWnewDMwLT
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByVVTightIsolationMVArun2v1PWnewDMwLT
+TimeReport   0.000000     0.000000  hpsPFTauChargedIsoPtSumdR03
+TimeReport   0.000000     0.000000  hpsPFTauNeutralIsoPtSumdR03
+TimeReport   0.000000     0.000000  hpsPFTauPUcorrPtSumdR03
+TimeReport   0.000000     0.000000  hpsPFTauNeutralIsoPtSumWeightdR03
+TimeReport   0.000000     0.000000  hpsPFTauFootprintCorrectiondR03
+TimeReport   0.000000     0.000000  hpsPFTauPhotonPtSumOutsideSignalConedR03
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByIsolationMVArun2v1DBdR03oldDMwLTraw
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByVLooseIsolationMVArun2v1DBdR03oldDMwLT
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByLooseIsolationMVArun2v1DBdR03oldDMwLT
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByMediumIsolationMVArun2v1DBdR03oldDMwLT
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByTightIsolationMVArun2v1DBdR03oldDMwLT
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByVTightIsolationMVArun2v1DBdR03oldDMwLT
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByVVTightIsolationMVArun2v1DBdR03oldDMwLT
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByIsolationMVArun2v1PWdR03oldDMwLTraw
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByVLooseIsolationMVArun2v1PWdR03oldDMwLT
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByLooseIsolationMVArun2v1PWdR03oldDMwLT
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByMediumIsolationMVArun2v1PWdR03oldDMwLT
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByTightIsolationMVArun2v1PWdR03oldDMwLT
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByVTightIsolationMVArun2v1PWdR03oldDMwLT
+TimeReport   0.000000     0.000000  hpsPFTauDiscriminationByVVTightIsolationMVArun2v1PWdR03oldDMwLT
+TimeReport   0.000000     0.000000  pfImpactParameterTagInfos
+TimeReport   0.000000     0.000000  pfTrackCountingHighEffBJetTags
+TimeReport   0.000000     0.000000  pfJetProbabilityBJetTags
+TimeReport   0.000000     0.000000  pfJetBProbabilityBJetTags
+TimeReport   0.000000     0.000000  pfSecondaryVertexTagInfos
+TimeReport   0.000000     0.000000  pfSimpleSecondaryVertexHighEffBJetTags
+TimeReport   0.000000     0.000000  pfCombinedSecondaryVertexV2BJetTags
+TimeReport   0.000000     0.000000  inclusiveCandidateVertexFinder
+TimeReport   0.000000     0.000000  candidateVertexMerger
+TimeReport   0.000000     0.000000  candidateVertexArbitrator
+TimeReport   0.000000     0.000000  inclusiveCandidateSecondaryVertices
+TimeReport   0.000000     0.000000  pfInclusiveSecondaryVertexFinderTagInfos
+TimeReport   0.000000     0.000000  pfSimpleInclusiveSecondaryVertexHighEffBJetTags
+TimeReport   0.000000     0.000000  pfCombinedInclusiveSecondaryVertexV2BJetTags
+TimeReport   0.000000     0.000000  softPFMuonsTagInfos
+TimeReport   0.000000     0.000000  softPFMuonBJetTags
+TimeReport   0.000000     0.000000  softPFElectronsTagInfos
+TimeReport   0.000000     0.000000  softPFElectronBJetTags
+TimeReport   0.000000     0.000000  pfCombinedMVAV2BJetTags
+TimeReport   0.000000     0.000000  muHadTauSelector
+TimeReport   0.000000     0.000000  muHadIsoTauSelector
+TimeReport  per event    per visit  Name
+
+TimeReport ------ Modules in End-Path: e ---[Real sec]----
+TimeReport  per event    per visit  Name
+TimeReport   0.000000     0.000000  antiSelectedOutput
+TimeReport  per event    per visit  Name
+
+TimeReport ---------- Module Summary ---[Real sec]----
+TimeReport  per event     per exec    per visit  Name
+TimeReport   0.000000     0.000000     0.000000  CleanJets
+TimeReport   0.000009     0.000009     0.000009  HighestPtAndMuonSignDRSelector
+TimeReport   0.000000     0.000000     0.000000  InvMassCut
+TimeReport   0.000000     0.000000     0.000000  Isolate
+TimeReport   0.000000     0.000000     0.000000  Mu1Mu2EtaCut
+TimeReport   0.000007     0.000014     0.000014  Mu1Mu2PtRankMuonID
+TimeReport   0.000000     0.000000     0.000000  Mu3
+TimeReport   0.000000     0.000000     0.000000  Mu3ID
+TimeReport   0.000000     0.000000     0.000000  Mu45Selector
+TimeReport   0.000029     0.000029     0.000029  MuonIWant
+TimeReport   0.000000     0.000000     0.000000  PtEtaCut
+TimeReport   0.000019     0.000019     0.000019  TriggerResults
+TimeReport   0.000000     0.000000     0.000000  ak4PFJetTracksAssociatorAtVertex
+TimeReport   0.000000     0.000000     0.000000  ak4PFJetsLegacyHPSPiZeros
+TimeReport   0.000000     0.000000     0.000000  ak4PFJetsRecoTauChargedHadrons
+TimeReport   0.000000     0.000000     0.000000  antiSelectedOutput
+TimeReport   0.000000     0.000000     0.000000  candidateVertexArbitrator
+TimeReport   0.000000     0.000000     0.000000  candidateVertexMerger
+TimeReport   0.000000     0.000000     0.000000  combinatoricRecoTaus
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauChargedIsoPtSum
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauChargedIsoPtSumdR03
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByDeadECALElectronRejection
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByDecayModeFinding
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByDecayModeFindingNewDMs
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByDecayModeFindingOldDMs
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByIsolationMVArun2v1DBdR03oldDMwLTraw
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByIsolationMVArun2v1DBnewDMwLTraw
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByIsolationMVArun2v1DBoldDMwLTraw
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByIsolationMVArun2v1PWdR03oldDMwLTraw
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByIsolationMVArun2v1PWnewDMwLTraw
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByIsolationMVArun2v1PWoldDMwLTraw
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByLooseChargedIsolation
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByLooseCombinedIsolationDBSumPtCorr3Hits
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByLooseCombinedIsolationDBSumPtCorr3HitsdR03
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByLooseElectronRejection
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByLooseIsolation
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByLooseIsolationMVArun2v1DBdR03oldDMwLT
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByLooseIsolationMVArun2v1DBnewDMwLT
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByLooseIsolationMVArun2v1DBoldDMwLT
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByLooseIsolationMVArun2v1PWdR03oldDMwLT
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByLooseIsolationMVArun2v1PWnewDMwLT
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByLooseIsolationMVArun2v1PWoldDMwLT
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByLooseMuonRejection3
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByLoosePileupWeightedIsolation3Hits
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByMVA6LooseElectronRejection
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByMVA6MediumElectronRejection
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByMVA6TightElectronRejection
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByMVA6VLooseElectronRejection
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByMVA6VTightElectronRejection
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByMVA6rawElectronRejection
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByMediumCombinedIsolationDBSumPtCorr3Hits
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByMediumCombinedIsolationDBSumPtCorr3HitsdR03
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByMediumElectronRejection
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByMediumIsolationMVArun2v1DBdR03oldDMwLT
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByMediumIsolationMVArun2v1DBnewDMwLT
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByMediumIsolationMVArun2v1DBoldDMwLT
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByMediumIsolationMVArun2v1PWdR03oldDMwLT
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByMediumIsolationMVArun2v1PWnewDMwLT
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByMediumIsolationMVArun2v1PWoldDMwLT
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByMediumPileupWeightedIsolation3Hits
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByPhotonPtSumOutsideSignalCone
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByRawCombinedIsolationDBSumPtCorr3Hits
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByRawPileupWeightedIsolation3Hits
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByTightCombinedIsolationDBSumPtCorr3Hits
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByTightCombinedIsolationDBSumPtCorr3HitsdR03
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByTightElectronRejection
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByTightIsolationMVArun2v1DBdR03oldDMwLT
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByTightIsolationMVArun2v1DBnewDMwLT
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByTightIsolationMVArun2v1DBoldDMwLT
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByTightIsolationMVArun2v1PWdR03oldDMwLT
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByTightIsolationMVArun2v1PWnewDMwLT
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByTightIsolationMVArun2v1PWoldDMwLT
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByTightMuonRejection3
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByTightPileupWeightedIsolation3Hits
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByVLooseIsolationMVArun2v1DBdR03oldDMwLT
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByVLooseIsolationMVArun2v1DBnewDMwLT
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByVLooseIsolationMVArun2v1DBoldDMwLT
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByVLooseIsolationMVArun2v1PWdR03oldDMwLT
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByVLooseIsolationMVArun2v1PWnewDMwLT
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByVLooseIsolationMVArun2v1PWoldDMwLT
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByVTightIsolationMVArun2v1DBdR03oldDMwLT
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByVTightIsolationMVArun2v1DBnewDMwLT
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByVTightIsolationMVArun2v1DBoldDMwLT
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByVTightIsolationMVArun2v1PWdR03oldDMwLT
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByVTightIsolationMVArun2v1PWnewDMwLT
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByVTightIsolationMVArun2v1PWoldDMwLT
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByVVTightIsolationMVArun2v1DBdR03oldDMwLT
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByVVTightIsolationMVArun2v1DBnewDMwLT
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByVVTightIsolationMVArun2v1DBoldDMwLT
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByVVTightIsolationMVArun2v1PWdR03oldDMwLT
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByVVTightIsolationMVArun2v1PWnewDMwLT
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauDiscriminationByVVTightIsolationMVArun2v1PWoldDMwLT
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauFootprintCorrection
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauFootprintCorrectiondR03
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauNeutralIsoPtSum
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauNeutralIsoPtSumWeight
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauNeutralIsoPtSumWeightdR03
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauNeutralIsoPtSumdR03
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauPUcorrPtSum
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauPUcorrPtSumdR03
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauPhotonPtSumOutsideSignalCone
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauPhotonPtSumOutsideSignalConedR03
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauPrimaryVertexProducer
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauProducer
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauProducerSansRefs
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauSecondaryVertexProducer
+TimeReport   0.000000     0.000000     0.000000  hpsPFTauTransverseImpactParameters
+TimeReport   0.000000     0.000000     0.000000  hpsSelectionDiscriminator
+TimeReport   0.000000     0.000000     0.000000  inclusiveCandidateSecondaryVertices
+TimeReport   0.000000     0.000000     0.000000  inclusiveCandidateVertexFinder
+TimeReport   0.000000     0.000000     0.000000  muHadIsoTauSelector
+TimeReport   0.000000     0.000000     0.000000  muHadTauSelector
+TimeReport   0.000000     0.000000     0.000000  pfCombinedInclusiveSecondaryVertexV2BJetTags
+TimeReport   0.000000     0.000000     0.000000  pfCombinedMVAV2BJetTags
+TimeReport   0.000000     0.000000     0.000000  pfCombinedSecondaryVertexV2BJetTags
+TimeReport   0.000000     0.000000     0.000000  pfImpactParameterTagInfos
+TimeReport   0.000000     0.000000     0.000000  pfInclusiveSecondaryVertexFinderTagInfos
+TimeReport   0.000000     0.000000     0.000000  pfJetBProbabilityBJetTags
+TimeReport   0.000000     0.000000     0.000000  pfJetProbabilityBJetTags
+TimeReport   0.000000     0.000000     0.000000  pfRecoTauTagInfoProducer
+TimeReport   0.000000     0.000000     0.000000  pfSecondaryVertexTagInfos
+TimeReport   0.000000     0.000000     0.000000  pfSimpleInclusiveSecondaryVertexHighEffBJetTags
+TimeReport   0.000000     0.000000     0.000000  pfSimpleSecondaryVertexHighEffBJetTags
+TimeReport   0.000000     0.000000     0.000000  pfTrackCountingHighEffBJetTags
+TimeReport   0.000000     0.000000     0.000000  recoTauAK4PFJets08Region
+TimeReport   0.000000     0.000000     0.000000  recoTauPileUpVertices
+TimeReport   0.000000     0.000000     0.000000  softPFElectronBJetTags
+TimeReport   0.000000     0.000000     0.000000  softPFElectronsTagInfos
+TimeReport   0.000000     0.000000     0.000000  softPFMuonBJetTags
+TimeReport   0.000000     0.000000     0.000000  softPFMuonsTagInfos
+TimeReport   0.000000     0.000000     0.000000  tauMuonPtSelector
+TimeReport  per event     per exec    per visit  Name
+
+T---Report end!
+
+TimeReport> Time report complete in 1094.68 seconds
+ Time Summary: 
+ - Min event:   9.5129e-05
+ - Max event:   4.47119
+ - Avg event:   0.00601253
+ - Total loop:  1092.12
+ - Total job:   1094.68
+ Event Throughput: 74.6765 ev/s
+ CPU Summary: 
+ - Total loop:  536.816
+ - Total job:   539.142
+
+
+=============================================
+
+MessageLogger Summary
+
+ type     category        sev    module        subroutine        count    total
+ ---- -------------------- -- ---------------- ----------------  -----    -----
+    1 XrdAdaptor           -w (NoModuleName)                         4        4
+    2 XrdAdaptor           -w AfterFile                              2        2
+    3 XrdAdaptor           -w PostProcessPath                        1        1
+    4 XrdAdaptor           -w file_open                              8        8
+    5 XrdAdaptorInternal   -w file_open                             16       16
+    6 TimeReport           -e AfterModEndJob                         1        1
+    7 fileAction           -s file_close                             8        8
+    8 fileAction           -s file_open                             24       24
+
+ type    category    Examples: run/evt        run/evt          run/evt
+ ---- -------------------- ---------------- ---------------- ----------------
+    1 XrdAdaptor           pre-events       pre-events       pre-events
+    2 XrdAdaptor           PostProcessEvent PostProcessEvent 
+    3 XrdAdaptor           PostProcessEvent                  
+    4 XrdAdaptor           pre-events       PostProcessEvent PostProcessEvent
+    5 XrdAdaptorInternal   pre-events       pre-events       PostProcessEvent
+    6 TimeReport           PostEndRun                        
+    7 fileAction           PostProcessEvent PostProcessEvent PostEndRun
+    8 fileAction           pre-events       pre-events       PostProcessEvent
+
+Severity    # Occurrences   Total Occurrences
+--------    -------------   -----------------
+Warning                31                  31
+Error                   1                   1
+System                 32                  32
+Complete
+process id is 115993 status is 0

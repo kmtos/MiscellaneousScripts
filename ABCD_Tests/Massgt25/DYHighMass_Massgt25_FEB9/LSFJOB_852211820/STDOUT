@@ -1,0 +1,36 @@
+@(#)CERN job starter $Date: 2010/06/23 14:22:16 $
+Working directory is </pool/lsf/ktos/852211820> on <b6c36755d9.cern.ch>
+
+/pool/lsf/ktos/852211820
+17-Feb-2017 16:05:28 CET  Initiating request to open file root://eoscms//eos/cms/store/group/phys_higgs/HiggsExo/ktos/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/DYHighMass_Massgt25_FEB9/170214_211931/0000/RegionB_selection_6.root
+[2017-02-17 16:05:30.247409 +0100][Error  ][XRootD            ] [eoscms:1094] Handling error while processing kXR_open (file: /eos/cms/store/group/phys_higgs/HiggsExo/ktos/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/DYHighMass_Massgt25_FEB9/170214_211931/0000/RegionB_selection_6.root, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ): [ERROR] Error response.
+%MSG-w XrdAdaptorInternal:  file_open 17-Feb-2017 16:05:30 CET pre-events
+Failed to open file at URL root://eoscms:1094//eos/cms/store/group/phys_higgs/HiggsExo/ktos/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/DYHighMass_Massgt25_FEB9/170214_211931/0000/RegionB_selection_6.root.
+%MSG
+[2017-02-17 16:05:30.270827 +0100][Error  ][XRootD            ] [eoscms:1094] Handling error while processing kXR_open (file: /eos/cms/store/group/phys_higgs/HiggsExo/ktos/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/DYHighMass_Massgt25_FEB9/170214_211931/0000/RegionB_selection_6.root?tried=, mode: 0660, flags: kXR_open_read kXR_async kXR_retstat ): [ERROR] Error response.
+%MSG-w XrdAdaptorInternal:  file_open 17-Feb-2017 16:05:30 CET pre-events
+Failed to open file at URL root://eoscms:1094//eos/cms/store/group/phys_higgs/HiggsExo/ktos/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/DYHighMass_Massgt25_FEB9/170214_211931/0000/RegionB_selection_6.root?tried=.
+%MSG
+----- Begin Fatal Exception 17-Feb-2017 16:05:30 CET-----------------------
+An exception of category 'FileOpenError' occurred while
+   [0] Constructing the EventProcessor
+   [1] Constructing input source of type PoolSource
+   [2] Calling RootFileSequenceBase::initTheFile()
+   [3] Calling StorageFactory::open()
+   [4] Calling XrdFile::open()
+Exception Message:
+Failed to open the file 'root://eoscms//eos/cms/store/group/phys_higgs/HiggsExo/ktos/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/DYHighMass_Massgt25_FEB9/170214_211931/0000/RegionB_selection_6.root'
+   Additional Info:
+      [a] Input file root://eoscms//eos/cms/store/group/phys_higgs/HiggsExo/ktos/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/DYHighMass_Massgt25_FEB9/170214_211931/0000/RegionB_selection_6.root could not be opened.
+      [b] XrdCl::File::Open(name='root://eoscms//eos/cms/store/group/phys_higgs/HiggsExo/ktos/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/DYHighMass_Massgt25_FEB9/170214_211931/0000/RegionB_selection_6.root', flags=0x10, permissions=0660) => error '[ERROR] Server responded with an error: [3011] Unable to open file /eos/cms/store/group/phys_higgs/HiggsExo/ktos/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/DYHighMass_Massgt25_FEB9/170214_211931/0000/RegionB_selection_6.root; No such file or directory
+' (errno=3011, code=400). No additional data servers were found.
+      [c] Last URL tried: root://eoscms:1094//eos/cms/store/group/phys_higgs/HiggsExo/ktos/DYJetsToLL_M-50_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/DYHighMass_Massgt25_FEB9/170214_211931/0000/RegionB_selection_6.root?tried=
+      [d] Problematic data server: eoscms:1094
+      [e] Disabled source: eoscms:1094
+----- End Fatal Exception -------------------------------------------------
+
+Job finished at Fri Feb 17 16:05:30 CET 2017 on node 
+ under linux version Scientific Linux CERN SLC release 6.8 (Carbon)
+
+CERN statistics: This process used approximately : 0:00:08 KSI2K hours (8 KSI2K seconds)
+                 This process corresponds to     : 0:00:31 HS06  hours (31 HS06  seconds)

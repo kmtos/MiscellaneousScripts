@@ -1,0 +1,23 @@
+@(#)CERN job starter $Date: 2010/06/23 14:22:16 $
+Working directory is </pool/lsf/ktos/852195689> on <b62e3bfa494.cern.ch>
+
+/pool/lsf/ktos/852195689
+17-Feb-2017 15:34:33 CET  Initiating request to open file root://eoscms//eos/cms/store/group/phys_higgs/HiggsExo/ktos/TTJets_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/TTBar_Massgt25_FEB9/170217_012500/0000/RegionB_selection_1.root
+%MSG-w XrdAdaptor:  file_open 17-Feb-2017 15:39:23 CET pre-events
+Data is served from cern.ch instead of original site eoscms
+%MSG
+17-Feb-2017 15:39:36 CET  Successfully opened file root://eoscms//eos/cms/store/group/phys_higgs/HiggsExo/ktos/TTJets_TuneCUETP8M1_13TeV-amcatnloFXFX-pythia8/TTBar_Massgt25_FEB9/170217_012500/0000/RegionB_selection_1.root
+
+
+A fatal system signal has occurred: segmentation violation
+The following is the call stack containing the origin of the signal.
+
+
+A fatal system signal has occurred: segmentation violation
+/pool/spool/1487341028.852195689.shell: line 9: 17325 Segmentation fault      (core dumped) cmsRun skimCheck_cfg_Single_TTBar_Massgt25_FEB9_1.py
+
+Job finished at Fri Feb 17 15:50:12 CET 2017 on node 
+ under linux version Scientific Linux CERN SLC release 6.8 (Carbon)
+
+CERN statistics: This process used approximately : 0:01:21 KSI2K hours (81 KSI2K seconds)
+                 This process corresponds to     : 0:05:19 HS06  hours (319 HS06  seconds)
