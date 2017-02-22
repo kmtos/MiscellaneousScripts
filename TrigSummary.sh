@@ -25,9 +25,13 @@ sumMassVisited=0
 sumMassPassed=0
 sumMassFailed=0
 
-sumIsolationVisited=0
-sumIsolationPassed=0
-sumIsolationFailed=0
+sumEtaVisited=0
+sumEtaPassed=0
+sumEtaFailed=0
+
+sumIsolateVisited=0
+sumIsolatePassed=0
+sumIsolateFailed=0
 
 sumPtEtaCutVisited=0
 sumPtEtaCutPassed=0
@@ -45,9 +49,17 @@ sumMu45SelectorVisited=0
 sumMu45SelectorPassed=0
 sumMu45SelectorFailed=0
 
+sumMuHadTauSelectorVisited=0
+sumMuHadTauSelectorPassed=0
+sumMuHadTauSelectorFailed=0
+
 sumTauMuonPtSelectorVisited=0
 sumTauMuonPtSelectorPassed=0
 sumTauMuonPtSelectorFailed=0
+
+sumMuHadIsoTauSelectorVisited=0
+sumMuHadIsoTauSelectorPassed=0
+sumMuHadIsoTauSelectorFailed=0
 
 for file in *stdout*; do
   countString=$(grep "TrigReport Events total =" $file)
@@ -66,7 +78,7 @@ for file in *stdout*; do
   sumMuonIWantPassed=$((sumMuonIWantPassed+MuonIWantPassed))
   sumMuonIWantFailed=$((sumMuonIWantFailed+MuonIWantFailed))
 
-  HighestPtString=$(grep -m 1 " HighestPtAndMuonOppositeSignDRSelector" $file)
+  HighestPtString=$(grep -m 1 " HighestPtAndMuonSignDRSelector" $file)
   HighestPtVisited=$(echo $HighestPtString | cut -d " " -f 4)
   HighestPtPassed=$(echo $HighestPtString | cut -d " " -f 5)
   HighestPtFailed=$(echo $HighestPtString | cut -d " " -f 6)
@@ -82,7 +94,7 @@ for file in *stdout*; do
   sumMu1Mu2Passed=$((sumMu1Mu2Passed+Mu1Mu2Passed))
   sumMu1Mu2Failed=$((sumMu1Mu2Failed+Mu1Mu2Failed))
 
-  MassString=$(grep -m 1 " Mu1Mu2MassSelection" $file)
+  MassString=$(grep -m 1 " InvMassCut" $file)
   MassVisited=$(echo $MassString | cut -d " " -f 4)
   MassPassed=$(echo $MassString | cut -d " " -f 5)
   MassFailed=$(echo $MassString | cut -d " " -f 6)
@@ -90,13 +102,21 @@ for file in *stdout*; do
   sumMassPassed=$((sumMassPassed+MassPassed))
   sumMassFailed=$((sumMassFailed+MassFailed))
 
-  IsolationString=$(grep -m 1 " Isolation" $file)
-  IsolationVisited=$(echo $IsolationString | cut -d " " -f 4)
-  IsolationPassed=$(echo $IsolationString | cut -d " " -f 5)
-  IsolationFailed=$(echo $IsolationString | cut -d " " -f 6)
-  sumIsolationVisited=$((sumIsolationVisited+IsolationVisited))
-  sumIsolationPassed=$((sumIsolationPassed+IsolationPassed))
-  sumIsolationFailed=$((sumIsolationFailed+IsolationFailed))
+  EtaString=$(grep -m 1 " Mu1Mu2EtaCut" $file)
+  EtaVisited=$(echo $EtaString | cut -d " " -f 4)
+  EtaPassed=$(echo $EtaString | cut -d " " -f 5)
+  EtaFailed=$(echo $EtaString | cut -d " " -f 6)
+  sumEtaVisited=$((sumEtaVisited+EtaVisited))
+  sumEtaPassed=$((sumEtaPassed+EtaPassed))
+  sumEtaFailed=$((sumEtaFailed+EtaFailed))
+
+  IsolateString=$(grep -m 1 " Isolate" $file)
+  IsolateVisited=$(echo $IsolateString | cut -d " " -f 4)
+  IsolatePassed=$(echo $IsolateString | cut -d " " -f 5)
+  IsolateFailed=$(echo $IsolateString | cut -d " " -f 6)
+  sumIsolateVisited=$((sumIsolateVisited+IsolateVisited))
+  sumIsolatePassed=$((sumIsolatePassed+IsolatePassed))
+  sumIsolateFailed=$((sumIsolateFailed+IsolateFailed))
 
   PtEtaCutString=$(grep -m 1 " PtEtaCut" $file)
   PtEtaCutVisited=$(echo $PtEtaCutString | cut -d " " -f 4)
@@ -130,27 +150,45 @@ for file in *stdout*; do
   sumMu45SelectorPassed=$((sumMu45SelectorPassed+Mu45SelectorPassed))
   sumMu45SelectorFailed=$((sumMu45SelectorFailed+Mu45SelectorFailed))
 
- TauMuonPtSelectorString=$(grep -m 1 " tauMuonPtSelector" $file)
- TauMuonPtSelectorVisited=$(echo $TauMuonPtSelectorString | cut -d " " -f 4)
- TauMuonPtSelectorPassed=$(echo $TauMuonPtSelectorString | cut -d " " -f 5)
- TauMuonPtSelectorFailed=$(echo $TauMuonPtSelectorString | cut -d " " -f 6)
- sumTauMuonPtSelectorVisited=$((sumTauMuonPtSelectorVisited+TauMuonPtSelectorVisited))
- sumTauMuonPtSelectorPassed=$((sumTauMuonPtSelectorPassed+TauMuonPtSelectorPassed))
- sumTauMuonPtSelectorFailed=$((sumTauMuonPtSelectorFailed+TauMuonPtSelectorFailed))
+  TauMuonPtSelectorString=$(grep -m 1 " tauMuonPtSelector" $file)
+  TauMuonPtSelectorVisited=$(echo $TauMuonPtSelectorString | cut -d " " -f 4)
+  TauMuonPtSelectorPassed=$(echo $TauMuonPtSelectorString | cut -d " " -f 5)
+  TauMuonPtSelectorFailed=$(echo $TauMuonPtSelectorString | cut -d " " -f 6)
+  sumTauMuonPtSelectorVisited=$((sumTauMuonPtSelectorVisited+TauMuonPtSelectorVisited))
+  sumTauMuonPtSelectorPassed=$((sumTauMuonPtSelectorPassed+TauMuonPtSelectorPassed))
+  sumTauMuonPtSelectorFailed=$((sumTauMuonPtSelectorFailed+TauMuonPtSelectorFailed))
+
+  MuHadTauSelectorString=$(grep -m 1 " muHadTauSelector" $file)
+  MuHadTauSelectorVisited=$(echo $MuHadTauSelectorString | cut -d " " -f 4)
+  MuHadTauSelectorPassed=$(echo $MuHadTauSelectorString | cut -d " " -f 5)
+  MuHadTauSelectorFailed=$(echo $MuHadTauSelectorString | cut -d " " -f 6)
+  sumMuHadTauSelectorVisited=$((sumMuHadTauSelectorVisited+MuHadTauSelectorVisited))
+  sumMuHadTauSelectorPassed=$((sumMuHadTauSelectorPassed+MuHadTauSelectorPassed))
+  sumMuHadTauSelectorFailed=$((sumMuHadTauSelectorFailed+MuHadTauSelectorFailed))
+
+  MuHadIsoTauSelectorString=$(grep -m 1 " muHadIsoTauSelector" $file)
+  MuHadIsoTauSelectorVisited=$(echo $MuHadIsoTauSelectorString | cut -d " " -f 4)
+  MuHadIsoTauSelectorPassed=$(echo $MuHadIsoTauSelectorString | cut -d " " -f 5)
+  MuHadIsoTauSelectorFailed=$(echo $MuHadIsoTauSelectorString | cut -d " " -f 6)
+  sumMuHadIsoTauSelectorVisited=$((sumMuHadIsoTauSelectorVisited+MuHadIsoTauSelectorVisited))
+  sumMuHadIsoTauSelectorPassed=$((sumMuHadIsoTauSelectorPassed+MuHadIsoTauSelectorPassed))
+  sumMuHadIsoTauSelectorFailed=$((sumMuHadIsoTauSelectorFailed+MuHadIsoTauSelectorFailed))
 
 done
 echo "SumTotal= $sumTotal   sumPassed= $sumPassed"
 echo "Visited= $sumMuonIWantVisited  Passed= $sumMuonIWantPassed  Failed= $sumMuonIWantFailed : MuonIWant"
-echo "Visited= $sumHighestPtVisited  Passed= $sumHighestPtPassed  Failed= $sumHighestPtFailed : HighestPtAndMuonOppositeSignDRSelector"
+echo "Visited= $sumHighestPtVisited  Passed= $sumHighestPtPassed  Failed= $sumHighestPtFailed : HighestPtAndMuonSignDRSelector"
 echo "Visited= $sumMu1Mu2Visited   Passed= $sumMu1Mu2Passed   Failed= $sumMu1Mu2Failed : Mu1Mu2PtRankMuonID"
-echo "Visited= $sumMassVisited   Passed= $sumMassPassed   Failed= $sumMassFailed : Mu1Mu2MassSelection"
-echo "Visited= $sumIsolationVisited   Passed= $sumIsolationPassed   Failed= $sumIsolationFailed : Isolation"
-echo "Visited= $sumIsolationVisited   Passed= $sumIsolationPassed   Failed= $sumIsolationFailed : Isolation"
+echo "Visited= $sumMassVisited   Passed= $sumMassPassed   Failed= $sumMassFailed : InvMassCut"
+echo "Visited= $sumEtaVisited   Passed= $sumEtaPassed   Failed= $sumEtaFailed : Mu1Mu2EtaCut"
+echo "Visited= $sumIsolateVisited   Passed= $sumIsolatePassed   Failed= $sumIsolateFailed : Isolate"
 echo "Visited= $sumPtEtaCutVisited    Passed= $sumPtEtaCutPassed    Failed= $sumPtEtaCutFailed : PtEtaCut"
 echo "Visited= $sumMu45SelectorVisited    Passed= $sumMu45SelectorPassed    Failed= $sumMu45SelectorFailed : Mu45Selector"
 echo "Visited= $sumMu3Visited    Passed= $sumMu3Passed    Failed= $sumMu3Failed : Mu3"
 echo "Visited= $sumMu3IDVisited    Passed= $sumMu3IDPassed    Failed= $sumMu3IDFailed : Mu3ID"
-echo "Visited= $sumTauMuonPtSelectorVisited    Passed= $sumTauMuonPtSelectorPassed    Failed= $sumTauMuonPtSelectorFailed : TauMuonPtSelector"
+echo "Visited= $sumTauMuonPtSelectorVisited    Passed= $sumTauMuonPtSelectorPassed    Failed= $sumTauMuonPtSelectorFailed : tauMuonPtSelector"
+echo "Visited= $sumMuHadTauSelectorVisited    Passed= $sumMuHadTauSelectorPassed    Failed= $sumMuHadTauSelectorFailed : muHadTauSelector"
+echo "Visited= $sumMuHadIsoTauSelectorVisited    Passed= $sumMuHadIsoTauSelectorPassed    Failed= $sumMuHadIsoTauSelectorFailed : muHadIsoTauSelector"
 
 
 
