@@ -1,0 +1,1048 @@
+#include "tdrstyle.C"
+#include "CMS_lumi.C"
+#include <string.h>
+#include "TChain.h"
+#include "TFile.h"
+#include "TH1.h"
+#include "TTree.h"
+#include "TKey.h"
+#include "Riostream.h"
+#include "TCanvas.h"
+#include "TLegend.h"
+#include "TGraphAsymmErrors.h"
+#include "TGraph.h"
+#include "TMultiGraph.h"
+
+
+void rootMacro_Get2DTNP_ID()
+{
+
+  setTDRStyle(true);
+  gStyle->SetPalette(1);
+  gStyle->SetOptStat(0);
+  gStyle->SetPaintTextFormat("4.2f");
+
+  TFile *outFile = new TFile("/home/kyletos/Downloads/RootFiles/ABCD_Tests/TNP_JPsi_ID_EFFICIENCIES.root", "RECREATE");
+ 
+////////////////////////////////
+// Loose
+////////////////////////////////
+  double effLooseBD[3][4], effLooseEF[3][4], effLooseGH[3][4], effLooseMC[3][4], errLooseBD[3][4], errLooseEF[3][4], errLooseGH[3][4], errLooseMC[3][4];
+
+  // Run BD Set Values
+  effLooseBD[0][0] = .983;
+  effLooseBD[0][1] = .978;
+  effLooseBD[0][2] = .984;
+  effLooseBD[0][3] = .953;
+
+  effLooseBD[1][0] = .977;
+  effLooseBD[1][1] = .96;
+  effLooseBD[1][2] = .974;
+  effLooseBD[1][3] = .91;
+
+  effLooseBD[2][0] = .979;
+  effLooseBD[2][1] = .978;
+  effLooseBD[2][2] = .959;
+  effLooseBD[2][3] = .9;
+
+  errLooseBD[0][0] = .001;
+  errLooseBD[0][1] = .002;
+  errLooseBD[0][2] = .002;
+  errLooseBD[0][3] = .008;
+
+  errLooseBD[1][0] = .002;
+  errLooseBD[1][1] = .005;
+  errLooseBD[1][2] = .004;
+  errLooseBD[1][3] = .02;
+
+  errLooseBD[2][0] = .004;
+  errLooseBD[2][1] = .009;
+  errLooseBD[2][2] = .008;
+  errLooseBD[2][3] = .03;
+
+  // SEttin EF Values
+  effLooseEF[0][0] = .978;
+  effLooseEF[0][1] = .981;
+  effLooseEF[0][2] = .984;
+  effLooseEF[0][3] = .930;
+
+  effLooseEF[1][0] = .968;
+  effLooseEF[1][1] = .940;
+  effLooseEF[1][2] = .971;
+  effLooseEF[1][3] = .940;
+
+  effLooseEF[2][0] = .969;
+  effLooseEF[2][1] = .970;
+  effLooseEF[2][2] = .940;
+  effLooseEF[2][3] = .900;
+
+  errLooseEF[0][0] = .002;
+  errLooseEF[0][1] = .005;
+  errLooseEF[0][2] = .004;
+  errLooseEF[0][3] = .02;
+
+  errLooseEF[1][0] = .005;
+  errLooseEF[1][1] = .01;
+  errLooseEF[1][2] = .009;
+  errLooseEF[1][3] = .01;
+
+  errLooseEF[2][0] = .01;
+  errLooseEF[2][1] = .02;
+  errLooseEF[2][2] = .02;
+  errLooseEF[2][3] = .07;
+
+  //Setting GH values
+  effLooseGH[0][0] = .985;
+  effLooseGH[0][1] = .974;
+  effLooseGH[0][2] = .989;
+  effLooseGH[0][3] = .972;
+
+  effLooseGH[1][0] = .991;
+  effLooseGH[1][1] = .986;
+  effLooseGH[1][2] = .970;
+  effLooseGH[1][3] = .970;
+
+  effLooseGH[2][0] = .989;
+  effLooseGH[2][1] = .950;
+  effLooseGH[2][2] = .950;
+  effLooseGH[2][3] = .920;
+
+  errLooseGH[0][0] = .0005;
+  errLooseGH[0][1] = .004;
+  errLooseGH[0][2] = .003;
+  errLooseGH[0][3] = .01;
+
+  errLooseGH[1][0] = .004;
+  errLooseGH[1][1] = .009;
+  errLooseGH[1][2] = .006;
+  errLooseGH[1][3] = .03;
+
+  errLooseGH[2][0] = .007;
+  errLooseGH[2][1] = .01;
+  errLooseGH[2][2] = .01;
+  errLooseGH[2][3] = .04;
+
+  // Run MC Set Values
+  effLooseMC[0][0] = .9914;
+  effLooseMC[0][1] = .9908;
+  effLooseMC[0][2] = .9977;
+  effLooseMC[0][3] = .9963;
+
+  effLooseMC[1][0] = .9936;
+  effLooseMC[1][1] = .986;
+  effLooseMC[1][2] = .994;
+  effLooseMC[1][3] = .995;
+
+  effLooseMC[2][0] = .997;
+  effLooseMC[2][1] = .996;
+  effLooseMC[2][2] = .995;
+  effLooseMC[2][3] = .993;
+
+  errLooseMC[0][0] = .0004;
+  errLooseMC[0][1] = .0007;
+  errLooseMC[0][2] = .0002;
+  errLooseMC[0][3] = .0007;
+
+  errLooseMC[1][0] = .0008;
+  errLooseMC[1][1] = .002;
+  errLooseMC[1][2] = .0008;
+  errLooseMC[1][3] = .002;
+
+  errLooseMC[2][0] = .0009;
+  errLooseMC[2][1] = .002;
+  errLooseMC[2][2] = .001;
+  errLooseMC[2][3] = .005;
+
+  for (int i = 0; i < 3; i++)
+  {
+    for (int j = 0; j < 4; j++)
+    {
+      std::cout << i << j << "=" << effLooseMC[i][j] << "  " << errLooseMC[i][j] << std::endl;
+    }
+  }
+
+////////////////////////////////
+// Medium2016
+////////////////////////////////
+  double effMedium2016BD[3][4], effMedium2016EF[3][4], effMedium2016GH[3][4], effMedium2016MC[3][4], errMedium2016BD[3][4], errMedium2016EF[3][4], errMedium2016GH[3][4], errMedium2016MC[3][4];
+
+  // Run BD Set Values
+  effMedium2016BD[0][0] = .9694;
+  effMedium2016BD[0][1] = .95;
+  effMedium2016BD[0][2] = .971;
+  effMedium2016BD[0][3] = .915;
+
+  effMedium2016BD[1][0] = .965;
+  effMedium2016BD[1][1] = .941;
+  effMedium2016BD[1][2] = .962;
+  effMedium2016BD[1][3] = .88;
+
+  effMedium2016BD[2][0] = .968;
+  effMedium2016BD[2][1] = .964;
+  effMedium2016BD[2][2] = .947;
+  effMedium2016BD[2][3] = .87;
+
+  errMedium2016BD[0][0] = .001;
+  errMedium2016BD[0][1] = .002;
+  errMedium2016BD[0][2] = .002;
+  errMedium2016BD[0][3] = .008;
+
+  errMedium2016BD[1][0] = .002;
+  errMedium2016BD[1][1] = .005;
+  errMedium2016BD[1][2] = .005;
+  errMedium2016BD[1][3] = .02;
+
+  errMedium2016BD[2][0] = .004;
+  errMedium2016BD[2][1] = .009;
+  errMedium2016BD[2][2] = .008;
+  errMedium2016BD[2][3] = .03;
+
+  // SEttin EF Values
+  effMedium2016EF[0][0] = .964;
+  effMedium2016EF[0][1] = .952;
+  effMedium2016EF[0][2] = .972;
+  effMedium2016EF[0][3] = .89;
+
+  effMedium2016EF[1][0] = .956;
+  effMedium2016EF[1][1] = .92;
+  effMedium2016EF[1][2] = .954;
+  effMedium2016EF[1][3] = .91;
+
+  effMedium2016EF[2][0] = .958;
+  effMedium2016EF[2][1] = .95;
+  effMedium2016EF[2][2] = .94;
+  effMedium2016EF[2][3] = .86;
+
+  errMedium2016EF[0][0] = .002;
+  errMedium2016EF[0][1] = .004;
+  errMedium2016EF[0][2] = .004;
+  errMedium2016EF[0][3] = .02;
+
+  errMedium2016EF[1][0] = .005;
+  errMedium2016EF[1][1] = .01;
+  errMedium2016EF[1][2] = .009;
+  errMedium2016EF[1][3] = .04;
+
+  errMedium2016EF[2][0] = .01;
+  errMedium2016EF[2][1] = .02;
+  errMedium2016EF[2][2] = .02;
+  errMedium2016EF[2][3] = .07;
+
+  //Setting GH values
+  effMedium2016GH[0][0] = .972;
+  effMedium2016GH[0][1] = .95;
+  effMedium2016GH[0][2] = .976;
+  effMedium2016GH[0][3] = .936;
+
+  effMedium2016GH[1][0] = .982;
+  effMedium2016GH[1][1] = .972;
+  effMedium2016GH[1][2] = .96;
+  effMedium2016GH[1][3] = .94;
+
+  effMedium2016GH[2][0] = .981;
+  effMedium2016GH[2][1] = .94;
+  effMedium2016GH[2][2] = .95;
+  effMedium2016GH[2][3] = .88;
+
+  errMedium2016GH[0][0] = .002;
+  errMedium2016GH[0][1] = .004;
+  errMedium2016GH[0][2] = .003;
+  errMedium2016GH[0][3] = .01;
+
+  errMedium2016GH[1][0] = .004;
+  errMedium2016GH[1][1] = .009;
+  errMedium2016GH[1][2] = .006;
+  errMedium2016GH[1][3] = .02;
+
+  errMedium2016GH[2][0] = .007;
+  errMedium2016GH[2][1] = .01;
+  errMedium2016GH[2][2] = .01;
+  errMedium2016GH[2][3] = .04;
+
+  // Run MC Set Values
+  effMedium2016MC[0][0] = .99772;
+  effMedium2016MC[0][1] = .96;
+  effMedium2016MC[0][2] = .9877;
+  effMedium2016MC[0][3] = .984;
+
+  effMedium2016MC[1][0] = .9876;
+  effMedium2016MC[1][1] = .973;
+  effMedium2016MC[1][2] = .988;
+  effMedium2016MC[1][3] = .986;
+
+  effMedium2016MC[2][0] = .99;
+  effMedium2016MC[2][1] = .9903;
+  effMedium2016MC[2][2] = .994;
+  effMedium2016MC[2][3] = .987;
+
+  errMedium2016MC[0][0] = .0006;
+  errMedium2016MC[0][1] = .001;
+  errMedium2016MC[0][2] = .0005;
+  errMedium2016MC[0][3] = .001;
+
+  errMedium2016MC[1][0] = .0009;
+  errMedium2016MC[1][1] = .007;
+  errMedium2016MC[1][2] = .001;
+  errMedium2016MC[1][3] = .002;
+
+  errMedium2016MC[2][0] = .002;
+  errMedium2016MC[2][1] = .0003;
+  errMedium2016MC[2][2] = .001;
+  errMedium2016MC[2][3] = .006;
+
+////////////////////////////////
+// Medium
+////////////////////////////////
+  double effMediumBD[3][4], effMediumEF[3][4], effMediumGH[3][4], effMediumMC[3][4], errMediumBD[3][4], errMediumEF[3][4], errMediumGH[3][4], errMediumMC[3][4];
+
+  // Run BD Set Values
+  effMediumBD[0][0] = .9688; 
+  effMediumBD[0][1] = .95;
+  effMediumBD[0][2] = .969;
+  effMediumBD[0][3] = .906;
+
+  effMediumBD[1][0] = .964;
+  effMediumBD[1][1] = .941;
+  effMediumBD[1][2] = .961;
+  effMediumBD[1][3] = .87;
+
+  effMediumBD[2][0] = .968;
+  effMediumBD[2][1] = .964;
+  effMediumBD[2][2] = .946;
+  effMediumBD[2][3] = .86;
+
+  errMediumBD[0][0] = .001;
+  errMediumBD[0][1] = .002;
+  errMediumBD[0][2] = .002;
+  errMediumBD[0][3] = .008;
+
+  errMediumBD[1][0] = .002;
+  errMediumBD[1][1] = .005;
+  errMediumBD[1][2] = .005;
+  errMediumBD[1][3] = .02;
+
+  errMediumBD[2][0] = .004;
+  errMediumBD[2][1] = .009;
+  errMediumBD[2][2] = .008;
+  errMediumBD[2][3] = .03;
+
+  // SEttin EF Values
+  effMediumEF[0][0] = .963;
+  effMediumEF[0][1] = .951;
+  effMediumEF[0][2] = .968;
+  effMediumEF[0][3] = .87;
+
+  effMediumEF[1][0] = .954;
+  effMediumEF[1][1] = .92;
+  effMediumEF[1][2] = .951;
+  effMediumEF[1][3] = .903;
+
+  effMediumEF[2][0] = .956;
+  effMediumEF[2][1] = .95;
+  effMediumEF[2][2] = .93;
+  effMediumEF[2][3] = .86;
+
+  errMediumEF[0][0] = .002;
+  errMediumEF[0][1] = .004;
+  errMediumEF[0][2] = .004;
+  errMediumEF[0][3] = .02;
+
+  errMediumEF[1][0] = .005;
+  errMediumEF[1][1] = .01;
+  errMediumEF[1][2] = .009;
+  errMediumEF[1][3] = .007;
+
+  errMediumEF[2][0] = .01;
+  errMediumEF[2][1] = .02;
+  errMediumEF[2][2] = .02;
+  errMediumEF[2][3] = .07;
+
+  //Setting GH values
+  effMediumGH[0][0] = .971;
+  effMediumGH[0][1] = .949;
+  effMediumGH[0][2] = .975;
+  effMediumGH[0][3] = .935;
+
+  effMediumGH[1][0] = .982;
+  effMediumGH[1][1] = .972;
+  effMediumGH[1][2] = .959;
+  effMediumGH[1][3] = .94;
+
+  effMediumGH[2][0] = .979;
+  effMediumGH[2][1] = .94;
+  effMediumGH[2][2] = .95;
+  effMediumGH[2][3] = .89;
+
+  errMediumGH[0][0] = .002;
+  errMediumGH[0][1] = .004;
+  errMediumGH[0][2] = .003;
+  errMediumGH[0][3] = .01;
+
+  errMediumGH[1][0] = .004;
+  errMediumGH[1][1] = .009;
+  errMediumGH[1][2] = .006;
+  errMediumGH[1][3] = .02;
+
+  errMediumGH[2][0] = .007;
+  errMediumGH[2][1] = .01;
+  errMediumGH[2][2] = .01;
+  errMediumGH[2][3] = .04;
+
+  // Run MC Set Values
+  effMediumMC[0][0] = .9767;
+  effMediumMC[0][1] = .960;
+  effMediumMC[0][2] = .9874;
+  effMediumMC[0][3] = .983;
+
+  effMediumMC[1][0] = .987;
+  effMediumMC[1][1] = .973;
+  effMediumMC[1][2] = .988;
+  effMediumMC[1][3] = .986;
+
+  effMediumMC[2][0] = .989;
+  effMediumMC[2][1] = .9903;
+  effMediumMC[2][2] = .993;
+  effMediumMC[2][3] = .987;
+
+  errMediumMC[0][0] = .0006;
+  errMediumMC[0][1] = .001;
+  errMediumMC[0][2] = .0005;
+  errMediumMC[0][3] = .001;
+
+  errMediumMC[1][0] = .0009;
+  errMediumMC[1][1] = .002;
+  errMediumMC[1][2] = .001;
+  errMediumMC[1][3] = .002;
+
+  errMediumMC[2][0] = .002;
+  errMediumMC[2][1] = .0003;
+  errMediumMC[2][2] = .002;
+  errMediumMC[2][3] = .006;
+
+
+
+
+////////////////////////////
+// Declaring Canvases
+////////////////////////////
+  TCanvas *EtavsPtLooseIDRunBDCanvas = new TCanvas("EtavsPtLooseIDRunBDCanvas", "", 600, 600);
+  TCanvas *EtavsPtMedium2016IDRunBDCanvas = new TCanvas("EtavsPtMedium2016IDRunBDCanvas", "", 600, 600);
+  TCanvas *EtavsPtMediumIDRunBDCanvas = new TCanvas("EtavsPtMediumIDRunBDCanvas", "", 600, 600);
+ 
+  TCanvas *EtavsPtLooseIDRunEFCanvas = new TCanvas("EtavsPtLooseIDRunEFCanvas", "", 600, 600);
+  TCanvas *EtavsPtMedium2016IDRunEFCanvas = new TCanvas("EtavsPtMedium2016IDRunEFCanvas", "", 600, 600);
+  TCanvas *EtavsPtMediumIDRunEFCanvas = new TCanvas("EtavsPtMediumIDRunEFCanvas", "", 600, 600);
+ 
+  TCanvas *EtavsPtLooseIDRunGHCanvas = new TCanvas("EtavsPtLooseIDRunGHCanvas", "", 600, 600);
+  TCanvas *EtavsPtMedium2016IDRunGHCanvas = new TCanvas("EtavsPtMedium2016IDRunGHCanvas", "", 600, 600);
+  TCanvas *EtavsPtMediumIDRunGHCanvas = new TCanvas("EtavsPtMediumIDRunGHCanvas", "", 600, 600);
+ 
+  TCanvas *EtavsPtLooseIDMCCanvas = new TCanvas("EtavsPtLooseIDMCCanvas", "", 600, 600);
+  TCanvas *EtavsPtMedium2016IDMCCanvas = new TCanvas("EtavsPtMedium2016IDMCCanvas", "", 600, 600);
+  TCanvas *EtavsPtMediumIDMCCanvas = new TCanvas("EtavsPtMediumIDMCCanvas", "", 600, 600);
+
+  Float_t binsx[] = {5, 10, 15, 20};
+  Float_t binsy[] = {0, .9, 1.2, 2.1, 2.4};
+  TH2F *EtavsPtLooseIDRunBD_ = new TH2F("EtavsPtLooseIDRunBD", "Loose ID Efficiency Run B to D", sizeof(binsx)/sizeof(Float_t) - 1, binsx, sizeof(binsy)/sizeof(Float_t) - 1, binsy);
+  TH2F *EtavsPtMedium2016IDRunBD_ = new TH2F("EtavsPtMedium2016IDRunBD", "Medium2016 ID Efficiency Run B to D", sizeof(binsx)/sizeof(Float_t) - 1, binsx, sizeof(binsy)/sizeof(Float_t) - 1, binsy);
+  TH2F *EtavsPtMediumIDRunBD_ = new TH2F("EtavsPtMediumIDRunBD", "Medium ID Efficiency Run B to D", sizeof(binsx)/sizeof(Float_t) - 1, binsx, sizeof(binsy)/sizeof(Float_t) - 1, binsy);
+
+  TH2F *EtavsPtLooseIDRunEF_ = new TH2F("EtavsPtLooseIDRunEF", "Loose ID Efficiency Run E,F", sizeof(binsx)/sizeof(Float_t) - 1, binsx, sizeof(binsy)/sizeof(Float_t) - 1, binsy);
+  TH2F *EtavsPtMedium2016IDRunEF_ = new TH2F("EtavsPtMedium2016IDRunEF", "Medium2016 ID Efficiency Run E,F", sizeof(binsx)/sizeof(Float_t) - 1, binsx, sizeof(binsy)/sizeof(Float_t) - 1, binsy);
+  TH2F *EtavsPtMediumIDRunEF_ = new TH2F("EtavsPtMediumIDRunEF", "Medium ID Efficiency Run E,F", sizeof(binsx)/sizeof(Float_t) - 1, binsx, sizeof(binsy)/sizeof(Float_t) - 1, binsy);
+
+  TH2F *EtavsPtLooseIDRunGH_ = new TH2F("EtavsPtLooseIDRunGH", "Loose ID Efficiency Run G,H", sizeof(binsx)/sizeof(Float_t) - 1, binsx, sizeof(binsy)/sizeof(Float_t) - 1, binsy);
+  TH2F *EtavsPtMedium2016IDRunGH_ = new TH2F("EtavsPtMedium2016IDRunGH", "Medium2016 ID Efficiency Run G,H", sizeof(binsx)/sizeof(Float_t) - 1, binsx, sizeof(binsy)/sizeof(Float_t) - 1, binsy);
+  TH2F *EtavsPtMediumIDRunGH_ = new TH2F("EtavsPtMediumIDRunGH", "Medium ID Efficiency Run G,H", sizeof(binsx)/sizeof(Float_t) - 1, binsx, sizeof(binsy)/sizeof(Float_t) - 1, binsy);
+
+  TH2F *EtavsPtLooseIDMC_ = new TH2F("EtavsPtLooseIDMC", "Loose ID Efficiency", sizeof(binsx)/sizeof(Float_t) - 1, binsx, sizeof(binsy)/sizeof(Float_t) - 1, binsy);
+  TH2F *EtavsPtMedium2016IDMC_ = new TH2F("EtavsPtMedium2016IDMC", "Medium2016 ID Efficiency", sizeof(binsx)/sizeof(Float_t) - 1, binsx, sizeof(binsy)/sizeof(Float_t) - 1, binsy);
+  TH2F *EtavsPtMediumIDMC_ = new TH2F("EtavsPtMediumIDMC", "Medium ID Efficiency", sizeof(binsx)/sizeof(Float_t) - 1, binsx, sizeof(binsy)/sizeof(Float_t) - 1, binsy);
+
+  for ( int i = 1; i <=3; i++)
+  {
+    for (int j = 1; j <=4; j++)
+    {
+      EtavsPtLooseIDRunBD_->SetBinContent(i, j, effLooseBD[i-1][j-1] );
+      EtavsPtLooseIDRunBD_->SetBinError(i, j, errLooseBD[i-1][j-1] );
+      EtavsPtMedium2016IDRunBD_->SetBinContent(i, j, effMedium2016BD[i-1][j-1] );
+      EtavsPtMedium2016IDRunBD_->SetBinError(i, j, errMedium2016BD[i-1][j-1] );
+      EtavsPtMediumIDRunBD_->SetBinContent(i, j, effMediumBD[i-1][j-1] );
+      EtavsPtMediumIDRunBD_->SetBinError(i, j, errMediumBD[i-1][j-1] );
+
+      EtavsPtLooseIDRunEF_->SetBinContent(i, j, effLooseEF[i-1][j-1] );
+      EtavsPtLooseIDRunEF_->SetBinError(i, j, errLooseEF[i-1][j-1] );
+      EtavsPtMedium2016IDRunEF_->SetBinContent(i, j, effMedium2016EF[i-1][j-1] );
+      EtavsPtMedium2016IDRunEF_->SetBinError(i, j, errMedium2016EF[i-1][j-1] );
+      EtavsPtMediumIDRunEF_->SetBinContent(i, j, effMediumEF[i-1][j-1] );
+      EtavsPtMediumIDRunEF_->SetBinError(i, j, errMediumEF[i-1][j-1] );
+      
+      EtavsPtLooseIDRunGH_->SetBinContent(i, j, effLooseGH[i-1][j-1] );
+      EtavsPtLooseIDRunGH_->SetBinError(i, j, errLooseGH[i-1][j-1] );
+      EtavsPtMedium2016IDRunGH_->SetBinContent(i, j, effMedium2016GH[i-1][j-1] );
+      EtavsPtMedium2016IDRunGH_->SetBinError(i, j, errMedium2016GH[i-1][j-1] );
+      EtavsPtMediumIDRunGH_->SetBinContent(i, j, effMediumGH[i-1][j-1] );
+      EtavsPtMediumIDRunGH_->SetBinError(i, j, errMediumGH[i-1][j-1] );
+
+      EtavsPtLooseIDMC_->SetBinContent(i, j, effLooseMC[i-1][j-1] );
+      EtavsPtLooseIDMC_->SetBinError(i, j, errLooseMC[i-1][j-1] );
+      EtavsPtMedium2016IDMC_->SetBinContent(i, j, effMedium2016MC[i-1][j-1] );
+      EtavsPtMedium2016IDMC_->SetBinError(i, j, errMedium2016MC[i-1][j-1] );
+      EtavsPtMediumIDMC_->SetBinContent(i, j, effMediumMC[i-1][j-1] );
+      EtavsPtMediumIDMC_->SetBinError(i, j, errMediumMC[i-1][j-1] );
+    }//for j
+  }//for i
+
+  // Fill Style
+  EtavsPtLooseIDRunBD_->SetFillStyle(0);
+  EtavsPtLooseIDRunBD_->SetFillStyle(0);
+  EtavsPtMedium2016IDRunBD_->SetFillStyle(0);
+  EtavsPtMedium2016IDRunBD_->SetFillStyle(0);
+  EtavsPtMediumIDRunBD_->SetFillStyle(0);
+  EtavsPtMediumIDRunBD_->SetFillStyle(0);
+
+  EtavsPtLooseIDRunEF_->SetFillStyle(0);
+  EtavsPtLooseIDRunEF_->SetFillStyle(0);
+  EtavsPtMedium2016IDRunEF_->SetFillStyle(0);
+  EtavsPtMedium2016IDRunEF_->SetFillStyle(0);
+  EtavsPtMediumIDRunEF_->SetFillStyle(0);
+  EtavsPtMediumIDRunEF_->SetFillStyle(0);
+
+  EtavsPtLooseIDRunGH_->SetFillStyle(0);
+  EtavsPtLooseIDRunGH_->SetFillStyle(0);
+  EtavsPtMedium2016IDRunGH_->SetFillStyle(0);
+  EtavsPtMedium2016IDRunGH_->SetFillStyle(0);
+  EtavsPtMediumIDRunGH_->SetFillStyle(0);
+  EtavsPtMediumIDRunGH_->SetFillStyle(0);
+
+  EtavsPtLooseIDMC_->SetFillStyle(0);
+  EtavsPtLooseIDMC_->SetFillStyle(0);
+  EtavsPtMedium2016IDMC_->SetFillStyle(0);
+  EtavsPtMedium2016IDMC_->SetFillStyle(0);
+  EtavsPtMediumIDMC_->SetFillStyle(0);
+  EtavsPtMediumIDMC_->SetFillStyle(0);
+
+  // Fill Color
+  EtavsPtLooseIDRunBD_->SetFillColor(0);
+  EtavsPtLooseIDRunBD_->SetFillColor(0);
+  EtavsPtMedium2016IDRunBD_->SetFillColor(0);
+  EtavsPtMedium2016IDRunBD_->SetFillColor(0);
+  EtavsPtMediumIDRunBD_->SetFillColor(0);
+  EtavsPtMediumIDRunBD_->SetFillColor(0);
+  
+  EtavsPtLooseIDRunEF_->SetFillColor(0);
+  EtavsPtLooseIDRunEF_->SetFillColor(0);
+  EtavsPtMedium2016IDRunEF_->SetFillColor(0);
+  EtavsPtMedium2016IDRunEF_->SetFillColor(0);
+  EtavsPtMediumIDRunEF_->SetFillColor(0);
+  EtavsPtMediumIDRunEF_->SetFillColor(0);
+  
+  EtavsPtLooseIDRunGH_->SetFillColor(0);
+  EtavsPtLooseIDRunGH_->SetFillColor(0);
+  EtavsPtMedium2016IDRunGH_->SetFillColor(0);
+  EtavsPtMedium2016IDRunGH_->SetFillColor(0);
+  EtavsPtMediumIDRunGH_->SetFillColor(0);
+  EtavsPtMediumIDRunGH_->SetFillColor(0);
+  
+  EtavsPtLooseIDMC_->SetFillColor(0);
+  EtavsPtLooseIDMC_->SetFillColor(0);
+  EtavsPtMedium2016IDMC_->SetFillColor(0);
+  EtavsPtMedium2016IDMC_->SetFillColor(0);
+  EtavsPtMediumIDMC_->SetFillColor(0);
+  EtavsPtMediumIDMC_->SetFillColor(0);
+
+  // Fill Color
+  EtavsPtLooseIDRunBD_->SetStats(false);
+  EtavsPtLooseIDRunBD_->SetStats(false);
+  EtavsPtMedium2016IDRunBD_->SetStats(false);
+  EtavsPtMedium2016IDRunBD_->SetStats(false);
+  EtavsPtMediumIDRunBD_->SetStats(false);
+  EtavsPtMediumIDRunBD_->SetStats(false);
+
+  EtavsPtLooseIDRunEF_->SetStats(false);
+  EtavsPtLooseIDRunEF_->SetStats(false);
+  EtavsPtMedium2016IDRunEF_->SetStats(false);
+  EtavsPtMedium2016IDRunEF_->SetStats(false);
+  EtavsPtMediumIDRunEF_->SetStats(false);
+  EtavsPtMediumIDRunEF_->SetStats(false);
+
+  EtavsPtLooseIDRunGH_->SetStats(false);
+  EtavsPtLooseIDRunGH_->SetStats(false);
+  EtavsPtMedium2016IDRunGH_->SetStats(false);
+  EtavsPtMedium2016IDRunGH_->SetStats(false);
+  EtavsPtMediumIDRunGH_->SetStats(false);
+  EtavsPtMediumIDRunGH_->SetStats(false);
+
+  EtavsPtLooseIDMC_->SetStats(false);
+  EtavsPtLooseIDMC_->SetStats(false);
+  EtavsPtMedium2016IDMC_->SetStats(false);
+  EtavsPtMedium2016IDMC_->SetStats(false);
+  EtavsPtMediumIDMC_->SetStats(false);
+  EtavsPtMediumIDMC_->SetStats(false);
+
+  // Fill Color
+  EtavsPtLooseIDRunBD_->GetXaxis()->SetTitle("muon p_{T} (GeV/c)");
+  EtavsPtLooseIDRunBD_->GetXaxis()->SetTitle("muon p_{T} (GeV/c)");
+  EtavsPtMedium2016IDRunBD_->GetXaxis()->SetTitle("muon p_{T} (GeV/c)");
+  EtavsPtMedium2016IDRunBD_->GetXaxis()->SetTitle("muon p_{T} (GeV/c)");
+  EtavsPtMediumIDRunBD_->GetXaxis()->SetTitle("muon p_{T} (GeV/c)");
+  EtavsPtMediumIDRunBD_->GetXaxis()->SetTitle("muon p_{T} (GeV/c)");
+  
+  EtavsPtLooseIDRunEF_->GetXaxis()->SetTitle("muon p_{T} (GeV/c)");
+  EtavsPtLooseIDRunEF_->GetXaxis()->SetTitle("muon p_{T} (GeV/c)");
+  EtavsPtMedium2016IDRunEF_->GetXaxis()->SetTitle("muon p_{T} (GeV/c)");
+  EtavsPtMedium2016IDRunEF_->GetXaxis()->SetTitle("muon p_{T} (GeV/c)");
+  EtavsPtMediumIDRunEF_->GetXaxis()->SetTitle("muon p_{T} (GeV/c)");
+  EtavsPtMediumIDRunEF_->GetXaxis()->SetTitle("muon p_{T} (GeV/c)");
+
+  EtavsPtLooseIDRunGH_->GetXaxis()->SetTitle("muon p_{T} (GeV/c)");
+  EtavsPtLooseIDRunGH_->GetXaxis()->SetTitle("muon p_{T} (GeV/c)");
+  EtavsPtMedium2016IDRunGH_->GetXaxis()->SetTitle("muon p_{T} (GeV/c)");
+  EtavsPtMedium2016IDRunGH_->GetXaxis()->SetTitle("muon p_{T} (GeV/c)");
+  EtavsPtMediumIDRunGH_->GetXaxis()->SetTitle("muon p_{T} (GeV/c)");
+  EtavsPtMediumIDRunGH_->GetXaxis()->SetTitle("muon p_{T} (GeV/c)");
+
+  EtavsPtLooseIDMC_->GetXaxis()->SetTitle("muon p_{T} (GeV/c)");
+  EtavsPtLooseIDMC_->GetXaxis()->SetTitle("muon p_{T} (GeV/c)");
+  EtavsPtMedium2016IDMC_->GetXaxis()->SetTitle("muon p_{T} (GeV/c)");
+  EtavsPtMedium2016IDMC_->GetXaxis()->SetTitle("muon p_{T} (GeV/c)");
+  EtavsPtMediumIDMC_->GetXaxis()->SetTitle("muon p_{T} (GeV/c)");
+  EtavsPtMediumIDMC_->GetXaxis()->SetTitle("muon p_{T} (GeV/c)");
+
+  // Fill Color
+  EtavsPtLooseIDRunBD_->GetXaxis()->SetTitleSize(.031);
+  EtavsPtLooseIDRunBD_->GetXaxis()->SetTitleSize(.031);
+  EtavsPtMedium2016IDRunBD_->GetXaxis()->SetTitleSize(.031);
+  EtavsPtMedium2016IDRunBD_->GetXaxis()->SetTitleSize(.031);
+  EtavsPtMediumIDRunBD_->GetXaxis()->SetTitleSize(.031);
+  EtavsPtMediumIDRunBD_->GetXaxis()->SetTitleSize(.031);
+
+  EtavsPtLooseIDRunEF_->GetXaxis()->SetTitleSize(.031);
+  EtavsPtLooseIDRunEF_->GetXaxis()->SetTitleSize(.031);
+  EtavsPtMedium2016IDRunEF_->GetXaxis()->SetTitleSize(.031);
+  EtavsPtMedium2016IDRunEF_->GetXaxis()->SetTitleSize(.031);
+  EtavsPtMediumIDRunEF_->GetXaxis()->SetTitleSize(.031);
+  EtavsPtMediumIDRunEF_->GetXaxis()->SetTitleSize(.031);
+
+  EtavsPtLooseIDRunGH_->GetXaxis()->SetTitleSize(.031);
+  EtavsPtLooseIDRunGH_->GetXaxis()->SetTitleSize(.031);
+  EtavsPtMedium2016IDRunGH_->GetXaxis()->SetTitleSize(.031);
+  EtavsPtMedium2016IDRunGH_->GetXaxis()->SetTitleSize(.031);
+  EtavsPtMediumIDRunGH_->GetXaxis()->SetTitleSize(.031);
+  EtavsPtMediumIDRunGH_->GetXaxis()->SetTitleSize(.031);
+
+  EtavsPtLooseIDMC_->GetXaxis()->SetTitleSize(.031);
+  EtavsPtLooseIDMC_->GetXaxis()->SetTitleSize(.031);
+  EtavsPtMedium2016IDMC_->GetXaxis()->SetTitleSize(.031);
+  EtavsPtMedium2016IDMC_->GetXaxis()->SetTitleSize(.031);
+  EtavsPtMediumIDMC_->GetXaxis()->SetTitleSize(.031);
+  EtavsPtMediumIDMC_->GetXaxis()->SetTitleSize(.031);
+
+  // Fill Color
+  EtavsPtLooseIDRunBD_->GetYaxis()->SetTitle("muon |#eta|");
+  EtavsPtLooseIDRunBD_->GetYaxis()->SetTitle("muon |#eta|");
+  EtavsPtMedium2016IDRunBD_->GetYaxis()->SetTitle("muon |#eta|");
+  EtavsPtMedium2016IDRunBD_->GetYaxis()->SetTitle("muon |#eta|");
+  EtavsPtMediumIDRunBD_->GetYaxis()->SetTitle("muon |#eta|");
+  EtavsPtMediumIDRunBD_->GetYaxis()->SetTitle("muon |#eta|");
+
+  EtavsPtLooseIDRunEF_->GetYaxis()->SetTitle("muon |#eta|");
+  EtavsPtLooseIDRunEF_->GetYaxis()->SetTitle("muon |#eta|");
+  EtavsPtMedium2016IDRunEF_->GetYaxis()->SetTitle("muon |#eta|");
+  EtavsPtMedium2016IDRunEF_->GetYaxis()->SetTitle("muon |#eta|");
+  EtavsPtMediumIDRunEF_->GetYaxis()->SetTitle("muon |#eta|");
+  EtavsPtMediumIDRunEF_->GetYaxis()->SetTitle("muon |#eta|");
+
+  EtavsPtLooseIDRunGH_->GetYaxis()->SetTitle("muon |#eta|");
+  EtavsPtLooseIDRunGH_->GetYaxis()->SetTitle("muon |#eta|");
+  EtavsPtMedium2016IDRunGH_->GetYaxis()->SetTitle("muon |#eta|");
+  EtavsPtMedium2016IDRunGH_->GetYaxis()->SetTitle("muon |#eta|");
+  EtavsPtMediumIDRunGH_->GetYaxis()->SetTitle("muon |#eta|");
+  EtavsPtMediumIDRunGH_->GetYaxis()->SetTitle("muon |#eta|");
+
+  EtavsPtLooseIDMC_->GetYaxis()->SetTitle("muon |#eta|");
+  EtavsPtLooseIDMC_->GetYaxis()->SetTitle("muon |#eta|");
+  EtavsPtMedium2016IDMC_->GetYaxis()->SetTitle("muon |#eta|");
+  EtavsPtMedium2016IDMC_->GetYaxis()->SetTitle("muon |#eta|");
+  EtavsPtMediumIDMC_->GetYaxis()->SetTitle("muon |#eta|");
+  EtavsPtMediumIDMC_->GetYaxis()->SetTitle("muon |#eta|");
+
+  // Fill Color
+  EtavsPtLooseIDRunBD_->GetYaxis()->SetTitleSize(.031);
+  EtavsPtLooseIDRunBD_->GetYaxis()->SetTitleSize(.031);
+  EtavsPtMedium2016IDRunBD_->GetYaxis()->SetTitleSize(.031);
+  EtavsPtMedium2016IDRunBD_->GetYaxis()->SetTitleSize(.031);
+  EtavsPtMediumIDRunBD_->GetYaxis()->SetTitleSize(.031);
+  EtavsPtMediumIDRunBD_->GetYaxis()->SetTitleSize(.031);
+
+  EtavsPtLooseIDRunEF_->GetYaxis()->SetTitleSize(.031);
+  EtavsPtLooseIDRunEF_->GetYaxis()->SetTitleSize(.031);
+  EtavsPtMedium2016IDRunEF_->GetYaxis()->SetTitleSize(.031);
+  EtavsPtMedium2016IDRunEF_->GetYaxis()->SetTitleSize(.031);
+  EtavsPtMediumIDRunEF_->GetYaxis()->SetTitleSize(.031);
+  EtavsPtMediumIDRunEF_->GetYaxis()->SetTitleSize(.031);
+
+  EtavsPtLooseIDRunGH_->GetYaxis()->SetTitleSize(.031);
+  EtavsPtLooseIDRunGH_->GetYaxis()->SetTitleSize(.031);
+  EtavsPtMedium2016IDRunGH_->GetYaxis()->SetTitleSize(.031);
+  EtavsPtMedium2016IDRunGH_->GetYaxis()->SetTitleSize(.031);
+  EtavsPtMediumIDRunGH_->GetYaxis()->SetTitleSize(.031);
+  EtavsPtMediumIDRunGH_->GetYaxis()->SetTitleSize(.031);
+
+  EtavsPtLooseIDMC_->GetYaxis()->SetTitleSize(.031);
+  EtavsPtLooseIDMC_->GetYaxis()->SetTitleSize(.031);
+  EtavsPtMedium2016IDMC_->GetYaxis()->SetTitleSize(.031);
+  EtavsPtMedium2016IDMC_->GetYaxis()->SetTitleSize(.031);
+  EtavsPtMediumIDMC_->GetYaxis()->SetTitleSize(.031);
+  EtavsPtMediumIDMC_->GetYaxis()->SetTitleSize(.031);
+
+  // Fill Color
+  EtavsPtLooseIDRunBD_->GetYaxis()->SetTitleOffset(1.1);
+  EtavsPtLooseIDRunBD_->GetYaxis()->SetTitleOffset(1.1);
+  EtavsPtMedium2016IDRunBD_->GetYaxis()->SetTitleOffset(1.1);
+  EtavsPtMedium2016IDRunBD_->GetYaxis()->SetTitleOffset(1.1);
+  EtavsPtMediumIDRunBD_->GetYaxis()->SetTitleOffset(1.1);
+  EtavsPtMediumIDRunBD_->GetYaxis()->SetTitleOffset(1.1);
+
+  EtavsPtLooseIDRunEF_->GetYaxis()->SetTitleOffset(1.1);
+  EtavsPtLooseIDRunEF_->GetYaxis()->SetTitleOffset(1.1);
+  EtavsPtMedium2016IDRunEF_->GetYaxis()->SetTitleOffset(1.1);
+  EtavsPtMedium2016IDRunEF_->GetYaxis()->SetTitleOffset(1.1);
+  EtavsPtMediumIDRunEF_->GetYaxis()->SetTitleOffset(1.1);
+  EtavsPtMediumIDRunEF_->GetYaxis()->SetTitleOffset(1.1);
+
+  EtavsPtLooseIDRunGH_->GetYaxis()->SetTitleOffset(1.1);
+  EtavsPtLooseIDRunGH_->GetYaxis()->SetTitleOffset(1.1);
+  EtavsPtMedium2016IDRunGH_->GetYaxis()->SetTitleOffset(1.1);
+  EtavsPtMedium2016IDRunGH_->GetYaxis()->SetTitleOffset(1.1);
+  EtavsPtMediumIDRunGH_->GetYaxis()->SetTitleOffset(1.1);
+  EtavsPtMediumIDRunGH_->GetYaxis()->SetTitleOffset(1.1);
+
+  EtavsPtLooseIDMC_->GetYaxis()->SetTitleOffset(1.1);
+  EtavsPtLooseIDMC_->GetYaxis()->SetTitleOffset(1.1);
+  EtavsPtMedium2016IDMC_->GetYaxis()->SetTitleOffset(1.1);
+  EtavsPtMedium2016IDMC_->GetYaxis()->SetTitleOffset(1.1);
+  EtavsPtMediumIDMC_->GetYaxis()->SetTitleOffset(1.1);
+  EtavsPtMediumIDMC_->GetYaxis()->SetTitleOffset(1.1);
+
+  // Fill Color
+  EtavsPtLooseIDRunBD_->GetXaxis()->SetTitleOffset(1.5);
+  EtavsPtLooseIDRunBD_->GetXaxis()->SetTitleOffset(1.5);
+  EtavsPtMedium2016IDRunBD_->GetXaxis()->SetTitleOffset(1.5);
+  EtavsPtMedium2016IDRunBD_->GetXaxis()->SetTitleOffset(1.5);
+  EtavsPtMediumIDRunBD_->GetXaxis()->SetTitleOffset(1.5);
+  EtavsPtMediumIDRunBD_->GetXaxis()->SetTitleOffset(1.5);
+  
+  EtavsPtLooseIDRunEF_->GetXaxis()->SetTitleOffset(1.5);
+  EtavsPtLooseIDRunEF_->GetXaxis()->SetTitleOffset(1.5);
+  EtavsPtMedium2016IDRunEF_->GetXaxis()->SetTitleOffset(1.5);
+  EtavsPtMedium2016IDRunEF_->GetXaxis()->SetTitleOffset(1.5);
+  EtavsPtMediumIDRunEF_->GetXaxis()->SetTitleOffset(1.5);
+  EtavsPtMediumIDRunEF_->GetXaxis()->SetTitleOffset(1.5);
+ 
+  EtavsPtLooseIDRunGH_->GetXaxis()->SetTitleOffset(1.5);
+  EtavsPtLooseIDRunGH_->GetXaxis()->SetTitleOffset(1.5);
+  EtavsPtMedium2016IDRunGH_->GetXaxis()->SetTitleOffset(1.5);
+  EtavsPtMedium2016IDRunGH_->GetXaxis()->SetTitleOffset(1.5);
+  EtavsPtMediumIDRunGH_->GetXaxis()->SetTitleOffset(1.5);
+  EtavsPtMediumIDRunGH_->GetXaxis()->SetTitleOffset(1.5);
+  
+  EtavsPtLooseIDMC_->GetXaxis()->SetTitleOffset(1.5);
+  EtavsPtLooseIDMC_->GetXaxis()->SetTitleOffset(1.5);
+  EtavsPtMedium2016IDMC_->GetXaxis()->SetTitleOffset(1.5);
+  EtavsPtMedium2016IDMC_->GetXaxis()->SetTitleOffset(1.5);
+  EtavsPtMediumIDMC_->GetXaxis()->SetTitleOffset(1.5);
+  EtavsPtMediumIDMC_->GetXaxis()->SetTitleOffset(1.5);
+
+  EtavsPtLooseIDRunBDCanvas->cd();
+  EtavsPtLooseIDRunBD_->Draw("COLZTEXT60 E");
+  EtavsPtMedium2016IDRunBDCanvas->cd();
+  EtavsPtMedium2016IDRunBD_->Draw("COLZTEXT60 E");
+  EtavsPtMediumIDRunBDCanvas->cd();
+  EtavsPtMediumIDRunBD_->Draw("COLZTEXT60 E");
+
+  EtavsPtLooseIDRunEFCanvas->cd();
+  EtavsPtLooseIDRunEF_->Draw("COLZTEXT60 E");
+  EtavsPtMedium2016IDRunEFCanvas->cd();
+  EtavsPtMedium2016IDRunEF_->Draw("COLZTEXT60 E");
+  EtavsPtMediumIDRunEFCanvas->cd();
+  EtavsPtMediumIDRunEF_->Draw("COLZTEXT60 E");
+
+  EtavsPtLooseIDRunGHCanvas->cd();
+  EtavsPtLooseIDRunGH_->Draw("COLZTEXT60 E");
+  EtavsPtMedium2016IDRunGHCanvas->cd();
+  EtavsPtMedium2016IDRunGH_->Draw("COLZTEXT60 E");
+  EtavsPtMediumIDRunGHCanvas->cd();
+  EtavsPtMediumIDRunGH_->Draw("COLZTEXT60 E");
+
+  EtavsPtLooseIDMCCanvas->cd();
+  EtavsPtLooseIDMC_->Draw("COLZTEXT60 E");
+  EtavsPtMedium2016IDMCCanvas->cd();
+  EtavsPtMedium2016IDMC_->Draw("COLZTEXT60 E");
+  EtavsPtMediumIDMCCanvas->cd();
+  EtavsPtMediumIDMC_->Draw("COLZTEXT60 E");
+
+  writeExtraText = true;
+  lumi_13TeV = "35.9 fb^(-1)";
+
+  CMS_lumi(EtavsPtLooseIDRunBDCanvas, 4, 11);
+  CMS_lumi(EtavsPtMedium2016IDRunBDCanvas, 4, 11);
+  CMS_lumi(EtavsPtMediumIDRunBDCanvas, 4, 11);
+
+  CMS_lumi(EtavsPtLooseIDRunEFCanvas, 4, 11);
+  CMS_lumi(EtavsPtMedium2016IDRunEFCanvas, 4, 11);
+  CMS_lumi(EtavsPtMediumIDRunEFCanvas, 4, 11);
+
+  CMS_lumi(EtavsPtLooseIDRunGHCanvas, 4, 11);
+  CMS_lumi(EtavsPtMedium2016IDRunGHCanvas, 4, 11);
+  CMS_lumi(EtavsPtMediumIDRunGHCanvas, 4, 11);
+
+  CMS_lumi(EtavsPtLooseIDMCCanvas, 4, 11);
+  CMS_lumi(EtavsPtMedium2016IDMCCanvas, 4, 11);
+  CMS_lumi(EtavsPtMediumIDMCCanvas, 4, 11);
+
+  outFile->cd();
+  EtavsPtLooseIDRunBDCanvas->Write();
+  EtavsPtMedium2016IDRunBDCanvas->Write();
+  EtavsPtMediumIDRunBDCanvas->Write();
+  
+  EtavsPtLooseIDRunEFCanvas->Write();
+  EtavsPtMedium2016IDRunEFCanvas->Write();
+  EtavsPtMediumIDRunEFCanvas->Write();
+  
+  EtavsPtLooseIDRunGHCanvas->Write();
+  EtavsPtMedium2016IDRunGHCanvas->Write();
+  EtavsPtMediumIDRunGHCanvas->Write();
+  
+  EtavsPtLooseIDMCCanvas->Write();
+  EtavsPtMedium2016IDMCCanvas->Write();
+  EtavsPtMediumIDMCCanvas->Write();
+
+
+  TCanvas *EtavsPtLooseIDRunBDtoMCCanvas = new TCanvas("EtavsPtLooseIDRunBDtoMCCanvas", "", 600, 600);
+  TCanvas *EtavsPtMedium2016IDRunBDtoMCCanvas = new TCanvas("EtavsPtMedium2016IDRunBDtoMCCanvas", "", 600, 600);
+  TCanvas *EtavsPtMediumIDRunBDtoMCCanvas = new TCanvas("EtavsPtMediumIDRunBDtoMCCanvas", "", 600, 600);
+
+  TCanvas *EtavsPtLooseIDRunEFtoMCCanvas = new TCanvas("EtavsPtLooseIDRunEFtoMCCanvas", "", 600, 600);
+  TCanvas *EtavsPtMedium2016IDRunEFtoMCCanvas = new TCanvas("EtavsPtMedium2016IDRunEFtoMCCanvas", "", 600, 600);
+  TCanvas *EtavsPtMediumIDRunEFtoMCCanvas = new TCanvas("EtavsPtMediumIDRunEFtoMCCanvas", "", 600, 600);
+
+  TCanvas *EtavsPtLooseIDRunGHtoMCCanvas = new TCanvas("EtavsPtLooseIDRunGHtoMCCanvas", "", 600, 600);
+  TCanvas *EtavsPtMedium2016IDRunGHtoMCCanvas = new TCanvas("EtavsPtMedium2016IDRunGHtoMCCanvas", "", 600, 600);
+  TCanvas *EtavsPtMediumIDRunGHtoMCCanvas = new TCanvas("EtavsPtMediumIDRunGHtoMCCanvas", "", 600, 600);
+
+  TH2F *EtavsPtLooseIDRunBDtoMC_ = (TH2F*)EtavsPtLooseIDRunBD_->Clone();
+  TH2F *EtavsPtMedium2016IDRunBDtoMC_ = (TH2F*)EtavsPtMedium2016IDRunBD_->Clone();
+  TH2F *EtavsPtMediumIDRunBDtoMC_ = (TH2F*)EtavsPtMediumIDRunBD_->Clone();
+
+  TH2F *EtavsPtLooseIDRunEFtoMC_ = (TH2F*)EtavsPtLooseIDRunEF_->Clone();
+  TH2F *EtavsPtMedium2016IDRunEFtoMC_ = (TH2F*)EtavsPtMedium2016IDRunEF_->Clone();
+  TH2F *EtavsPtMediumIDRunEFtoMC_ = (TH2F*)EtavsPtMediumIDRunEF_->Clone();
+
+  TH2F *EtavsPtLooseIDRunGHtoMC_ = (TH2F*)EtavsPtLooseIDRunGH_->Clone();
+  TH2F *EtavsPtMedium2016IDRunGHtoMC_ = (TH2F*)EtavsPtMedium2016IDRunGH_->Clone();
+  TH2F *EtavsPtMediumIDRunGHtoMC_ = (TH2F*)EtavsPtMediumIDRunGH_->Clone();
+
+  EtavsPtLooseIDRunBDtoMC_->SetName("EtavsPtLooseIDRunBDtoMC");
+  EtavsPtMedium2016IDRunBDtoMC_->SetName("EtavsPtMedium2016IDRunBDtoMC");
+  EtavsPtMediumIDRunBDtoMC_->SetName("EtavsPtMediumIDRunBDtoMC");
+ 
+  EtavsPtLooseIDRunEFtoMC_->SetName("EtavsPtLooseIDRunEFtoMC");
+  EtavsPtMedium2016IDRunEFtoMC_->SetName("EtavsPtMedium2016IDRunEFtoMC");
+  EtavsPtMediumIDRunEFtoMC_->SetName("EtavsPtMediumIDRunEFtoMC");
+ 
+  EtavsPtLooseIDRunGHtoMC_->SetName("EtavsPtLooseIDRunGHtoMC");
+  EtavsPtMedium2016IDRunGHtoMC_->SetName("EtavsPtMedium2016IDRunGHtoMC");
+  EtavsPtMediumIDRunGHtoMC_->SetName("EtavsPtMediumIDRunGHtoMC");
+
+  EtavsPtLooseIDRunBDtoMC_->Divide(EtavsPtLooseIDMC_ );
+  EtavsPtMedium2016IDRunBDtoMC_->Divide(EtavsPtMedium2016IDMC_ );
+  EtavsPtMediumIDRunBDtoMC_->Divide(EtavsPtMediumIDMC_ );
+  
+  EtavsPtLooseIDRunEFtoMC_->Divide(EtavsPtLooseIDMC_ );
+  EtavsPtMedium2016IDRunEFtoMC_->Divide(EtavsPtMedium2016IDMC_ );
+  EtavsPtMediumIDRunEFtoMC_->Divide(EtavsPtMediumIDMC_ );
+  
+  EtavsPtLooseIDRunGHtoMC_->Divide(EtavsPtLooseIDMC_ );
+  EtavsPtMedium2016IDRunGHtoMC_->Divide(EtavsPtMedium2016IDMC_ );
+  EtavsPtMediumIDRunGHtoMC_->Divide(EtavsPtMediumIDMC_ );
+
+//  for ( int i = 1; i <=3; i++)
+//  {
+//    for (int j = 1; j <=4; j++)
+//    {
+//      EtavsPtLooseIDRunBDtoMC_->SetBinContent(i,j,EtavsPtLooseIDRunBDtoMC_->GetBinContent(i,j) + EtavsPtLooseIDRunBDtoMC_->GetBinError(i,j) );
+//      EtavsPtMedium2016IDRunBDtoMC_->SetBinContent(i,j,EtavsPtMedium2016IDRunBDtoMC_->GetBinContent(i,j) + EtavsPtMedium2016IDRunBDtoMC_->GetBinError(i,j) );
+//      EtavsPtMediumIDRunBDtoMC_->SetBinContent(i,j,EtavsPtMediumIDRunBDtoMC_->GetBinContent(i,j) + EtavsPtMediumIDRunBDtoMC_->GetBinError(i,j) );
+//    
+//      EtavsPtLooseIDRunEFtoMC_->SetBinContent(i,j,EtavsPtLooseIDRunEFtoMC_->GetBinContent(i,j) + EtavsPtLooseIDRunEFtoMC_->GetBinError(i,j) );
+//      EtavsPtMedium2016IDRunEFtoMC_->SetBinContent(i,j,EtavsPtMedium2016IDRunEFtoMC_->GetBinContent(i,j) + EtavsPtMedium2016IDRunEFtoMC_->GetBinError(i,j) );
+//      EtavsPtMediumIDRunEFtoMC_->SetBinContent(i,j,EtavsPtMediumIDRunEFtoMC_->GetBinContent(i,j) + EtavsPtMediumIDRunEFtoMC_->GetBinError(i,j) );
+//     
+//      EtavsPtLooseIDRunGHtoMC_->SetBinContent(i,j,EtavsPtLooseIDRunGHtoMC_->GetBinContent(i,j) + EtavsPtLooseIDRunGHtoMC_->GetBinError(i,j) );
+//      EtavsPtMedium2016IDRunGHtoMC_->SetBinContent(i,j,EtavsPtMedium2016IDRunGHtoMC_->GetBinContent(i,j) + EtavsPtMedium2016IDRunGHtoMC_->GetBinError(i,j) );
+//      EtavsPtMediumIDRunGHtoMC_->SetBinContent(i,j,EtavsPtMediumIDRunGHtoMC_->GetBinContent(i,j) + EtavsPtMediumIDRunGHtoMC_->GetBinError(i,j) );
+//    }//for j
+//  }//for i
+
+
+  EtavsPtLooseIDRunBDtoMCCanvas->cd();
+  gPad->SetLeftMargin(.1);
+  gPad->SetRightMargin(.125);
+  gPad->SetTopMargin(.03);
+  gPad->SetBottomMargin(.1);
+  EtavsPtLooseIDRunBDtoMC_->Draw("COLZTEXT60 E");
+  gPad->Update();
+  TPaletteAxis *palette1 = (TPaletteAxis*)EtavsPtLooseIDRunBDtoMC_->GetListOfFunctions()->FindObject("palette");
+  palette1->SetX1NDC(0.88);
+  palette1->SetX2NDC(0.92);
+  palette1->SetY1NDC(0.1);
+  palette1->SetY2NDC(0.97);
+
+  EtavsPtMedium2016IDRunBDtoMCCanvas->cd();
+  gPad->SetLeftMargin(.1);
+  gPad->SetRightMargin(.125);
+  gPad->SetTopMargin(.03);
+  gPad->SetBottomMargin(.1);
+  EtavsPtMedium2016IDRunBDtoMC_->Draw("COLZTEXT60 E");
+  gPad->Update();
+  TPaletteAxis *palette2 = (TPaletteAxis*)EtavsPtMedium2016IDRunBDtoMC_->GetListOfFunctions()->FindObject("palette");
+  palette2->SetX1NDC(0.88);
+  palette2->SetX2NDC(0.92);
+  palette2->SetY1NDC(0.1);
+  palette2->SetY2NDC(0.97);
+
+  EtavsPtMediumIDRunBDtoMCCanvas->cd();
+  gPad->SetLeftMargin(.1);
+  gPad->SetRightMargin(.125);
+  gPad->SetTopMargin(.03);
+  gPad->SetBottomMargin(.1);
+  EtavsPtMediumIDRunBDtoMC_->Draw("COLZTEXT60 E");
+  gPad->Update();
+  TPaletteAxis *palette3 = (TPaletteAxis*)EtavsPtMediumIDRunBDtoMC_->GetListOfFunctions()->FindObject("palette");
+  palette3->SetX1NDC(0.88);
+  palette3->SetX2NDC(0.92);
+  palette3->SetY1NDC(0.1);
+  palette3->SetY2NDC(0.97);
+
+  EtavsPtLooseIDRunEFtoMCCanvas->cd();
+  gPad->SetLeftMargin(.1);
+  gPad->SetRightMargin(.125);
+  gPad->SetTopMargin(.03);
+  gPad->SetBottomMargin(.1);
+  EtavsPtLooseIDRunEFtoMC_->Draw("COLZTEXT60 E");
+  gPad->Update();
+  TPaletteAxis *palette4 = (TPaletteAxis*)EtavsPtLooseIDRunEFtoMC_->GetListOfFunctions()->FindObject("palette");
+  palette4->SetX1NDC(0.88);
+  palette4->SetX2NDC(0.92);
+  palette4->SetY1NDC(0.1);
+  palette4->SetY2NDC(0.97);
+
+  EtavsPtMedium2016IDRunEFtoMCCanvas->cd();
+  gPad->SetLeftMargin(.1);
+  gPad->SetRightMargin(.125);
+  gPad->SetTopMargin(.03);
+  gPad->SetBottomMargin(.1);
+  EtavsPtMedium2016IDRunEFtoMC_->Draw("COLZTEXT60 E");
+  gPad->Update();
+  TPaletteAxis *palette5 = (TPaletteAxis*)EtavsPtMedium2016IDRunEFtoMC_->GetListOfFunctions()->FindObject("palette");
+  palette5->SetX1NDC(0.88);
+  palette5->SetX2NDC(0.92);
+  palette5->SetY1NDC(0.1);
+  palette5->SetY2NDC(0.97);
+
+  EtavsPtMediumIDRunEFtoMCCanvas->cd();
+  gPad->SetLeftMargin(.1);
+  gPad->SetRightMargin(.125);
+  gPad->SetTopMargin(.03);
+  gPad->SetBottomMargin(.1);
+  EtavsPtMediumIDRunEFtoMC_->Draw("COLZTEXT60 E");
+  gPad->Update();
+  TPaletteAxis *palette6 = (TPaletteAxis*)EtavsPtMediumIDRunEFtoMC_->GetListOfFunctions()->FindObject("palette");
+  palette6->SetX1NDC(0.88);
+  palette6->SetX2NDC(0.92);
+  palette6->SetY1NDC(0.1);
+  palette6->SetY2NDC(0.97);
+
+  EtavsPtLooseIDRunGHtoMCCanvas->cd();
+  gPad->SetLeftMargin(.1);
+  gPad->SetRightMargin(.125);
+  gPad->SetTopMargin(.03);
+  gPad->SetBottomMargin(.1);
+  EtavsPtLooseIDRunGHtoMC_->Draw("COLZTEXT60 E");
+  gPad->Update();
+  TPaletteAxis *palette7 = (TPaletteAxis*)EtavsPtLooseIDRunGHtoMC_->GetListOfFunctions()->FindObject("palette");
+  palette7->SetX1NDC(0.88);
+  palette7->SetX2NDC(0.92);
+  palette7->SetY1NDC(0.1);
+  palette7->SetY2NDC(0.97);
+
+  EtavsPtMedium2016IDRunGHtoMCCanvas->cd();
+  gPad->SetLeftMargin(.1);
+  gPad->SetRightMargin(.125);
+  gPad->SetTopMargin(.03);
+  gPad->SetBottomMargin(.1);
+  EtavsPtMedium2016IDRunGHtoMC_->Draw("COLZTEXT60 E");
+  gPad->Update();
+  TPaletteAxis *palette8 = (TPaletteAxis*)EtavsPtMedium2016IDRunGHtoMC_->GetListOfFunctions()->FindObject("palette");
+  palette8->SetX1NDC(0.88);
+  palette8->SetX2NDC(0.92);
+  palette8->SetY1NDC(0.1);
+  palette8->SetY2NDC(0.97);
+
+  EtavsPtMediumIDRunGHtoMCCanvas->cd();
+  gPad->SetLeftMargin(.1);
+  gPad->SetRightMargin(.125);
+  gPad->SetTopMargin(.03);
+  gPad->SetBottomMargin(.1);
+  EtavsPtMediumIDRunGHtoMC_->Draw("COLZTEXT60 E");
+  gPad->Update();
+  TPaletteAxis *palette9 = (TPaletteAxis*)EtavsPtMediumIDRunGHtoMC_->GetListOfFunctions()->FindObject("palette");
+  palette9->SetX1NDC(0.88);
+  palette9->SetX2NDC(0.92);
+  palette9->SetY1NDC(0.1);
+  palette9->SetY2NDC(0.97);
+
+  writeExtraText = true;
+  lumi_13TeV = "35.9 fb^(-1)";
+
+  CMS_lumi(EtavsPtLooseIDRunBDtoMCCanvas, 4, 11);
+  CMS_lumi(EtavsPtMedium2016IDRunBDtoMCCanvas, 4, 11);
+  CMS_lumi(EtavsPtMediumIDRunBDtoMCCanvas, 4, 11);
+
+  CMS_lumi(EtavsPtLooseIDRunEFtoMCCanvas, 4, 11);
+  CMS_lumi(EtavsPtMedium2016IDRunEFtoMCCanvas, 4, 11);
+  CMS_lumi(EtavsPtMediumIDRunEFtoMCCanvas, 4, 11);
+
+  CMS_lumi(EtavsPtLooseIDRunGHtoMCCanvas, 4, 11);
+  CMS_lumi(EtavsPtMedium2016IDRunGHtoMCCanvas, 4, 11);
+  CMS_lumi(EtavsPtMediumIDRunGHtoMCCanvas, 4, 11);
+
+  outFile->cd();
+  EtavsPtLooseIDRunBDtoMC_->Write();
+  EtavsPtMedium2016IDRunBDtoMC_->Write();
+  EtavsPtMediumIDRunBDtoMC_->Write();
+  
+  EtavsPtLooseIDRunEFtoMC_->Write();
+  EtavsPtMedium2016IDRunEFtoMC_->Write();
+  EtavsPtMediumIDRunEFtoMC_->Write();
+  
+  EtavsPtLooseIDRunGHtoMC_->Write();
+  EtavsPtMedium2016IDRunGHtoMC_->Write();
+  EtavsPtMediumIDRunGHtoMC_->Write();
+
+  EtavsPtLooseIDRunBDtoMCCanvas->Write();
+  EtavsPtMedium2016IDRunBDtoMCCanvas->Write();
+  EtavsPtMediumIDRunBDtoMCCanvas->Write();
+  
+  EtavsPtLooseIDRunEFtoMCCanvas->Write();
+  EtavsPtMedium2016IDRunEFtoMCCanvas->Write();
+  EtavsPtMediumIDRunEFtoMCCanvas->Write();
+  
+  EtavsPtLooseIDRunGHtoMCCanvas->Write();
+  EtavsPtMedium2016IDRunGHtoMCCanvas->Write();
+  EtavsPtMediumIDRunGHtoMCCanvas->Write();
+
+
+  outFile->Close();
+}// 

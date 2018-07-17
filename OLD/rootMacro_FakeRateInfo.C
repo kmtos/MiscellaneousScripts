@@ -1,0 +1,1528 @@
+#include <string.h>
+#include "TChain.h"
+#include "TFile.h"
+#include "TH1.h"
+#include "TTree.h"
+#include "TKey.h"
+#include "Riostream.h"
+#include "TCanvas.h"
+#include "TLegend.h"
+#include "TGraphAsymmErrors.h"
+#include "TGraph.h"
+#include "TMultiGraph.h"
+#include "iostream"
+#include "fstream"
+#include "TMath.h"
+
+void rootMacro_FakeRateInfo()
+{
+
+  gStyle->SetOptStat(kFALSE);
+  gStyle->SetEndErrorSize(7);
+
+  //Old DMs
+  TFile infileTTNew   ("/home/kyletos/Downloads/RootFiles/FakeRate/FinalFiles/FINAL_TT_New_VariousHTBDisc_SEP20.root");
+  TFile infileTTNewMVA("/home/kyletos/Downloads/RootFiles/FakeRate/FinalFiles/FINAL_TT_NewMVA_VariousHTBDisc_SEP20.root");
+  TFile infileTTOld   ("/home/kyletos/Downloads/RootFiles/FakeRate/FinalFiles/FINAL_TT_Old_VariousHTBDisc_SEP20.root");
+  TFile infileTTOldMVA("/home/kyletos/Downloads/RootFiles/FakeRate/FinalFiles/FINAL_TT_OldMVA_VariousHTBDisc_SEP20.root");
+  
+  TFile infileWJNew   ("/home/kyletos/Downloads/RootFiles/FakeRate/FinalFiles/FINAL_WJ_New_VariousHTBDisc_SEP20.root");
+  TFile infileWJNewMVA("/home/kyletos/Downloads/RootFiles/FakeRate/FinalFiles/FINAL_WJ_NewMVA_VariousHTBDisc_SEP20.root");
+  TFile infileWJOld   ("/home/kyletos/Downloads/RootFiles/FakeRate/FinalFiles/FINAL_WJ_Old_VariousHTBDisc_SEP20.root");
+  TFile infileWJOldMVA("/home/kyletos/Downloads/RootFiles/FakeRate/FinalFiles/FINAL_WJ_OldMVA_VariousHTBDisc_SEP20.root");
+
+  TFile infileDYNew   ("/home/kyletos/Downloads/RootFiles/FakeRate/FinalFiles/FINAL_DY_New_VariousHTBDisc_SEP20.root");
+  TFile infileDYNewMVA("/home/kyletos/Downloads/RootFiles/FakeRate/FinalFiles/FINAL_DY_NewMVA_VariousHTBDisc_SEP20.root");
+  TFile infileDYOld   ("/home/kyletos/Downloads/RootFiles/FakeRate/FinalFiles/FINAL_DY_Old_VariousHTBDisc_SEP20.root");
+  TFile infileDYOldMVA("/home/kyletos/Downloads/RootFiles/FakeRate/FinalFiles/FINAL_DY_OldMVA_VariousHTBDisc_SEP20.root");
+
+  TFile infileH125a19New   ("/home/kyletos/Downloads/RootFiles/FakeRate/FinalFiles/H125a9_Trig_CJ_New_VariousHTBDisc_SEP16_Plots.root");
+  TFile infileH125a19NewMVA("/home/kyletos/Downloads/RootFiles/FakeRate/FinalFiles/H125a9_Trig_CJ_NewMVA_VariousHTBDisc_SEP16_Plots.root");
+  TFile infileH125a19Old   ("/home/kyletos/Downloads/RootFiles/FakeRate/FinalFiles/H125a9_Trig_CJ_Old_VariousHTBDisc_SEP16_v2_Plots.root");
+  TFile infileH125a19OldMVA("/home/kyletos/Downloads/RootFiles/FakeRate/FinalFiles/H125a9_Trig_CJ_OldMVA_VariousHTBDisc_SEP16_v2_Plots.root");
+
+  TFile infileH125a9New   ("/home/kyletos/Downloads/RootFiles/FakeRate/FinalFiles/H125a9_Trig_CJ_New_VariousHTBDisc_SEP16_Plots.root");
+  TFile infileH125a9NewMVA("/home/kyletos/Downloads/RootFiles/FakeRate/FinalFiles/H125a9_Trig_CJ_NewMVA_VariousHTBDisc_SEP16_Plots.root");
+  TFile infileH125a9Old   ("/home/kyletos/Downloads/RootFiles/FakeRate/FinalFiles/H125a9_Trig_CJ_Old_VariousHTBDisc_SEP16_v2_Plots.root");
+  TFile infileH125a9OldMVA("/home/kyletos/Downloads/RootFiles/FakeRate/FinalFiles/H125a9_Trig_CJ_OldMVA_VariousHTBDisc_SEP16_v2_Plots.root");
+
+  TFile infileH125a5New   ("/home/kyletos/Downloads/RootFiles/FakeRate/FinalFiles/H125a9_Trig_CJ_New_VariousHTBDisc_SEP16_Plots.root");
+  TFile infileH125a5NewMVA("/home/kyletos/Downloads/RootFiles/FakeRate/FinalFiles/H125a9_Trig_CJ_NewMVA_VariousHTBDisc_SEP16_Plots.root");
+  TFile infileH125a5Old   ("/home/kyletos/Downloads/RootFiles/FakeRate/FinalFiles/H125a9_Trig_CJ_Old_VariousHTBDisc_SEP16_v2_Plots.root");
+  TFile infileH125a5OldMVA("/home/kyletos/Downloads/RootFiles/FakeRate/FinalFiles/H125a9_Trig_CJ_OldMVA_VariousHTBDisc_SEP16_v2_Plots.root");
+
+  TFile infileH750a9New   ("/home/kyletos/Downloads/RootFiles/FakeRate/FinalFiles/H750a9_Trig_CJ_New_VariousHTBDisc_SEP16_Plots.root");
+  TFile infileH750a9NewMVA("/home/kyletos/Downloads/RootFiles/FakeRate/FinalFiles/H750a9_Trig_CJ_NewMVA_VariousHTBDisc_SEP16_Plots.root");
+  TFile infileH750a9Old   ("/home/kyletos/Downloads/RootFiles/FakeRate/FinalFiles/H750a9_Trig_CJ_Old_VariousHTBDisc_SEP16_v2_Plots.root");
+  TFile infileH750a9OldMVA("/home/kyletos/Downloads/RootFiles/FakeRate/FinalFiles/H750a9_Trig_CJ_OldMVA_VariousHTBDisc_SEP16_v2_Plots.root");
+
+
+  TFile *outFile = new TFile("/home/kyletos/Downloads/RootFiles/CombinedPlots/comb_FakeRateInfo_NewHT_VariousHTBDisc_SEP20.root", "RECREATE");
+
+  ofstream infoFile;
+  infoFile.open ("/home/kyletos/Downloads/RootFiles/CombinedPlots/FakeRateInfo_NewHT_VariousHTBDisc_SEP20.txt");
+
+
+cout << "Files Created" << endl;
+
+  ////////////////
+  // TTJets
+  ////////////////
+  TCanvas *MatchedLooseIsoCJPtCanvasTTNew   = (TCanvas*)infileTTNew.Get("MatchedLooseIsoCJPt");
+  TCanvas *MatchedMedIsoCJPtCanvasTTNew     = (TCanvas*)infileTTNew.Get("MatchedMedIsoCJPt");
+  TCanvas *MatchedTightIsoCJPtCanvasTTNew   = (TCanvas*)infileTTNew.Get("MatchedTightIsoCJPt");
+  TCanvas *MatchedDMFindCJPtCanvasTTNew     = (TCanvas*)infileTTNew.Get("MatchedDMFindCJPt");
+  TCanvas *MatchedCJPtCanvasTTNew   = (TCanvas*)infileTTNew.Get("MatchedCJPt");
+
+  TCanvas *MatchedLooseIsoCJPtCanvasTTOld   = (TCanvas*)infileTTOld.Get("MatchedLooseIsoCJPt");
+  TCanvas *MatchedMedIsoCJPtCanvasTTOld     = (TCanvas*)infileTTOld.Get("MatchedMedIsoCJPt");
+  TCanvas *MatchedTightIsoCJPtCanvasTTOld   = (TCanvas*)infileTTOld.Get("MatchedTightIsoCJPt");
+  TCanvas *MatchedDMFindCJPtCanvasTTOld     = (TCanvas*)infileTTOld.Get("MatchedDMFindCJPt");
+  TCanvas *MatchedCJPtCanvasTTOld   = (TCanvas*)infileTTOld.Get("MatchedCJPt");
+
+  TCanvas *MatchedLooseIsoCJPtCanvasTTNewMVA   = (TCanvas*)infileTTNewMVA.Get("MatchedLooseIsoCJPt");
+  TCanvas *MatchedMedIsoCJPtCanvasTTNewMVA     = (TCanvas*)infileTTNewMVA.Get("MatchedMedIsoCJPt");
+  TCanvas *MatchedTightIsoCJPtCanvasTTNewMVA   = (TCanvas*)infileTTNewMVA.Get("MatchedTightIsoCJPt");
+  TCanvas *MatchedCJPtCanvasTTNewMVA   = (TCanvas*)infileTTNewMVA.Get("MatchedCJPt");
+
+  TCanvas *MatchedLooseIsoCJPtCanvasTTOldMVA   = (TCanvas*)infileTTOldMVA.Get("MatchedLooseIsoCJPt");
+  TCanvas *MatchedMedIsoCJPtCanvasTTOldMVA     = (TCanvas*)infileTTOldMVA.Get("MatchedMedIsoCJPt");
+  TCanvas *MatchedTightIsoCJPtCanvasTTOldMVA   = (TCanvas*)infileTTOldMVA.Get("MatchedTightIsoCJPt");
+  TCanvas *MatchedCJPtCanvasTTOldMVA   = (TCanvas*)infileTTOldMVA.Get("MatchedCJPt");
+
+  ////////////////
+  // WJJets
+  ////////////////
+  TCanvas *MatchedLooseIsoCJPtCanvasWJNew   = (TCanvas*)infileWJNew.Get("MatchedLooseIsoCJPt");
+  TCanvas *MatchedMedIsoCJPtCanvasWJNew     = (TCanvas*)infileWJNew.Get("MatchedMedIsoCJPt");
+  TCanvas *MatchedTightIsoCJPtCanvasWJNew   = (TCanvas*)infileWJNew.Get("MatchedTightIsoCJPt");
+  TCanvas *MatchedDMFindCJPtCanvasWJNew     = (TCanvas*)infileWJNew.Get("MatchedDMFindCJPt");
+  TCanvas *MatchedCJPtCanvasWJNew   = (TCanvas*)infileWJNew.Get("MatchedCJPt");
+
+  TCanvas *MatchedLooseIsoCJPtCanvasWJOld   = (TCanvas*)infileWJOld.Get("MatchedLooseIsoCJPt");
+  TCanvas *MatchedMedIsoCJPtCanvasWJOld     = (TCanvas*)infileWJOld.Get("MatchedMedIsoCJPt");
+  TCanvas *MatchedTightIsoCJPtCanvasWJOld   = (TCanvas*)infileWJOld.Get("MatchedTightIsoCJPt");
+  TCanvas *MatchedDMFindCJPtCanvasWJOld     = (TCanvas*)infileWJOld.Get("MatchedDMFindCJPt");
+  TCanvas *MatchedCJPtCanvasWJOld   = (TCanvas*)infileWJOld.Get("MatchedCJPt");
+
+  TCanvas *MatchedLooseIsoCJPtCanvasWJNewMVA   = (TCanvas*)infileWJNewMVA.Get("MatchedLooseIsoCJPt");
+  TCanvas *MatchedMedIsoCJPtCanvasWJNewMVA     = (TCanvas*)infileWJNewMVA.Get("MatchedMedIsoCJPt");
+  TCanvas *MatchedTightIsoCJPtCanvasWJNewMVA   = (TCanvas*)infileWJNewMVA.Get("MatchedTightIsoCJPt");
+  TCanvas *MatchedCJPtCanvasWJNewMVA   = (TCanvas*)infileWJNewMVA.Get("MatchedCJPt");
+ 
+  TCanvas *MatchedLooseIsoCJPtCanvasWJOldMVA   = (TCanvas*)infileWJOldMVA.Get("MatchedLooseIsoCJPt");
+  TCanvas *MatchedMedIsoCJPtCanvasWJOldMVA     = (TCanvas*)infileWJOldMVA.Get("MatchedMedIsoCJPt");
+  TCanvas *MatchedTightIsoCJPtCanvasWJOldMVA   = (TCanvas*)infileWJOldMVA.Get("MatchedTightIsoCJPt");
+  TCanvas *MatchedCJPtCanvasWJOldMVA   = (TCanvas*)infileWJOldMVA.Get("MatchedCJPt");
+
+  ////////////////
+  // DY
+  ////////////////
+  TCanvas *MatchedLooseIsoCJPtCanvasDYNew   = (TCanvas*)infileDYNew.Get("MatchedLooseIsoCJPt");
+  TCanvas *MatchedMedIsoCJPtCanvasDYNew     = (TCanvas*)infileDYNew.Get("MatchedMedIsoCJPt");
+  TCanvas *MatchedTightIsoCJPtCanvasDYNew   = (TCanvas*)infileDYNew.Get("MatchedTightIsoCJPt");
+  TCanvas *MatchedDMFindCJPtCanvasDYNew     = (TCanvas*)infileDYNew.Get("MatchedDMFindCJPt");
+  TCanvas *MatchedCJPtCanvasDYNew   = (TCanvas*)infileDYNew.Get("MatchedCJPt");
+
+  TCanvas *MatchedLooseIsoCJPtCanvasDYOld   = (TCanvas*)infileDYOld.Get("MatchedLooseIsoCJPt");
+  TCanvas *MatchedMedIsoCJPtCanvasDYOld     = (TCanvas*)infileDYOld.Get("MatchedMedIsoCJPt");
+  TCanvas *MatchedTightIsoCJPtCanvasDYOld   = (TCanvas*)infileDYOld.Get("MatchedTightIsoCJPt");
+  TCanvas *MatchedDMFindCJPtCanvasDYOld     = (TCanvas*)infileDYOld.Get("MatchedDMFindCJPt");
+  TCanvas *MatchedCJPtCanvasDYOld   = (TCanvas*)infileDYOld.Get("MatchedCJPt");
+
+  TCanvas *MatchedLooseIsoCJPtCanvasDYNewMVA   = (TCanvas*)infileDYNewMVA.Get("MatchedLooseIsoCJPt");
+  TCanvas *MatchedMedIsoCJPtCanvasDYNewMVA     = (TCanvas*)infileDYNewMVA.Get("MatchedMedIsoCJPt");
+  TCanvas *MatchedTightIsoCJPtCanvasDYNewMVA   = (TCanvas*)infileDYNewMVA.Get("MatchedTightIsoCJPt");
+  TCanvas *MatchedCJPtCanvasDYNewMVA   = (TCanvas*)infileDYNewMVA.Get("MatchedCJPt");
+ 
+  TCanvas *MatchedLooseIsoCJPtCanvasDYOldMVA   = (TCanvas*)infileDYOldMVA.Get("MatchedLooseIsoCJPt");
+  TCanvas *MatchedMedIsoCJPtCanvasDYOldMVA     = (TCanvas*)infileDYOldMVA.Get("MatchedMedIsoCJPt");
+  TCanvas *MatchedTightIsoCJPtCanvasDYOldMVA   = (TCanvas*)infileDYOldMVA.Get("MatchedTightIsoCJPt");
+  TCanvas *MatchedCJPtCanvasDYOldMVA   = (TCanvas*)infileDYOldMVA.Get("MatchedCJPt");
+  
+  ////////////////
+  //NEvents Files
+  ////////////////
+  TCanvas *NEventsDYOldMVACanvas   = (TCanvas*)infileDYOldMVA.Get("NEvents");
+  TCanvas *NEventsTTOldMVACanvas   = (TCanvas*)infileTTOldMVA.Get("NEvents");
+  TCanvas *NEventsWJOldMVACanvas   = (TCanvas*)infileWJOldMVA.Get("NEvents");
+  TCanvas *NEventsH125a19OldMVACanvas   = (TCanvas*)infileH125a19OldMVA.Get("NEvents");
+  TCanvas *NEventsH125a9OldMVACanvas   = (TCanvas*)infileH125a9OldMVA.Get("NEvents");
+  TCanvas *NEventsH125a5OldMVACanvas   = (TCanvas*)infileH125a5OldMVA.Get("NEvents");
+  TCanvas *NEventsH750a9OldMVACanvas   = (TCanvas*)infileH750a9OldMVA.Get("NEvents");
+  TCanvas *NEventsDYOldCanvas   = (TCanvas*)infileDYOld.Get("NEvents");
+  TCanvas *NEventsTTOldCanvas   = (TCanvas*)infileTTOld.Get("NEvents");
+  TCanvas *NEventsWJOldCanvas   = (TCanvas*)infileWJOld.Get("NEvents");
+  TCanvas *NEventsH125a19OldCanvas   = (TCanvas*)infileH125a19Old.Get("NEvents");
+  TCanvas *NEventsH125a9OldCanvas   = (TCanvas*)infileH125a9Old.Get("NEvents");
+  TCanvas *NEventsH125a5OldCanvas   = (TCanvas*)infileH125a5Old.Get("NEvents");
+  TCanvas *NEventsH750a9OldCanvas   = (TCanvas*)infileH750a9Old.Get("NEvents");
+  TCanvas *NEventsDYNewMVACanvas   = (TCanvas*)infileDYNewMVA.Get("NEvents");
+  TCanvas *NEventsTTNewMVACanvas   = (TCanvas*)infileTTNewMVA.Get("NEvents");
+  TCanvas *NEventsWJNewMVACanvas   = (TCanvas*)infileWJNewMVA.Get("NEvents");
+  TCanvas *NEventsH125a19NewMVACanvas   = (TCanvas*)infileH125a19NewMVA.Get("NEvents");
+  TCanvas *NEventsH125a9NewMVACanvas   = (TCanvas*)infileH125a9NewMVA.Get("NEvents");
+  TCanvas *NEventsH125a5NewMVACanvas   = (TCanvas*)infileH125a5NewMVA.Get("NEvents");
+  TCanvas *NEventsH750a9NewMVACanvas   = (TCanvas*)infileH750a9NewMVA.Get("NEvents");
+  TCanvas *NEventsDYNewCanvas   = (TCanvas*)infileDYNew.Get("NEvents");
+  TCanvas *NEventsTTNewCanvas   = (TCanvas*)infileTTNew.Get("NEvents");
+  TCanvas *NEventsWJNewCanvas   = (TCanvas*)infileWJNew.Get("NEvents");
+  TCanvas *NEventsH125a19NewCanvas   = (TCanvas*)infileH125a19New.Get("NEvents");
+  TCanvas *NEventsH125a9NewCanvas   = (TCanvas*)infileH125a9New.Get("NEvents");
+  TCanvas *NEventsH125a5NewCanvas   = (TCanvas*)infileH125a5New.Get("NEvents");
+  TCanvas *NEventsH750a9NewCanvas   = (TCanvas*)infileH750a9New.Get("NEvents");
+
+  TCanvas *NEventsCutsDYOldMVACanvas   = (TCanvas*)infileDYOldMVA.Get("NEventsCuts");
+  TCanvas *NEventsCutsTTOldMVACanvas   = (TCanvas*)infileTTOldMVA.Get("NEventsCuts");
+  TCanvas *NEventsCutsWJOldMVACanvas   = (TCanvas*)infileWJOldMVA.Get("NEventsCuts");
+  TCanvas *NEventsCutsH125a19OldMVACanvas   = (TCanvas*)infileH125a19OldMVA.Get("NEventsCuts");
+  TCanvas *NEventsCutsH125a9OldMVACanvas   = (TCanvas*)infileH125a9OldMVA.Get("NEventsCuts");
+  TCanvas *NEventsCutsH125a5OldMVACanvas   = (TCanvas*)infileH125a5OldMVA.Get("NEventsCuts");
+  TCanvas *NEventsCutsH750a9OldMVACanvas   = (TCanvas*)infileH750a9OldMVA.Get("NEventsCuts");
+  TCanvas *NEventsCutsDYOldCanvas   = (TCanvas*)infileDYOld.Get("NEventsCuts");
+  TCanvas *NEventsCutsTTOldCanvas   = (TCanvas*)infileTTOld.Get("NEventsCuts");
+  TCanvas *NEventsCutsWJOldCanvas   = (TCanvas*)infileWJOld.Get("NEventsCuts");
+  TCanvas *NEventsCutsH125a19OldCanvas   = (TCanvas*)infileH125a19Old.Get("NEventsCuts");
+  TCanvas *NEventsCutsH125a9OldCanvas   = (TCanvas*)infileH125a9Old.Get("NEventsCuts");
+  TCanvas *NEventsCutsH125a5OldCanvas   = (TCanvas*)infileH125a5Old.Get("NEventsCuts");
+  TCanvas *NEventsCutsH750a9OldCanvas   = (TCanvas*)infileH750a9Old.Get("NEventsCuts");
+  TCanvas *NEventsCutsDYNewMVACanvas   = (TCanvas*)infileDYNewMVA.Get("NEventsCuts");
+  TCanvas *NEventsCutsTTNewMVACanvas   = (TCanvas*)infileTTNewMVA.Get("NEventsCuts");
+  TCanvas *NEventsCutsWJNewMVACanvas   = (TCanvas*)infileWJNewMVA.Get("NEventsCuts");
+  TCanvas *NEventsCutsH125a19NewMVACanvas   = (TCanvas*)infileH125a19NewMVA.Get("NEventsCuts");
+  TCanvas *NEventsCutsH125a9NewMVACanvas   = (TCanvas*)infileH125a9NewMVA.Get("NEventsCuts");
+  TCanvas *NEventsCutsH125a5NewMVACanvas   = (TCanvas*)infileH125a5NewMVA.Get("NEventsCuts");
+  TCanvas *NEventsCutsH750a9NewMVACanvas   = (TCanvas*)infileH750a9NewMVA.Get("NEventsCuts");
+  TCanvas *NEventsCutsDYNewCanvas   = (TCanvas*)infileDYNew.Get("NEventsCuts");
+  TCanvas *NEventsCutsTTNewCanvas   = (TCanvas*)infileTTNew.Get("NEventsCuts");
+  TCanvas *NEventsCutsWJNewCanvas   = (TCanvas*)infileWJNew.Get("NEventsCuts");
+  TCanvas *NEventsCutsH125a19NewCanvas   = (TCanvas*)infileH125a19New.Get("NEventsCuts");
+  TCanvas *NEventsCutsH125a9NewCanvas   = (TCanvas*)infileH125a9New.Get("NEventsCuts");
+  TCanvas *NEventsCutsH125a5NewCanvas   = (TCanvas*)infileH125a5New.Get("NEventsCuts");
+  TCanvas *NEventsCutsH750a9NewCanvas   = (TCanvas*)infileH750a9New.Get("NEventsCuts");
+
+  ////////////////
+  //GenMatch histo
+  //////////////// 
+  TCanvas *GenMatchTypeDYCanvas   = (TCanvas*)infileDYOldMVA.Get("GenMatchType");
+  TCanvas *GenMatchTypeTTCanvas   = (TCanvas*)infileTTOldMVA.Get("GenMatchType");
+  TCanvas *GenMatchTypeWJCanvas   = (TCanvas*)infileWJOldMVA.Get("GenMatchType");
+  
+  ////////////////
+  //GenMatch histo
+  //////////////// 
+  TCanvas *GenMatchPDGIDDYCanvas   = (TCanvas*)infileDYOldMVA.Get("GenMatchPDGID");
+  TCanvas *GenMatchPDGIDTTCanvas   = (TCanvas*)infileTTOldMVA.Get("GenMatchPDGID");
+  TCanvas *GenMatchPDGIDWJCanvas   = (TCanvas*)infileWJOldMVA.Get("GenMatchPDGID");
+
+  ////////////////
+  // H125a19 125
+  ////////////////
+  TCanvas *MatchedLooseIsoCJPtCanvasH125a19New   = (TCanvas*)infileH125a19New.Get("MatchedLooseIsoCJPt");
+  TCanvas *MatchedMedIsoCJPtCanvasH125a19New     = (TCanvas*)infileH125a19New.Get("MatchedMedIsoCJPt");
+  TCanvas *MatchedTightIsoCJPtCanvasH125a19New   = (TCanvas*)infileH125a19New.Get("MatchedTightIsoCJPt");
+  TCanvas *MatchedDMFindCJPtCanvasH125a19New     = (TCanvas*)infileH125a19New.Get("MatchedDMFindCJPt");
+  TCanvas *MatchedCJPtCanvasH125a19New   = (TCanvas*)infileH125a19New.Get("MatchedCJPt");
+
+  TCanvas *MatchedLooseIsoCJPtCanvasH125a19Old   = (TCanvas*)infileH125a19Old.Get("MatchedLooseIsoCJPt");
+  TCanvas *MatchedMedIsoCJPtCanvasH125a19Old     = (TCanvas*)infileH125a19Old.Get("MatchedMedIsoCJPt");
+  TCanvas *MatchedTightIsoCJPtCanvasH125a19Old   = (TCanvas*)infileH125a19Old.Get("MatchedTightIsoCJPt");
+  TCanvas *MatchedDMFindCJPtCanvasH125a19Old     = (TCanvas*)infileH125a19Old.Get("MatchedDMFindCJPt");
+  TCanvas *MatchedCJPtCanvasH125a19Old   = (TCanvas*)infileH125a19Old.Get("MatchedCJPt");
+
+  TCanvas *MatchedLooseIsoCJPtCanvasH125a19NewMVA   = (TCanvas*)infileH125a19NewMVA.Get("MatchedLooseIsoCJPt");
+  TCanvas *MatchedMedIsoCJPtCanvasH125a19NewMVA     = (TCanvas*)infileH125a19NewMVA.Get("MatchedMedIsoCJPt");
+  TCanvas *MatchedTightIsoCJPtCanvasH125a19NewMVA   = (TCanvas*)infileH125a19NewMVA.Get("MatchedTightIsoCJPt");
+  TCanvas *MatchedCJPtCanvasH125a19NewMVA   = (TCanvas*)infileH125a19NewMVA.Get("MatchedCJPt");
+
+  TCanvas *MatchedLooseIsoCJPtCanvasH125a19OldMVA   = (TCanvas*)infileH125a19OldMVA.Get("MatchedLooseIsoCJPt");
+  TCanvas *MatchedMedIsoCJPtCanvasH125a19OldMVA     = (TCanvas*)infileH125a19OldMVA.Get("MatchedMedIsoCJPt");
+  TCanvas *MatchedTightIsoCJPtCanvasH125a19OldMVA   = (TCanvas*)infileH125a19OldMVA.Get("MatchedTightIsoCJPt");
+  TCanvas *MatchedCJPtCanvasH125a19OldMVA   = (TCanvas*)infileH125a19OldMVA.Get("MatchedCJPt");
+
+  ////////////////
+  // H125a9 125
+  ////////////////
+  TCanvas *MatchedLooseIsoCJPtCanvasH125a9New   = (TCanvas*)infileH125a9New.Get("MatchedLooseIsoCJPt");
+  TCanvas *MatchedMedIsoCJPtCanvasH125a9New     = (TCanvas*)infileH125a9New.Get("MatchedMedIsoCJPt");
+  TCanvas *MatchedTightIsoCJPtCanvasH125a9New   = (TCanvas*)infileH125a9New.Get("MatchedTightIsoCJPt");
+  TCanvas *MatchedDMFindCJPtCanvasH125a9New     = (TCanvas*)infileH125a9New.Get("MatchedDMFindCJPt");
+  TCanvas *MatchedCJPtCanvasH125a9New   = (TCanvas*)infileH125a9New.Get("MatchedCJPt");
+
+  TCanvas *MatchedLooseIsoCJPtCanvasH125a9Old   = (TCanvas*)infileH125a9Old.Get("MatchedLooseIsoCJPt");
+  TCanvas *MatchedMedIsoCJPtCanvasH125a9Old     = (TCanvas*)infileH125a9Old.Get("MatchedMedIsoCJPt");
+  TCanvas *MatchedTightIsoCJPtCanvasH125a9Old   = (TCanvas*)infileH125a9Old.Get("MatchedTightIsoCJPt");
+  TCanvas *MatchedDMFindCJPtCanvasH125a9Old     = (TCanvas*)infileH125a9Old.Get("MatchedDMFindCJPt");
+  TCanvas *MatchedCJPtCanvasH125a9Old   = (TCanvas*)infileH125a9Old.Get("MatchedCJPt");
+
+  TCanvas *MatchedLooseIsoCJPtCanvasH125a9NewMVA   = (TCanvas*)infileH125a9NewMVA.Get("MatchedLooseIsoCJPt");
+  TCanvas *MatchedMedIsoCJPtCanvasH125a9NewMVA     = (TCanvas*)infileH125a9NewMVA.Get("MatchedMedIsoCJPt");
+  TCanvas *MatchedTightIsoCJPtCanvasH125a9NewMVA   = (TCanvas*)infileH125a9NewMVA.Get("MatchedTightIsoCJPt");
+  TCanvas *MatchedCJPtCanvasH125a9NewMVA   = (TCanvas*)infileH125a9NewMVA.Get("MatchedCJPt");
+
+  TCanvas *MatchedLooseIsoCJPtCanvasH125a9OldMVA   = (TCanvas*)infileH125a9OldMVA.Get("MatchedLooseIsoCJPt");
+  TCanvas *MatchedMedIsoCJPtCanvasH125a9OldMVA     = (TCanvas*)infileH125a9OldMVA.Get("MatchedMedIsoCJPt");
+  TCanvas *MatchedTightIsoCJPtCanvasH125a9OldMVA   = (TCanvas*)infileH125a9OldMVA.Get("MatchedTightIsoCJPt");
+  TCanvas *MatchedCJPtCanvasH125a9OldMVA   = (TCanvas*)infileH125a9OldMVA.Get("MatchedCJPt");
+
+
+  ////////////////
+  // H125a5 125
+  ////////////////
+  TCanvas *MatchedLooseIsoCJPtCanvasH125a5New   = (TCanvas*)infileH125a5New.Get("MatchedLooseIsoCJPt");
+  TCanvas *MatchedMedIsoCJPtCanvasH125a5New     = (TCanvas*)infileH125a5New.Get("MatchedMedIsoCJPt");
+  TCanvas *MatchedTightIsoCJPtCanvasH125a5New   = (TCanvas*)infileH125a5New.Get("MatchedTightIsoCJPt");
+  TCanvas *MatchedDMFindCJPtCanvasH125a5New     = (TCanvas*)infileH125a5New.Get("MatchedDMFindCJPt");
+  TCanvas *MatchedCJPtCanvasH125a5New   = (TCanvas*)infileH125a5New.Get("MatchedCJPt");
+
+  TCanvas *MatchedLooseIsoCJPtCanvasH125a5Old   = (TCanvas*)infileH125a5Old.Get("MatchedLooseIsoCJPt");
+  TCanvas *MatchedMedIsoCJPtCanvasH125a5Old     = (TCanvas*)infileH125a5Old.Get("MatchedMedIsoCJPt");
+  TCanvas *MatchedTightIsoCJPtCanvasH125a5Old   = (TCanvas*)infileH125a5Old.Get("MatchedTightIsoCJPt");
+  TCanvas *MatchedDMFindCJPtCanvasH125a5Old     = (TCanvas*)infileH125a5Old.Get("MatchedDMFindCJPt");
+  TCanvas *MatchedCJPtCanvasH125a5Old   = (TCanvas*)infileH125a5Old.Get("MatchedCJPt");
+
+  TCanvas *MatchedLooseIsoCJPtCanvasH125a5NewMVA   = (TCanvas*)infileH125a5NewMVA.Get("MatchedLooseIsoCJPt");
+  TCanvas *MatchedMedIsoCJPtCanvasH125a5NewMVA     = (TCanvas*)infileH125a5NewMVA.Get("MatchedMedIsoCJPt");
+  TCanvas *MatchedTightIsoCJPtCanvasH125a5NewMVA   = (TCanvas*)infileH125a5NewMVA.Get("MatchedTightIsoCJPt");
+  TCanvas *MatchedCJPtCanvasH125a5NewMVA   = (TCanvas*)infileH125a5NewMVA.Get("MatchedCJPt");
+
+  TCanvas *MatchedLooseIsoCJPtCanvasH125a5OldMVA   = (TCanvas*)infileH125a5OldMVA.Get("MatchedLooseIsoCJPt");
+  TCanvas *MatchedMedIsoCJPtCanvasH125a5OldMVA     = (TCanvas*)infileH125a5OldMVA.Get("MatchedMedIsoCJPt");
+  TCanvas *MatchedTightIsoCJPtCanvasH125a5OldMVA   = (TCanvas*)infileH125a5OldMVA.Get("MatchedTightIsoCJPt");
+  TCanvas *MatchedCJPtCanvasH125a5OldMVA   = (TCanvas*)infileH125a5OldMVA.Get("MatchedCJPt");
+
+
+  ////////////////
+  // H1750
+  ////////////////
+  TCanvas *MatchedLooseIsoCJPtCanvasH750a9New   = (TCanvas*)infileH750a9New.Get("MatchedLooseIsoCJPt");
+  TCanvas *MatchedMedIsoCJPtCanvasH750a9New     = (TCanvas*)infileH750a9New.Get("MatchedMedIsoCJPt");
+  TCanvas *MatchedTightIsoCJPtCanvasH750a9New   = (TCanvas*)infileH750a9New.Get("MatchedTightIsoCJPt");
+  TCanvas *MatchedDMFindCJPtCanvasH750a9New     = (TCanvas*)infileH750a9New.Get("MatchedDMFindCJPt");
+  TCanvas *MatchedCJPtCanvasH750a9New   = (TCanvas*)infileH750a9New.Get("MatchedCJPt");
+
+  TCanvas *MatchedLooseIsoCJPtCanvasH750a9Old   = (TCanvas*)infileH750a9Old.Get("MatchedLooseIsoCJPt");
+  TCanvas *MatchedMedIsoCJPtCanvasH750a9Old     = (TCanvas*)infileH750a9Old.Get("MatchedMedIsoCJPt");
+  TCanvas *MatchedTightIsoCJPtCanvasH750a9Old   = (TCanvas*)infileH750a9Old.Get("MatchedTightIsoCJPt");
+  TCanvas *MatchedDMFindCJPtCanvasH750a9Old     = (TCanvas*)infileH750a9Old.Get("MatchedDMFindCJPt");
+  TCanvas *MatchedCJPtCanvasH750a9Old   = (TCanvas*)infileH750a9Old.Get("MatchedCJPt");
+
+  TCanvas *MatchedLooseIsoCJPtCanvasH750a9NewMVA   = (TCanvas*)infileH750a9NewMVA.Get("MatchedLooseIsoCJPt");
+  TCanvas *MatchedMedIsoCJPtCanvasH750a9NewMVA     = (TCanvas*)infileH750a9NewMVA.Get("MatchedMedIsoCJPt");
+  TCanvas *MatchedTightIsoCJPtCanvasH750a9NewMVA   = (TCanvas*)infileH750a9NewMVA.Get("MatchedTightIsoCJPt");
+  TCanvas *MatchedCJPtCanvasH750a9NewMVA   = (TCanvas*)infileH750a9NewMVA.Get("MatchedCJPt");
+
+  TCanvas *MatchedLooseIsoCJPtCanvasH750a9OldMVA   = (TCanvas*)infileH750a9OldMVA.Get("MatchedLooseIsoCJPt");
+  TCanvas *MatchedMedIsoCJPtCanvasH750a9OldMVA     = (TCanvas*)infileH750a9OldMVA.Get("MatchedMedIsoCJPt");
+  TCanvas *MatchedTightIsoCJPtCanvasH750a9OldMVA   = (TCanvas*)infileH750a9OldMVA.Get("MatchedTightIsoCJPt");
+  TCanvas *MatchedCJPtCanvasH750a9OldMVA   = (TCanvas*)infileH750a9OldMVA.Get("MatchedCJPt");
+
+
+
+
+  ///////////////////////////////////////////
+  // Histgrams to be overlaid Matched
+  ///////////////////////////////////////////
+
+  //Matching the Lepton Particle
+  TCanvas *MatchedTauMuPtLeptonDYCanvas   = (TCanvas*)infileDYOldMVA.Get("MatchedTauMuPtLepton");
+  TCanvas *MatchedTauMuPtLeptonTTCanvas   = (TCanvas*)infileTTOldMVA.Get("MatchedTauMuPtLepton");
+  TCanvas *MatchedTauMuPtLeptonWJCanvas   = (TCanvas*)infileWJOldMVA.Get("MatchedTauMuPtLepton");
+  TCanvas *MatchedTauMuPtH125a19Canvas   = (TCanvas*)infileH125a19OldMVA.Get("MatchedTauMuPt");
+  TCanvas *MatchedTauMuPtH125a9Canvas   = (TCanvas*)infileH125a1OldMVA.Get("MatchedTauMuPt");
+  TCanvas *MatchedTauMuPtH125a5Canvas   = (TCanvas*)infileH125a5OldMVA.Get("MatchedTauMuPt");
+  TCanvas *MatchedTauMuPtH750a9Canvas   = (TCanvas*)infileH750a9OldMVA.Get("MatchedTauMuPt");
+
+  TCanvas *MatchedTauHadPtLeptonDYCanvas   = (TCanvas*)infileDYOldMVA.Get("MatchedTauHadPtLepton");
+  TCanvas *MatchedTauHadPtLeptonTTCanvas   = (TCanvas*)infileTTOldMVA.Get("MatchedTauHadPtLepton");
+  TCanvas *MatchedTauHadPtLeptonWJCanvas   = (TCanvas*)infileWJOldMVA.Get("MatchedTauHadPtLepton");
+  TCanvas *MatchedTauHadPtH125a19Canvas   = (TCanvas*)infileH125a19OldMVA.Get("MatchedTauHadPt");
+  TCanvas *MatchedTauHadPtH125a9Canvas   = (TCanvas*)infileH125a9OldMVA.Get("MatchedTauHadPt");
+  TCanvas *MatchedTauHadPtH125a5Canvas   = (TCanvas*)infileH125a5OldMVA.Get("MatchedTauHadPt");
+  TCanvas *MatchedTauHadPtH750a9Canvas   = (TCanvas*)infileH750a9OldMVA.Get("MatchedTauHadPt");
+
+  TCanvas *MatchedTauHadEtaLeptonDYCanvas   = (TCanvas*)infileDYOldMVA.Get("MatchedTauHadEtaLepton");
+  TCanvas *MatchedTauHadEtaLeptonTTCanvas   = (TCanvas*)infileTTOldMVA.Get("MatchedTauHadEtaLepton");
+  TCanvas *MatchedTauHadEtaLeptonWJCanvas   = (TCanvas*)infileWJOldMVA.Get("MatchedTauHadEtaLepton");
+  TCanvas *MatchedTauHadEtaH125a19Canvas   = (TCanvas*)infileH125a19OldMVA.Get("MatchedTauHadEta");
+  TCanvas *MatchedTauHadEtaH125a9Canvas   = (TCanvas*)infileH125a9OldMVA.Get("MatchedTauHadEta");
+  TCanvas *MatchedTauHadEtaH125a5Canvas   = (TCanvas*)infileH125a5OldMVA.Get("MatchedTauHadEta");
+  TCanvas *MatchedTauHadEtaH750a9Canvas   = (TCanvas*)infileH750a9OldMVA.Get("MatchedTauHadEta");
+
+  TCanvas *MatchedHTLeptonDYCanvas   = (TCanvas*)infileDYOldMVA.Get("MatchedHTLepton");
+  TCanvas *MatchedHTLeptonTTCanvas   = (TCanvas*)infileTTOldMVA.Get("MatchedHTLepton");
+  TCanvas *MatchedHTLeptonWJCanvas   = (TCanvas*)infileWJOldMVA.Get("MatchedHTLepton");
+  TCanvas *MatchedHTH125a19Canvas   = (TCanvas*)infileH125a19OldMVA.Get("MatchedHT");
+  TCanvas *MatchedHTH125a9Canvas   = (TCanvas*)infileH125a9OldMVA.Get("MatchedHT");
+  TCanvas *MatchedHTH125a5Canvas   = (TCanvas*)infileH125a5OldMVA.Get("MatchedHT");
+  TCanvas *MatchedHTH750a9Canvas   = (TCanvas*)infileH750a9OldMVA.Get("MatchedHT");
+
+  TCanvas *MatchedBDiscCSVLeptonDYCanvas   = (TCanvas*)infileDYOldMVA.Get("MatchedBDiscCSVLepton");
+  TCanvas *MatchedBDiscCSVLeptonTTCanvas   = (TCanvas*)infileTTOldMVA.Get("MatchedBDiscCSVLepton");
+  TCanvas *MatchedBDiscCSVLeptonWJCanvas   = (TCanvas*)infileWJOldMVA.Get("MatchedBDiscCSVLepton");
+  TCanvas *MatchedBDiscCSVH125a19Canvas   = (TCanvas*)infileH125a19OldMVA.Get("MatchedBDiscCSV");
+  TCanvas *MatchedBDiscCSVH125a9Canvas   = (TCanvas*)infileH125a9OldMVA.Get("MatchedBDiscCSV");
+  TCanvas *MatchedBDiscCSVH125a5Canvas   = (TCanvas*)infileH125a5OldMVA.Get("MatchedBDiscCSV");
+  TCanvas *MatchedBDiscCSVH750a9Canvas   = (TCanvas*)infileH750a9OldMVA.Get("MatchedBDiscCSV");
+
+  //Matching the Jet Particle
+  TCanvas *MatchedTauMuPtJetDYCanvas   = (TCanvas*)infileDYOldMVA.Get("MatchedTauMuPtJet");
+  TCanvas *MatchedTauMuPtJetTTCanvas   = (TCanvas*)infileTTOldMVA.Get("MatchedTauMuPtJet");
+  TCanvas *MatchedTauMuPtJetWJCanvas   = (TCanvas*)infileWJOldMVA.Get("MatchedTauMuPtJet");
+  
+  TCanvas *MatchedTauHadPtJetDYCanvas   = (TCanvas*)infileDYOldMVA.Get("MatchedTauHadPtJet");
+  TCanvas *MatchedTauHadPtJetTTCanvas   = (TCanvas*)infileTTOldMVA.Get("MatchedTauHadPtJet");
+  TCanvas *MatchedTauHadPtJetWJCanvas   = (TCanvas*)infileWJOldMVA.Get("MatchedTauHadPtJet");
+  
+  TCanvas *MatchedTauHadEtaJetDYCanvas   = (TCanvas*)infileDYOldMVA.Get("MatchedTauHadEtaJet");
+  TCanvas *MatchedTauHadEtaJetTTCanvas   = (TCanvas*)infileTTOldMVA.Get("MatchedTauHadEtaJet");
+  TCanvas *MatchedTauHadEtaJetWJCanvas   = (TCanvas*)infileWJOldMVA.Get("MatchedTauHadEtaJet");
+  
+  TCanvas *MatchedHTJetDYCanvas   = (TCanvas*)infileDYOldMVA.Get("MatchedHTJet");
+  TCanvas *MatchedHTJetTTCanvas   = (TCanvas*)infileTTOldMVA.Get("MatchedHTJet");
+  TCanvas *MatchedHTJetWJCanvas   = (TCanvas*)infileWJOldMVA.Get("MatchedHTJet");
+  
+  TCanvas *MatchedBDiscCSVJetDYCanvas   = (TCanvas*)infileDYOldMVA.Get("MatchedBDiscCSVJet");
+  TCanvas *MatchedBDiscCSVJetTTCanvas   = (TCanvas*)infileTTOldMVA.Get("MatchedBDiscCSVJet");
+  TCanvas *MatchedBDiscCSVJetWJCanvas   = (TCanvas*)infileWJOldMVA.Get("MatchedBDiscCSVJet");
+
+
+cout << "Got Canvases" << endl;
+
+  //////////////////////////////
+  // Getting the DY Histograms
+  //////////////////////////////
+  TH1F* MatchedLooseIsoCJPtDYNew_   = (TH1F*)MatchedLooseIsoCJPtCanvasDYNew->GetPrimitive("MatchedLooseIsoCJPt");
+  TH1F* MatchedMedIsoCJPtDYNew_     = (TH1F*)MatchedMedIsoCJPtCanvasDYNew->GetPrimitive("MatchedMedIsoCJPt");
+  TH1F* MatchedTightIsoCJPtDYNew_   = (TH1F*)MatchedTightIsoCJPtCanvasDYNew->GetPrimitive("MatchedTightIsoCJPt");
+  TH1F* MatchedDMFindCJPtDYNew_     = (TH1F*)MatchedDMFindCJPtCanvasDYNew->GetPrimitive("MatchedDMFindCJPt");
+  TH1F* MatchedCJPtDYNew_   = (TH1F*)MatchedCJPtCanvasDYNew->GetPrimitive("MatchedCJPt");
+
+  TH1F* MatchedLooseIsoCJPtDYOld_   = (TH1F*)MatchedLooseIsoCJPtCanvasDYOld->GetPrimitive("MatchedLooseIsoCJPt");
+  TH1F* MatchedMedIsoCJPtDYOld_     = (TH1F*)MatchedMedIsoCJPtCanvasDYOld->GetPrimitive("MatchedMedIsoCJPt");
+  TH1F* MatchedTightIsoCJPtDYOld_   = (TH1F*)MatchedTightIsoCJPtCanvasDYOld->GetPrimitive("MatchedTightIsoCJPt");
+  TH1F* MatchedDMFindCJPtDYOld_     = (TH1F*)MatchedDMFindCJPtCanvasDYOld->GetPrimitive("MatchedDMFindCJPt");
+  TH1F* MatchedCJPtDYOld_   = (TH1F*)MatchedCJPtCanvasDYOld->GetPrimitive("MatchedCJPt");
+
+  TH1F* MatchedLooseIsoCJPtDYNewMVA_   = (TH1F*)MatchedLooseIsoCJPtCanvasDYNewMVA->GetPrimitive("MatchedLooseIsoCJPt");
+  TH1F* MatchedMedIsoCJPtDYNewMVA_     = (TH1F*)MatchedMedIsoCJPtCanvasDYNewMVA->GetPrimitive("MatchedMedIsoCJPt");
+  TH1F* MatchedTightIsoCJPtDYNewMVA_   = (TH1F*)MatchedTightIsoCJPtCanvasDYNewMVA->GetPrimitive("MatchedTightIsoCJPt");
+  TH1F* MatchedCJPtDYNewMVA_   = (TH1F*)MatchedCJPtCanvasDYNewMVA->GetPrimitive("MatchedCJPt");
+
+  TH1F* MatchedLooseIsoCJPtDYOldMVA_   = (TH1F*)MatchedLooseIsoCJPtCanvasDYOldMVA->GetPrimitive("MatchedLooseIsoCJPt");
+  TH1F* MatchedMedIsoCJPtDYOldMVA_     = (TH1F*)MatchedMedIsoCJPtCanvasDYOldMVA->GetPrimitive("MatchedMedIsoCJPt");
+  TH1F* MatchedTightIsoCJPtDYOldMVA_   = (TH1F*)MatchedTightIsoCJPtCanvasDYOldMVA->GetPrimitive("MatchedTightIsoCJPt");
+  TH1F* MatchedCJPtDYOldMVA_   = (TH1F*)MatchedCJPtCanvasDYOldMVA->GetPrimitive("MatchedCJPt");
+
+  //////////////////////////////
+  // Getting the WJ Histograms
+  //////////////////////////////
+  TH1F* MatchedLooseIsoCJPtWJNew_   = (TH1F*)MatchedLooseIsoCJPtCanvasWJNew->GetPrimitive("MatchedLooseIsoCJPt");
+  TH1F* MatchedMedIsoCJPtWJNew_     = (TH1F*)MatchedMedIsoCJPtCanvasWJNew->GetPrimitive("MatchedMedIsoCJPt");
+  TH1F* MatchedTightIsoCJPtWJNew_   = (TH1F*)MatchedTightIsoCJPtCanvasWJNew->GetPrimitive("MatchedTightIsoCJPt");
+  TH1F* MatchedDMFindCJPtWJNew_     = (TH1F*)MatchedDMFindCJPtCanvasWJNew->GetPrimitive("MatchedDMFindCJPt");
+  TH1F* MatchedCJPtWJNew_   = (TH1F*)MatchedCJPtCanvasWJNew->GetPrimitive("MatchedCJPt");
+  
+  TH1F* MatchedLooseIsoCJPtWJOld_   = (TH1F*)MatchedLooseIsoCJPtCanvasWJOld->GetPrimitive("MatchedLooseIsoCJPt");
+  TH1F* MatchedMedIsoCJPtWJOld_     = (TH1F*)MatchedMedIsoCJPtCanvasWJOld->GetPrimitive("MatchedMedIsoCJPt");
+  TH1F* MatchedTightIsoCJPtWJOld_   = (TH1F*)MatchedTightIsoCJPtCanvasWJOld->GetPrimitive("MatchedTightIsoCJPt");
+  TH1F* MatchedDMFindCJPtWJOld_     = (TH1F*)MatchedDMFindCJPtCanvasWJOld->GetPrimitive("MatchedDMFindCJPt");
+  TH1F* MatchedCJPtWJOld_   = (TH1F*)MatchedCJPtCanvasWJOld->GetPrimitive("MatchedCJPt");
+  
+  TH1F* MatchedLooseIsoCJPtWJNewMVA_   = (TH1F*)MatchedLooseIsoCJPtCanvasWJNewMVA->GetPrimitive("MatchedLooseIsoCJPt");
+  TH1F* MatchedMedIsoCJPtWJNewMVA_     = (TH1F*)MatchedMedIsoCJPtCanvasWJNewMVA->GetPrimitive("MatchedMedIsoCJPt");
+  TH1F* MatchedTightIsoCJPtWJNewMVA_   = (TH1F*)MatchedTightIsoCJPtCanvasWJNewMVA->GetPrimitive("MatchedTightIsoCJPt");
+  TH1F* MatchedCJPtWJNewMVA_   = (TH1F*)MatchedCJPtCanvasWJNewMVA->GetPrimitive("MatchedCJPt");
+  
+  TH1F* MatchedLooseIsoCJPtWJOldMVA_   = (TH1F*)MatchedLooseIsoCJPtCanvasWJOldMVA->GetPrimitive("MatchedLooseIsoCJPt");
+  TH1F* MatchedMedIsoCJPtWJOldMVA_     = (TH1F*)MatchedMedIsoCJPtCanvasWJOldMVA->GetPrimitive("MatchedMedIsoCJPt");
+  TH1F* MatchedTightIsoCJPtWJOldMVA_   = (TH1F*)MatchedTightIsoCJPtCanvasWJOldMVA->GetPrimitive("MatchedTightIsoCJPt");
+  TH1F* MatchedCJPtWJOldMVA_   = (TH1F*)MatchedCJPtCanvasWJOldMVA->GetPrimitive("MatchedCJPt");
+
+
+  //////////////////////////////
+  // Getting the TT Histograms
+  //////////////////////////////
+  TH1F* MatchedLooseIsoCJPtTTNew_   = (TH1F*)MatchedLooseIsoCJPtCanvasTTNew->GetPrimitive("MatchedLooseIsoCJPt");
+  TH1F* MatchedMedIsoCJPtTTNew_     = (TH1F*)MatchedMedIsoCJPtCanvasTTNew->GetPrimitive("MatchedMedIsoCJPt");
+  TH1F* MatchedTightIsoCJPtTTNew_   = (TH1F*)MatchedTightIsoCJPtCanvasTTNew->GetPrimitive("MatchedTightIsoCJPt");
+  TH1F* MatchedDMFindCJPtTTNew_     = (TH1F*)MatchedDMFindCJPtCanvasTTNew->GetPrimitive("MatchedDMFindCJPt");
+  TH1F* MatchedCJPtTTNew_   = (TH1F*)MatchedCJPtCanvasTTNew->GetPrimitive("MatchedCJPt");
+  
+  TH1F* MatchedLooseIsoCJPtTTOld_   = (TH1F*)MatchedLooseIsoCJPtCanvasTTOld->GetPrimitive("MatchedLooseIsoCJPt");
+  TH1F* MatchedMedIsoCJPtTTOld_     = (TH1F*)MatchedMedIsoCJPtCanvasTTOld->GetPrimitive("MatchedMedIsoCJPt");
+  TH1F* MatchedTightIsoCJPtTTOld_   = (TH1F*)MatchedTightIsoCJPtCanvasTTOld->GetPrimitive("MatchedTightIsoCJPt");
+  TH1F* MatchedDMFindCJPtTTOld_     = (TH1F*)MatchedDMFindCJPtCanvasTTOld->GetPrimitive("MatchedDMFindCJPt");
+  TH1F* MatchedCJPtTTOld_   = (TH1F*)MatchedCJPtCanvasTTOld->GetPrimitive("MatchedCJPt");
+  
+  TH1F* MatchedLooseIsoCJPtTTNewMVA_   = (TH1F*)MatchedLooseIsoCJPtCanvasTTNewMVA->GetPrimitive("MatchedLooseIsoCJPt");
+  TH1F* MatchedMedIsoCJPtTTNewMVA_     = (TH1F*)MatchedMedIsoCJPtCanvasTTNewMVA->GetPrimitive("MatchedMedIsoCJPt");
+  TH1F* MatchedTightIsoCJPtTTNewMVA_   = (TH1F*)MatchedTightIsoCJPtCanvasTTNewMVA->GetPrimitive("MatchedTightIsoCJPt");
+  TH1F* MatchedCJPtTTNewMVA_   = (TH1F*)MatchedCJPtCanvasTTNewMVA->GetPrimitive("MatchedCJPt");
+  
+  TH1F* MatchedLooseIsoCJPtTTOldMVA_   = (TH1F*)MatchedLooseIsoCJPtCanvasTTOldMVA->GetPrimitive("MatchedLooseIsoCJPt");
+  TH1F* MatchedMedIsoCJPtTTOldMVA_     = (TH1F*)MatchedMedIsoCJPtCanvasTTOldMVA->GetPrimitive("MatchedMedIsoCJPt");
+  TH1F* MatchedTightIsoCJPtTTOldMVA_   = (TH1F*)MatchedTightIsoCJPtCanvasTTOldMVA->GetPrimitive("MatchedTightIsoCJPt");
+  TH1F* MatchedCJPtTTOldMVA_   = (TH1F*)MatchedCJPtCanvasTTOldMVA->GetPrimitive("MatchedCJPt");
+
+
+  ///////////////////////////
+  // NEvents Histograms
+  ///////////////////////////
+  TH1F* NEventsTTOldMVA_   = (TH1F*)NEventsTTOldMVACanvas->GetPrimitive("NEvents");
+  TH1F* NEventsDYOldMVA_   = (TH1F*)NEventsDYOldMVACanvas->GetPrimitive("NEvents");
+  TH1F* NEventsWJOldMVA_   = (TH1F*)NEventsWJOldMVACanvas->GetPrimitive("NEvents");
+  TH1F* NEventsH125a19OldMVA_   = (TH1F*)NEventsH125a19OldMVACanvas->GetPrimitive("NEvents");
+  TH1F* NEventsH750a9OldMVA_   = (TH1F*)NEventsH750a9OldMVACanvas->GetPrimitive("NEvents");
+  TH1F* NEventsTTOld_   = (TH1F*)NEventsTTOldCanvas->GetPrimitive("NEvents");
+  TH1F* NEventsDYOld_   = (TH1F*)NEventsDYOldCanvas->GetPrimitive("NEvents");
+  TH1F* NEventsWJOld_   = (TH1F*)NEventsWJOldCanvas->GetPrimitive("NEvents");
+  TH1F* NEventsH125a19Old_   = (TH1F*)NEventsH125a19OldCanvas->GetPrimitive("NEvents");
+  TH1F* NEventsH750a9Old_   = (TH1F*)NEventsH750a9OldCanvas->GetPrimitive("NEvents");
+  TH1F* NEventsTTNewMVA_   = (TH1F*)NEventsTTNewMVACanvas->GetPrimitive("NEvents");
+  TH1F* NEventsDYNewMVA_   = (TH1F*)NEventsDYNewMVACanvas->GetPrimitive("NEvents");
+  TH1F* NEventsWJNewMVA_   = (TH1F*)NEventsWJNewMVACanvas->GetPrimitive("NEvents");
+  TH1F* NEventsH125a19NewMVA_   = (TH1F*)NEventsH125a19NewMVACanvas->GetPrimitive("NEvents");
+  TH1F* NEventsH750a9NewMVA_   = (TH1F*)NEventsH750a9NewMVACanvas->GetPrimitive("NEvents");
+  TH1F* NEventsTTNew_   = (TH1F*)NEventsTTNewCanvas->GetPrimitive("NEvents");
+  TH1F* NEventsDYNew_   = (TH1F*)NEventsDYNewCanvas->GetPrimitive("NEvents");
+  TH1F* NEventsWJNew_   = (TH1F*)NEventsWJNewCanvas->GetPrimitive("NEvents");
+  TH1F* NEventsH125a19New_   = (TH1F*)NEventsH125a19NewCanvas->GetPrimitive("NEvents");
+  TH1F* NEventsH750a9New_   = (TH1F*)NEventsH750a9NewCanvas->GetPrimitive("NEvents");
+
+  TH1F* NEventsCutsTTOldMVA_   = (TH1F*)NEventsCutsTTOldMVACanvas->GetPrimitive("NEventsCuts");
+  TH1F* NEventsCutsDYOldMVA_   = (TH1F*)NEventsCutsDYOldMVACanvas->GetPrimitive("NEventsCuts");
+  TH1F* NEventsCutsWJOldMVA_   = (TH1F*)NEventsCutsWJOldMVACanvas->GetPrimitive("NEventsCuts");
+  TH1F* NEventsCutsH125a19OldMVA_   = (TH1F*)NEventsCutsH125a19OldMVACanvas->GetPrimitive("NEventsCuts");
+  TH1F* NEventsCutsH750a9OldMVA_   = (TH1F*)NEventsCutsH750a9OldMVACanvas->GetPrimitive("NEventsCuts");
+  TH1F* NEventsCutsTTOld_   = (TH1F*)NEventsCutsTTOldCanvas->GetPrimitive("NEventsCuts");
+  TH1F* NEventsCutsDYOld_   = (TH1F*)NEventsCutsDYOldCanvas->GetPrimitive("NEventsCuts");
+  TH1F* NEventsCutsWJOld_   = (TH1F*)NEventsCutsWJOldCanvas->GetPrimitive("NEventsCuts");
+  TH1F* NEventsCutsH125a19Old_   = (TH1F*)NEventsCutsH125a19OldCanvas->GetPrimitive("NEventsCuts");
+  TH1F* NEventsCutsH750a9Old_   = (TH1F*)NEventsCutsH750a9OldCanvas->GetPrimitive("NEventsCuts");
+  TH1F* NEventsCutsTTNewMVA_   = (TH1F*)NEventsCutsTTNewMVACanvas->GetPrimitive("NEventsCuts");
+  TH1F* NEventsCutsDYNewMVA_   = (TH1F*)NEventsCutsDYNewMVACanvas->GetPrimitive("NEventsCuts");
+  TH1F* NEventsCutsWJNewMVA_   = (TH1F*)NEventsCutsWJNewMVACanvas->GetPrimitive("NEventsCuts");
+  TH1F* NEventsCutsH125a19NewMVA_   = (TH1F*)NEventsCutsH125a19NewMVACanvas->GetPrimitive("NEventsCuts");
+  TH1F* NEventsCutsH750a9NewMVA_   = (TH1F*)NEventsCutsH750a9NewMVACanvas->GetPrimitive("NEventsCuts");
+  TH1F* NEventsCutsTTNew_   = (TH1F*)NEventsCutsTTNewCanvas->GetPrimitive("NEventsCuts");
+  TH1F* NEventsCutsDYNew_   = (TH1F*)NEventsCutsDYNewCanvas->GetPrimitive("NEventsCuts");
+  TH1F* NEventsCutsWJNew_   = (TH1F*)NEventsCutsWJNewCanvas->GetPrimitive("NEventsCuts");
+  TH1F* NEventsCutsH125a19New_   = (TH1F*)NEventsCutsH125a19NewCanvas->GetPrimitive("NEventsCuts");
+  TH1F* NEventsCutsH750a9New_   = (TH1F*)NEventsCutsH750a9NewCanvas->GetPrimitive("NEventsCuts");
+
+  ///////////////////////////
+  // GenMatchType Histograms
+  ///////////////////////////
+  TH1F* GenMatchTypeTT_   = (TH1F*)GenMatchTypeTTCanvas->GetPrimitive("GenMatchType");
+  TH1F* GenMatchTypeDY_   = (TH1F*)GenMatchTypeDYCanvas->GetPrimitive("GenMatchType");
+  TH1F* GenMatchTypeWJ_   = (TH1F*)GenMatchTypeWJCanvas->GetPrimitive("GenMatchType");
+
+  ///////////////////////////
+  // GenMatchType Histograms
+  ///////////////////////////
+  TH1F* GenMatchPDGIDTT_   = (TH1F*)GenMatchPDGIDTTCanvas->GetPrimitive("GenMatchPDGID");
+  TH1F* GenMatchPDGIDDY_   = (TH1F*)GenMatchPDGIDDYCanvas->GetPrimitive("GenMatchPDGID");
+  TH1F* GenMatchPDGIDWJ_   = (TH1F*)GenMatchPDGIDWJCanvas->GetPrimitive("GenMatchPDGID");
+
+  //////////////////////////////
+  // Getting the H125a19 Histograms
+  //////////////////////////////
+  TH1F* MatchedLooseIsoCJPtH125a19New_   = (TH1F*)MatchedLooseIsoCJPtCanvasH125a19New->GetPrimitive("MatchedLooseIsoCJPt");
+  TH1F* MatchedMedIsoCJPtH125a19New_     = (TH1F*)MatchedMedIsoCJPtCanvasH125a19New->GetPrimitive("MatchedMedIsoCJPt");
+  TH1F* MatchedTightIsoCJPtH125a19New_   = (TH1F*)MatchedTightIsoCJPtCanvasH125a19New->GetPrimitive("MatchedTightIsoCJPt");
+  TH1F* MatchedDMFindCJPtH125a19New_     = (TH1F*)MatchedDMFindCJPtCanvasH125a19New->GetPrimitive("MatchedDMFindCJPt");
+  TH1F* MatchedCJPtH125a19New_   = (TH1F*)MatchedCJPtCanvasH125a19New->GetPrimitive("MatchedCJPt");
+
+  TH1F* MatchedLooseIsoCJPtH125a19Old_   = (TH1F*)MatchedLooseIsoCJPtCanvasH125a19Old->GetPrimitive("MatchedLooseIsoCJPt");
+  TH1F* MatchedMedIsoCJPtH125a19Old_     = (TH1F*)MatchedMedIsoCJPtCanvasH125a19Old->GetPrimitive("MatchedMedIsoCJPt");
+  TH1F* MatchedTightIsoCJPtH125a19Old_   = (TH1F*)MatchedTightIsoCJPtCanvasH125a19Old->GetPrimitive("MatchedTightIsoCJPt");
+  TH1F* MatchedDMFindCJPtH125a19Old_     = (TH1F*)MatchedDMFindCJPtCanvasH125a19Old->GetPrimitive("MatchedDMFindCJPt");
+  TH1F* MatchedCJPtH125a19Old_   = (TH1F*)MatchedCJPtCanvasH125a19Old->GetPrimitive("MatchedCJPt");
+
+  TH1F* MatchedLooseIsoCJPtH125a19NewMVA_   = (TH1F*)MatchedLooseIsoCJPtCanvasH125a19NewMVA->GetPrimitive("MatchedLooseIsoCJPt");
+  TH1F* MatchedMedIsoCJPtH125a19NewMVA_     = (TH1F*)MatchedMedIsoCJPtCanvasH125a19NewMVA->GetPrimitive("MatchedMedIsoCJPt");
+  TH1F* MatchedTightIsoCJPtH125a19NewMVA_   = (TH1F*)MatchedTightIsoCJPtCanvasH125a19NewMVA->GetPrimitive("MatchedTightIsoCJPt");
+  TH1F* MatchedCJPtH125a19NewMVA_   = (TH1F*)MatchedCJPtCanvasH125a19NewMVA->GetPrimitive("MatchedCJPt");
+
+  TH1F* MatchedLooseIsoCJPtH125a19OldMVA_   = (TH1F*)MatchedLooseIsoCJPtCanvasH125a19OldMVA->GetPrimitive("MatchedLooseIsoCJPt");
+  TH1F* MatchedMedIsoCJPtH125a19OldMVA_     = (TH1F*)MatchedMedIsoCJPtCanvasH125a19OldMVA->GetPrimitive("MatchedMedIsoCJPt");
+  TH1F* MatchedTightIsoCJPtH125a19OldMVA_   = (TH1F*)MatchedTightIsoCJPtCanvasH125a19OldMVA->GetPrimitive("MatchedTightIsoCJPt");
+  TH1F* MatchedCJPtH125a19OldMVA_   = (TH1F*)MatchedCJPtCanvasH125a19OldMVA->GetPrimitive("MatchedCJPt");
+
+  //////////////////////////////
+  // Getting the H750a9 Histograms
+  //////////////////////////////
+  TH1F* MatchedLooseIsoCJPtH750a9New_   = (TH1F*)MatchedLooseIsoCJPtCanvasH750a9New->GetPrimitive("MatchedLooseIsoCJPt");
+  TH1F* MatchedMedIsoCJPtH750a9New_     = (TH1F*)MatchedMedIsoCJPtCanvasH750a9New->GetPrimitive("MatchedMedIsoCJPt");
+  TH1F* MatchedTightIsoCJPtH750a9New_   = (TH1F*)MatchedTightIsoCJPtCanvasH750a9New->GetPrimitive("MatchedTightIsoCJPt");
+  TH1F* MatchedDMFindCJPtH750a9New_     = (TH1F*)MatchedDMFindCJPtCanvasH750a9New->GetPrimitive("MatchedDMFindCJPt");
+  TH1F* MatchedCJPtH750a9New_   = (TH1F*)MatchedCJPtCanvasH750a9New->GetPrimitive("MatchedCJPt");
+
+  TH1F* MatchedLooseIsoCJPtH750a9Old_   = (TH1F*)MatchedLooseIsoCJPtCanvasH750a9Old->GetPrimitive("MatchedLooseIsoCJPt");
+  TH1F* MatchedMedIsoCJPtH750a9Old_     = (TH1F*)MatchedMedIsoCJPtCanvasH750a9Old->GetPrimitive("MatchedMedIsoCJPt");
+  TH1F* MatchedTightIsoCJPtH750a9Old_   = (TH1F*)MatchedTightIsoCJPtCanvasH750a9Old->GetPrimitive("MatchedTightIsoCJPt");
+  TH1F* MatchedDMFindCJPtH750a9Old_     = (TH1F*)MatchedDMFindCJPtCanvasH750a9Old->GetPrimitive("MatchedDMFindCJPt");
+  TH1F* MatchedCJPtH750a9Old_   = (TH1F*)MatchedCJPtCanvasH750a9Old->GetPrimitive("MatchedCJPt");
+
+  TH1F* MatchedLooseIsoCJPtH750a9NewMVA_   = (TH1F*)MatchedLooseIsoCJPtCanvasH750a9NewMVA->GetPrimitive("MatchedLooseIsoCJPt");
+  TH1F* MatchedMedIsoCJPtH750a9NewMVA_     = (TH1F*)MatchedMedIsoCJPtCanvasH750a9NewMVA->GetPrimitive("MatchedMedIsoCJPt");
+  TH1F* MatchedTightIsoCJPtH750a9NewMVA_   = (TH1F*)MatchedTightIsoCJPtCanvasH750a9NewMVA->GetPrimitive("MatchedTightIsoCJPt");
+  TH1F* MatchedCJPtH750a9NewMVA_   = (TH1F*)MatchedCJPtCanvasH750a9NewMVA->GetPrimitive("MatchedCJPt");
+
+  TH1F* MatchedLooseIsoCJPtH750a9OldMVA_   = (TH1F*)MatchedLooseIsoCJPtCanvasH750a9OldMVA->GetPrimitive("MatchedLooseIsoCJPt");
+  TH1F* MatchedMedIsoCJPtH750a9OldMVA_     = (TH1F*)MatchedMedIsoCJPtCanvasH750a9OldMVA->GetPrimitive("MatchedMedIsoCJPt");
+  TH1F* MatchedTightIsoCJPtH750a9OldMVA_   = (TH1F*)MatchedTightIsoCJPtCanvasH750a9OldMVA->GetPrimitive("MatchedTightIsoCJPt");
+  TH1F* MatchedCJPtH750a9OldMVA_   = (TH1F*)MatchedCJPtCanvasH750a9OldMVA->GetPrimitive("MatchedCJPt");
+
+  //////////////////////////////////
+  // Canvases for overlaid histos
+  //////////////////////////////////
+  
+  // For Lepton Particles
+  TH1F* MatchedTauMuPtLeptonTT_   = (TH1F*)MatchedTauMuPtLeptonTTCanvas->GetPrimitive("MatchedTauMuPtLepton");
+  TH1F* MatchedTauMuPtLeptonDY_   = (TH1F*)MatchedTauMuPtLeptonDYCanvas->GetPrimitive("MatchedTauMuPtLepton");
+  TH1F* MatchedTauMuPtLeptonWJ_   = (TH1F*)MatchedTauMuPtLeptonWJCanvas->GetPrimitive("MatchedTauMuPtLepton");
+  TH1F* MatchedTauMuPtH125a19_   = (TH1F*)MatchedTauMuPtH125a19Canvas->GetPrimitive("MatchedTauMuPt");
+  TH1F* MatchedTauMuPtH750a9_   = (TH1F*)MatchedTauMuPtH750a9Canvas->GetPrimitive("MatchedTauMuPt");
+
+  TH1F* MatchedTauHadPtLeptonTT_   = (TH1F*)MatchedTauHadPtLeptonTTCanvas->GetPrimitive("MatchedTauHadPtLepton");
+  TH1F* MatchedTauHadPtLeptonDY_   = (TH1F*)MatchedTauHadPtLeptonDYCanvas->GetPrimitive("MatchedTauHadPtLepton");
+  TH1F* MatchedTauHadPtLeptonWJ_   = (TH1F*)MatchedTauHadPtLeptonWJCanvas->GetPrimitive("MatchedTauHadPtLepton");
+  TH1F* MatchedTauHadPtH125a19_   = (TH1F*)MatchedTauHadPtH125a19Canvas->GetPrimitive("MatchedTauHadPt");
+  TH1F* MatchedTauHadPtH750a9_   = (TH1F*)MatchedTauHadPtH750a9Canvas->GetPrimitive("MatchedTauHadPt");
+
+  TH1F* MatchedTauHadEtaLeptonTT_   = (TH1F*)MatchedTauHadEtaLeptonTTCanvas->GetPrimitive("MatchedTauHadEtaLepton");
+  TH1F* MatchedTauHadEtaLeptonDY_   = (TH1F*)MatchedTauHadEtaLeptonDYCanvas->GetPrimitive("MatchedTauHadEtaLepton");
+  TH1F* MatchedTauHadEtaLeptonWJ_   = (TH1F*)MatchedTauHadEtaLeptonWJCanvas->GetPrimitive("MatchedTauHadEtaLepton");
+  TH1F* MatchedTauHadEtaH125a19_   = (TH1F*)MatchedTauHadEtaH125a19Canvas->GetPrimitive("MatchedTauHadEta");
+  TH1F* MatchedTauHadEtaH750a9_   = (TH1F*)MatchedTauHadEtaH750a9Canvas->GetPrimitive("MatchedTauHadEta");
+
+  TH1F* MatchedHTLeptonTT_   = (TH1F*)MatchedHTLeptonTTCanvas->GetPrimitive("MatchedHTLepton");
+  TH1F* MatchedHTLeptonDY_   = (TH1F*)MatchedHTLeptonDYCanvas->GetPrimitive("MatchedHTLepton");
+  TH1F* MatchedHTLeptonWJ_   = (TH1F*)MatchedHTLeptonWJCanvas->GetPrimitive("MatchedHTLepton");
+  TH1F* MatchedHTH125a19_   = (TH1F*)MatchedHTH125a19Canvas->GetPrimitive("MatchedHT");
+  TH1F* MatchedHTH750a9_   = (TH1F*)MatchedHTH750a9Canvas->GetPrimitive("MatchedHT");
+
+  TH1F* MatchedBDiscCSVLeptonTT_   = (TH1F*)MatchedBDiscCSVLeptonTTCanvas->GetPrimitive("MatchedBDiscCSVLepton");
+  TH1F* MatchedBDiscCSVLeptonDY_   = (TH1F*)MatchedBDiscCSVLeptonDYCanvas->GetPrimitive("MatchedBDiscCSVLepton");
+  TH1F* MatchedBDiscCSVLeptonWJ_   = (TH1F*)MatchedBDiscCSVLeptonWJCanvas->GetPrimitive("MatchedBDiscCSVLepton");
+  TH1F* MatchedBDiscCSVH125a19_   = (TH1F*)MatchedBDiscCSVH125a19Canvas->GetPrimitive("MatchedBDiscCSV");
+  TH1F* MatchedBDiscCSVH750a9_   = (TH1F*)MatchedBDiscCSVH750a9Canvas->GetPrimitive("MatchedBDiscCSV");
+
+  // For Jet Particles
+  TH1F* MatchedTauMuPtJetTT_   = (TH1F*)MatchedTauMuPtJetTTCanvas->GetPrimitive("MatchedTauMuPtJet");
+  TH1F* MatchedTauMuPtJetDY_   = (TH1F*)MatchedTauMuPtJetDYCanvas->GetPrimitive("MatchedTauMuPtJet");
+  TH1F* MatchedTauMuPtJetWJ_   = (TH1F*)MatchedTauMuPtJetWJCanvas->GetPrimitive("MatchedTauMuPtJet");
+  
+  TH1F* MatchedTauHadPtJetTT_   = (TH1F*)MatchedTauHadPtJetTTCanvas->GetPrimitive("MatchedTauHadPtJet");
+  TH1F* MatchedTauHadPtJetDY_   = (TH1F*)MatchedTauHadPtJetDYCanvas->GetPrimitive("MatchedTauHadPtJet");
+  TH1F* MatchedTauHadPtJetWJ_   = (TH1F*)MatchedTauHadPtJetWJCanvas->GetPrimitive("MatchedTauHadPtJet");
+  
+  TH1F* MatchedTauHadEtaJetTT_   = (TH1F*)MatchedTauHadEtaJetTTCanvas->GetPrimitive("MatchedTauHadEtaJet");
+  TH1F* MatchedTauHadEtaJetDY_   = (TH1F*)MatchedTauHadEtaJetDYCanvas->GetPrimitive("MatchedTauHadEtaJet");
+  TH1F* MatchedTauHadEtaJetWJ_   = (TH1F*)MatchedTauHadEtaJetWJCanvas->GetPrimitive("MatchedTauHadEtaJet");
+  
+  TH1F* MatchedHTJetTT_   = (TH1F*)MatchedHTJetTTCanvas->GetPrimitive("MatchedHTJet");
+  TH1F* MatchedHTJetDY_   = (TH1F*)MatchedHTJetDYCanvas->GetPrimitive("MatchedHTJet");
+  TH1F* MatchedHTJetWJ_   = (TH1F*)MatchedHTJetWJCanvas->GetPrimitive("MatchedHTJet");
+  
+  TH1F* MatchedBDiscCSVJetTT_   = (TH1F*)MatchedBDiscCSVJetTTCanvas->GetPrimitive("MatchedBDiscCSVJet");
+  TH1F* MatchedBDiscCSVJetDY_   = (TH1F*)MatchedBDiscCSVJetDYCanvas->GetPrimitive("MatchedBDiscCSVJet");
+  TH1F* MatchedBDiscCSVJetWJ_   = (TH1F*)MatchedBDiscCSVJetWJCanvas->GetPrimitive("MatchedBDiscCSVJet");
+
+
+cout << "Histograms assigned." << endl; 
+
+  ////////////////////////////
+  // Getting TTJets Numbers
+  ////////////////////////////
+  double TTNew_Loose  = MatchedLooseIsoCJPtTTNew_->GetEntries();
+  double TTNew_Med    = MatchedMedIsoCJPtTTNew_->GetEntries();   
+  double TTNew_Tight  = MatchedTightIsoCJPtTTNew_->GetEntries(); 
+  double TTNew_DMFind = MatchedDMFindCJPtTTNew_->GetEntries();   
+  double TTNew_GenMat = MatchedCJPtTTNew_->GetEntries(); 
+
+  double TTOld_Loose  = MatchedLooseIsoCJPtTTOld_->GetEntries();
+  double TTOld_Med    = MatchedMedIsoCJPtTTOld_->GetEntries();
+  double TTOld_Tight  = MatchedTightIsoCJPtTTOld_->GetEntries();
+  double TTOld_DMFind = MatchedDMFindCJPtTTOld_->GetEntries();
+  double TTOld_GenMat = MatchedCJPtTTOld_->GetEntries();
+
+  double TTNewMVA_Loose  = MatchedLooseIsoCJPtTTNewMVA_->GetEntries();
+  double TTNewMVA_Med    = MatchedMedIsoCJPtTTNewMVA_->GetEntries();
+  double TTNewMVA_Tight  = MatchedTightIsoCJPtTTNewMVA_->GetEntries();
+  double TTNewMVA_GenMat = MatchedCJPtTTNewMVA_->GetEntries();
+
+  double TTOldMVA_Loose  = MatchedLooseIsoCJPtTTOldMVA_->GetEntries();
+  double TTOldMVA_Med    = MatchedMedIsoCJPtTTOldMVA_->GetEntries();
+  double TTOldMVA_Tight  = MatchedTightIsoCJPtTTOldMVA_->GetEntries();
+  double TTOldMVA_GenMat = MatchedCJPtTTOldMVA_->GetEntries();
+
+  ////////////////////////////
+  // Getting WJJets Numbers
+  ////////////////////////////
+  double WJNew_Loose  = MatchedLooseIsoCJPtWJNew_->GetEntries();
+  double WJNew_Med    = MatchedMedIsoCJPtWJNew_->GetEntries();  
+  double WJNew_Tight  = MatchedTightIsoCJPtWJNew_->GetEntries();
+  double WJNew_DMFind = MatchedDMFindCJPtWJNew_->GetEntries();
+  double WJNew_GenMat = MatchedCJPtWJNew_->GetEntries();
+  
+  double WJOld_Loose  = MatchedLooseIsoCJPtWJOld_->GetEntries();
+  double WJOld_Med    = MatchedMedIsoCJPtWJOld_->GetEntries();
+  double WJOld_Tight  = MatchedTightIsoCJPtWJOld_->GetEntries();
+  double WJOld_DMFind = MatchedDMFindCJPtWJOld_->GetEntries();
+  double WJOld_GenMat = MatchedCJPtWJOld_->GetEntries();
+  
+  double WJNewMVA_Loose  = MatchedLooseIsoCJPtWJNewMVA_->GetEntries();
+  double WJNewMVA_Med    = MatchedMedIsoCJPtWJNewMVA_->GetEntries();
+  double WJNewMVA_Tight  = MatchedTightIsoCJPtWJNewMVA_->GetEntries();
+  double WJNewMVA_GenMat = MatchedCJPtWJNewMVA_->GetEntries();
+  
+  double WJOldMVA_Loose  = MatchedLooseIsoCJPtWJOldMVA_->GetEntries();
+  double WJOldMVA_Med    = MatchedMedIsoCJPtWJOldMVA_->GetEntries();
+  double WJOldMVA_Tight  = MatchedTightIsoCJPtWJOldMVA_->GetEntries();
+  double WJOldMVA_GenMat = MatchedCJPtWJOldMVA_->GetEntries();
+
+  ////////////////////////////
+  // Getting DYJets Numbers
+  ////////////////////////////
+  double DYNew_Loose  = MatchedLooseIsoCJPtDYNew_->GetEntries();
+  double DYNew_Med    = MatchedMedIsoCJPtDYNew_->GetEntries();  
+  double DYNew_Tight  = MatchedTightIsoCJPtDYNew_->GetEntries();
+  double DYNew_DMFind = MatchedDMFindCJPtDYNew_->GetEntries();
+  double DYNew_GenMat = MatchedCJPtDYNew_->GetEntries();
+  
+  double DYOld_Loose  = MatchedLooseIsoCJPtDYOld_->GetEntries();
+  double DYOld_Med    = MatchedMedIsoCJPtDYOld_->GetEntries();
+  double DYOld_Tight  = MatchedTightIsoCJPtDYOld_->GetEntries();
+  double DYOld_DMFind = MatchedDMFindCJPtDYOld_->GetEntries();
+  double DYOld_GenMat = MatchedCJPtDYOld_->GetEntries();
+  
+  double DYNewMVA_Loose  = MatchedLooseIsoCJPtDYNewMVA_->GetEntries();
+  double DYNewMVA_Med    = MatchedMedIsoCJPtDYNewMVA_->GetEntries();
+  double DYNewMVA_Tight  = MatchedTightIsoCJPtDYNewMVA_->GetEntries();
+  double DYNewMVA_GenMat = MatchedCJPtDYNewMVA_->GetEntries();
+  
+  double DYOldMVA_Loose  = MatchedLooseIsoCJPtDYOldMVA_->GetEntries();
+  double DYOldMVA_Med    = MatchedMedIsoCJPtDYOldMVA_->GetEntries();
+  double DYOldMVA_Tight  = MatchedTightIsoCJPtDYOldMVA_->GetEntries();
+  double DYOldMVA_GenMat = MatchedCJPtDYOldMVA_->GetEntries();
+  
+  ///////////////////////////////////
+  // Getting Starting Event Number   
+  ///////////////////////////////////
+  double DYOldMVA_Total = NEventsDYOldMVA_->GetBinContent(1);
+  double TTOldMVA_Total = NEventsTTOldMVA_->GetBinContent(1);
+  double WJOldMVA_Total = NEventsWJOldMVA_->GetBinContent(1);
+  double H125a19OldMVA_Total = NEventsH125a19OldMVA_->GetBinContent(1);
+  double H750a9OldMVA_Total = NEventsH750a9OldMVA_->GetBinContent(1);
+  double DYOld_Total = NEventsDYOld_->GetBinContent(1);
+  double TTOld_Total = NEventsTTOld_->GetBinContent(1);
+  double WJOld_Total = NEventsWJOld_->GetBinContent(1);
+  double H125a19Old_Total = NEventsH125a19Old_->GetBinContent(1);
+  double H750a9Old_Total = NEventsH750a9Old_->GetBinContent(1);
+  double DYNewMVA_Total = NEventsDYNewMVA_->GetBinContent(1);
+  double TTNewMVA_Total = NEventsTTNewMVA_->GetBinContent(1);
+  double WJNewMVA_Total = NEventsWJNewMVA_->GetBinContent(1);
+  double H125a19NewMVA_Total = NEventsH125a19NewMVA_->GetBinContent(1);
+  double H750a9NewMVA_Total = NEventsH750a9NewMVA_->GetBinContent(1);
+  double DYNew_Total = NEventsDYNew_->GetBinContent(1);
+  double TTNew_Total = NEventsTTNew_->GetBinContent(1);
+  double WJNew_Total = NEventsWJNew_->GetBinContent(1);
+  double H125a19New_Total = NEventsH125a19New_->GetBinContent(1);
+  double H750a9New_Total = NEventsH750a9New_->GetBinContent(1);
+
+  // Declare Bin counts for DY
+  double DYOldMVACutNRemovedMu =NEventsCutsDYOldMVA_->GetBinContent(1), DYOldMVALepBD1 = NEventsCutsDYOldMVA_->GetBinContent(2), DYOldMVALepBD1Med = NEventsCutsDYOldMVA_->GetBinContent(3);
+  double DYOldMVALepBD2 = NEventsCutsDYOldMVA_->GetBinContent(4), DYOldMVALepBD2Med = NEventsCutsDYOldMVA_->GetBinContent(5), DYOldMVALepHT1 = NEventsCutsDYOldMVA_->GetBinContent(6);
+  double DYOldMVALepHT1Med = NEventsCutsDYOldMVA_->GetBinContent(7), DYOldMVALepHT2 = NEventsCutsDYOldMVA_->GetBinContent(8), DYOldMVALepHT2Med = NEventsCutsDYOldMVA_->GetBinContent(9);
+  double DYOldMVAJetBD1 = NEventsCutsDYOldMVA_->GetBinContent(10), DYOldMVAJetBD1Med = NEventsCutsDYOldMVA_->GetBinContent(11);
+  double DYOldMVAJetBD2 = NEventsCutsDYOldMVA_->GetBinContent(12), DYOldMVAJetBD2Med = NEventsCutsDYOldMVA_->GetBinContent(13), DYOldMVAJetHT1 = NEventsCutsDYOldMVA_->GetBinContent(14);
+  double DYOldMVAJetHT1Med = NEventsCutsDYOldMVA_->GetBinContent(15), DYOldMVAJetHT2 = NEventsCutsDYOldMVA_->GetBinContent(16), DYOldMVAJetHT2Med = NEventsCutsDYOldMVA_->GetBinContent(17);
+  double DYOldMVANJet = NEventsCutsDYOldMVA_->GetBinContent(18), DYOldMVANLep = NEventsCutsDYOldMVA_->GetBinContent(19), DYOldMVANLepJet = NEventsCutsDYOldMVA_->GetBinContent(20);
+
+  double DYOldCutNRemovedMu =NEventsCutsDYOld_->GetBinContent(1), DYOldLepBD1 = NEventsCutsDYOld_->GetBinContent(2), DYOldLepBD1Med = NEventsCutsDYOld_->GetBinContent(3);
+  double DYOldLepBD2 = NEventsCutsDYOld_->GetBinContent(4), DYOldLepBD2Med = NEventsCutsDYOld_->GetBinContent(5), DYOldLepHT1 = NEventsCutsDYOld_->GetBinContent(6);
+  double DYOldLepHT1Med = NEventsCutsDYOld_->GetBinContent(7), DYOldLepHT2 = NEventsCutsDYOld_->GetBinContent(8), DYOldLepHT2Med = NEventsCutsDYOld_->GetBinContent(9);
+  double DYOldJetBD1 = NEventsCutsDYOld_->GetBinContent(10), DYOldJetBD1Med = NEventsCutsDYOld_->GetBinContent(11);
+  double DYOldJetBD2 = NEventsCutsDYOld_->GetBinContent(12), DYOldJetBD2Med = NEventsCutsDYOld_->GetBinContent(13), DYOldJetHT1 = NEventsCutsDYOld_->GetBinContent(14);
+  double DYOldJetHT1Med = NEventsCutsDYOld_->GetBinContent(15), DYOldJetHT2 = NEventsCutsDYOld_->GetBinContent(16), DYOldJetHT2Med = NEventsCutsDYOld_->GetBinContent(17);
+  double DYOldNJet = NEventsCutsDYOld_->GetBinContent(18), DYOldNLep = NEventsCutsDYOld_->GetBinContent(19), DYOldNLepJet = NEventsCutsDYOld_->GetBinContent(20);
+
+  double DYNewMVACutNRemovedMu =NEventsCutsDYNewMVA_->GetBinContent(1), DYNewMVALepBD1 = NEventsCutsDYNewMVA_->GetBinContent(2), DYNewMVALepBD1Med = NEventsCutsDYNewMVA_->GetBinContent(3);
+  double DYNewMVALepBD2 = NEventsCutsDYNewMVA_->GetBinContent(4), DYNewMVALepBD2Med = NEventsCutsDYNewMVA_->GetBinContent(5), DYNewMVALepHT1 = NEventsCutsDYNewMVA_->GetBinContent(6);
+  double DYNewMVALepHT1Med = NEventsCutsDYNewMVA_->GetBinContent(7), DYNewMVALepHT2 = NEventsCutsDYNewMVA_->GetBinContent(8), DYNewMVALepHT2Med = NEventsCutsDYNewMVA_->GetBinContent(9);
+  double DYNewMVAJetBD1 = NEventsCutsDYNewMVA_->GetBinContent(10), DYNewMVAJetBD1Med = NEventsCutsDYNewMVA_->GetBinContent(11);
+  double DYNewMVAJetBD2 = NEventsCutsDYNewMVA_->GetBinContent(12), DYNewMVAJetBD2Med = NEventsCutsDYNewMVA_->GetBinContent(13), DYNewMVAJetHT1 = NEventsCutsDYNewMVA_->GetBinContent(14);
+  double DYNewMVAJetHT1Med = NEventsCutsDYNewMVA_->GetBinContent(15), DYNewMVAJetHT2 = NEventsCutsDYNewMVA_->GetBinContent(16), DYNewMVAJetHT2Med = NEventsCutsDYNewMVA_->GetBinContent(17);
+  double DYNewMVANJet = NEventsCutsDYNewMVA_->GetBinContent(18), DYNewMVANLep = NEventsCutsDYNewMVA_->GetBinContent(19), DYNewMVANLepJet = NEventsCutsDYNewMVA_->GetBinContent(20);
+
+  double DYNewCutNRemovedMu =NEventsCutsDYNew_->GetBinContent(1), DYNewLepBD1 = NEventsCutsDYNew_->GetBinContent(2), DYNewLepBD1Med = NEventsCutsDYNew_->GetBinContent(3);
+  double DYNewLepBD2 = NEventsCutsDYNew_->GetBinContent(4), DYNewLepBD2Med = NEventsCutsDYNew_->GetBinContent(5), DYNewLepHT1 = NEventsCutsDYNew_->GetBinContent(6);
+  double DYNewLepHT1Med = NEventsCutsDYNew_->GetBinContent(7), DYNewLepHT2 = NEventsCutsDYNew_->GetBinContent(8), DYNewLepHT2Med = NEventsCutsDYNew_->GetBinContent(9);
+  double DYNewJetBD1 = NEventsCutsDYNew_->GetBinContent(10), DYNewJetBD1Med = NEventsCutsDYNew_->GetBinContent(11);
+  double DYNewJetBD2 = NEventsCutsDYNew_->GetBinContent(12), DYNewJetBD2Med = NEventsCutsDYNew_->GetBinContent(13), DYNewJetHT1 = NEventsCutsDYNew_->GetBinContent(14);
+  double DYNewJetHT1Med = NEventsCutsDYNew_->GetBinContent(15), DYNewJetHT2 = NEventsCutsDYNew_->GetBinContent(16), DYNewJetHT2Med = NEventsCutsDYNew_->GetBinContent(17);
+  double DYNewNJet = NEventsCutsDYNew_->GetBinContent(18), DYNewNLep = NEventsCutsDYNew_->GetBinContent(19), DYNewNLepJet = NEventsCutsDYNew_->GetBinContent(20);
+
+  // Declare Bin counts for TT
+  double TTOldMVACutNRemovedMu =NEventsCutsTTOldMVA_->GetBinContent(1), TTOldMVALepBD1 = NEventsCutsTTOldMVA_->GetBinContent(2), TTOldMVALepBD1Med = NEventsCutsTTOldMVA_->GetBinContent(3);
+  double TTOldMVALepBD2 = NEventsCutsTTOldMVA_->GetBinContent(4), TTOldMVALepBD2Med = NEventsCutsTTOldMVA_->GetBinContent(5), TTOldMVALepHT1 = NEventsCutsTTOldMVA_->GetBinContent(6);
+  double TTOldMVALepHT1Med = NEventsCutsTTOldMVA_->GetBinContent(7), TTOldMVALepHT2 = NEventsCutsTTOldMVA_->GetBinContent(8), TTOldMVALepHT2Med = NEventsCutsTTOldMVA_->GetBinContent(9);
+  double TTOldMVAJetBD1 = NEventsCutsTTOldMVA_->GetBinContent(10), TTOldMVAJetBD1Med = NEventsCutsTTOldMVA_->GetBinContent(11); 
+  double TTOldMVAJetBD2 = NEventsCutsTTOldMVA_->GetBinContent(12), TTOldMVAJetBD2Med = NEventsCutsTTOldMVA_->GetBinContent(13), TTOldMVAJetHT1 = NEventsCutsTTOldMVA_->GetBinContent(14);
+  double TTOldMVAJetHT1Med = NEventsCutsTTOldMVA_->GetBinContent(15), TTOldMVAJetHT2 = NEventsCutsTTOldMVA_->GetBinContent(16), TTOldMVAJetHT2Med = NEventsCutsTTOldMVA_->GetBinContent(17);
+  double TTOldMVANJet = NEventsCutsTTOldMVA_->GetBinContent(18), TTOldMVANLep = NEventsCutsTTOldMVA_->GetBinContent(19), TTOldMVANLepJet = NEventsCutsTTOldMVA_->GetBinContent(20);
+  
+  double TTOldCutNRemovedMu =NEventsCutsTTOld_->GetBinContent(1), TTOldLepBD1 = NEventsCutsTTOld_->GetBinContent(2), TTOldLepBD1Med = NEventsCutsTTOld_->GetBinContent(3);
+  double TTOldLepBD2 = NEventsCutsTTOld_->GetBinContent(4), TTOldLepBD2Med = NEventsCutsTTOld_->GetBinContent(5), TTOldLepHT1 = NEventsCutsTTOld_->GetBinContent(6);
+  double TTOldLepHT1Med = NEventsCutsTTOld_->GetBinContent(7), TTOldLepHT2 = NEventsCutsTTOld_->GetBinContent(8), TTOldLepHT2Med = NEventsCutsTTOld_->GetBinContent(9);
+  double TTOldJetBD1 = NEventsCutsTTOld_->GetBinContent(10), TTOldJetBD1Med = NEventsCutsTTOld_->GetBinContent(11); 
+  double TTOldJetBD2 = NEventsCutsTTOld_->GetBinContent(12), TTOldJetBD2Med = NEventsCutsTTOld_->GetBinContent(13), TTOldJetHT1 = NEventsCutsTTOld_->GetBinContent(14);
+  double TTOldJetHT1Med = NEventsCutsTTOld_->GetBinContent(15), TTOldJetHT2 = NEventsCutsTTOld_->GetBinContent(16), TTOldJetHT2Med = NEventsCutsTTOld_->GetBinContent(17);
+  double TTOldNJet = NEventsCutsTTOld_->GetBinContent(18), TTOldNLep = NEventsCutsTTOld_->GetBinContent(19), TTOldNLepJet = NEventsCutsTTOld_->GetBinContent(20);
+  
+  double TTNewMVACutNRemovedMu =NEventsCutsTTNewMVA_->GetBinContent(1), TTNewMVALepBD1 = NEventsCutsTTNewMVA_->GetBinContent(2), TTNewMVALepBD1Med = NEventsCutsTTNewMVA_->GetBinContent(3);
+  double TTNewMVALepBD2 = NEventsCutsTTNewMVA_->GetBinContent(4), TTNewMVALepBD2Med = NEventsCutsTTNewMVA_->GetBinContent(5), TTNewMVALepHT1 = NEventsCutsTTNewMVA_->GetBinContent(6);
+  double TTNewMVALepHT1Med = NEventsCutsTTNewMVA_->GetBinContent(7), TTNewMVALepHT2 = NEventsCutsTTNewMVA_->GetBinContent(8), TTNewMVALepHT2Med = NEventsCutsTTNewMVA_->GetBinContent(9);
+  double TTNewMVAJetBD1 = NEventsCutsTTNewMVA_->GetBinContent(10), TTNewMVAJetBD1Med = NEventsCutsTTNewMVA_->GetBinContent(11); 
+  double TTNewMVAJetBD2 = NEventsCutsTTNewMVA_->GetBinContent(12), TTNewMVAJetBD2Med = NEventsCutsTTNewMVA_->GetBinContent(13), TTNewMVAJetHT1 = NEventsCutsTTNewMVA_->GetBinContent(14);
+  double TTNewMVAJetHT1Med = NEventsCutsTTNewMVA_->GetBinContent(15), TTNewMVAJetHT2 = NEventsCutsTTNewMVA_->GetBinContent(16), TTNewMVAJetHT2Med = NEventsCutsTTNewMVA_->GetBinContent(17);
+  double TTNewMVANJet = NEventsCutsTTNewMVA_->GetBinContent(18), TTNewMVANLep = NEventsCutsTTNewMVA_->GetBinContent(19), TTNewMVANLepJet = NEventsCutsTTNewMVA_->GetBinContent(20);  
+  double TTNewCutNRemovedMu =NEventsCutsTTNew_->GetBinContent(1), TTNewLepBD1 = NEventsCutsTTNew_->GetBinContent(2), TTNewLepBD1Med = NEventsCutsTTNew_->GetBinContent(3);
+  double TTNewLepBD2 = NEventsCutsTTNew_->GetBinContent(4), TTNewLepBD2Med = NEventsCutsTTNew_->GetBinContent(5), TTNewLepHT1 = NEventsCutsTTNew_->GetBinContent(6);
+  double TTNewLepHT1Med = NEventsCutsTTNew_->GetBinContent(7), TTNewLepHT2 = NEventsCutsTTNew_->GetBinContent(8), TTNewLepHT2Med = NEventsCutsTTNew_->GetBinContent(9);
+  double TTNewJetBD1 = NEventsCutsTTNew_->GetBinContent(10), TTNewJetBD1Med = NEventsCutsTTNew_->GetBinContent(11); 
+  double TTNewJetBD2 = NEventsCutsTTNew_->GetBinContent(12), TTNewJetBD2Med = NEventsCutsTTNew_->GetBinContent(13), TTNewJetHT1 = NEventsCutsTTNew_->GetBinContent(14);
+  double TTNewJetHT1Med = NEventsCutsTTNew_->GetBinContent(15), TTNewJetHT2 = NEventsCutsTTNew_->GetBinContent(16), TTNewJetHT2Med = NEventsCutsTTNew_->GetBinContent(17);
+  double TTNewNJet = NEventsCutsTTNew_->GetBinContent(18), TTNewNLep = NEventsCutsTTNew_->GetBinContent(19), TTNewNLepJet = NEventsCutsTTNew_->GetBinContent(20);
+
+  // Declare Bin counts for WJ
+  double WJOldMVACutNRemovedMu =NEventsCutsWJOldMVA_->GetBinContent(1), WJOldMVALepBD1 = NEventsCutsWJOldMVA_->GetBinContent(2), WJOldMVALepBD1Med = NEventsCutsWJOldMVA_->GetBinContent(3);
+  double WJOldMVALepBD2 = NEventsCutsWJOldMVA_->GetBinContent(4), WJOldMVALepBD2Med = NEventsCutsWJOldMVA_->GetBinContent(5), WJOldMVALepHT1 = NEventsCutsWJOldMVA_->GetBinContent(6);
+  double WJOldMVALepHT1Med = NEventsCutsWJOldMVA_->GetBinContent(7), WJOldMVALepHT2 = NEventsCutsWJOldMVA_->GetBinContent(8), WJOldMVALepHT2Med = NEventsCutsWJOldMVA_->GetBinContent(9);
+  double WJOldMVAJetBD1 = NEventsCutsWJOldMVA_->GetBinContent(10), WJOldMVAJetBD1Med = NEventsCutsWJOldMVA_->GetBinContent(11); 
+  double WJOldMVAJetBD2 = NEventsCutsWJOldMVA_->GetBinContent(12), WJOldMVAJetBD2Med = NEventsCutsWJOldMVA_->GetBinContent(13), WJOldMVAJetHT1 = NEventsCutsWJOldMVA_->GetBinContent(14);
+  double WJOldMVAJetHT1Med = NEventsCutsWJOldMVA_->GetBinContent(15), WJOldMVAJetHT2 = NEventsCutsWJOldMVA_->GetBinContent(16), WJOldMVAJetHT2Med = NEventsCutsWJOldMVA_->GetBinContent(17);
+  double WJOldMVANJet = NEventsCutsWJOldMVA_->GetBinContent(18), WJOldMVANLep = NEventsCutsWJOldMVA_->GetBinContent(19), WJOldMVANLepJet = NEventsCutsWJOldMVA_->GetBinContent(20);
+  
+  double WJOldCutNRemovedMu =NEventsCutsWJOld_->GetBinContent(1), WJOldLepBD1 = NEventsCutsWJOld_->GetBinContent(2), WJOldLepBD1Med = NEventsCutsWJOld_->GetBinContent(3);
+  double WJOldLepBD2 = NEventsCutsWJOld_->GetBinContent(4), WJOldLepBD2Med = NEventsCutsWJOld_->GetBinContent(5), WJOldLepHT1 = NEventsCutsWJOld_->GetBinContent(6);
+  double WJOldLepHT1Med = NEventsCutsWJOld_->GetBinContent(7), WJOldLepHT2 = NEventsCutsWJOld_->GetBinContent(8), WJOldLepHT2Med = NEventsCutsWJOld_->GetBinContent(9);
+  double WJOldJetBD1 = NEventsCutsWJOld_->GetBinContent(10), WJOldJetBD1Med = NEventsCutsWJOld_->GetBinContent(11); 
+  double WJOldJetBD2 = NEventsCutsWJOld_->GetBinContent(12), WJOldJetBD2Med = NEventsCutsWJOld_->GetBinContent(13), WJOldJetHT1 = NEventsCutsWJOld_->GetBinContent(14);
+  double WJOldJetHT1Med = NEventsCutsWJOld_->GetBinContent(15), WJOldJetHT2 = NEventsCutsWJOld_->GetBinContent(16), WJOldJetHT2Med = NEventsCutsWJOld_->GetBinContent(17);
+  double WJOldNJet = NEventsCutsWJOld_->GetBinContent(18), WJOldNLep = NEventsCutsWJOld_->GetBinContent(19), WJOldNLepJet = NEventsCutsWJOld_->GetBinContent(20);
+  
+  double WJNewMVACutNRemovedMu =NEventsCutsWJNewMVA_->GetBinContent(1), WJNewMVALepBD1 = NEventsCutsWJNewMVA_->GetBinContent(2), WJNewMVALepBD1Med = NEventsCutsWJNewMVA_->GetBinContent(3);
+  double WJNewMVALepBD2 = NEventsCutsWJNewMVA_->GetBinContent(4), WJNewMVALepBD2Med = NEventsCutsWJNewMVA_->GetBinContent(5), WJNewMVALepHT1 = NEventsCutsWJNewMVA_->GetBinContent(6);
+  double WJNewMVALepHT1Med = NEventsCutsWJNewMVA_->GetBinContent(7), WJNewMVALepHT2 = NEventsCutsWJNewMVA_->GetBinContent(8), WJNewMVALepHT2Med = NEventsCutsWJNewMVA_->GetBinContent(9);
+  double WJNewMVAJetBD1 = NEventsCutsWJNewMVA_->GetBinContent(10), WJNewMVAJetBD1Med = NEventsCutsWJNewMVA_->GetBinContent(11); 
+  double WJNewMVAJetBD2 = NEventsCutsWJNewMVA_->GetBinContent(12), WJNewMVAJetBD2Med = NEventsCutsWJNewMVA_->GetBinContent(13), WJNewMVAJetHT1 = NEventsCutsWJNewMVA_->GetBinContent(14);
+  double WJNewMVAJetHT1Med = NEventsCutsWJNewMVA_->GetBinContent(15), WJNewMVAJetHT2 = NEventsCutsWJNewMVA_->GetBinContent(16), WJNewMVAJetHT2Med = NEventsCutsWJNewMVA_->GetBinContent(17);
+  double WJNewMVANJet = NEventsCutsWJNewMVA_->GetBinContent(18), WJNewMVANLep = NEventsCutsWJNewMVA_->GetBinContent(19), WJNewMVANLepJet = NEventsCutsWJNewMVA_->GetBinContent(20);
+  
+  double WJNewCutNRemovedMu =NEventsCutsWJNew_->GetBinContent(1), WJNewLepBD1 = NEventsCutsWJNew_->GetBinContent(2), WJNewLepBD1Med = NEventsCutsWJNew_->GetBinContent(3);
+  double WJNewLepBD2 = NEventsCutsWJNew_->GetBinContent(4), WJNewLepBD2Med = NEventsCutsWJNew_->GetBinContent(5), WJNewLepHT1 = NEventsCutsWJNew_->GetBinContent(6);
+  double WJNewLepHT1Med = NEventsCutsWJNew_->GetBinContent(7), WJNewLepHT2 = NEventsCutsWJNew_->GetBinContent(8), WJNewLepHT2Med = NEventsCutsWJNew_->GetBinContent(9);
+  double WJNewJetBD1 = NEventsCutsWJNew_->GetBinContent(10), WJNewJetBD1Med = NEventsCutsWJNew_->GetBinContent(11); 
+  double WJNewJetBD2 = NEventsCutsWJNew_->GetBinContent(12), WJNewJetBD2Med = NEventsCutsWJNew_->GetBinContent(13), WJNewJetHT1 = NEventsCutsWJNew_->GetBinContent(14);
+  double WJNewJetHT1Med = NEventsCutsWJNew_->GetBinContent(15), WJNewJetHT2 = NEventsCutsWJNew_->GetBinContent(16), WJNewJetHT2Med = NEventsCutsWJNew_->GetBinContent(17);
+  double WJNewNJet = NEventsCutsWJNew_->GetBinContent(18), WJNewNLep = NEventsCutsWJNew_->GetBinContent(19), WJNewNLepJet = NEventsCutsWJNew_->GetBinContent(20);
+
+  //H125a19nal 125
+  double H125a19NewCutNRemovedMu = NEventsCutsH125a19New_->GetBinContent(1), H125a19NewBD1 = NEventsCutsH125a19New_->GetBinContent(2), H125a19NewBD1Med = NEventsCutsH125a19New_->GetBinContent(3);
+  double H125a19NewBD2 = NEventsCutsH125a19New_->GetBinContent(4), H125a19NewBD2Med = NEventsCutsH125a19New_->GetBinContent(5), H125a19NewHT1 = NEventsCutsH125a19New_->GetBinContent(6);
+  double H125a19NewHT1Med = NEventsCutsH125a19New_->GetBinContent(7), H125a19NewHT2 = NEventsCutsH125a19New_->GetBinContent(8), H125a19NewHT2Med = NEventsCutsH125a19New_->GetBinContent(9);
+
+  double H125a19NewMVACutNRemovedMu = NEventsCutsH125a19NewMVA_->GetBinContent(1), H125a19NewMVABD1 = NEventsCutsH125a19NewMVA_->GetBinContent(2), H125a19NewMVABD1Med = NEventsCutsH125a19NewMVA_->GetBinContent(3);
+  double H125a19NewMVABD2 = NEventsCutsH125a19NewMVA_->GetBinContent(4), H125a19NewMVABD2Med = NEventsCutsH125a19NewMVA_->GetBinContent(5), H125a19NewMVAHT1 = NEventsCutsH125a19NewMVA_->GetBinContent(6);
+  double H125a19NewMVAHT1Med = NEventsCutsH125a19NewMVA_->GetBinContent(7), H125a19NewMVAHT2 = NEventsCutsH125a19NewMVA_->GetBinContent(8), H125a19NewMVAHT2Med = NEventsCutsH125a19NewMVA_->GetBinContent(9);
+
+  double H125a19OldCutNRemovedMu = NEventsCutsH125a19Old_->GetBinContent(1), H125a19OldBD1 = NEventsCutsH125a19Old_->GetBinContent(2), H125a19OldBD1Med = NEventsCutsH125a19Old_->GetBinContent(3);
+  double H125a19OldBD2 = NEventsCutsH125a19Old_->GetBinContent(4), H125a19OldBD2Med = NEventsCutsH125a19Old_->GetBinContent(5), H125a19OldHT1 = NEventsCutsH125a19Old_->GetBinContent(6);
+  double H125a19OldHT1Med = NEventsCutsH125a19Old_->GetBinContent(7), H125a19OldHT2 = NEventsCutsH125a19Old_->GetBinContent(8), H125a19OldHT2Med = NEventsCutsH125a19Old_->GetBinContent(9);
+
+  double H125a19OldMVACutNRemovedMu = NEventsCutsH125a19OldMVA_->GetBinContent(1), H125a19OldMVABD1 = NEventsCutsH125a19OldMVA_->GetBinContent(2), H125a19OldMVABD1Med = NEventsCutsH125a19OldMVA_->GetBinContent(3);
+  double H125a19OldMVABD2 = NEventsCutsH125a19OldMVA_->GetBinContent(4), H125a19OldMVABD2Med = NEventsCutsH125a19OldMVA_->GetBinContent(5), H125a19OldMVAHT1 = NEventsCutsH125a19OldMVA_->GetBinContent(6);
+  double H125a19OldMVAHT1Med = NEventsCutsH125a19OldMVA_->GetBinContent(7), H125a19OldMVAHT2 = NEventsCutsH125a19OldMVA_->GetBinContent(8), H125a19OldMVAHT2Med = NEventsCutsH125a19OldMVA_->GetBinContent(9);
+  
+  //Big H125a19nal 750
+  double H750a9NewCutNRemovedMu = NEventsCutsH750a9New_->GetBinContent(1), H750a9NewBD1 = NEventsCutsH750a9New_->GetBinContent(2), H750a9NewBD1Med = NEventsCutsH750a9New_->GetBinContent(3);
+  double H750a9NewBD2 = NEventsCutsH750a9New_->GetBinContent(4), H750a9NewBD2Med = NEventsCutsH750a9New_->GetBinContent(5), H750a9NewHT1 = NEventsCutsH750a9New_->GetBinContent(6);
+  double H750a9NewHT1Med = NEventsCutsH750a9New_->GetBinContent(7), H750a9NewHT2 = NEventsCutsH750a9New_->GetBinContent(8), H750a9NewHT2Med = NEventsCutsH750a9New_->GetBinContent(9);
+
+  double H750a9NewMVACutNRemovedMu = NEventsCutsH750a9NewMVA_->GetBinContent(1), H750a9NewMVABD1 = NEventsCutsH750a9NewMVA_->GetBinContent(2);
+  double H750a9NewMVABD1Med = NEventsCutsH750a9NewMVA_->GetBinContent(3);
+  double H750a9NewMVABD2 = NEventsCutsH750a9NewMVA_->GetBinContent(4), H750a9NewMVABD2Med = NEventsCutsH750a9NewMVA_->GetBinContent(5), H750a9NewMVAHT1 = NEventsCutsH750a9NewMVA_->GetBinContent(6);
+  double H750a9NewMVAHT1Med =NEventsCutsH750a9NewMVA_->GetBinContent(7), H750a9NewMVAHT2 = NEventsCutsH750a9NewMVA_->GetBinContent(8), H750a9NewMVAHT2Med = NEventsCutsH750a9NewMVA_->GetBinContent(9);
+  
+  double H750a9OldCutNRemovedMu = NEventsCutsH750a9Old_->GetBinContent(1), H750a9OldBD1 = NEventsCutsH750a9Old_->GetBinContent(2), H750a9OldBD1Med = NEventsCutsH750a9Old_->GetBinContent(3);
+  double H750a9OldBD2 = NEventsCutsH750a9Old_->GetBinContent(4), H750a9OldBD2Med = NEventsCutsH750a9Old_->GetBinContent(5), H750a9OldHT1 = NEventsCutsH750a9Old_->GetBinContent(6);
+  double H750a9OldHT1Med = NEventsCutsH750a9Old_->GetBinContent(7), H750a9OldHT2 = NEventsCutsH750a9Old_->GetBinContent(8), H750a9OldHT2Med = NEventsCutsH750a9Old_->GetBinContent(9);
+  
+  double H750a9OldMVACutNRemovedMu = NEventsCutsH750a9OldMVA_->GetBinContent(1), H750a9OldMVABD1 = NEventsCutsH750a9OldMVA_->GetBinContent(2);
+  double H750a9OldMVABD1Med = NEventsCutsH750a9OldMVA_->GetBinContent(3);
+  double H750a9OldMVABD2 = NEventsCutsH750a9OldMVA_->GetBinContent(4), H750a9OldMVABD2Med = NEventsCutsH750a9OldMVA_->GetBinContent(5), H750a9OldMVAHT1 = NEventsCutsH750a9OldMVA_->GetBinContent(6);
+  double H750a9OldMVAHT1Med =NEventsCutsH750a9OldMVA_->GetBinContent(7), H750a9OldMVAHT2 = NEventsCutsH750a9OldMVA_->GetBinContent(8), H750a9OldMVAHT2Med = NEventsCutsH750a9OldMVA_->GetBinContent(9);
+
+  ////////////////////////////
+  // Getting H750a9Jets Numbers
+  ////////////////////////////
+  double H125a19New_Loose  = MatchedLooseIsoCJPtH125a19New_->GetEntries();
+  double H125a19New_Med    = MatchedMedIsoCJPtH125a19New_->GetEntries();
+  double H125a19New_Tight  = MatchedTightIsoCJPtH125a19New_->GetEntries();
+  double H125a19New_DMFind = MatchedDMFindCJPtH125a19New_->GetEntries();
+  double H125a19New_GenMat = MatchedCJPtH125a19New_->GetEntries();
+
+  double H125a19Old_Loose  = MatchedLooseIsoCJPtH125a19Old_->GetEntries();
+  double H125a19Old_Med    = MatchedMedIsoCJPtH125a19Old_->GetEntries();
+  double H125a19Old_Tight  = MatchedTightIsoCJPtH125a19Old_->GetEntries();
+  double H125a19Old_DMFind = MatchedDMFindCJPtH125a19Old_->GetEntries();
+  double H125a19Old_GenMat = MatchedCJPtH125a19Old_->GetEntries();
+
+  double H125a19NewMVA_Loose  = MatchedLooseIsoCJPtH125a19NewMVA_->GetEntries();
+  double H125a19NewMVA_Med    = MatchedMedIsoCJPtH125a19NewMVA_->GetEntries();
+  double H125a19NewMVA_Tight  = MatchedTightIsoCJPtH125a19NewMVA_->GetEntries();
+  double H125a19NewMVA_GenMat = MatchedCJPtH125a19NewMVA_->GetEntries();
+
+  double H125a19OldMVA_Loose  = MatchedLooseIsoCJPtH125a19OldMVA_->GetEntries();
+  double H125a19OldMVA_Med    = MatchedMedIsoCJPtH125a19OldMVA_->GetEntries();
+  double H125a19OldMVA_Tight  = MatchedTightIsoCJPtH125a19OldMVA_->GetEntries();
+  double H125a19OldMVA_GenMat = MatchedCJPtH125a19OldMVA_->GetEntries();
+
+  ////////////////////////////
+  // Getting H750a9Jets Numbers
+  ////////////////////////////
+  double H750a9New_Loose  = MatchedLooseIsoCJPtH750a9New_->GetEntries();
+  double H750a9New_Med    = MatchedMedIsoCJPtH750a9New_->GetEntries();
+  double H750a9New_Tight  = MatchedTightIsoCJPtH750a9New_->GetEntries();
+  double H750a9New_DMFind = MatchedDMFindCJPtH750a9New_->GetEntries();
+  double H750a9New_GenMat = MatchedCJPtH750a9New_->GetEntries();
+
+  double H750a9Old_Loose  = MatchedLooseIsoCJPtH750a9Old_->GetEntries();
+  double H750a9Old_Med    = MatchedMedIsoCJPtH750a9Old_->GetEntries();
+  double H750a9Old_Tight  = MatchedTightIsoCJPtH750a9Old_->GetEntries();
+  double H750a9Old_DMFind = MatchedDMFindCJPtH750a9Old_->GetEntries();
+  double H750a9Old_GenMat = MatchedCJPtH750a9Old_->GetEntries();
+
+  double H750a9NewMVA_Loose  = MatchedLooseIsoCJPtH750a9NewMVA_->GetEntries();
+  double H750a9NewMVA_Med    = MatchedMedIsoCJPtH750a9NewMVA_->GetEntries();
+  double H750a9NewMVA_Tight  = MatchedTightIsoCJPtH750a9NewMVA_->GetEntries();
+  double H750a9NewMVA_GenMat = MatchedCJPtH750a9NewMVA_->GetEntries();
+
+  double H750a9OldMVA_Loose  = MatchedLooseIsoCJPtH750a9OldMVA_->GetEntries();
+  double H750a9OldMVA_Med    = MatchedMedIsoCJPtH750a9OldMVA_->GetEntries();
+  double H750a9OldMVA_Tight  = MatchedTightIsoCJPtH750a9OldMVA_->GetEntries();
+  double H750a9OldMVA_GenMat = MatchedCJPtH750a9OldMVA_->GetEntries();
+
+  //////////////////////////////
+  //  Scaling xsec calculations
+  //////////////////////////////
+  double DYOld50_xsec = 6104000 * 20 / DYOld_Total, DYOldMVA50_xsec = 6104000 * 20 / DYOldMVA_Total, DYNew50_xsec = 6104000 * 20 / DYNew_Total, DYNewMVA50_xsec = 6104000 * 20 / DYNewMVA_Total;
+  double TTOld50_xsec = 815960 * 20 / TTOld_Total, TTOldMVA50_xsec = 815960 * 20 / TTOldMVA_Total, TTNew50_xsec = 815960 * 20 / TTNew_Total, TTNewMVA50_xsec = 815960 * 20 / TTNewMVA_Total;
+  double WJOld50_xsec = 6104000 * 20 / WJOld_Total, WJOldMVA50_xsec = 6104000 * 20 / WJOldMVA_Total, WJNew50_xsec = 6104000 * 20 / WJNew_Total, WJNewMVA50_xsec = 6104000 * 20 / WJNewMVA_Total;
+  double H125a19Old50_xsec= 6104000 * 20 / H125a19Old_Total, H125a19OldMVA50_xsec = 6104000 * 20 / H125a19OldMVA_Total, H125a19New50_xsec = 6104000 * 20 / H125a19New_Total, H125a19NewMVA50_xsec = 6104000 * 20 / H125a19NewMVA_Total;
+  double H750a9Old50_xsec = 6104000 * 20 / H750a9Old_Total, H750a9OldMVA50_xsec = 6104000 * 20 / H750a9OldMVA_Total, H750a9New50_xsec = 6104000 * 20 / H750a9New_Total, H750a9NewMVA50_xsec = 6104000 * 20 / H750a9NewMVA_Total;
+
+  //////////////////////////
+  // Cut Info
+  //////////////////////////
+  infoFile << "################################################\n## Cut Info for New DM No MVA \n################################################\n" << endl;
+  infoFile << "nEvents with RemovedMuon: DY= " << DYNewCutNRemovedMu << "\tTT= " << TTNewCutNRemovedMu << "\tWJ= " << WJNewCutNRemovedMu << "\t\tH125a19= " << H125a19NewCutNRemovedMu << "\t\tH750a9= " << H750a9NewCutNRemovedMu << std::endl;
+  infoFile<<NEventsCutsTTNew_->GetXaxis()->GetBinLabel(19)<< "\t\t\t: DY= " << DYNewNLep << "\tTT= " << TTNewNLep << "\t\tWJ= " << WJNewNLep << std::endl;
+  infoFile<<NEventsCutsTTNew_->GetXaxis()->GetBinLabel(2) << "\t\t: DY= " << DYNewLepBD1 << "\tTT= " << TTNewLepBD1 << "\t\tWJ= " << WJNewLepBD1 << "\t\tH125a19= " << H125a19NewBD1 << "\t\tH750a9= " << H750a9NewBD1 << std::endl;
+  infoFile<<NEventsCutsTTNew_->GetXaxis()->GetBinLabel(3)<<"\t: DY= "<<DYNewLepBD1Med<<"\t\tTT= "<<TTNewLepBD1Med<<"\t\tWJ= "<<WJNewLepBD1Med << "\t\tH125a19= " << H125a19NewBD1Med << "\t\tH750a9= " << H750a9NewBD1Med <<std::endl;
+  infoFile<<NEventsCutsTTNew_->GetXaxis()->GetBinLabel(4) << "\t\t: DY= " << DYNewLepBD2 << "\tTT= " << TTNewLepBD2 << "\t\tWJ= " << WJNewLepBD2 << "\t\tH125a19= " << H125a19NewBD2 << "\t\tH750a9= " << H750a9NewBD2 << std::endl;
+  infoFile<<NEventsCutsTTNew_->GetXaxis()->GetBinLabel(5)<<"\t: DY= "<<DYNewLepBD2Med<<"\t\tTT= "<<TTNewLepBD2Med<<"\t\tWJ= "<<WJNewLepBD2Med << "\t\tH125a19= " << H125a19NewBD2Med << "\t\tH750a9= " << H750a9NewBD2Med <<std::endl;
+  infoFile<<NEventsCutsTTNew_->GetXaxis()->GetBinLabel(6) << "\t\t: DY= " << DYNewLepHT1 << "\tTT= " << TTNewLepHT1 << "\t\tWJ= " << WJNewLepHT1 << "\t\tH125a19= " << H125a19NewHT1 << "\t\tH750a9= " << H750a9NewHT1 << std::endl;
+  infoFile<<NEventsCutsTTNew_->GetXaxis()->GetBinLabel(7)<<"\t: DY= "<<DYNewLepHT1Med<<"\t\tTT= "<<TTNewLepHT1Med<<"\t\tWJ= "<<WJNewLepHT1Med << "\t\tH125a19= " << H125a19NewHT1Med << "\t\tH750a9= " << H750a9NewHT1Med <<std::endl;
+  infoFile<<NEventsCutsTTNew_->GetXaxis()->GetBinLabel(8) << "\t\t: DY= " << DYNewLepHT2 << "\tTT= " << TTNewLepHT2 << "\t\tWJ= " << WJNewLepHT2 << "\t\tH125a19= " << H125a19NewHT2 << "\t\tH750a9= " << H750a9NewHT2 << std::endl;
+  infoFile<<NEventsCutsTTNew_->GetXaxis()->GetBinLabel(9)<<"\t: DY= "<<DYNewLepHT2Med<<"\t\tTT= "<<TTNewLepHT2Med<<"\t\tWJ= "<<WJNewLepHT2Med << "\t\tH125a19= " << H125a19NewHT2Med << "\t\tH750a9= " << H750a9NewHT2Med <<std::endl;
+  infoFile<<NEventsCutsTTNew_->GetXaxis()->GetBinLabel(18) << "\t\t\t: DY= " << DYNewNJet << "\tTT= " << TTNewNJet << "\tWJ= " << WJNewNJet << std::endl;
+  infoFile<<NEventsCutsTTNew_->GetXaxis()->GetBinLabel(10) << "\t\t: DY= " << DYNewJetBD1 << "\tTT= " << TTNewJetBD1 << "\tWJ= " << WJNewJetBD1 <<  std::endl;
+  infoFile<<NEventsCutsTTNew_->GetXaxis()->GetBinLabel(11) << "\t: DY= " << DYNewJetBD1Med << "\tTT= "<<TTNewJetBD1Med<<"\t\tWJ= "<<WJNewJetBD1Med << std::endl;
+  infoFile<<NEventsCutsTTNew_->GetXaxis()->GetBinLabel(12) << "\t\t: DY= " << DYNewJetBD2 << "\tTT= " << TTNewJetBD2 << "\tWJ= " << WJNewJetBD2 <<  std::endl;
+  infoFile<<NEventsCutsTTNew_->GetXaxis()->GetBinLabel(13) << "\t: DY= " << DYNewJetBD2Med <<"\tTT= "<<TTNewJetBD2Med<<"\t\tWJ= "<<WJNewJetBD2Med <<std::endl;
+  infoFile<<NEventsCutsTTNew_->GetXaxis()->GetBinLabel(14) << "\t\t: DY= " << DYNewJetHT1 << "\tTT= " << TTNewJetHT1 << "\tWJ= " << WJNewJetHT1 << std::endl;
+  infoFile<<NEventsCutsTTNew_->GetXaxis()->GetBinLabel(15) << "\t: DY= " << DYNewJetHT1Med <<"\tTT= "<<TTNewJetHT1Med<<"\t\tWJ= "<<WJNewJetHT1Med << std::endl;
+  infoFile<<NEventsCutsTTNew_->GetXaxis()->GetBinLabel(16) << "\t\t: DY= " << DYNewJetHT2 << "\tTT= " << TTNewJetHT2 << "\tWJ= " << WJNewJetHT2 << std::endl;
+  infoFile<<NEventsCutsTTNew_->GetXaxis()->GetBinLabel(17) << "\t: DY= " << DYNewJetHT2Med <<"\tTT= "<<TTNewJetHT2Med<<"\t\tWJ= "<<WJNewJetHT2Med << std::endl;
+  infoFile<<NEventsCutsTTNew_->GetXaxis()->GetBinLabel(18) << "\t\t\t: DY= " << DYNewNJet << "\tTT= " << TTNewNJet << "\tWJ= " << WJNewNJet << std::endl;
+
+  infoFile << "################################################\n## Cut Info for New DM + MVA \n################################################\n" << endl;
+  infoFile << "nEvents with RemovedMuon: DY= " << DYNewMVACutNRemovedMu << "\tTT= " << TTNewMVACutNRemovedMu << "\tWJ= " << WJNewMVACutNRemovedMu << "\t\tH125a19= " << H125a19NewMVACutNRemovedMu << "\t\tH750a9= " << H750a9NewMVACutNRemovedMu << std::endl;
+  infoFile<<NEventsCutsTTNewMVA_->GetXaxis()->GetBinLabel(19)<< "\t\t\t: DY= " << DYNewMVANLep << "\tTT= " << TTNewMVANLep << "\t\tWJ= " << WJNewMVANLep << std::endl;
+  infoFile<<NEventsCutsTTNewMVA_->GetXaxis()->GetBinLabel(2) << "\t\t: DY= " << DYNewMVALepBD1 << "\tTT= " << TTNewMVALepBD1 << "\t\tWJ= " << WJNewMVALepBD1 << "\t\tH125a19= " << H125a19NewMVABD1 << "\t\tH750a9= " << H750a9NewMVABD1 << std::endl;
+  infoFile<<NEventsCutsTTNewMVA_->GetXaxis()->GetBinLabel(3)<<"\t: DY= "<<DYNewMVALepBD1Med<<"\tTT= "<<TTNewMVALepBD1Med<<"\t\tWJ= "<<WJNewMVALepBD1Med << "\t\tH125a19= " << H125a19NewMVABD1Med << "\t\tH750a9= " << H750a9NewMVABD1Med <<std::endl;
+  infoFile<<NEventsCutsTTNewMVA_->GetXaxis()->GetBinLabel(4) << "\t\t: DY= " << DYNewMVALepBD2 << "\tTT= " << TTNewMVALepBD2 << "\t\tWJ= " << WJNewMVALepBD2 << "\t\tH125a19= " << H125a19NewMVABD2 << "\t\tH750a9= " << H750a9NewMVABD2 << std::endl;
+  infoFile<<NEventsCutsTTNewMVA_->GetXaxis()->GetBinLabel(5)<<"\t: DY= "<<DYNewMVALepBD2Med<<"\tTT= "<<TTNewMVALepBD2Med<<"\t\tWJ= "<<WJNewMVALepBD2Med << "\t\tH125a19= " << H125a19NewMVABD2Med << "\t\tH750a9= " << H750a9NewMVABD2Med <<std::endl;
+  infoFile<<NEventsCutsTTNewMVA_->GetXaxis()->GetBinLabel(6) << "\t\t: DY= " << DYNewMVALepHT1 << "\tTT= " << TTNewMVALepHT1 << "\t\tWJ= " << WJNewMVALepHT1 << "\t\tH125a19= " << H125a19NewMVAHT1 << "\t\tH750a9= " << H750a9NewMVAHT1 << std::endl;
+  infoFile<<NEventsCutsTTNewMVA_->GetXaxis()->GetBinLabel(7)<<"\t: DY= "<<DYNewMVALepHT1Med<<"\t\tTT= "<<TTNewMVALepHT1Med<<"\t\tWJ= "<<WJNewMVALepHT1Med << "\t\tH125a19= " << H125a19NewMVAHT1Med << "\t\tH750a9= " << H750a9NewMVAHT1Med <<std::endl;
+  infoFile<<NEventsCutsTTNewMVA_->GetXaxis()->GetBinLabel(8) << "\t\t: DY= " << DYNewMVALepHT2 << "\tTT= " << TTNewMVALepHT2 << "\t\tWJ= " << WJNewMVALepHT2 << "\t\tH125a19= " << H125a19NewMVAHT2 << "\t\tH750a9= " << H750a9NewMVAHT2 << std::endl;
+  infoFile<<NEventsCutsTTNewMVA_->GetXaxis()->GetBinLabel(9)<<"\t: DY= "<<DYNewMVALepHT2Med<<"\tTT= "<<TTNewMVALepHT2Med<<"\t\tWJ= "<<WJNewMVALepHT2Med << "\t\tH125a19= " << H125a19NewMVAHT2Med << "\t\tH750a9= " << H750a9NewMVAHT2Med <<std::endl;
+  infoFile<<NEventsCutsTTNewMVA_->GetXaxis()->GetBinLabel(18) << "\t\t\t: DY= " << DYNewMVANJet << "\tTT= " << TTNewMVANJet << "\tWJ= " << WJNewMVANJet << std::endl;
+  infoFile<<NEventsCutsTTNewMVA_->GetXaxis()->GetBinLabel(10) << "\t\t: DY= " << DYNewMVAJetBD1 << "\tTT= " << TTNewMVAJetBD1 << "\tWJ= " << WJNewMVAJetBD1 <<  std::endl;
+  infoFile<<NEventsCutsTTNewMVA_->GetXaxis()->GetBinLabel(11) << "\t: DY= " << DYNewMVAJetBD1Med << "\tTT= "<<TTNewMVAJetBD1Med<<"\t\tWJ= "<<WJNewMVAJetBD1Med << std::endl;
+  infoFile<<NEventsCutsTTNewMVA_->GetXaxis()->GetBinLabel(12) << "\t\t: DY= " << DYNewMVAJetBD2 << "\tTT= " << TTNewMVAJetBD2 << "\tWJ= " << WJNewMVAJetBD2 <<  std::endl;
+  infoFile<<NEventsCutsTTNewMVA_->GetXaxis()->GetBinLabel(13) << "\t: DY= " << DYNewMVAJetBD2Med <<"\tTT= "<<TTNewMVAJetBD2Med<<"\t\tWJ= "<<WJNewMVAJetBD2Med <<std::endl;
+  infoFile<<NEventsCutsTTNewMVA_->GetXaxis()->GetBinLabel(14) << "\t\t: DY= " << DYNewMVAJetHT1 << "\tTT= " << TTNewMVAJetHT1 << "\tWJ= " << WJNewMVAJetHT1 << std::endl;
+  infoFile<<NEventsCutsTTNewMVA_->GetXaxis()->GetBinLabel(15) << "\t: DY= " << DYNewMVAJetHT1Med <<"\tTT= "<<TTNewMVAJetHT1Med<<"\t\tWJ= "<<WJNewMVAJetHT1Med << std::endl;
+  infoFile<<NEventsCutsTTNewMVA_->GetXaxis()->GetBinLabel(16) << "\t\t: DY= " << DYNewMVAJetHT2 << "\tTT= " << TTNewMVAJetHT2 << "\tWJ= " << WJNewMVAJetHT2 << std::endl;
+  infoFile<<NEventsCutsTTNewMVA_->GetXaxis()->GetBinLabel(17) << "\t: DY= " << DYNewMVAJetHT2Med <<"\tTT= "<<TTNewMVAJetHT2Med<<"\t\tWJ= "<<WJNewMVAJetHT2Med << std::endl;
+  infoFile<<NEventsCutsTTNewMVA_->GetXaxis()->GetBinLabel(18) << "\t\t\t: DY= " << DYNewMVANJet << "\tTT= " << TTNewMVANJet << "\tWJ= " << WJNewMVANJet << std::endl;
+
+  infoFile << "################################################\n## Cut Info for Old DM No MVA \n################################################\n" << endl;
+  infoFile << "nEvents with RemovedMuon: DY= " << DYOldCutNRemovedMu << "\tTT= " << TTOldCutNRemovedMu << "\tWJ= " << WJOldCutNRemovedMu << "\t\tH125a19= " << H125a19OldCutNRemovedMu << "\t\tH750a9= " << H750a9OldCutNRemovedMu << std::endl;
+  infoFile<<NEventsCutsTTOld_->GetXaxis()->GetBinLabel(19)<< "\t\t\t: DY= " << DYOldNLep << "\tTT= " << TTOldNLep << "\t\tWJ= " << WJOldNLep << std::endl;
+  infoFile<<NEventsCutsTTOld_->GetXaxis()->GetBinLabel(2) << "\t\t: DY= " << DYOldLepBD1 << "\tTT= " << TTOldLepBD1 << "\t\tWJ= " << WJOldLepBD1 << "\t\tH125a19= " << H125a19OldBD1 << "\t\tH750a9= " << H750a9OldBD1 << std::endl;
+  infoFile<<NEventsCutsTTOld_->GetXaxis()->GetBinLabel(3)<<"\t: DY= "<<DYOldLepBD1Med<<"\t\tTT= "<<TTOldLepBD1Med<<"\t\tWJ= "<<WJOldLepBD1Med << "\t\tH125a19= " << H125a19OldBD1Med << "\t\tH750a9= " << H750a9OldBD1Med <<std::endl;
+  infoFile<<NEventsCutsTTOld_->GetXaxis()->GetBinLabel(4) << "\t\t: DY= " << DYOldLepBD2 << "\tTT= " << TTOldLepBD2 << "\t\tWJ= " << WJOldLepBD2 << "\t\tH125a19= " << H125a19OldBD2 << "\t\tH750a9= " << H750a9OldBD2 << std::endl;
+  infoFile<<NEventsCutsTTOld_->GetXaxis()->GetBinLabel(5)<<"\t: DY= "<<DYOldLepBD2Med<<"\t\tTT= "<<TTOldLepBD2Med<<"\t\tWJ= "<<WJOldLepBD2Med << "\t\tH125a19= " << H125a19OldBD2Med << "\t\tH750a9= " << H750a9OldBD2Med <<std::endl;
+  infoFile<<NEventsCutsTTOld_->GetXaxis()->GetBinLabel(6) << "\t\t: DY= " << DYOldLepHT1 << "\tTT= " << TTOldLepHT1 << "\t\tWJ= " << WJOldLepHT1 << "\t\tH125a19= " << H125a19OldHT1 << "\t\tH750a9= " << H750a9OldHT1 << std::endl;
+  infoFile<<NEventsCutsTTOld_->GetXaxis()->GetBinLabel(7)<<"\t: DY= "<<DYOldLepHT1Med<<"\t\tTT= "<<TTOldLepHT1Med<<"\t\tWJ= "<<WJOldLepHT1Med << "\t\tH125a19= " << H125a19OldHT1Med << "\t\tH750a9= " << H750a9OldHT1Med <<std::endl;
+  infoFile<<NEventsCutsTTOld_->GetXaxis()->GetBinLabel(8) << "\t\t: DY= " << DYOldLepHT2 << "\tTT= " << TTOldLepHT2 << "\t\tWJ= " << WJOldLepHT2 << "\t\tH125a19= " << H125a19OldHT2 << "\t\tH750a9= " << H750a9OldHT2 << std::endl;
+  infoFile<<NEventsCutsTTOld_->GetXaxis()->GetBinLabel(9)<<"\t: DY= "<<DYOldLepHT2Med<<"\t\tTT= "<<TTOldLepHT2Med<<"\t\tWJ= "<<WJOldLepHT2Med << "\t\tH125a19= " << H125a19OldHT2Med << "\t\tH750a9= " << H750a9OldHT2Med <<std::endl;
+  infoFile<<NEventsCutsTTOld_->GetXaxis()->GetBinLabel(18) << "\t\t\t: DY= " << DYOldNJet << "\tTT= " << TTOldNJet << "\tWJ= " << WJOldNJet << std::endl;
+  infoFile<<NEventsCutsTTOld_->GetXaxis()->GetBinLabel(10) << "\t\t: DY= " << DYOldJetBD1 << "\tTT= " << TTOldJetBD1 << "\tWJ= " << WJOldJetBD1 <<  std::endl;
+  infoFile<<NEventsCutsTTOld_->GetXaxis()->GetBinLabel(11) << "\t: DY= " << DYOldJetBD1Med << "\tTT= "<<TTOldJetBD1Med<<"\t\tWJ= "<<WJOldJetBD1Med << std::endl;
+  infoFile<<NEventsCutsTTOld_->GetXaxis()->GetBinLabel(12) << "\t\t: DY= " << DYOldJetBD2 << "\tTT= " << TTOldJetBD2 << "\tWJ= " << WJOldJetBD2 <<  std::endl;
+  infoFile<<NEventsCutsTTOld_->GetXaxis()->GetBinLabel(13) << "\t: DY= " << DYOldJetBD2Med <<"\tTT= "<<TTOldJetBD2Med<<"\t\tWJ= "<<WJOldJetBD2Med <<std::endl;
+  infoFile<<NEventsCutsTTOld_->GetXaxis()->GetBinLabel(14) << "\t\t: DY= " << DYOldJetHT1 << "\tTT= " << TTOldJetHT1 << "\tWJ= " << WJOldJetHT1 << std::endl;
+  infoFile<<NEventsCutsTTOld_->GetXaxis()->GetBinLabel(15) << "\t: DY= " << DYOldJetHT1Med <<"\tTT= "<<TTOldJetHT1Med<<"\t\tWJ= "<<WJOldJetHT1Med << std::endl;
+  infoFile<<NEventsCutsTTOld_->GetXaxis()->GetBinLabel(16) << "\t\t: DY= " << DYOldJetHT2 << "\tTT= " << TTOldJetHT2 << "\tWJ= " << WJOldJetHT2 << std::endl;
+  infoFile<<NEventsCutsTTOld_->GetXaxis()->GetBinLabel(17) << "\t: DY= " << DYOldJetHT2Med <<"\tTT= "<<TTOldJetHT2Med<<"\t\tWJ= "<<WJOldJetHT2Med << std::endl;
+  infoFile<<NEventsCutsTTOld_->GetXaxis()->GetBinLabel(18) << "\t\t\t: DY= " << DYOldNJet << "\tTT= " << TTOldNJet << "\tWJ= " << WJOldNJet << std::endl;
+
+  infoFile << "################################################\n## Cut Info for OldMVA DM + MVA \n################################################\n" << endl;
+  infoFile << "nEvents with RemovedMuon: DY= " << DYOldMVACutNRemovedMu << "\tTT= " << TTOldMVACutNRemovedMu << "\tWJ= " << WJOldMVACutNRemovedMu << "\t\tH125a19= " << H125a19OldMVACutNRemovedMu << "\t\tH750a9= " << H750a9OldMVACutNRemovedMu << std::endl;
+  infoFile<<NEventsCutsTTOldMVA_->GetXaxis()->GetBinLabel(19)<< "\t\t\t: DY= " << DYOldMVANLep << "\tTT= " << TTOldMVANLep << "\t\tWJ= " << WJOldMVANLep << std::endl;
+  infoFile<<NEventsCutsTTOldMVA_->GetXaxis()->GetBinLabel(2) << "\t\t: DY= " << DYOldMVALepBD1 << "\tTT= " << TTOldMVALepBD1 << "\t\tWJ= " << WJOldMVALepBD1 << "\t\tH125a19= " << H125a19OldMVABD1 << "\t\tH750a9= " << H750a9OldMVABD1 << std::endl;
+  infoFile<<NEventsCutsTTOldMVA_->GetXaxis()->GetBinLabel(3)<<"\t: DY= "<<DYOldMVALepBD1Med<<"\t\tTT= "<<TTOldMVALepBD1Med<<"\t\tWJ= "<<WJOldMVALepBD1Med << "\t\tH125a19= " << H125a19OldMVABD1Med << "\t\tH750a9= " << H750a9OldMVABD1Med <<std::endl;
+  infoFile<<NEventsCutsTTOldMVA_->GetXaxis()->GetBinLabel(4) << "\t\t: DY= " << DYOldMVALepBD2 << "\tTT= " << TTOldMVALepBD2 << "\t\tWJ= " << WJOldMVALepBD2 << "\t\tH125a19= " << H125a19OldMVABD2 << "\t\tH750a9= " << H750a9OldMVABD2 << std::endl;
+  infoFile<<NEventsCutsTTOldMVA_->GetXaxis()->GetBinLabel(5)<<"\t: DY= "<<DYOldMVALepBD2Med<<"\tTT= "<<TTOldMVALepBD2Med<<"\t\tWJ= "<<WJOldMVALepBD2Med << "\t\tH125a19= " << H125a19OldMVABD2Med << "\t\tH750a9= " << H750a9OldMVABD2Med <<std::endl;
+  infoFile<<NEventsCutsTTOldMVA_->GetXaxis()->GetBinLabel(6) << "\t\t: DY= " << DYOldMVALepHT1 << "\tTT= " << TTOldMVALepHT1 << "\t\tWJ= " << WJOldMVALepHT1 << "\t\tH125a19= " << H125a19OldMVAHT1 << "\t\tH750a9= " << H750a9OldMVAHT1 << std::endl;
+  infoFile<<NEventsCutsTTOldMVA_->GetXaxis()->GetBinLabel(7)<<"\t: DY= "<<DYOldMVALepHT1Med<<"\t\tTT= "<<TTOldMVALepHT1Med<<"\t\tWJ= "<<WJOldMVALepHT1Med << "\t\tH125a19= " << H125a19OldMVAHT1Med << "\t\tH750a9= " << H750a9OldMVAHT1Med <<std::endl;
+  infoFile<<NEventsCutsTTOldMVA_->GetXaxis()->GetBinLabel(8) << "\t\t: DY= " << DYOldMVALepHT2 << "\tTT= " << TTOldMVALepHT2 << "\t\tWJ= " << WJOldMVALepHT2 << "\t\tH125a19= " << H125a19OldMVAHT2 << "\t\tH750a9= " << H750a9OldMVAHT2 << std::endl;
+  infoFile<<NEventsCutsTTOldMVA_->GetXaxis()->GetBinLabel(9)<<"\t: DY= "<<DYOldMVALepHT2Med<<"\t\tTT= "<<TTOldMVALepHT2Med<<"\t\tWJ= "<<WJOldMVALepHT2Med << "\t\tH125a19= " << H125a19OldMVAHT2Med << "\t\tH750a9= " << H750a9OldMVAHT2Med <<std::endl;
+  infoFile<<NEventsCutsTTOldMVA_->GetXaxis()->GetBinLabel(18) << "\t\t\t: DY= " << DYOldMVANJet << "\tTT= " << TTOldMVANJet << "\tWJ= " << WJOldMVANJet << std::endl;
+  infoFile<<NEventsCutsTTOldMVA_->GetXaxis()->GetBinLabel(10) << "\t\t: DY= " << DYOldMVAJetBD1 << "\tTT= " << TTOldMVAJetBD1 << "\tWJ= " << WJOldMVAJetBD1 <<  std::endl;
+  infoFile<<NEventsCutsTTOldMVA_->GetXaxis()->GetBinLabel(11) << "\t: DY= " << DYOldMVAJetBD1Med << "\tTT= "<<TTOldMVAJetBD1Med<<"\t\tWJ= "<<WJOldMVAJetBD1Med << std::endl;
+  infoFile<<NEventsCutsTTOldMVA_->GetXaxis()->GetBinLabel(12) << "\t\t: DY= " << DYOldMVAJetBD2 << "\tTT= " << TTOldMVAJetBD2 << "\tWJ= " << WJOldMVAJetBD2 <<  std::endl;
+  infoFile<<NEventsCutsTTOldMVA_->GetXaxis()->GetBinLabel(13) << "\t: DY= " << DYOldMVAJetBD2Med <<"\tTT= "<<TTOldMVAJetBD2Med<<"\t\tWJ= "<<WJOldMVAJetBD2Med <<std::endl;
+  infoFile<<NEventsCutsTTOldMVA_->GetXaxis()->GetBinLabel(14) << "\t\t: DY= " << DYOldMVAJetHT1 << "\tTT= " << TTOldMVAJetHT1 << "\tWJ= " << WJOldMVAJetHT1 << std::endl;
+  infoFile<<NEventsCutsTTOldMVA_->GetXaxis()->GetBinLabel(15) << "\t: DY= " << DYOldMVAJetHT1Med <<"\tTT= "<<TTOldMVAJetHT1Med<<"\t\tWJ= "<<WJOldMVAJetHT1Med << std::endl;
+  infoFile<<NEventsCutsTTOldMVA_->GetXaxis()->GetBinLabel(16) << "\t\t: DY= " << DYOldMVAJetHT2 << "\tTT= " << TTOldMVAJetHT2 << "\tWJ= " << WJOldMVAJetHT2 << std::endl;
+  infoFile<<NEventsCutsTTOldMVA_->GetXaxis()->GetBinLabel(17) << "\t: DY= " << DYOldMVAJetHT2Med <<"\tTT= "<<TTOldMVAJetHT2Med<<"\t\tWJ= "<<WJOldMVAJetHT2Med << std::endl;
+  infoFile<<NEventsCutsTTOldMVA_->GetXaxis()->GetBinLabel(18) << "\t\t\t: DY= " << DYOldMVANJet << "\tTT= " << TTOldMVANJet << "\tWJ= " << WJOldMVANJet << std::endl;
+
+
+
+
+  //////////////////////////
+  // Writing DY information
+  //////////////////////////
+  infoFile << "\n\n\n############################################\n## Drell-Yan M-50 || Total Number of Events:\n## NewMVA= " << DYNewMVA_Total << "\tNew= " << DYNew_Total << "\tOldMVA= ";
+  infoFile << DYOldMVA_Total << "\tOld= " << DYOld_Total << "\n#############################################\n" << endl;
+  infoFile << "Numbers of Events:" << endl;
+  infoFile << "       | Removed Mu \t| New+MVA \t| New \t\t| Old+MVA \t| Old" << endl;
+  infoFile << "Loose: | " << DYNew_GenMat << "\t\t| " << DYNewMVA_Loose << "\t\t| " << DYNew_Loose << "\t\t| " << DYOldMVA_Loose << "\t\t| " << DYOld_Loose << endl;
+  infoFile << "Med:   | " << DYNew_GenMat << "\t\t| " << DYNewMVA_Med << "\t\t| " << DYNew_Med << "\t\t| " << DYOldMVA_Med << "\t\t| " << DYOld_Med << endl;
+  infoFile << "Tight: | " << DYNew_GenMat << "\t\t| " << DYNewMVA_Tight << "\t\t| " << DYNew_Tight << "\t\t| " << DYOldMVA_Tight << "\t\t| " << DYOld_Tight << endl;
+
+  infoFile << "\nFraction of Total of Events:" << endl;
+  infoFile << "       | Removed Mu \t| New+MVA \t| New \t\t| Old+MVA \t| Old" << endl;
+  infoFile << "Loose: | " << DYNew_GenMat/DYNew_Total << "\t| " << DYNewMVA_Loose/DYNewMVA_Total << "\t| ";
+  infoFile << DYNew_Loose/DYNew_Total << "\t| " << DYOldMVA_Loose/DYOldMVA_Total << "\t| " << DYOld_Loose/DYOld_Total << endl;
+  infoFile << "Med:   | " << DYNew_GenMat/DYNew_Total << "\t| " << DYNewMVA_Med/DYNewMVA_Total << "\t| " << DYNew_Med/DYNew_Total << "\t| " << DYOldMVA_Med/DYOldMVA_Total << "\t| ";
+  infoFile << DYOld_Med/DYOld_Total << endl;
+  infoFile << "Tight: | " << DYNew_GenMat/DYNew_Total << "\t| " << DYNewMVA_Tight/DYNewMVA_Total << "\t| " ;
+  infoFile << DYNew_Tight/DYNew_Total << "\t| " << DYOldMVA_Tight/DYOldMVA_Total << "\t| " << DYOld_Tight/DYOld_Total << endl;
+
+  infoFile << "\nFraction of Events with a Removed Muon (a.k.a. A Cleaned Jet):" << endl;
+  infoFile << "       | Removed Mu \t| New+MVA \t| New \t\t| Old+MVA \t| Old" << endl;
+  infoFile << "Loose: | " << DYNew_GenMat/DYNew_GenMat << "\t\t| " << DYNewMVA_Loose/DYNewMVA_GenMat << "\t| ";
+  infoFile << DYNew_Loose/DYNew_GenMat << "\t| " << DYOldMVA_Loose/DYOldMVA_GenMat << "\t| " << DYOld_Loose/DYOld_GenMat << endl;
+  infoFile << "Med:   | " << DYNew_GenMat/DYNew_GenMat << "\t\t| " << DYNewMVA_Med/DYNewMVA_GenMat << "\t| ";
+  infoFile << DYNew_Med/DYNew_GenMat << "\t| " << DYOldMVA_Med/DYOldMVA_GenMat << "\t| " << DYOld_Med/DYOld_GenMat << endl;
+  infoFile << "Tight: | " << DYNew_GenMat/DYNew_GenMat << "\t\t| " << DYNewMVA_Tight/DYNewMVA_GenMat << "\t| ";
+  infoFile << DYNew_Tight/DYNew_GenMat << "\t| " << DYOldMVA_Tight/DYOldMVA_GenMat << "\t| " << DYOld_Tight/DYOld_GenMat << endl;
+
+  //////////////////////////
+  // Writing TT information
+  //////////////////////////
+  infoFile << "\n\n\n############################################\n## TTbar || Total Number of Events:\n## NewMVA= " << TTNewMVA_Total << "\tNew= " << TTNew_Total << "\tOldMVA= ";
+  infoFile << TTOldMVA_Total << "\tOld= " << TTOld_Total << "\n#############################################\n" << endl;
+  infoFile << "Numbers of Events:" << endl;
+  infoFile << "       | Removed Mu \t| New+MVA \t| New \t\t| Old+MVA \t| Old" << endl;
+  infoFile << "Loose: | " << TTNew_GenMat << "\t\t| " << TTNewMVA_Loose << "\t\t| " << TTNew_Loose << "\t\t| " << TTOldMVA_Loose << "\t\t| " << TTOld_Loose << endl;
+  infoFile << "Med:   | " << TTNew_GenMat << "\t\t| " << TTNewMVA_Med << "\t\t| " << TTNew_Med << "\t\t| " << TTOldMVA_Med << "\t\t| " << TTOld_Med << endl;
+  infoFile << "Tight: | " << TTNew_GenMat << "\t\t| " << TTNewMVA_Tight << "\t\t| " << TTNew_Tight << "\t\t| " << TTOldMVA_Tight << "\t\t| " << TTOld_Tight << endl;
+
+  infoFile << "\nFraction of Total of Events:" << endl;
+  infoFile << "       | Removed Mu \t| New+MVA \t| New \t\t| Old+MVA \t| Old" << endl;
+  infoFile << "Loose: | " << TTNew_GenMat/TTNew_Total << "\t| " << TTNewMVA_Loose/TTNewMVA_Total << "\t| ";
+  infoFile << TTNew_Loose/TTNew_Total << "\t| " << TTOldMVA_Loose/TTOldMVA_Total << "\t| " << TTOld_Loose/TTOld_Total << endl;
+  infoFile << "Med:   | " << TTNew_GenMat/TTNew_Total << "\t| " << TTNewMVA_Med/TTNewMVA_Total << "\t| " << TTNew_Med/TTNew_Total << "\t| " << TTOldMVA_Med/TTOldMVA_Total << "\t| "; 
+  infoFile << TTOld_Med/TTOld_Total << endl;
+  infoFile << "Tight: | " << TTNew_GenMat/TTNew_Total << "\t| " << TTNewMVA_Tight/TTNewMVA_Total << "\t| " ;
+  infoFile << TTNew_Tight/TTNew_Total << "\t| " << TTOldMVA_Tight/TTOldMVA_Total << "\t| " << TTOld_Tight/TTOld_Total << endl;
+
+  infoFile << "\nFraction of Events with a Removed Muon (a.k.a. A Cleaned Jet):" << endl;
+  infoFile << "       | Removed Mu \t| New+MVA \t| New \t\t| Old+MVA \t| Old" << endl;
+  infoFile << "Loose: | " << TTNew_GenMat/TTNew_GenMat << "\t\t| " << TTNewMVA_Loose/TTNewMVA_GenMat << "\t| ";
+  infoFile << TTNew_Loose/TTNew_GenMat << "\t| " << TTOldMVA_Loose/TTOldMVA_GenMat << "\t| " << TTOld_Loose/TTOld_GenMat << endl;
+  infoFile << "Med:   | " << TTNew_GenMat/TTNew_GenMat << "\t\t| " << TTNewMVA_Med/TTNewMVA_GenMat << "\t| ";
+  infoFile << TTNew_Med/TTNew_GenMat << "\t| " << TTOldMVA_Med/TTOldMVA_GenMat << "\t| " << TTOld_Med/TTOld_GenMat << endl;
+  infoFile << "Tight: | " << TTNew_GenMat/TTNew_GenMat << "\t\t| " << TTNewMVA_Tight/TTNewMVA_GenMat << "\t| ";
+  infoFile << TTNew_Tight/TTNew_GenMat << "\t| " << TTOldMVA_Tight/TTOldMVA_GenMat << "\t| " << TTOld_Tight/TTOld_GenMat << endl;
+
+  //////////////////////////
+  // Writing WJ information
+  //////////////////////////
+  infoFile << "\n\n\n############################################\n## WJets || Total Number of Events:\n## NewMVA= " << WJNewMVA_Total << "\tNew= " << WJNew_Total << "\tOldMVA= ";
+  infoFile << WJOldMVA_Total << "\tOld= " << WJOld_Total << "\n#############################################\n" << endl;
+  infoFile << "Numbers of Events:" << endl;
+  infoFile << "       | Removed Mu \t| New+MVA \t| New \t\t| Old+MVA \t| Old" << endl;
+  infoFile << "Loose: | " << WJNew_GenMat << "\t\t| " << WJNewMVA_Loose << "\t\t| " << WJNew_Loose << "\t\t| " << WJOldMVA_Loose << "\t\t| " << WJOld_Loose << endl;
+  infoFile << "Med:   | " << WJNew_GenMat << "\t\t| " << WJNewMVA_Med << "\t\t| " << WJNew_Med << "\t\t| " << WJOldMVA_Med << "\t\t| " << WJOld_Med << endl;
+  infoFile << "Tight: | " << WJNew_GenMat << "\t\t| " << WJNewMVA_Tight << "\t\t| " << WJNew_Tight << "\t\t| " << WJOldMVA_Tight << "\t\t| " << WJOld_Tight << endl;
+
+  infoFile << "\nFraction of Total of Events:" << endl;
+  infoFile << "       | Removed Mu \t| New+MVA \t| New \t\t| Old+MVA \t| Old" << endl;
+  infoFile << "Loose: | " << WJNew_GenMat/WJNew_Total << "\t| " << WJNewMVA_Loose/WJNewMVA_Total << "\t| ";
+  infoFile << WJNew_Loose/WJNew_Total << "\t| " << WJOldMVA_Loose/WJOldMVA_Total << "\t| " << WJOld_Loose/WJOld_Total << endl;
+  infoFile << "Med:   | " << WJNew_GenMat/WJNew_Total << "\t| " << WJNewMVA_Med/WJNewMVA_Total << "\t| " << WJNew_Med/WJNew_Total << "\t| " << WJOldMVA_Med/WJOldMVA_Total << "\t| "; 
+  infoFile << WJOld_Med/WJOld_Total << endl;
+  infoFile << "Tight: | " << WJNew_GenMat/WJNew_Total << "\t| " << WJNewMVA_Tight/WJNewMVA_Total << "\t| " ;
+  infoFile << WJNew_Tight/WJNew_Total << "\t| " << WJOldMVA_Tight/WJOldMVA_Total << "\t| " << WJOld_Tight/WJOld_Total << endl;
+
+  infoFile << "\nFraction of Events with a Removed Muon (a.k.a. A Cleaned Jet):" << endl;
+  infoFile << "       | Removed Mu \t| New+MVA \t| New \t\t| Old+MVA \t| Old" << endl;
+  infoFile << "Loose: | " << WJNew_GenMat/WJNew_GenMat << "\t\t| " << WJNewMVA_Loose/WJNewMVA_GenMat << "\t| ";
+  infoFile << WJNew_Loose/WJNew_GenMat << "\t| " << WJOldMVA_Loose/WJOldMVA_GenMat << "\t| " << WJOld_Loose/WJOld_GenMat << endl;
+  infoFile << "Med:   | " << WJNew_GenMat/WJNew_GenMat << "\t\t| " << WJNewMVA_Med/WJNewMVA_GenMat << "\t| ";
+  infoFile << WJNew_Med/WJNew_GenMat << "\t| " << WJOldMVA_Med/WJOldMVA_GenMat << "\t| " << WJOld_Med/WJOld_GenMat << endl;
+  infoFile << "Tight: | " << WJNew_GenMat/WJNew_GenMat << "\t\t| " << WJNewMVA_Tight/WJNewMVA_GenMat << "\t| ";
+  infoFile << WJNew_Tight/WJNew_GenMat << "\t| " << WJOldMVA_Tight/WJOldMVA_GenMat << "\t| " << WJOld_Tight/WJOld_GenMat << endl;
+
+  //////////////////////////
+  // Writing H125a19 information
+  //////////////////////////
+  infoFile << "\n\n\n############################################\n## H125a19nal H125 a9 || Total Number of Events:\n## NewMVA= " << H125a19NewMVA_Total << "\tNew= " << H125a19New_Total << "\tOldMVA= ";
+  infoFile << H125a19OldMVA_Total << "\tOld= " << H125a19Old_Total << "\n#############################################\n" << endl;
+  infoFile << "Numbers of Events:" << endl;
+  infoFile << "       | Removed Mu \t| New+MVA \t| New \t\t| Old+MVA \t| Old" << endl;
+  infoFile << "Loose: | " << H125a19New_GenMat << "\t\t| " << H125a19NewMVA_Loose << "\t\t| " << H125a19New_Loose << "\t\t| " << H125a19OldMVA_Loose << "\t\t| " << H125a19Old_Loose << endl;
+  infoFile << "Med:   | " << H125a19New_GenMat << "\t\t| " << H125a19NewMVA_Med << "\t\t| " << H125a19New_Med << "\t\t| " << H125a19OldMVA_Med << "\t\t| " << H125a19Old_Med << endl;
+  infoFile << "Tight: | " << H125a19New_GenMat << "\t\t| " << H125a19NewMVA_Tight << "\t\t| " << H125a19New_Tight << "\t\t| " << H125a19OldMVA_Tight << "\t\t| " << H125a19Old_Tight << endl;
+
+  infoFile << "\nFraction of Total of Events:" << endl;
+  infoFile << "       | Removed Mu \t| New+MVA \t| New \t\t| Old+MVA \t| Old" << endl;
+  infoFile << "Loose: | " << H125a19New_GenMat/H125a19New_Total << "\t| " << H125a19NewMVA_Loose/H125a19NewMVA_Total << "\t| ";
+  infoFile << H125a19New_Loose/H125a19New_Total << "\t| " << H125a19OldMVA_Loose/H125a19OldMVA_Total << "\t| " << H125a19Old_Loose/H125a19Old_Total << endl;
+  infoFile << "Med:   | " << H125a19New_GenMat/H125a19New_Total << "\t| " << H125a19NewMVA_Med/H125a19NewMVA_Total << "\t| " << H125a19New_Med/H125a19New_Total << "\t| " << H125a19OldMVA_Med/H125a19OldMVA_Total << "\t| "; 
+  infoFile << H125a19Old_Med/H125a19Old_Total << endl;
+  infoFile << "Tight: | " << H125a19New_GenMat/H125a19New_Total << "\t| " << H125a19NewMVA_Tight/H125a19NewMVA_Total << "\t| " ;
+  infoFile << H125a19New_Tight/H125a19New_Total << "\t| " << H125a19OldMVA_Tight/H125a19OldMVA_Total << "\t| " << H125a19Old_Tight/H125a19Old_Total << endl;
+
+  infoFile << "\nFraction of Events with a Removed Muon (a.k.a. A Cleaned Jet):" << endl;
+  infoFile << "       | Removed Mu \t| New+MVA \t| New \t\t| Old+MVA \t| Old" << endl;
+  infoFile << "Loose: | " << H125a19New_GenMat/H125a19New_GenMat << "\t\t| " << H125a19NewMVA_Loose/H125a19NewMVA_GenMat << "\t| ";
+  infoFile << H125a19New_Loose/H125a19New_GenMat << "\t| " << H125a19OldMVA_Loose/H125a19OldMVA_GenMat << "\t| " << H125a19Old_Loose/H125a19Old_GenMat << endl;
+  infoFile << "Med:   | " << H125a19New_GenMat/H125a19New_GenMat << "\t\t| " << H125a19NewMVA_Med/H125a19NewMVA_GenMat << "\t| ";
+  infoFile << H125a19New_Med/H125a19New_GenMat << "\t| " << H125a19OldMVA_Med/H125a19OldMVA_GenMat << "\t| " << H125a19Old_Med/H125a19Old_GenMat << endl;
+  infoFile << "Tight: | " << H125a19New_GenMat/H125a19New_GenMat << "\t\t| " << H125a19NewMVA_Tight/H125a19NewMVA_GenMat << "\t| ";
+  infoFile << H125a19New_Tight/H125a19New_GenMat << "\t| " << H125a19OldMVA_Tight/H125a19OldMVA_GenMat << "\t| " << H125a19Old_Tight/H125a19Old_GenMat << endl;
+
+  //////////////////////////
+  // Writing H750a9 information
+  //////////////////////////
+  infoFile << "\n\n\n############################################\n## H125a19nal H750 a9 || Total Number of Events:\n## NewMVA= " << H750a9NewMVA_Total << "\tNew= " << H750a9New_Total << "\tOldMVA= ";
+  infoFile << H750a9OldMVA_Total << "\tOld= " << H750a9Old_Total << "\n#############################################\n" << endl;
+  infoFile << "Numbers of Events:" << endl;
+  infoFile << "       | Removed Mu \t| New+MVA \t| New \t\t| Old+MVA \t| Old" << endl;
+  infoFile << "Loose: | " << H750a9New_GenMat << "\t\t| " << H750a9NewMVA_Loose << "\t\t| " << H750a9New_Loose << "\t\t| " << H750a9OldMVA_Loose << "\t\t| " << H750a9Old_Loose << endl;
+  infoFile << "Med:   | " << H750a9New_GenMat << "\t\t| " << H750a9NewMVA_Med << "\t\t| " << H750a9New_Med << "\t\t| " << H750a9OldMVA_Med << "\t\t| " << H750a9Old_Med << endl;
+  infoFile << "Tight: | " << H750a9New_GenMat << "\t\t| " << H750a9NewMVA_Tight << "\t\t| " << H750a9New_Tight << "\t\t| " << H750a9OldMVA_Tight << "\t\t| " << H750a9Old_Tight << endl;
+
+  infoFile << "\nFraction of Total of Events:" << endl;
+  infoFile << "       | Removed Mu \t| New+MVA \t| New \t\t| Old+MVA \t| Old" << endl;
+  infoFile << "Loose: | " << H750a9New_GenMat/H750a9New_Total << "\t| " << H750a9NewMVA_Loose/H750a9NewMVA_Total << "\t| ";
+  infoFile << H750a9New_Loose/H750a9New_Total << "\t| " << H750a9OldMVA_Loose/H750a9OldMVA_Total << "\t| " << H750a9Old_Loose/H750a9Old_Total << endl;
+  infoFile << "Med:   | " << H750a9New_GenMat/H750a9New_Total << "\t| " << H750a9NewMVA_Med/H750a9NewMVA_Total << "\t| " << H750a9New_Med/H750a9New_Total << "\t| " << H750a9OldMVA_Med/H750a9OldMVA_Total << "\t| ";
+  infoFile << H750a9Old_Med/H750a9Old_Total << endl;
+  infoFile << "Tight: | " << H750a9New_GenMat/H750a9New_Total << "\t| " << H750a9NewMVA_Tight/H750a9NewMVA_Total << "\t| " ;
+  infoFile << H750a9New_Tight/H750a9New_Total << "\t| " << H750a9OldMVA_Tight/H750a9OldMVA_Total << "\t| " << H750a9Old_Tight/H750a9Old_Total << endl;
+
+  infoFile << "\nFraction of Events with a Removed Muon (a.k.a. A Cleaned Jet):" << endl;
+  infoFile << "       | Removed Mu \t| New+MVA \t| New \t\t| Old+MVA \t| Old" << endl;
+  infoFile << "Loose: | " << H750a9New_GenMat/H750a9New_GenMat << "\t\t| " << H750a9NewMVA_Loose/H750a9NewMVA_GenMat << "\t| ";
+  infoFile << H750a9New_Loose/H750a9New_GenMat << "\t| " << H750a9OldMVA_Loose/H750a9OldMVA_GenMat << "\t| " << H750a9Old_Loose/H750a9Old_GenMat << endl;
+  infoFile << "Med:   | " << H750a9New_GenMat/H750a9New_GenMat << "\t\t| " << H750a9NewMVA_Med/H750a9NewMVA_GenMat << "\t| ";
+  infoFile << H750a9New_Med/H750a9New_GenMat << "\t| " << H750a9OldMVA_Med/H750a9OldMVA_GenMat << "\t| " << H750a9Old_Med/H750a9Old_GenMat << endl;
+  infoFile << "Tight: | " << H750a9New_GenMat/H750a9New_GenMat << "\t\t| " << H750a9NewMVA_Tight/H750a9NewMVA_GenMat << "\t| ";
+  infoFile << H750a9New_Tight/H750a9New_GenMat << "\t| " << H750a9OldMVA_Tight/H750a9OldMVA_GenMat << "\t| " << H750a9Old_Tight/H750a9Old_GenMat << endl;
+
+
+
+
+  TCanvas TauHadPtLeptonCanvas("TauHadPtLeptonCanvas","",600,600);
+  TCanvas TauMuPtLeptonCanvas("TauMuPtLeptonCanvas","",600,600);
+  TCanvas TauHadEtaLeptonCanvas("TauHadEtaLeptonCanvas","",600,600);
+  TCanvas HTLeptonCanvas("HTLeptonCanvas","",600,600);
+  TCanvas BDiscCSVLeptonCanvas("BDiscCSVCanvas","",600,600);
+
+  TauHadPtLeptonCanvas.SetGrid(1,1);
+  TauMuPtLeptonCanvas.SetGrid(1,1);
+  TauHadEtaLeptonCanvas.SetGrid(1,1);
+  HTLeptonCanvas.SetGrid(1,1);
+  BDiscCSVLeptonCanvas.SetGrid(1,1);
+
+  TCanvas TauHadPtJetCanvas("TauHadPtJetCanvas","",600,600);
+  TCanvas TauMuPtJetCanvas("TauMuPtJetCanvas","",600,600);
+  TCanvas TauHadEtaJetCanvas("TauHadEtaJetCanvas","",600,600);
+  TCanvas HTJetCanvas("HTJetCanvas","",600,600);
+  TCanvas BDiscCSVJetCanvas("BDiscCSVJetCanvas","",600,600);
+
+  TauHadPtJetCanvas.SetGrid(1,1);
+  TauMuPtJetCanvas.SetGrid(1,1);
+  TauHadEtaJetCanvas.SetGrid(1,1);
+  HTJetCanvas.SetGrid(1,1);
+  BDiscCSVJetCanvas.SetGrid(1,1);
+
+  TCanvas OldH125a19ToBackgroundCanvas("OldH125a19ToBackgroundCanvas","",600,600);
+  TCanvas OldMVAH125a19ToBackgroundCanvas("OldMVAH125a19ToBackgroundCanvas","",600,600);
+  TCanvas NewH125a19ToBackgroundCanvas("NewH125a19ToBackgroundCanvas","",600,600);
+  TCanvas NewMVAH125a19ToBackgroundCanvas("NewMVAH125a19ToBackgroundCanvas","",600,600);
+
+  OldH125a19ToBackgroundCanvas.SetGrid(1,1);
+  OldMVAH125a19ToBackgroundCanvas.SetGrid(1,1);
+  NewH125a19ToBackgroundCanvas.SetGrid(1,1);
+  NewMVAH125a19ToBackgroundCanvas.SetGrid(1,1);
+
+
+  TH1F* OldH125a19ToBackground_    = new TH1F("OldH125a19ToBackground","", 8, -.5, 7.5);
+      OldH125a19ToBackground_->GetXaxis()->SetBinLabel(1, "BDisc < .5");
+      OldH125a19ToBackground_->GetXaxis()->SetBinLabel(2, "BDisc < .5 + MedIso");
+      OldH125a19ToBackground_->GetXaxis()->SetBinLabel(3, "BDisc < .9");
+      OldH125a19ToBackground_->GetXaxis()->SetBinLabel(4, "BDisc < .9 + Med Iso");
+      OldH125a19ToBackground_->GetXaxis()->SetBinLabel(5, "HT < 300");
+      OldH125a19ToBackground_->GetXaxis()->SetBinLabel(6, "HT < 300 + MedIso");
+      OldH125a19ToBackground_->GetXaxis()->SetBinLabel(7, "HT < 400");
+      OldH125a19ToBackground_->GetXaxis()->SetBinLabel(8, "HT < 400 MedIso");
+  OldH125a19ToBackground_->SetBinContent(1, H750a9OldBD1 / TMath::Sqrt(H750a9OldBD1 + DYOldLepBD1 + TTOldLepBD1 + WJOldLepBD1 + DYOldJetBD1 + TTOldJetBD1 + WJOldJetBD1) );
+  OldH125a19ToBackground_->SetBinContent(2, H750a9OldBD1Med/ TMath::Sqrt(H750a9OldBD1Med+ DYOldLepBD1Med+ TTOldLepBD1Med+ WJOldLepBD1Med+ DYOldJetBD1Med+ TTOldJetBD1Med+ WJOldJetBD1Med));
+  OldH125a19ToBackground_->SetBinContent(3, H750a9OldBD2 / TMath::Sqrt(H750a9OldBD2 + DYOldLepBD2 + TTOldLepBD2 + WJOldLepBD2 + DYOldJetBD2 + TTOldJetBD2 + WJOldJetBD2) );
+  OldH125a19ToBackground_->SetBinContent(4, H750a9OldBD2Med/ TMath::Sqrt(H750a9OldBD2Med+ DYOldLepBD2Med+ TTOldLepBD2Med+ WJOldLepBD2Med+ DYOldJetBD2Med+ TTOldJetBD2Med+ WJOldJetBD2Med));
+  OldH125a19ToBackground_->SetBinContent(5, H750a9OldHT1 / TMath::Sqrt(H750a9OldHT1 + DYOldLepHT1 + TTOldLepHT1 + WJOldLepHT1 + DYOldJetHT1 + TTOldJetHT1 + WJOldJetHT1) );
+  OldH125a19ToBackground_->SetBinContent(6, H750a9OldHT1Med/ TMath::Sqrt(H750a9OldHT1Med+ DYOldLepHT1Med+ TTOldLepHT1Med+ WJOldLepHT1Med+ DYOldJetHT1Med+ TTOldJetHT1Med+ WJOldJetHT1Med));
+  OldH125a19ToBackground_->SetBinContent(7, H750a9OldHT2 / TMath::Sqrt(H750a9OldHT2 + DYOldLepHT2 + TTOldLepHT2 + WJOldLepHT2 + DYOldJetHT2 + TTOldJetHT2 + WJOldJetHT2) );
+  OldH125a19ToBackground_->SetBinContent(8, H750a9OldHT2Med/ TMath::Sqrt(H750a9OldHT2Med+ DYOldLepHT2Med+ TTOldLepHT2Med+ WJOldLepHT2Med+ DYOldJetHT2Med+ TTOldJetHT2Med+ WJOldJetHT2Med));
+  OldH125a19ToBackground_->GetYaxis()->SetTitle("S / sqrt (S + B)");
+
+  TH1F* OldMVAH125a19ToBackground_    = new TH1F("OldMVAH125a19ToBackground","", 8, -.5, 7.5);
+      OldMVAH125a19ToBackground_->GetXaxis()->SetBinLabel(1, "BDisc < .5");
+      OldMVAH125a19ToBackground_->GetXaxis()->SetBinLabel(2, "BDisc < .5 + MedIso");
+      OldMVAH125a19ToBackground_->GetXaxis()->SetBinLabel(3, "BDisc < .9");
+      OldMVAH125a19ToBackground_->GetXaxis()->SetBinLabel(4, "BDisc < .9 + Med Iso");
+      OldMVAH125a19ToBackground_->GetXaxis()->SetBinLabel(5, "HT < 300");
+      OldMVAH125a19ToBackground_->GetXaxis()->SetBinLabel(6, "HT < 300 + MedIso");
+      OldMVAH125a19ToBackground_->GetXaxis()->SetBinLabel(7, "HT < 400");
+      OldMVAH125a19ToBackground_->GetXaxis()->SetBinLabel(8, "HT < 400 MedIso");
+  OldMVAH125a19ToBackground_->SetBinContent(1, H750a9OldMVABD1 / TMath::Sqrt(H750a9OldMVABD1 + DYOldMVALepBD1 + TTOldMVALepBD1 + WJOldMVALepBD1 + DYOldMVAJetBD1 + TTOldMVAJetBD1 + WJOldMVAJetBD1) );
+  OldMVAH125a19ToBackground_->SetBinContent(2,H750a9OldMVABD1Med/ TMath::Sqrt(H750a9OldMVABD1Med+ DYOldMVALepBD1Med+ TTOldMVALepBD1Med+ WJOldMVALepBD1Med+ DYOldMVAJetBD1Med+ TTOldMVAJetBD1Med+ WJOldMVAJetBD1Med));
+  OldMVAH125a19ToBackground_->SetBinContent(3, H750a9OldMVABD2 / TMath::Sqrt(H750a9OldMVABD2 + DYOldMVALepBD2 + TTOldMVALepBD2 + WJOldMVALepBD2 + DYOldMVAJetBD2 + TTOldMVAJetBD2 + WJOldMVAJetBD2) );
+  OldMVAH125a19ToBackground_->SetBinContent(4,H750a9OldMVABD2Med/ TMath::Sqrt(H750a9OldMVABD2Med+ DYOldMVALepBD2Med+ TTOldMVALepBD2Med+ WJOldMVALepBD2Med+ DYOldMVAJetBD2Med+ TTOldMVAJetBD2Med+ WJOldMVAJetBD2Med));
+  OldMVAH125a19ToBackground_->SetBinContent(5, H750a9OldMVAHT1 / TMath::Sqrt(H750a9OldMVAHT1 + DYOldMVALepHT1 + TTOldMVALepHT1 + WJOldMVALepHT1 + DYOldMVAJetHT1 + TTOldMVAJetHT1 + WJOldMVAJetHT1) );
+  OldMVAH125a19ToBackground_->SetBinContent(6,H750a9OldMVAHT1Med/ TMath::Sqrt(H750a9OldMVAHT1Med+ DYOldMVALepHT1Med+ TTOldMVALepHT1Med+ WJOldMVALepHT1Med+ DYOldMVAJetHT1Med+ TTOldMVAJetHT1Med+ WJOldMVAJetHT1Med));
+  OldMVAH125a19ToBackground_->SetBinContent(7, H750a9OldMVAHT2 / TMath::Sqrt(H750a9OldMVAHT2 + DYOldMVALepHT2 + TTOldMVALepHT2 + WJOldMVALepHT2 + DYOldMVAJetHT2 + TTOldMVAJetHT2 + WJOldMVAJetHT2) );
+  OldMVAH125a19ToBackground_->SetBinContent(8,H750a9OldMVAHT2Med/ TMath::Sqrt(H750a9OldMVAHT2Med+ DYOldMVALepHT2Med+ TTOldMVALepHT2Med+ WJOldMVALepHT2Med+ DYOldMVAJetHT2Med+ TTOldMVAJetHT2Med+ WJOldMVAJetHT2Med));
+  OldMVAH125a19ToBackground_->GetYaxis()->SetTitle("S / sqrt (S + B)");
+
+  TH1F* NewH125a19ToBackground_    = new TH1F("NewH125a19ToBackground","", 8, -.5, 7.5);
+      NewH125a19ToBackground_->GetXaxis()->SetBinLabel(1, "BDisc < .5");
+      NewH125a19ToBackground_->GetXaxis()->SetBinLabel(2, "BDisc < .5 + MedIso");
+      NewH125a19ToBackground_->GetXaxis()->SetBinLabel(3, "BDisc < .9");
+      NewH125a19ToBackground_->GetXaxis()->SetBinLabel(4, "BDisc < .9 + Med Iso");
+      NewH125a19ToBackground_->GetXaxis()->SetBinLabel(5, "HT < 300");
+      NewH125a19ToBackground_->GetXaxis()->SetBinLabel(6, "HT < 300 + MedIso");
+      NewH125a19ToBackground_->GetXaxis()->SetBinLabel(7, "HT < 400");
+      NewH125a19ToBackground_->GetXaxis()->SetBinLabel(8, "HT < 400 MedIso");
+  NewH125a19ToBackground_->SetBinContent(1, H750a9NewBD1 / TMath::Sqrt(H750a9NewBD1 + DYNewLepBD1 + TTNewLepBD1 + WJNewLepBD1 + DYNewJetBD1 + TTNewJetBD1 + WJNewJetBD1) );
+  NewH125a19ToBackground_->SetBinContent(2,H750a9NewBD1Med/ TMath::Sqrt(H750a9NewBD1Med+ DYNewLepBD1Med+ TTNewLepBD1Med+ WJNewLepBD1Med+ DYNewJetBD1Med+ TTNewJetBD1Med+ WJNewJetBD1Med));
+  NewH125a19ToBackground_->SetBinContent(3, H750a9NewBD2 / TMath::Sqrt(H750a9NewBD2 + DYNewLepBD2 + TTNewLepBD2 + WJNewLepBD2 + DYNewJetBD2 + TTNewJetBD2 + WJNewJetBD2) );
+  NewH125a19ToBackground_->SetBinContent(4,H750a9NewBD2Med/ TMath::Sqrt(H750a9NewBD2Med+ DYNewLepBD2Med+ TTNewLepBD2Med+ WJNewLepBD2Med+ DYNewJetBD2Med+ TTNewJetBD2Med+ WJNewJetBD2Med));
+  NewH125a19ToBackground_->SetBinContent(5, H750a9NewHT1 / TMath::Sqrt(H750a9NewHT1 + DYNewLepHT1 + TTNewLepHT1 + WJNewLepHT1 + DYNewJetHT1 + TTNewJetHT1 + WJNewJetHT1) );
+  NewH125a19ToBackground_->SetBinContent(6,H750a9NewHT1Med/ TMath::Sqrt(H750a9NewHT1Med+ DYNewLepHT1Med+ TTNewLepHT1Med+ WJNewLepHT1Med+ DYNewJetHT1Med+ TTNewJetHT1Med+ WJNewJetHT1Med));
+  NewH125a19ToBackground_->SetBinContent(7, H750a9NewHT2 / TMath::Sqrt(H750a9NewHT2 + DYNewLepHT2 + TTNewLepHT2 + WJNewLepHT2 + DYNewJetHT2 + TTNewJetHT2 + WJNewJetHT2) );
+  NewH125a19ToBackground_->SetBinContent(8,H750a9NewHT2Med/ TMath::Sqrt(H750a9NewHT2Med+ DYNewLepHT2Med+ TTNewLepHT2Med+ WJNewLepHT2Med+ DYNewJetHT2Med+ TTNewJetHT2Med+ WJNewJetHT2Med));
+  NewH125a19ToBackground_->GetYaxis()->SetTitle("S / sqrt (S + B)");
+
+  TH1F* NewMVAH125a19ToBackground_    = new TH1F("NewMVAH125a19ToBackground","", 8, -.5, 7.5);
+      NewMVAH125a19ToBackground_->GetXaxis()->SetBinLabel(1, "BDisc < .5");
+      NewMVAH125a19ToBackground_->GetXaxis()->SetBinLabel(2, "BDisc < .5 + MedIso");
+      NewMVAH125a19ToBackground_->GetXaxis()->SetBinLabel(3, "BDisc < .9");
+      NewMVAH125a19ToBackground_->GetXaxis()->SetBinLabel(4, "BDisc < .9 + Med Iso");
+      NewMVAH125a19ToBackground_->GetXaxis()->SetBinLabel(5, "HT < 300");
+      NewMVAH125a19ToBackground_->GetXaxis()->SetBinLabel(6, "HT < 300 + MedIso");
+      NewMVAH125a19ToBackground_->GetXaxis()->SetBinLabel(7, "HT < 400");
+      NewMVAH125a19ToBackground_->GetXaxis()->SetBinLabel(8, "HT < 400 MedIso");
+  NewMVAH125a19ToBackground_->SetBinContent(1, H750a9NewMVABD1 / TMath::Sqrt(H750a9NewMVABD1 + DYNewMVALepBD1 + TTNewMVALepBD1 + WJNewMVALepBD1 + DYNewMVAJetBD1 + TTNewMVAJetBD1 + WJNewMVAJetBD1) );
+  NewMVAH125a19ToBackground_->SetBinContent(2,H750a9NewMVABD1Med/ TMath::Sqrt(H750a9NewMVABD1Med+ DYNewMVALepBD1Med+ TTNewMVALepBD1Med+ WJNewMVALepBD1Med+ DYNewMVAJetBD1Med+ TTNewMVAJetBD1Med+ WJNewMVAJetBD1Med));
+  NewMVAH125a19ToBackground_->SetBinContent(3, H750a9NewMVABD2 / TMath::Sqrt(H750a9NewMVABD2 + DYNewMVALepBD2 + TTNewMVALepBD2 + WJNewMVALepBD2 + DYNewMVAJetBD2 + TTNewMVAJetBD2 + WJNewMVAJetBD2) );
+  NewMVAH125a19ToBackground_->SetBinContent(4,H750a9NewMVABD2Med/ TMath::Sqrt(H750a9NewMVABD2Med+ DYNewMVALepBD2Med+ TTNewMVALepBD2Med+ WJNewMVALepBD2Med+ DYNewMVAJetBD2Med+ TTNewMVAJetBD2Med+ WJNewMVAJetBD2Med));
+  NewMVAH125a19ToBackground_->SetBinContent(5, H750a9NewMVAHT1 / TMath::Sqrt(H750a9NewMVAHT1 + DYNewMVALepHT1 + TTNewMVALepHT1 + WJNewMVALepHT1 + DYNewMVAJetHT1 + TTNewMVAJetHT1 + WJNewMVAJetHT1) );
+  NewMVAH125a19ToBackground_->SetBinContent(6,H750a9NewMVAHT1Med/ TMath::Sqrt(H750a9NewMVAHT1Med+ DYNewMVALepHT1Med+ TTNewMVALepHT1Med+ WJNewMVALepHT1Med+ DYNewMVAJetHT1Med+ TTNewMVAJetHT1Med+ WJNewMVAJetHT1Med));
+  NewMVAH125a19ToBackground_->SetBinContent(7, H750a9NewMVAHT2 / TMath::Sqrt(H750a9NewMVAHT2 + DYNewMVALepHT2 + TTNewMVALepHT2 + WJNewMVALepHT2 + DYNewMVAJetHT2 + TTNewMVAJetHT2 + WJNewMVAJetHT2) );
+  NewMVAH125a19ToBackground_->SetBinContent(8,H750a9NewMVAHT2Med/ TMath::Sqrt(H750a9NewMVAHT2Med+ DYNewMVALepHT2Med+ TTNewMVALepHT2Med+ WJNewMVALepHT2Med+ DYNewMVAJetHT2Med+ TTNewMVAJetHT2Med+ WJNewMVAJetHT2Med));
+  NewMVAH125a19ToBackground_->GetYaxis()->SetTitle("S / sqrt (S + B)");
+
+/*
+cout << "Canvases created" << endl;
+
+  // To  divide histograms for efficiency with new Gen Matching New DM's
+  TGraphAsymmErrors* FinalEffLooseIsoRECOPtRachNew_ = new TGraphAsymmErrors(30);
+  TGraphAsymmErrors* FinalEffMedIsoRECOPtRachNew_ = new TGraphAsymmErrors(30);
+  TGraphAsymmErrors* FinalEffTightIsoRECOPtRachNew_ = new TGraphAsymmErrors(30);
+  TGraphAsymmErrors* FinalEffDMFindRECOPtRachNew_ = new TGraphAsymmErrors(30);
+
+
+  // To divide histograms for efficiency with new Gen Matching New DM's
+  FinalEffLooseIsoCJPtRachNew_->Divide(MatchedLooseIsoCJPtRachNew_, MatchedCJPtRachNew_);
+  FinalEffMedIsoCJPtRachNew_->Divide(MatchedMedIsoCJPtRachNew_,     MatchedCJPtRachNew_);
+  FinalEffTightIsoCJPtRachNew_->Divide(MatchedTightIsoCJPtRachNew_, MatchedCJPtRachNew_);
+  FinalEffDMFindCJPtRachNew_->Divide(MatchedDMFindCJPtRachNew_,     MatchedCJPtRachNew_);
+
+  //Set Colors for New Gen Matching New DM's
+  FinalEffLooseIsoCJPtRachNew_->SetMarkerColor(kBlue+1);
+  FinalEffMedIsoCJPtRachNew_->SetMarkerColor(kBlue+1);
+  FinalEffTightIsoCJPtRachNew_->SetMarkerColor(kBlue+1);
+  FinalEffDMFindCJPtRachNew_->SetMarkerColor(kBlue+1);
+
+  FinalEffLooseIsoCJPtRachNew_->SetMarkerSize(.07);
+  FinalEffMedIsoCJPtRachNew_->SetMarkerSize(.07);
+  FinalEffTightIsoCJPtRachNew_->SetMarkerSize(.07);
+  FinalEffDMFindCJPtRachNew_->SetMarkerSize(.07);
+
+  FinalEffLooseIsoCJPtRachNew_->SetLineColor(kBlue+1);
+  FinalEffMedIsoCJPtRachNew_->SetLineColor(kBlue+1);
+  FinalEffTightIsoCJPtRachNew_->SetLineColor(kBlue+1);
+  FinalEffDMFindCJPtRachNew_->SetLineColor(kBlue+1);
+
+  FinalEffLooseIsoCJPtRachNew_->GetXaxis()->SetTitle("p_{T}");
+  FinalEffMedIsoCJPtRachNew_->GetXaxis()->SetTitle("p_{T}");
+  FinalEffTightIsoCJPtRachNew_->GetXaxis()->SetTitle("p_{T}");
+  FinalEffDMFindCJPtRachNew_->GetXaxis()->SetTitle("p_{T}");
+
+  FinalEffLooseIsoCJPtRachNew_->GetYaxis()->SetTitle("#epsilon (Loose Iso + DMFinding + GM / GM)");
+  FinalEffMedIsoCJPtRachNew_->GetYaxis()->SetTitle("#epsilon (Med Iso + DMFinding + GM / GM)");
+  FinalEffTightIsoCJPtRachNew_->GetYaxis()->SetTitle("#epsilon (Tight Iso + DMFinding + GM / GM)");
+  FinalEffDMFindCJPtRachNew_->GetYaxis()->SetTitle("#epsilon (DMFinding + GM / GM)");
+
+  FinalEffLooseIsoCJPtRachNew_->SetTitle("m_{h} = 125 GeV  |  m_{a1} = 9 GeV");
+  FinalEffMedIsoCJPtRachNew_->SetTitle("m_{h} = 125 GeV  |  m_{a1} = 9 GeV");
+  FinalEffTightIsoCJPtRachNew_->SetTitle("m_{h} = 125 GeV  |  m_{a1} = 9 GeV");
+  FinalEffDMFindCJPtRachNew_->SetTitle("m_{h} = 125 GeV  |  m_{a1} = 9 GeV");
+
+  FinalEffLooseIsoCJPtRachNew_->GetYaxis()->SetRangeUser(0.0, 1.0);
+  FinalEffMedIsoCJPtRachNew_->GetYaxis()->SetRangeUser(0.0, 1.0);
+  FinalEffTightIsoCJPtRachNew_->GetYaxis()->SetRangeUser(0.0, 1.0);
+  FinalEffDMFindCJPtRachNew_->GetYaxis()->SetRangeUser(0.0, 1.0);
+
+  FinalEffLooseIsoCJPtRachNew_->SetLineWidth(3);
+  FinalEffMedIsoCJPtRachNew_->SetLineWidth(3);
+  FinalEffTightIsoCJPtRachNew_->SetLineWidth(3);
+  FinalEffDMFindCJPtRachNew_->SetLineWidth(3);
+
+
+cout << "Attributes set." << endl;  
+*/
+  //Setting Color for Overlaid Lepton Matched histograms
+  MatchedTauMuPtLeptonTT_->SetLineColor(kBlue+1);
+  MatchedTauMuPtLeptonDY_->SetLineColor(kRed);
+  MatchedTauMuPtLeptonWJ_->SetLineColor(kGreen+1);
+  MatchedTauMuPtH125a19_->SetLineColor(kBlack);
+  MatchedTauMuPtH750a9_->SetLineColor(kGray+1);
+  
+  MatchedTauHadPtLeptonTT_->SetLineColor(kBlue+1);
+  MatchedTauHadPtLeptonDY_->SetLineColor(kRed);
+  MatchedTauHadPtLeptonWJ_->SetLineColor(kGreen+1);
+  MatchedTauHadPtH125a19_->SetLineColor(kBlack);
+  MatchedTauHadPtH750a9_->SetLineColor(kGray+1);
+  
+  MatchedTauHadEtaLeptonTT_->SetLineColor(kBlue+1);
+  MatchedTauHadEtaLeptonDY_->SetLineColor(kRed);
+  MatchedTauHadEtaLeptonWJ_->SetLineColor(kGreen+1);
+  MatchedTauHadEtaH125a19_->SetLineColor(kBlack);
+  MatchedTauHadEtaH750a9_->SetLineColor(kGray+1);
+  
+  MatchedHTLeptonTT_->SetLineColor(kBlue+1);
+  MatchedHTLeptonDY_->SetLineColor(kRed);
+  MatchedHTLeptonWJ_->SetLineColor(kGreen+1);
+  MatchedHTH125a19_->SetLineColor(kBlack);
+  MatchedHTH750a9_->SetLineColor(kGray+1);
+  
+  MatchedBDiscCSVLeptonTT_->SetLineColor(kBlue+1);
+  MatchedBDiscCSVLeptonDY_->SetLineColor(kRed);
+  MatchedBDiscCSVLeptonWJ_->SetLineColor(kGreen+1);
+  MatchedBDiscCSVH125a19_->SetLineColor(kBlack);
+  MatchedBDiscCSVH750a9_->SetLineColor(kGray+1);
+
+  //Setting color for Overlaid Jet Matched histograms
+  MatchedTauMuPtJetTT_->SetLineColor(kBlue+1);
+  MatchedTauMuPtJetDY_->SetLineColor(kRed);
+  MatchedTauMuPtJetWJ_->SetLineColor(kGreen+1);
+
+  MatchedTauHadPtJetTT_->SetLineColor(kBlue+1);
+  MatchedTauHadPtJetDY_->SetLineColor(kRed);
+  MatchedTauHadPtJetWJ_->SetLineColor(kGreen+1);
+
+  MatchedTauHadEtaJetTT_->SetLineColor(kBlue+1);
+  MatchedTauHadEtaJetDY_->SetLineColor(kRed);
+  MatchedTauHadEtaJetWJ_->SetLineColor(kGreen+1);
+
+  MatchedHTJetTT_->SetLineColor(kBlue+1);
+  MatchedHTJetDY_->SetLineColor(kRed);
+  MatchedHTJetWJ_->SetLineColor(kGreen+1);
+
+  MatchedBDiscCSVJetTT_->SetLineColor(kBlue+1);
+  MatchedBDiscCSVJetDY_->SetLineColor(kRed);
+  MatchedBDiscCSVJetWJ_->SetLineColor(kGreen+1);
+
+  //Making the Legend
+  leg = new TLegend(0.1,0.7,0.25,0.9);
+  leg->AddEntry(MatchedTauMuPtLeptonTT_, "TTbar","L");
+  leg->AddEntry(MatchedTauMuPtLeptonDY_, "DY","L");
+  leg->AddEntry(MatchedTauMuPtLeptonWJ_, "WJets","L");
+  leg->AddEntry(MatchedTauMuPtH125a19_,"H125a19nal H125","L");
+  leg->AddEntry(MatchedTauMuPtH750a9_,"H125a19nal H750","L");
+
+  //Drawing all of the Overlaid Lepton Matched HIstograms
+  TauHadPtLeptonCanvas.cd();
+  MatchedTauHadPtLeptonTT_->DrawNormalized();
+  MatchedTauHadPtLeptonDY_->DrawNormalized("SAME");
+  MatchedTauHadPtLeptonWJ_->DrawNormalized("SAME");
+  MatchedTauHadPtH125a19_->DrawNormalized("SAME");
+  MatchedTauHadPtH750a9_->DrawNormalized("SAME");
+  leg->Draw();
+
+  TauMuPtLeptonCanvas.cd();
+  MatchedTauMuPtLeptonTT_->DrawNormalized();
+  MatchedTauMuPtLeptonDY_->DrawNormalized("SAME");
+  MatchedTauMuPtLeptonWJ_->DrawNormalized("SAME");
+  MatchedTauMuPtH125a19_->DrawNormalized("SAME");
+  MatchedTauMuPtH750a9_->DrawNormalized("SAME");
+  leg->Draw();
+ 
+  TauHadEtaLeptonCanvas.cd();
+  MatchedTauHadEtaLeptonTT_->DrawNormalized();
+  MatchedTauHadEtaLeptonDY_->DrawNormalized("SAME");
+  MatchedTauHadEtaLeptonWJ_->DrawNormalized("SAME");
+  MatchedTauHadEtaH125a19_->DrawNormalized("SAME");
+  MatchedTauHadEtaH750a9_->DrawNormalized("SAME");
+  leg->Draw();
+  
+  HTLeptonCanvas.cd();
+  MatchedHTLeptonTT_->DrawNormalized();
+  MatchedHTLeptonDY_->DrawNormalized("SAME");
+  MatchedHTLeptonWJ_->DrawNormalized("SAME");
+  MatchedHTH125a19_->DrawNormalized("SAME");
+  MatchedHTH750a9_->DrawNormalized("SAME");
+  leg->Draw();
+  
+  BDiscCSVLeptonCanvas.cd();
+  MatchedBDiscCSVLeptonTT_->DrawNormalized();
+  MatchedBDiscCSVLeptonDY_->DrawNormalized("SAME");
+  MatchedBDiscCSVLeptonWJ_->DrawNormalized("SAME");
+  MatchedBDiscCSVH125a19_->DrawNormalized("SAME");
+  MatchedBDiscCSVH750a9_->DrawNormalized("SAME");
+  leg->Draw();
+  
+  //Drawing all of the Overlaid Jet Matched Histograms
+  TauHadPtJetCanvas.cd();
+  MatchedTauHadPtJetTT_->DrawNormalized();
+  MatchedTauHadPtJetDY_->DrawNormalized("SAME");
+  MatchedTauHadPtJetWJ_->DrawNormalized("SAME");
+  MatchedTauHadPtH125a19_->DrawNormalized("SAME");
+  MatchedTauHadPtH750a9_->DrawNormalized("SAME");
+  leg->Draw();
+  
+  TauMuPtJetCanvas.cd();
+  MatchedTauMuPtJetTT_->DrawNormalized();
+  MatchedTauMuPtJetDY_->DrawNormalized("SAME");
+  MatchedTauMuPtJetWJ_->DrawNormalized("SAME");
+  MatchedTauMuPtH125a19_->DrawNormalized("SAME");
+  MatchedTauMuPtH750a9_->DrawNormalized("SAME");
+  leg->Draw();
+  
+  TauHadEtaJetCanvas.cd();
+  MatchedTauHadEtaJetTT_->DrawNormalized();
+  MatchedTauHadEtaJetDY_->DrawNormalized("SAME");
+  MatchedTauHadEtaJetWJ_->DrawNormalized("SAME");
+  MatchedTauHadEtaH125a19_->DrawNormalized("SAME");
+  MatchedTauHadEtaH750a9_->DrawNormalized("SAME");
+  leg->Draw();
+
+  HTJetCanvas.cd();
+  MatchedHTJetTT_->DrawNormalized();
+  MatchedHTJetDY_->DrawNormalized("SAME");
+  MatchedHTJetWJ_->DrawNormalized("SAME");
+  MatchedHTH125a19_->DrawNormalized("SAME");
+  MatchedHTH750a9_->DrawNormalized("SAME");
+  leg->Draw();
+  
+  BDiscCSVJetCanvas.cd();
+  MatchedBDiscCSVJetTT_->DrawNormalized();
+  MatchedBDiscCSVJetDY_->DrawNormalized("SAME");
+  MatchedBDiscCSVJetWJ_->DrawNormalized("SAME");
+  MatchedBDiscCSVH125a19_->DrawNormalized("SAME");
+  MatchedBDiscCSVH750a9_->DrawNormalized("SAME");
+  leg->Draw();
+ 
+cout << "Histograms Drawn" << endl;
+
+  outFile->cd();
+
+  TauHadPtLeptonCanvas.Write();
+  TauMuPtLeptonCanvas.Write();
+  TauHadEtaLeptonCanvas.Write();
+  HTLeptonCanvas.Write();
+  BDiscCSVLeptonCanvas.Write();
+
+  TauHadPtJetCanvas.Write();
+  TauMuPtJetCanvas.Write();
+  TauHadEtaJetCanvas.Write();
+  HTJetCanvas.Write();
+  BDiscCSVJetCanvas.Write();
+
+  GenMatchTypeTT_->Write();
+  GenMatchTypeDY_->Write(); 
+  GenMatchTypeWJ_->Write(); 
+
+  GenMatchPDGIDTT_->Write();
+  GenMatchPDGIDDY_->Write();
+  GenMatchPDGIDWJ_->Write();
+
+  OldH125a19ToBackgroundCanvas.cd();
+  OldH125a19ToBackground_->Draw();
+  OldH125a19ToBackgroundCanvas.Write();
+
+  OldMVAH125a19ToBackgroundCanvas.cd();
+  OldMVAH125a19ToBackground_->Draw();
+  OldMVAH125a19ToBackgroundCanvas.Write();
+  
+  NewH125a19ToBackgroundCanvas.cd();
+  NewH125a19ToBackground_->Draw();
+  NewH125a19ToBackgroundCanvas.Write();
+
+  NewMVAH125a19ToBackgroundCanvas.cd();
+  NewMVAH125a19ToBackground_->Draw();
+  NewMVAH125a19ToBackgroundCanvas.Write();
+
+  outFile->Write();
+  outFile->Close();
+cout << "end" << endl;
+
+}//rootMacro_BBA_combine
