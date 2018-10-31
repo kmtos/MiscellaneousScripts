@@ -25,12 +25,12 @@ void rootMacro_CompareTwoRegionsData()
 
 
   //Old DMs
-  TFile infileEstimateFromD("/home/kyletos/Downloads/RootFiles/ABCD_Tests/FakeRateEstimate/FINAL_SingleMu_AntiMedIsoMu2_TauDMAntiMedIso_MAY1_CFromD_1CombBin.root");
-  TFile infileEstimateFromD_UP("/home/kyletos/Downloads/RootFiles/ABCD_Tests/FakeRateEstimate/FINAL_SingleMu_AntiMedIsoMu2_TauDMAntiMedIso_MAY1_CFromD_1CombBin_UP.root");
-  TFile infileEstimateFromD_DOWN("/home/kyletos/Downloads/RootFiles/ABCD_Tests/FakeRateEstimate/FINAL_SingleMu_AntiMedIsoMu2_TauDMAntiMedIso_MAY1_CFromD_1CombBin_DOWN.root");
-  TFile infileRegionItself("/home/kyletos/Downloads/RootFiles/ABCD_Tests/FakeRateEstimate/FINAL_SingleMu_AntiMedIsoMu2_TauDMMedIso_MAY1_RegionCItself_1CombBin.root");
+  TFile infileEstimateFromD("/home/kyletos/Downloads/RootFiles/ABCD_Tests/FakeRateEstimate/FINAL_SingleMu_AntiMedIsoMu2_TauDMAntiMedIso_AUG2_CFromD.root");
+  TFile infileEstimateFromD_UP("/home/kyletos/Downloads/RootFiles/ABCD_Tests/FakeRateEstimate/FINAL_SingleMu_AntiMedIsoMu2_TauDMAntiMedIso_AUG2_TauFakeRateUP.root");
+  TFile infileEstimateFromD_DOWN("/home/kyletos/Downloads/RootFiles/ABCD_Tests/FakeRateEstimate/FINAL_SingleMu_AntiMedIsoMu2_TauDMAntiMedIso_AUG2_TauFakeRateDOWN.root");
+  TFile infileRegionItself("/home/kyletos/Downloads/RootFiles/ABCD_Tests/FakeRateEstimate/FINAL_SingleMu_AntiMedIsoMu2_TauDMMedIso_AUG2_CItself.root");
 
-  TFile *outFile = new TFile("/home/kyletos/Downloads/RootFiles/ABCD_Tests/FakeRateEstimateData_DatatoData_CFromD_MAY1_1CombBin.root", "RECREATE");
+  TFile *outFile = new TFile("/home/kyletos/Downloads/RootFiles/ABCD_Tests/FakeRateEstimateData_DatatoData_CFromD_AUG2.root", "RECREATE");
 
 cout << "Files Created" << endl;
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -47,6 +47,7 @@ cout << "Files Created" << endl;
   TH1F *DiTauInvMassFakeWeightEstimateFromD_ = (TH1F*)infileEstimateFromD.Get("DiTauInvMassFakeWeight");
   TH1F *PtMu1FakeWeightEstimateFromD_ = (TH1F*)infileEstimateFromD.Get("PtMu1FakeWeight");
   TH1F *PtMu2FakeWeightEstimateFromD_ = (TH1F*)infileEstimateFromD.Get("PtMu2FakeWeight");
+  TH1F *PtMu3FakeWeightEstimateFromD_ = (TH1F*)infileEstimateFromD.Get("PtMu3FakeWeight");
   TH1F *EtaFakeWeightEstimateFromD_ = (TH1F*)infileEstimateFromD.Get("EtaFakeWeight");
   TH1F *DRFakeWeightEstimateFromD_ = (TH1F*)infileEstimateFromD.Get("DRFakeWeight");
   TH1F *DiMuInvMassFakeWeightZoomEstimateFromD_ = (TH1F*)infileEstimateFromD.Get("DiMuInvMassFakeWeightZoom");
@@ -64,6 +65,7 @@ cout << "Files Created" << endl;
   DiTauInvMassFakeWeightEstimateFromD_->SetLineColor(kRed);
   PtMu1FakeWeightEstimateFromD_->SetLineColor(kRed);
   PtMu2FakeWeightEstimateFromD_->SetLineColor(kRed);
+  PtMu3FakeWeightEstimateFromD_->SetLineColor(kRed);
   EtaFakeWeightEstimateFromD_->SetLineColor(kRed);
   DRFakeWeightEstimateFromD_->SetLineColor(kRed);
   DiMuInvMassFakeWeightZoomEstimateFromD_->SetLineColor(kRed);
@@ -77,6 +79,7 @@ cout << "Files Created" << endl;
   DiTauInvMassFakeWeightEstimateFromD_->SetFillColor(kRed);
   PtMu1FakeWeightEstimateFromD_->SetFillColor(kRed);
   PtMu2FakeWeightEstimateFromD_->SetFillColor(kRed);
+  PtMu3FakeWeightEstimateFromD_->SetFillColor(kRed);
   EtaFakeWeightEstimateFromD_->SetFillColor(kRed);
   DRFakeWeightEstimateFromD_->SetFillColor(kRed);
   DiMuInvMassFakeWeightZoomEstimateFromD_->SetFillColor(kRed);
@@ -90,6 +93,7 @@ cout << "Files Created" << endl;
   DiTauInvMassFakeWeightEstimateFromD_->SetMarkerColor(kRed);
   PtMu1FakeWeightEstimateFromD_->SetMarkerColor(kRed);
   PtMu2FakeWeightEstimateFromD_->SetMarkerColor(kRed);
+  PtMu3FakeWeightEstimateFromD_->SetMarkerColor(kRed);
   EtaFakeWeightEstimateFromD_->SetMarkerColor(kRed);
   DRFakeWeightEstimateFromD_->SetMarkerColor(kRed);
   DiMuInvMassFakeWeightZoomEstimateFromD_->SetMarkerColor(kRed);
@@ -106,6 +110,7 @@ cout << "Files Created" << endl;
   TH1F *DiTauInvMassFakeWeightRegionItself_ = (TH1F*)infileRegionItself.Get("DiTauInvMassFakeWeight");
   TH1F *PtMu1FakeWeightRegionItself_ = (TH1F*)infileRegionItself.Get("PtMu1FakeWeight");
   TH1F *PtMu2FakeWeightRegionItself_ = (TH1F*)infileRegionItself.Get("PtMu2FakeWeight");
+  TH1F *PtMu3FakeWeightRegionItself_ = (TH1F*)infileRegionItself.Get("PtMu3FakeWeight");
   TH1F *EtaFakeWeightRegionItself_ = (TH1F*)infileRegionItself.Get("EtaFakeWeight");
   TH1F *DRFakeWeightRegionItself_ = (TH1F*)infileRegionItself.Get("DRFakeWeight");
   TH1F *DiMuInvMassFakeWeightZoomRegionItself_ = (TH1F*)infileRegionItself.Get("DiMuInvMassFakeWeightZoom");
@@ -127,6 +132,7 @@ cout << "Set Colors" << endl;
   TCanvas *DiTauInvMassFakeWeightCanvas = new TCanvas ("DiTauInvMassFakeWeightCanvas","",600,600);
   TCanvas *PtMu1FakeWeightCanvas = new TCanvas ("PtMu1FakeWeightCanvas","",600,600);
   TCanvas *PtMu2FakeWeightCanvas = new TCanvas ("PtMu2FakeWeightCanvas","",600,600);
+  TCanvas *PtMu3FakeWeightCanvas = new TCanvas ("PtMu3FakeWeightCanvas","",600,600);
   TCanvas *EtaFakeWeightCanvas = new TCanvas ("EtaFakeWeightCanvas","",600,600);
   TCanvas *DRFakeWeightCanvas = new TCanvas ("DRFakeWeightCanvas","",600,600);
   TCanvas *DiMuInvMassFakeWeightZoomCanvas = new TCanvas ("DiMuInvMassFakeWeightZoomCanvas","",600,600);
@@ -383,7 +389,7 @@ CMS_lumi(  TauVisMassZoomCanvas, 4, 11);
   ratiopad->Draw();
 
   plotpad->cd();
-  for (int i=1; i < DiMuInvMassFakeWeightRegionItself_->GetXaxis()->GetNbins(); i++)
+  for (int i=1; i < DiMuInvMassFakeWeightRegionItself_->GetXaxis()->GetNbins()+1; i++)
   {
     DiMuInvMassFakeWeightEstimateFromD_->SetBinError(i, pow(DiMuInvMassFakeWeightEstimateFromD_->GetBinContent(i), 0.5) );
     double vNum = DiMuInvMassFakeWeightEstimateFromD_->GetBinContent(i), vNumUp = DiMuInvMassFakeWeightEstimateFromD_DOWN_->GetBinContent(i), vNumDown = DiMuInvMassFakeWeightEstimateFromD_UP_->GetBinContent(i);
@@ -424,7 +430,7 @@ std::cout <<   "Next ERROR:" << ey_low << "\tcontent=" << vNum <<endl;
   ratiostaterr->GetYaxis()->SetTitleOffset(0.2);
   ratiostaterr->GetYaxis()->SetNdivisions(503);
 
-  for (int i = 0; i <= DiMuInvMassFakeWeightEstimateFromD_->GetNbinsX()+2; i++)
+  for (int i = 0; i <= DiMuInvMassFakeWeightEstimateFromD_->GetNbinsX()+1; i++)
   {
     ratiostaterr->SetBinContent(i, 1.0);
     if (DiMuInvMassFakeWeightEstimateFromD_->GetBinContent(i) > 1e-6)
@@ -447,7 +453,7 @@ std::cout <<   "Next ERROR:" << ey_low << "\tcontent=" << vNum <<endl;
   num->SetLineColor(kBlack);
   TGraphAsymmErrors *graph = new TGraphAsymmErrors(num->GetNbinsX());
   int npoints = 0;
-  for (int i=1; i < DiMuInvMassFakeWeightRegionItself_->GetXaxis()->GetNbins(); i++)
+  for (int i=1; i < DiMuInvMassFakeWeightRegionItself_->GetXaxis()->GetNbins()+1; i++)
   {
     if (DiMuInvMassFakeWeightEstimateFromD_->GetBinContent(i) > 0)
     { 

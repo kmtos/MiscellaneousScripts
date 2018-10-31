@@ -19,10 +19,10 @@ void rootMacro_GetFakeRate()
   setTDRStyle(true);
   gStyle->SetPalette(1);
 
-  TFile infile ("/home/kyletos/Downloads/RootFiles/ABCD_Tests/GetRates/FINAL_SingleMu_MedIsoMu2_TauDM_ZSKIM_MAY1_TauFakeRate.root");
-  TFile *outFile = new TFile("/home/kyletos/Downloads/RootFiles/ABCD_Tests/TAUFAKERATES_FINAL_SingleMu_MedIsoMu2_TauDM_ZSKIM_MAY1_TauFakeRate.root", "RECREATE");
-  TFile infileWZ ("/home/kyletos/Downloads/RootFiles/ABCD_Tests/GetRates/FINAL_WZ3L1Nu_MedIsoMu2_TauDM_ZSKIM_MAY1_TauFakeRate.root");
-  TFile infileZZ ("/home/kyletos/Downloads/RootFiles/ABCD_Tests/GetRates/FINAL_ZZTo4LAmac_MedIsoMu2_TauDM_ZSKIM_MAY1_TauFakeRate.root");
+  TFile infile ("/home/kyletos/Downloads/RootFiles/ABCD_Tests/TauFakeRate/FINAL_SingleMu_MedIsoMu2_TauDM_ZSKIM_JUL18.root");
+  TFile *outFile = new TFile("/home/kyletos/Downloads/RootFiles/ABCD_Tests/TAUFAKERATES_FINAL_SingleMu_MedIsoMu2_TauDM_ZSKIM_JUL18.root", "RECREATE");
+  TFile infileWZ ("/home/kyletos/Downloads/RootFiles/ABCD_Tests/TauFakeRate/FINAL_WZ3L1Nu_MedIsoMu2_TauDM_ZSKIM_JUL18.root");
+  TFile infileZZ ("/home/kyletos/Downloads/RootFiles/ABCD_Tests/TauFakeRate/FINAL_ZZTo4LAmac_MedIsoMu2_TauDM_ZSKIM_JUL18.root");
 
   TH2F* EtavsPtTauMedIsoWZ_ = (TH2F*)infileWZ.Get("EtavsPtTauMedIso");
   TH2F* EtavsPtTauMedIsoZZ_ = (TH2F*)infileZZ.Get("EtavsPtTauMedIso");
